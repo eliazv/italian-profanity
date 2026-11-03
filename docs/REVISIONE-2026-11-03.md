@@ -1,5 +1,7 @@
 # Revisione tecnica e nuove fonti — 3 novembre 2026
 
+> **Documento storico.** Il contenuto è stato assorbito in [SPECIFICHE.md](../SPECIFICHE.md) v2 il 2026-11-03, e le decisioni sono registrate in [decisioni.md](decisioni.md). In caso di divergenza prevale la specifica. Una correzione rispetto al testo qui sotto: HurtLex ha una licenza dichiarata nel README, CC BY-NC-SA 4.0, e per questo è escluso.
+
 > **Stato:** proposta di aggiornamento alla [SPECIFICHE.md](../SPECIFICHE.md). Questo documento corregge o sostituisce, dove indicato, alcune scelte dei § 5–14 della spec iniziale. Non sono ancora stati implementati motori, dataset o benchmark. Lo scopo è decidere un MVP affidabile **prima** di scrivere codice.
 >
 > **Decisione proposta:** confermare il monorepo TypeScript + Dart e il dataset unico; cambiare il matcher, gli allowlist, l'ordine delle priorità e il processo di curazione; partire con italiano soltanto, con inglese opt-in.
