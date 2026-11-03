@@ -7,17 +7,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": [
-        "cazzo",
-        "cazzi",
-        "cazzone",
-        "cazzoni",
-        "cazzata",
-        "cazzate"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["cazzo", "cazzi", "cazzone", "cazzoni", "cazzata", "cazzate"],
+      "provenance": ["manual"],
       "note": "Forme elencate e non prefisso: cazzotto, cazzuola e scazzottata devono passare."
     },
     {
@@ -26,17 +17,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": [
-        "puttana",
-        "puttane",
-        "puttanata",
-        "puttanate",
-        "puttaniere",
-        "puttanieri"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["puttana", "puttane", "puttanata", "puttanate", "puttaniere", "puttanieri"],
+      "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -45,16 +27,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "troia",
-        "troie",
-        "troiona",
-        "troione",
-        "troioni"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["troia", "troie", "troiona", "troione", "troioni"],
+      "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -63,13 +37,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": [
-        "mignotta",
-        "mignotte"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["mignotta", "mignotte"],
+      "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -88,9 +57,7 @@
         "sborrone",
         "sborroni"
       ],
-      "provenance": [
-        "manual"
-      ],
+      "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -99,13 +66,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": [
-        "pompino",
-        "pompini"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["pompino", "pompini"],
+      "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -114,13 +76,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "bocchino",
-        "bocchini"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["bocchino", "bocchini"],
+      "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -129,17 +86,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "scopata",
-        "scopate",
-        "scopare",
-        "scopando",
-        "scopato",
-        "scopati"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["scopata", "scopate", "scopare", "scopando", "scopato", "scopati"],
+      "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -148,13 +96,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "figa",
-        "fighe"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["figa", "fighe"],
+      "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -163,13 +106,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "fica",
-        "fiche"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["fica", "fiche"],
+      "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -188,9 +126,7 @@
         "fottiti",
         "fottetevi"
       ],
-      "provenance": [
-        "manual"
-      ],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
     },
     {
@@ -199,16 +135,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "chiavare",
-        "chiavata",
-        "chiavate",
-        "chiavato",
-        "chiavati"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["chiavare", "chiavata", "chiavate", "chiavato", "chiavati"],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },
     {
@@ -217,17 +145,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "trombare",
-        "trombata",
-        "trombate",
-        "trombato",
-        "trombati",
-        "trombando"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["trombare", "trombata", "trombate", "trombato", "trombati", "trombando"],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },
     {
@@ -236,15 +155,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": [
-        "segaiolo",
-        "segaiola",
-        "segaioli",
-        "segaiole"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["segaiolo", "segaiola", "segaioli", "segaiole"],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
     },
     {
@@ -253,14 +165,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": [
-        "baldracca",
-        "baldracche",
-        "baldraccone"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["baldracca", "baldracche", "baldraccone"],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
     },
     {
@@ -269,13 +175,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "zoccola",
-        "zoccole"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["zoccola", "zoccole"],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },
     {
@@ -284,13 +185,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "battona",
-        "battone"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["battona", "battone"],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },
     {
@@ -299,12 +195,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": [
-        "succhiacazzi"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["succhiacazzi"],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
     },
     {
@@ -313,15 +205,8 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": [
-        "pompinara",
-        "pompinare",
-        "pompinaro",
-        "pompinari"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["pompinara", "pompinare", "pompinaro", "pompinari"],
+      "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
     }
   ]

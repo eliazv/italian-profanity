@@ -7,15 +7,8 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": [
-        "frocio",
-        "frocia",
-        "froci",
-        "frocie"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["frocio", "frocia", "froci", "frocie"],
+      "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -24,13 +17,8 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": [
-        "culattone",
-        "culattoni"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["culattone", "culattoni"],
+      "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -39,15 +27,8 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": [
-        "negraccio",
-        "negraccia",
-        "negracci",
-        "negracce"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["negraccio", "negraccia", "negracci", "negracce"],
+      "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -56,14 +37,8 @@
       "category": "discriminatory",
       "severity": 2,
       "confidence": "medium",
-      "terms": [
-        "terrone",
-        "terrona",
-        "terroni"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["terrone", "terrona", "terroni"],
+      "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -72,15 +47,8 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "medium",
-      "terms": [
-        "recchione",
-        "recchioni",
-        "ricchione",
-        "ricchioni"
-      ],
-      "provenance": [
-        "manual"
-      ],
+      "terms": ["recchione", "recchioni", "ricchione", "ricchioni"],
+      "provenance": ["manual"],
       "note": "Insulto esplicito, ma esistono i cognomi Recchione/Recchioni: review in balanced; non blocco automatico del solo cognome."
     },
     {
@@ -90,28 +58,12 @@
       "severity": 3,
       "confidence": "high",
       "phrases": [
-        [
-          "sporco",
-          "ebreo"
-        ],
-        [
-          "sporchi",
-          "ebrei"
-        ],
-        [
-          "negro",
-          "di",
-          "merda"
-        ],
-        [
-          "zingaro",
-          "di",
-          "merda"
-        ]
+        ["sporco", "ebreo"],
+        ["sporchi", "ebrei"],
+        ["negro", "di", "merda"],
+        ["zingaro", "di", "merda"]
       ],
-      "provenance": [
-        "manual"
-      ],
+      "provenance": ["manual"],
       "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
     }
   ]
