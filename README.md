@@ -24,7 +24,7 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 
 **Limite dichiarato:** è un controllo lessicale. Un testo senza match non è necessariamente appropriato, e la moderazione umana resta necessaria.
 
-Pacchetti previsti: npm `italian-profanity` · pub.dev `italian_profanity`.
+Pacchetti: npm [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) · pub.dev [`italian_profanity`](https://pub.dev/packages/italian_profanity).
 
 **Prima beta di integrazione.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 65 regole e 244 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti restano da curare. L'inglese opzionale contiene tre famiglie minime.
 
