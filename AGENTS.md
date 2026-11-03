@@ -23,19 +23,19 @@ Node 24 o superiore, pnpm 10 (versione fissata in `packageManager`) e Dart SDK 3
 
 ## Comandi
 
-| Comando                      | Cosa fa                                                                              |
-| ---------------------------- | ------------------------------------------------------------------------------------ |
-| `pnpm validate`              | Schema, unicità degli id, termini già normalizzati, fixture per ogni regola          |
-| `pnpm build:data`            | Genera la tabella di normalizzazione e i dati per TS e Dart                          |
-| `pnpm lint` / `pnpm format`  | Biome (TS, JSON, Markdown) più `dart format` e `dart analyze`                        |
-| `pnpm typecheck`             | `tsc` su `tools/` e sul pacchetto, con `isolatedDeclarations` sul codice pubblicato  |
-| `pnpm test`                  | Test TS (Vitest) e Dart (`dart test`)                                                |
-| `pnpm parity`                | Confronta i due motori e verifica sempre le attese `expectedBase`                    |
-| `pnpm parity --expectations` | Verifica anche le attese delle fixture: attivo in CI dalla fase M2                   |
-| `pnpm audit:benign`          | Controlla il corpus di nomi, cognomi e parole comuni (dalla fase M2)                 |
-| `pnpm check`                 | Validazione, build, lint, typecheck, test e parità: **deve passare prima del merge** |
-| `pnpm changeset`             | Registra una modifica per il prossimo rilascio                                       |
-| `pnpm release:version`       | Applica i changeset e allinea la versione Dart (vedi `docs/rilascio.md`)             |
+| Comando                      | Cosa fa                                                                               |
+| ---------------------------- | ------------------------------------------------------------------------------------- |
+| `pnpm validate`              | Schema, unicità degli id, termini già normalizzati, fixture per ogni regola           |
+| `pnpm build:data`            | Genera la tabella di normalizzazione e i dati per TS e Dart                           |
+| `pnpm lint` / `pnpm format`  | Biome (TS, JSON, Markdown) più `dart format` e `dart analyze`                         |
+| `pnpm typecheck`             | `tsc` su `tools/` e sul pacchetto, con `isolatedDeclarations` sul codice pubblicato   |
+| `pnpm test`                  | Test TS (Vitest) e Dart (`dart test`)                                                 |
+| `pnpm parity`                | Confronta i motori e verifica sempre le attese di normalizzazione, segmenti ed errori |
+| `pnpm parity --expectations` | Verifica anche le attese delle fixture: attivo in CI dalla fase M2                    |
+| `pnpm audit:benign`          | Controlla il corpus di nomi, cognomi e parole comuni (dalla fase M2)                  |
+| `pnpm check`                 | Validazione, build, lint, typecheck, test e parità: **deve passare prima del merge**  |
+| `pnpm changeset`             | Registra una modifica per il prossimo rilascio                                        |
+| `pnpm release:version`       | Applica i changeset e allinea la versione Dart (vedi `docs/rilascio.md`)              |
 
 ## Dove mettere le mani
 

@@ -6,6 +6,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:italian_profanity/src/normalize.dart';
+import 'package:italian_profanity/src/segment.dart';
 
 void main(List<String> args) {
   if (args.isEmpty) {
@@ -27,11 +28,19 @@ void main(List<String> args) {
     for (final line in file.readAsLinesSync(encoding: utf8)) {
       if (line.trim().isEmpty) continue;
       final fixture = jsonDecode(line) as Map<String, Object?>;
-      // M0: solo la vista base. Da M2 si aggiungono action e matches.
-      results.add({
+      final result = <String, Object>{
         'id': fixture['id'] as String,
         'base': fold(fixture['input'] as String),
-      });
+      };
+      try {
+        result['segments'] = segment(fixture['input'] as String,
+                (fixture['maxLength'] as num?) ?? 64)
+            .map((part) => part.toJson())
+            .toList();
+      } on ArgumentError {
+        result['error'] = 'invalidMaxLength';
+      }
+      results.add(result);
     }
   }
 

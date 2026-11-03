@@ -58,3 +58,9 @@ La generazione della tabella non include la versione Unicode del runtime nei fil
 ## Documentazione pubblica
 
 `docs/` resta nel repository e non viene aggiunta a `.gitignore`. Spiega scelte e limiti del prodotto e permette di riesaminarli. Cache, output temporanei e report con dati privati devono rimanere fuori dal versionamento. Nessun nickname reale di utenti va inserito nei documenti pubblici, nelle fixture o nei log.
+
+## Esito M1
+
+La prima CI GitHub di M0 è passata sul commit `6e8bd9a`. La fase M1 implementa ora in TS e Dart segmenti, frammenti, viste `base` e `deleet`, sequenze ripetute per `squeeze` e provenienza dei caratteri in UTF-16. Il limite viene applicato prima del fold e non spezza coppie surrogate valide.
+
+Sono aggiunte 107 fixture M1, per un totale di 138; i test dei pacchetti verificano direttamente le attese e le invarianti, e la parità confronta le strutture complete. `pnpm check` passa con 253 test per linguaggio. Il confronto delle sequenze ripetute con le regole, rilevatore, policy e attivazione obbligatoria delle attese lessicali e dell'audit restano in M2. L'elenco delle due regole seme non è stato ampliato: la curazione resta in M3.

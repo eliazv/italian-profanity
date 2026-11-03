@@ -1,4 +1,46 @@
 import { FOLD } from "./generated/data.ts"
+import type { Range } from "./types.ts"
+
+/** Un punto di codice normalizzato e la sua provenienza UTF-16. */
+export interface OriginChar {
+  char: string
+  range: Range
+}
+
+/** Normalizza solo il prefisso ammesso, senza spezzare coppie surrogate. */
+export function foldWithOrigins(input: string, maxLength = 64): OriginChar[] {
+  if (typeof input !== "string") throw new TypeError("Il testo deve essere una stringa")
+  if (!Number.isInteger(maxLength) || maxLength <= 0) {
+    throw new RangeError("maxLength deve essere un intero positivo finito")
+  }
+  const output: OriginChar[] = []
+  let offset = 0
+  let count = 0
+  for (const char of input) {
+    if (count++ >= maxLength) break
+    const start = offset
+    offset += char.length
+    const value = FOLD[char] ?? char
+    // I segni combinanti eliminati appartengono al carattere precedente,
+    // anche quando questo si è espanso in più punti di codice.
+    const code = char.codePointAt(0) ?? 0
+    if (value === "" && code >= 0x0300 && code <= 0x036f) {
+      const previous = output.at(-1)
+      if (previous) {
+        const originStart = previous.range.start
+        for (let index = output.length - 1; index >= 0; index--) {
+          const unit = output[index]
+          if (!unit || unit.range.start !== originStart) break
+          unit.range.end = offset
+        }
+      }
+    }
+    for (const normalized of value) {
+      output.push({ char: normalized, range: { start, end: offset } })
+    }
+  }
+  return output
+}
 
 /**
  * Vista `base` a livello di carattere (SPECIFICHE.md §4.3): minuscole, accenti rimossi,

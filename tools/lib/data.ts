@@ -1,6 +1,7 @@
 // Caricamento dei dati sorgente in data/. Nessuna validazione qui: la fa validate.ts.
 import { readdirSync } from "node:fs"
 import { basename, join, relative } from "node:path"
+import type { Segment } from "../../packages/js/src/segment.ts"
 
 import { readJson, readJsonl } from "./json.ts"
 import { DATA, ROOT } from "./paths.ts"
@@ -41,6 +42,9 @@ export interface Fixture {
   profile: "balanced" | "strict" | "lenient"
   contacts?: boolean
   expectedBase?: string
+  maxLength?: number
+  expectedSegments?: Array<Pick<Segment, "kind" | "range" | "base" | "deleet"> & Partial<Segment>>
+  expectedError?: "invalidMaxLength"
   action?: "allow" | "review" | "block"
   rules?: string[]
   mustNotMatch?: string[]

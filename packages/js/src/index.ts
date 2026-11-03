@@ -1,5 +1,5 @@
-// API pubblica di italian-profanity. Stato: fase M0 (struttura). Il rilevatore
-// (findMatches, check, isClean, createChecker) arriva nelle fasi M1-M2: SPECIFICHE.md §11.
+// API pubblica di italian-profanity. M1 completata: normalizzazione e segmentazione
+// sono interne. Il rilevatore pubblico arriva in M2: SPECIFICHE.md §11.
 
 export { DATA_VERSION, VERSION } from "./generated/data.ts"
 export type {

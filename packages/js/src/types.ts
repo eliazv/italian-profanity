@@ -1,4 +1,4 @@
-// Tipi pubblici (SPECIFICHE.md §5, §6). L'API di rilevamento arriva nelle fasi M1-M2.
+// Tipi pubblici (SPECIFICHE.md §5, §6). L'API di rilevamento arriva in M2.
 
 export type Category = "blasphemy" | "insult" | "sexual" | "discriminatory" | "vulgar"
 export type Severity = 1 | 2 | 3

@@ -4,6 +4,8 @@ Italian-first profanity detection for short user-generated text — nicknames, u
 
 > 🚧 Work in progress — not yet published. Design: [SPECIFICHE.md](SPECIFICHE.md) (Italian).
 
+Current status: M1 complete (Unicode normalization, segmentation, views and UTF-16 origins in both engines). Detection and policy APIs arrive in M2; the capabilities below describe the intended product.
+
 - Precision first: Italian names, surnames and places such as _Claudio_, _Diodato_ or _Madonna di Campiglio_ are not flagged.
 - Catches common evasions: leetspeak, separators, accents, repeated letters, spaced letters and Unicode look-alikes.
 - Blasphemy-aware: divine terms are only flagged in combination with an insult (_dio_ alone is fine).
@@ -21,6 +23,8 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 **Limite dichiarato:** è un controllo lessicale. Un testo senza match non è necessariamente appropriato, e la moderazione umana resta necessaria.
 
 Pacchetti previsti: npm `italian-profanity` · pub.dev `italian_profanity`.
+
+**Stato attuale: M1 completata.** Normalizzazione, segmentazione, viste e origini UTF-16 sono implementate in entrambi i motori e verificate su 138 fixture condivise. Le API `findMatches()`, `check()` e `isClean()` arrivano in M2: il pacchetto non è ancora un filtro utilizzabile.
 
 Keywords: profanity, italian, parolacce, bestemmie, insulti, moderation, nickname, username, validation, flutter, dart.
 

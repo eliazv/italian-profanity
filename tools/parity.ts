@@ -1,10 +1,11 @@
 // Esegue le fixture su entrambi i motori e confronta i risultati (SPECIFICHE.md §7.2).
 // Uso: node tools/parity.ts [--expectations]
-//   Le attese expectedBase sono sempre verificate, anche prima del rilevatore.
+//   Le attese di normalizzazione, segmenti ed errori sono sempre verificate.
 //   --expectations  verifica anche che i risultati rispettino le attese di rilevamento
 //                   (attivo in CI dalla fase M2, quando esiste il rilevatore).
 import { execFileSync } from "node:child_process"
 import { join } from "node:path"
+import type { Segment } from "../packages/js/src/segment.ts"
 
 import { type Fixture, loadFixtureFiles } from "./lib/data.ts"
 import { canonicalJson } from "./lib/json.ts"
@@ -13,6 +14,8 @@ import { DART_PKG, DATA, JS_PKG } from "./lib/paths.ts"
 interface RunnerResult {
   id: string
   base?: string
+  segments?: Segment[]
+  error?: string
   action?: string
   matches?: Array<{ ruleId: string }>
 }
@@ -45,6 +48,11 @@ function run(
     throw error
   }
   const results = JSON.parse(output) as RunnerResult[]
+  const ids = new Set<string>()
+  for (const result of results) {
+    if (ids.has(result.id)) throw new Error(`Il runner ${label} ripete l'id ${result.id}`)
+    ids.add(result.id)
+  }
   return new Map(results.map((result) => [result.id, result]))
 }
 
@@ -63,6 +71,15 @@ const fixtures = new Map<string, Fixture>(
 )
 
 const problems: string[] = []
+
+for (const [label, results] of [
+  ["TS", js],
+  ["Dart", dart],
+] as const) {
+  for (const id of results.keys()) {
+    if (!fixtures.has(id)) problems.push(`${label}: risultato inatteso ${id}`)
+  }
+}
 
 for (const id of fixtures.keys()) {
   const a = js.get(id)
@@ -86,6 +103,32 @@ for (const id of fixtures.keys()) {
         problems.push(
           `${id}: ${label} base attesa ${JSON.stringify(expectedBase)}, ottenuta ${JSON.stringify(result.base)}`,
         )
+      }
+    }
+  }
+  const fixture = fixtures.get(id)
+  for (const [label, result] of [
+    ["TS", a],
+    ["Dart", b],
+  ] as const) {
+    if (result.error !== fixture?.expectedError) {
+      problems.push(
+        `${id}: ${label} errore atteso ${fixture?.expectedError}, ottenuto ${result.error}`,
+      )
+    }
+    if (fixture?.expectedSegments !== undefined) {
+      const expected = fixture.expectedSegments
+      const actual = result.segments
+      if (!actual || actual.length !== expected.length) {
+        problems.push(`${id}: ${label} numero di segmenti errato`)
+        continue
+      }
+      for (const [index, part] of expected.entries()) {
+        for (const key of Object.keys(part) as Array<keyof Segment>) {
+          if (canonicalJson(actual[index]?.[key]) !== canonicalJson(part[key])) {
+            problems.push(`${id}: ${label} segments[${index}].${key} diverso dall'attesa`)
+          }
+        }
       }
     }
   }

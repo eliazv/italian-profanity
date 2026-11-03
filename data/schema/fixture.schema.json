@@ -2,11 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/eliazv/italian-profanity/data/schema/fixture.schema.json",
   "title": "Caso di test (una riga JSONL)",
-  "description": "Vedi SPECIFICHE.md §7.1. Almeno uno tra expectedBase, action, rules e mustNotMatch.",
+  "description": "Vedi SPECIFICHE.md §7.1. Almeno un'attesa di normalizzazione, segmentazione, errore o rilevamento.",
   "type": "object",
   "required": ["id", "input", "profile"],
   "additionalProperties": false,
   "anyOf": [
+    { "required": ["expectedSegments"] },
+    { "required": ["expectedError"] },
     { "required": ["expectedBase"] },
     { "required": ["action"] },
     { "required": ["rules"] },
@@ -15,6 +17,16 @@
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z]+(-[a-z]+)*-[0-9]{3,}$" },
     "input": { "type": "string" },
+    "maxLength": {
+      "type": "number",
+      "description": "Può essere invalido nelle fixture di errore."
+    },
+    "expectedError": { "const": "invalidMaxLength" },
+    "expectedSegments": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/segment" },
+      "description": "Elenco completo dei segmenti. I campi opzionali presenti vengono confrontati esattamente, inclusi ordine e lunghezza degli array."
+    },
     "expectedBase": {
       "type": "string",
       "description": "Risultato atteso di fold sull'intero input, prima della segmentazione e dei limiti. Verificato sempre dalla parità."
@@ -30,5 +42,63 @@
       "uniqueItems": true
     },
     "note": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "required": ["expectedError"] },
+      "then": {
+        "required": ["maxLength"],
+        "not": {
+          "anyOf": [
+            { "required": ["expectedSegments"] },
+            { "required": ["action"] },
+            { "required": ["rules"] },
+            { "required": ["mustNotMatch"] }
+          ]
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "range": {
+      "type": "object",
+      "required": ["start", "end"],
+      "additionalProperties": false,
+      "properties": {
+        "start": { "type": "integer", "minimum": 0 },
+        "end": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "fragment": {
+      "type": "object",
+      "required": ["text", "range"],
+      "additionalProperties": false,
+      "properties": { "text": { "type": "string" }, "range": { "$ref": "#/$defs/range" } }
+    },
+    "repetition": {
+      "type": "object",
+      "required": ["char", "count", "range"],
+      "additionalProperties": false,
+      "properties": {
+        "char": { "type": "string", "minLength": 1, "maxLength": 1 },
+        "count": { "type": "integer", "minimum": 1 },
+        "range": { "$ref": "#/$defs/range" }
+      }
+    },
+    "segment": {
+      "type": "object",
+      "required": ["kind", "range", "base", "deleet"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["word", "spaced"] },
+        "range": { "$ref": "#/$defs/range" },
+        "base": { "type": "string" },
+        "deleet": { "type": "string" },
+        "baseOrigins": { "type": "array", "items": { "$ref": "#/$defs/range" } },
+        "deleetOrigins": { "type": "array", "items": { "$ref": "#/$defs/range" } },
+        "fragments": { "type": "array", "items": { "$ref": "#/$defs/fragment" } },
+        "squeeze": { "type": "array", "items": { "$ref": "#/$defs/repetition" } }
+      }
+    }
   }
 }
