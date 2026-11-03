@@ -18,18 +18,18 @@ Da mantenere:
 
 Da modificare prima dell'implementazione:
 
-| Scelta originale | Problema | Modifica proposta |
-| --- | --- | --- |
-| Confronto `contains` con l'intero testo concatenato | Crea corrispondenze spurie tra parole e tra porzioni finali di nomi | Abolire il compact globale come superficie universale; matcher su span/token e unione selettiva |
-| `combo` su sottostringhe adiacenti nel compact | `Claudio porco` contiene `dio` + `porco` al confine dei token, anche se `Claudio` è un nome | Riconoscere componenti ancorate a token interi, a morfologie approvate oppure a composti riconosciuti |
-| `allow` rimosso dal testo *prima* dei controlli | Può cancellare materiale realmente offensivo o formare nuove sequenze adiacenti | Le eccezioni sopprimono **solo uno specifico match**, e solo se coincidono con il token/span e la regola prevista |
-| `stem: true` esteso | `cazz` cattura anche `cazzotto`, `cazzuola` e derivati innocenti | Preferire forme enumerate; prefissi solo quando validati con un corpus benigno |
-| Collasso di ogni lettera ripetuta a una | Perde informazione linguistica e crea collisioni | Forma esatta + trasformazione controllata delle ripetizioni; mai unica rappresentazione distruttiva |
-| Inglese attivo per default | In nickname corti può aumentare i falsi positivi e appesantisce il pacchetto | `it` default, `en` opt-in con dati e test separati |
-| Zero dipendenze anche in Dart, promettendo NFKD completo | La libreria standard Dart non offre una API equivalente a `String.normalize('NFKD')` di JS | Usare una dipendenza Dart per NFKD oppure generare una tabella comune con limiti dichiarati; misurare dimensioni |
-| `minSeverity` usata come unica decisione | Rilevazione linguistica e politica di moderazione sono concetti diversi | Mettere un livello `policy` sopra l'output del rilevatore |
-| 150 casi, 17–22 ore, 0,05 ms a nickname | Obiettivi non dimostrati e scarsi per l'anti-elusione e i falsi positivi | Più test e benchmark misurati, senza vincoli numerici non ancora validati |
-| Qualunque aggiornamento lista = minor | Una nuova parola può trasformare input precedentemente accettati in rifiutati | Pubblicare un changelog *behavioral*, con matrice dei casi modificati e policy configurabili |
+| Scelta originale                                         | Problema                                                                                    | Modifica proposta                                                                                                 |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Confronto `contains` con l'intero testo concatenato      | Crea corrispondenze spurie tra parole e tra porzioni finali di nomi                         | Abolire il compact globale come superficie universale; matcher su span/token e unione selettiva                   |
+| `combo` su sottostringhe adiacenti nel compact           | `Claudio porco` contiene `dio` + `porco` al confine dei token, anche se `Claudio` è un nome | Riconoscere componenti ancorate a token interi, a morfologie approvate oppure a composti riconosciuti             |
+| `allow` rimosso dal testo _prima_ dei controlli          | Può cancellare materiale realmente offensivo o formare nuove sequenze adiacenti             | Le eccezioni sopprimono **solo uno specifico match**, e solo se coincidono con il token/span e la regola prevista |
+| `stem: true` esteso                                      | `cazz` cattura anche `cazzotto`, `cazzuola` e derivati innocenti                            | Preferire forme enumerate; prefissi solo quando validati con un corpus benigno                                    |
+| Collasso di ogni lettera ripetuta a una                  | Perde informazione linguistica e crea collisioni                                            | Forma esatta + trasformazione controllata delle ripetizioni; mai unica rappresentazione distruttiva               |
+| Inglese attivo per default                               | In nickname corti può aumentare i falsi positivi e appesantisce il pacchetto                | `it` default, `en` opt-in con dati e test separati                                                                |
+| Zero dipendenze anche in Dart, promettendo NFKD completo | La libreria standard Dart non offre una API equivalente a `String.normalize('NFKD')` di JS  | Usare una dipendenza Dart per NFKD oppure generare una tabella comune con limiti dichiarati; misurare dimensioni  |
+| `minSeverity` usata come unica decisione                 | Rilevazione linguistica e politica di moderazione sono concetti diversi                     | Mettere un livello `policy` sopra l'output del rilevatore                                                         |
+| 150 casi, 17–22 ore, 0,05 ms a nickname                  | Obiettivi non dimostrati e scarsi per l'anti-elusione e i falsi positivi                    | Più test e benchmark misurati, senza vincoli numerici non ancora validati                                         |
+| Qualunque aggiornamento lista = minor                    | Una nuova parola può trasformare input precedentemente accettati in rifiutati               | Pubblicare un changelog _behavioral_, con matrice dei casi modificati e policy configurabili                      |
 
 ## 2. Architettura v0.1 consigliata
 
@@ -51,7 +51,7 @@ Non costruire ogni bestemmia come prodotto cartesiano indiscriminato di tronconi
 
 - `Dio porco`, `D10 p0rc0`, `porco Dio`: corrispondenze high-confidence se la coppia è riconosciuta.
 - `diocane`: composto noto, high-confidence.
-- `Claudio`, `Claudio porco`, `Diodato`, `Cristiano`, `Madonna di Campiglio`: non devono essere bloccati *come bestemmia* per una semplice sottostringa. Eventuali insulti indipendenti si valutano separatamente.
+- `Claudio`, `Claudio porco`, `Diodato`, `Cristiano`, `Madonna di Campiglio`: non devono essere bloccati _come bestemmia_ per una semplice sottostringa. Eventuali insulti indipendenti si valutano separatamente.
 - `cazzo`, `cazzzo`, `c a z z o`: riconoscere varianti certe.
 - `cazzotto`, `cazzuola`, `scazzottata`: proteggere da prefissi troppo larghi.
 - `incazzato`: richiede una forma/derivazione esplicitamente approvata, non un contains libero.
@@ -69,8 +69,8 @@ Testare i token di una lettera concatenati **solo in segmenti circoscritti** qua
 
 ### API concettuale
 
-~~~ts
-const result = check("D10 p0rc0", { profile: "balanced" });
+```ts
+const result = check("D10 p0rc0", { profile: "balanced" })
 // {
 //   action: "block",
 //   matches: [{
@@ -83,34 +83,34 @@ const result = check("D10 p0rc0", { profile: "balanced" });
 //     range: { start: 0, end: 9 }
 //   }]
 // }
-isClean("Claudio"); // true: è un helper della policy, NON il motore
-~~~
+isClean("Claudio") // true: è un helper della policy, NON il motore
+```
 
 Il risultato può separare `findMatches(text)` (tutti i match) da `check(text, policy)`. Evitare la promessa che “assenza di match = testo appropriato”: è solo un controllo lessicale con copertura limitata.
 
 Profili suggeriti:
 
-| Profilo | Impiego | Principio |
-| --- | --- | --- |
-| `balanced` (default) | nickname di giochi generalisti | blocca forme chiaramente offensive, prudente con i casi ambigui |
-| `strict` | ambienti con utenti minori | include volgarità leggere e dubbi con verifica/revisione |
-| `lenient` | community adulte | blocca soprattutto bestemmie esplicite e insulti discriminatori, configurabile |
-| `custom` | singola app | categorie, severità, eventuali regole/allowlist proprietarie |
+| Profilo              | Impiego                        | Principio                                                                      |
+| -------------------- | ------------------------------ | ------------------------------------------------------------------------------ |
+| `balanced` (default) | nickname di giochi generalisti | blocca forme chiaramente offensive, prudente con i casi ambigui                |
+| `strict`             | ambienti con utenti minori     | include volgarità leggere e dubbi con verifica/revisione                       |
+| `lenient`            | community adulte               | blocca soprattutto bestemmie esplicite e insulti discriminatori, configurabile |
+| `custom`             | singola app                    | categorie, severità, eventuali regole/allowlist proprietarie                   |
 
 Le severità non devono essere copiate automaticamente da liste altrui: dipendono da definizioni e criteri editoriali. Distinguere `vulgar`, `sexual`, `insult`, `blasphemy`, `discriminatory`; la categoria `discriminatory` non deve mai trattare nomi di identità neutri come offese di per sé.
 
 ## 3. Fonti aggiuntive verificate
 
-| Fonte | Contenuto utile | Licenza/situazione | Impiego |
-| --- | --- | --- | --- |
-| [napolux/paroleitaliane](https://github.com/napolux/paroleitaliane) | 454 voci in lista_badwords; 8.912 nomi, 38.486 cognomi, 60.444 parole comuni e altri corpora | MIT dichiarata, **ma il README avverte che alcune liste sono di provenienza originaria ignota**; coniugazione_verbi è CC BY-SA 3.0 | **Priorità massima**: shortlist offensiva + corpus benigno per trovare falsi positivi. Vietato importare automaticamente tutto; documentare provenienza e verifica |
-| [LDNOOBW/it](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words/blob/master/it) | lista italiana semplice, con frasi e regionalismi | CC BY 4.0 | Audit copertura. Se voci/derivati vengono incorporati, attribuzione e corretto trattamento della licenza dati |
-| [valeriobasile/hurtlex](https://github.com/valeriobasile/hurtlex) | lexicon italiano con classi specifiche, Revised HurtLex con punteggi di offensività | Nessun LICENSE top-level individuato nella verifica del 03/11/2026; **non assumere che si possa redistribuire** | Ricerca classificazione/ambiguità, NO copia automatica dei dati |
-| [Dax-87/badwords-it](https://github.com/Dax-87/badwords-it) | esempio PHP di parola, substring, frase e test | MIT nel README | Ispirazione per matcher e test; attenzione alle false corrispondenze ai confini |
-| [obscenity](https://www.npmjs.com/package/obscenity) | matcher JS con transformer, whitelist e offset di risultato | MIT | Riferimento architetturale; non integrare un motore solo JS che romperebbe la parità con Dart |
-| [dsojevic/profanity-list](https://github.com/dsojevic/profanity-list) | schema con severity, tags, exceptions e partial matching | verificare prima di copiare | **Solo ispirazione per lo schema**: supporta inglese/emoji, non un corpus italiano |
-| [EVALITA / HaSpeeDe](https://github.com/evalita2018/data) | benchmark di hate speech in testi più lunghi | alcune raccolte sono CC BY-NC-SA | Valutazione/ricerca **solo nei termini consentiti**, mai dati di default nel package commerciale |
-| [Unicode UTS #39](https://www.unicode.org/reports/tr39/) | confusables e spoofing Unicode | standard tecnico, con dati da verificare per uso e versione | Algoritmo e test di omografi |
+| Fonte                                                                                                         | Contenuto utile                                                                              | Licenza/situazione                                                                                                                 | Impiego                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [napolux/paroleitaliane](https://github.com/napolux/paroleitaliane)                                           | 454 voci in lista_badwords; 8.912 nomi, 38.486 cognomi, 60.444 parole comuni e altri corpora | MIT dichiarata, **ma il README avverte che alcune liste sono di provenienza originaria ignota**; coniugazione_verbi è CC BY-SA 3.0 | **Priorità massima**: shortlist offensiva + corpus benigno per trovare falsi positivi. Vietato importare automaticamente tutto; documentare provenienza e verifica |
+| [LDNOOBW/it](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words/blob/master/it) | lista italiana semplice, con frasi e regionalismi                                            | CC BY 4.0                                                                                                                          | Audit copertura. Se voci/derivati vengono incorporati, attribuzione e corretto trattamento della licenza dati                                                      |
+| [valeriobasile/hurtlex](https://github.com/valeriobasile/hurtlex)                                             | lexicon italiano con classi specifiche, Revised HurtLex con punteggi di offensività          | Nessun LICENSE top-level individuato nella verifica del 03/11/2026; **non assumere che si possa redistribuire**                    | Ricerca classificazione/ambiguità, NO copia automatica dei dati                                                                                                    |
+| [Dax-87/badwords-it](https://github.com/Dax-87/badwords-it)                                                   | esempio PHP di parola, substring, frase e test                                               | MIT nel README                                                                                                                     | Ispirazione per matcher e test; attenzione alle false corrispondenze ai confini                                                                                    |
+| [obscenity](https://www.npmjs.com/package/obscenity)                                                          | matcher JS con transformer, whitelist e offset di risultato                                  | MIT                                                                                                                                | Riferimento architetturale; non integrare un motore solo JS che romperebbe la parità con Dart                                                                      |
+| [dsojevic/profanity-list](https://github.com/dsojevic/profanity-list)                                         | schema con severity, tags, exceptions e partial matching                                     | verificare prima di copiare                                                                                                        | **Solo ispirazione per lo schema**: supporta inglese/emoji, non un corpus italiano                                                                                 |
+| [EVALITA / HaSpeeDe](https://github.com/evalita2018/data)                                                     | benchmark di hate speech in testi più lunghi                                                 | alcune raccolte sono CC BY-NC-SA                                                                                                   | Valutazione/ricerca **solo nei termini consentiti**, mai dati di default nel package commerciale                                                                   |
+| [Unicode UTS #39](https://www.unicode.org/reports/tr39/)                                                      | confusables e spoofing Unicode                                                               | standard tecnico, con dati da verificare per uso e versione                                                                        | Algoritmo e test di omografi                                                                                                                                       |
 
 ### Strategia sulle licenze
 
@@ -120,7 +120,7 @@ Non basta “leggere una lista CC BY 4.0 e riscriverla per farla MIT”: l'uso s
 
 Per ogni regola o batch, aggiungere metadati di curazione **non necessariamente inclusi nel runtime**:
 
-~~~json
+```json
 {
   "id": "it.insult.example",
   "category": "insult",
@@ -132,7 +132,7 @@ Per ogni regola o batch, aggiungere metadati di curazione **non necessariamente 
   "positiveCases": ["it-pos-001"],
   "negativeCases": ["it-neg-001"]
 }
-~~~
+```
 
 Senza una provenienza documentabile non promuovere i candidati di origine esterna nel bundle pubblico. Non pubblicare log di nickname reali nei test senza anonimizzazione/consenso.
 
@@ -149,23 +149,23 @@ Senza una provenienza documentabile non promuovere i candidati di origine estern
 
 ### Fixture minime da aggiungere alla spec
 
-| Input | Aspettativa nel profilo balanced | Motivo |
-| --- | --- | --- |
-| Claudio | allow | nome innocuo |
-| Claudio porco | allow *per la regola di bestemmia* | non usare il suffisso `dio` del nome |
-| Diodato | allow | nome innocuo |
-| Cristiano | allow | nome innocuo |
-| Madonna di Campiglio | allow | toponimo |
-| Scazzottata / cazzotto / cazzuola | allow | parole innocue o a diverso significato |
-| Dio santo | allow | formula religiosa non automaticamente blasfema |
-| Dio porco / porco Dio | block | combinazione esplicita |
-| D10 p0rc0 | block | leet |
-| p0r-cò_Dio | block | obfuscation delimitata |
-| Diocaneee | block | composto + ripetizioni |
-| c a z z o | block | separazione tra lettere |
-| incazzato | secondo policy, non `contains` cieco | derivato da curare |
-| Unicode composto/decomposto, fullwidth, misto cirillico/latino | esito coerente col fixture | normalizzazione e omografi |
-| nome con numeri innocenti | allow | anti-falsi-positivi leet |
+| Input                                                          | Aspettativa nel profilo balanced     | Motivo                                         |
+| -------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------- |
+| Claudio                                                        | allow                                | nome innocuo                                   |
+| Claudio porco                                                  | allow _per la regola di bestemmia_   | non usare il suffisso `dio` del nome           |
+| Diodato                                                        | allow                                | nome innocuo                                   |
+| Cristiano                                                      | allow                                | nome innocuo                                   |
+| Madonna di Campiglio                                           | allow                                | toponimo                                       |
+| Scazzottata / cazzotto / cazzuola                              | allow                                | parole innocue o a diverso significato         |
+| Dio santo                                                      | allow                                | formula religiosa non automaticamente blasfema |
+| Dio porco / porco Dio                                          | block                                | combinazione esplicita                         |
+| D10 p0rc0                                                      | block                                | leet                                           |
+| p0r-cò_Dio                                                     | block                                | obfuscation delimitata                         |
+| Diocaneee                                                      | block                                | composto + ripetizioni                         |
+| c a z z o                                                      | block                                | separazione tra lettere                        |
+| incazzato                                                      | secondo policy, non `contains` cieco | derivato da curare                             |
+| Unicode composto/decomposto, fullwidth, misto cirillico/latino | esito coerente col fixture           | normalizzazione e omografi                     |
+| nome con numeri innocenti                                      | allow                                | anti-falsi-positivi leet                       |
 
 Nelle fixture il flag `expect` non dovrebbe essere il solo booleano: prevedere `expectedMatches`, `expectedAction` e `profile`. Per `Claudio porco` controllare esplicitamente che non scatti la regola `blasphemy`, a prescindere da altre regole configurate.
 

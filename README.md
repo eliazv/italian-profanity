@@ -4,9 +4,9 @@ Italian-first profanity detection for short user-generated text — nicknames, u
 
 > 🚧 Work in progress — not yet published. Design: [SPECIFICHE.md](SPECIFICHE.md) (Italian).
 
-- Precision first: Italian names, surnames and places such as *Claudio*, *Diodato* or *Madonna di Campiglio* are not flagged.
+- Precision first: Italian names, surnames and places such as _Claudio_, _Diodato_ or _Madonna di Campiglio_ are not flagged.
 - Catches common evasions: leetspeak, separators, accents, repeated letters, spaced letters and Unicode look-alikes.
-- Blasphemy-aware: divine terms are only flagged in combination with an insult (*dio* alone is fine).
+- Blasphemy-aware: divine terms are only flagged in combination with an insult (_dio_ alone is fine).
 - Detection separated from policy: `balanced`, `strict` and `lenient` profiles, plus custom rules and exceptions.
 - Zero runtime dependencies, offline, MIT.
 

@@ -99,10 +99,10 @@ Le regole che lavorano sulle parole vedono ogni parola con i frammenti **riuniti
 
 Ogni parola viene valutata in più viste. Basta che una delle viste corrisponda a una regola:
 
-| Vista | Trasformazione |
-|---|---|
-| `base` | Minuscole, rimozione degli accenti, caratteri fullwidth convertiti, caratteri simili ricondotti alle lettere latine |
-| `deleet` | `base` più la conversione del leetspeak: `0→o 1→i 3→e 4→a 5→s 7→t @→a $→s €→e !→i` |
+| Vista     | Trasformazione                                                                                                                                          |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `base`    | Minuscole, rimozione degli accenti, caratteri fullwidth convertiti, caratteri simili ricondotti alle lettere latine                                     |
+| `deleet`  | `base` più la conversione del leetspeak: `0→o 1→i 3→e 4→a 5→s 7→t @→a $→s €→e !→i`                                                                      |
 | `squeeze` | `deleet` più la riduzione a una delle lettere ripetute **3 o più volte** (`porcooo` → `porco`, `cazzzzo` → `cazzo`). Le doppie italiane restano intatte |
 
 `deleet` si applica solo alle parole che contengono almeno una lettera. Così "1993" non diventa "ieei", mentre "D10" diventa "dio".
@@ -126,14 +126,14 @@ Questo approccio ha tre vantaggi:
 
 ### 5.1 Tipi di regola
 
-| Tipo | Su cosa si applica | Esempio | Note |
-|---|---|---|---|
-| `word` | Parola intera, uguale a una delle forme elencate | `cazzo`, `cazzi`, `stronzo`, `stronza`, `stronzi` | **Il tipo predefinito.** Le flessioni vanno elencate, non dedotte |
-| `prefix` | Parola che inizia con il termine | `vaffancul` | **Raro.** Va giustificato in `note` e deve superare il controllo sul corpus di parole innocue (§7.3) |
-| `phrase` | Sequenza di parole | `porca puttana`, `figlio di puttana` | Le parole intermedie sono quelle dichiarate |
-| `compound` | Composto noto dentro una sola parola, ancorato all'inizio o alla fine della parola | `porcodio`, `diocane`, `madonnaputtana` | Mai cercato in mezzo a una parola |
-| `combo` | Concetto divino più insulto, vedi §5.2 | `Dio porco`, `D10 p0rc0`, `dioporcone` | Riservato alle bestemmie |
-| `pattern` | Riconoscimento di contatti (URL, email, telefono) | `www.sito.it`, `333 1234567` | Solo per la categoria `contact`, regex fisse dentro il motore |
+| Tipo       | Su cosa si applica                                                                 | Esempio                                           | Note                                                                                                 |
+| ---------- | ---------------------------------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `word`     | Parola intera, uguale a una delle forme elencate                                   | `cazzo`, `cazzi`, `stronzo`, `stronza`, `stronzi` | **Il tipo predefinito.** Le flessioni vanno elencate, non dedotte                                    |
+| `prefix`   | Parola che inizia con il termine                                                   | `vaffancul`                                       | **Raro.** Va giustificato in `note` e deve superare il controllo sul corpus di parole innocue (§7.3) |
+| `phrase`   | Sequenza di parole                                                                 | `porca puttana`, `figlio di puttana`              | Le parole intermedie sono quelle dichiarate                                                          |
+| `compound` | Composto noto dentro una sola parola, ancorato all'inizio o alla fine della parola | `porcodio`, `diocane`, `madonnaputtana`           | Mai cercato in mezzo a una parola                                                                    |
+| `combo`    | Concetto divino più insulto, vedi §5.2                                             | `Dio porco`, `D10 p0rc0`, `dioporcone`            | Riservato alle bestemmie                                                                             |
+| `pattern`  | Riconoscimento di contatti (URL, email, telefono)                                  | `www.sito.it`, `333 1234567`                      | Solo per la categoria `contact`, regex fisse dentro il motore                                        |
 
 ### 5.2 Bestemmie: la regola `combo`
 
@@ -154,14 +154,14 @@ Di conseguenza:
 
 ```jsonc
 {
-  "id": "it.blasphemy.divine-insult",     // stabile: compare nei risultati e nei changelog
+  "id": "it.blasphemy.divine-insult", // stabile: compare nei risultati e nei changelog
   "kind": "combo",
   "category": "blasphemy",
-  "severity": 3,                          // 1 lieve · 2 volgare · 3 grave
-  "confidence": "high",                   // high | medium: la policy decide come trattare medium
+  "severity": 3, // 1 lieve · 2 volgare · 3 grave
+  "confidence": "high", // high | medium: la policy decide come trattare medium
   "a": ["dio", "dii", "madonna", "madonne", "gesu", "cristo"],
   "b": { "forms": ["boia", "bestia"], "prefixes": ["porc", "can", "ladr", "merd", "serpent"] },
-  "provenance": ["manual"],               // manual | napolux@<commit> | …
+  "provenance": ["manual"], // manual | napolux@<commit> | …
   "note": "facoltativo, per i curatori"
 }
 ```
@@ -187,12 +187,12 @@ Un'eccezione **non toglie testo e non disattiva la regola altrove**. Se la stess
 
 ### 6.1 Profili
 
-| Profilo | Uso | Comportamento |
-|---|---|---|
+| Profilo              | Uso                      | Comportamento                                                         |
+| -------------------- | ------------------------ | --------------------------------------------------------------------- |
 | `balanced` (default) | Giochi e app generaliste | `block` per gravità 2-3 con `confidence: high`; `review` per `medium` |
-| `strict` | Utenti minorenni, scuole | `block` da gravità 1; `review` diventa `block` |
-| `lenient` | Community adulte | `block` solo per `blasphemy` e `discriminatory` |
-| personalizzato | Esigenze specifiche | Soglie per categoria, termini ed eccezioni dell'app |
+| `strict`             | Utenti minorenni, scuole | `block` da gravità 1; `review` diventa `block`                        |
+| `lenient`            | Community adulte         | `block` solo per `blasphemy` e `discriminatory`                       |
+| personalizzato       | Esigenze specifiche      | Soglie per categoria, termini ed eccezioni dell'app                   |
 
 `review` indica un caso dubbio: l'app decide se rifiutare il testo o mandarlo in moderazione manuale. Per i nickname conviene trattarlo come un rifiuto.
 
@@ -205,14 +205,14 @@ findMatches("D10 p0rc0")
 // [{ ruleId: "it.blasphemy.divine-insult", category: "blasphemy", severity: 3,
 //    confidence: "high", kind: "combo", range: { start: 0, end: 9 } }]
 
-check("D10 p0rc0")                  // { action: "block", matches: [...] }  profilo balanced
-check("Claudio", { profile: "strict" })   // { action: "allow", matches: [] }
-isClean("Claudio")                  // true: scorciatoia per check(...).action === "allow"
+check("D10 p0rc0") // { action: "block", matches: [...] }  profilo balanced
+check("Claudio", { profile: "strict" }) // { action: "allow", matches: [] }
+isClean("Claudio") // true: scorciatoia per check(...).action === "allow"
 
 const checker = createChecker({
   profile: "balanced",
-  languages: ["it"],                // default; "en" solo se attivato
-  contacts: true,                   // URL, email, telefono
+  languages: ["it"], // default; "en" solo se attivato
+  contacts: true, // URL, email, telefono
   extraRules: [{ kind: "word", terms: ["nomeconcorrente"], category: "insult", severity: 2 }],
   exceptions: [{ ruleId: "it.insult.xyz", word: "cognomelocale" }],
 })
@@ -351,14 +351,14 @@ italian-profanity/
 
 Gli strumenti principali:
 
-| Ambito | Scelta |
-|---|---|
-| Package manager JS | pnpm, workspace con `packages/js` e la radice per `tools/` |
-| Build TS | `tsdown` (ESM, CJS e `.d.ts`), nessuna dipendenza a runtime |
-| Test TS | Vitest |
-| Lint e formattazione | Biome, sia per TS sia per JSON |
-| Dart | `dart test`, `dart analyze` con `lints/recommended`, `dart format` |
-| Versioni | Changesets. **Le versioni npm e pub sono sempre identiche**: `tools/` sincronizza `pubspec.yaml` |
+| Ambito               | Scelta                                                                                           |
+| -------------------- | ------------------------------------------------------------------------------------------------ |
+| Package manager JS   | pnpm, workspace con `packages/js` e la radice per `tools/`                                       |
+| Build TS             | `tsdown` (ESM, CJS e `.d.ts`), nessuna dipendenza a runtime                                      |
+| Test TS              | Vitest                                                                                           |
+| Lint e formattazione | Biome, sia per TS sia per JSON                                                                   |
+| Dart                 | `dart test`, `dart analyze` con `lints/recommended`, `dart format`                               |
+| Versioni             | Changesets. **Le versioni npm e pub sono sempre identiche**: `tools/` sincronizza `pubspec.yaml` |
 
 ---
 
@@ -374,16 +374,16 @@ Gli strumenti principali:
 
 ## 11. Roadmap
 
-| Fase | Contenuto | Ore stimate |
-|---|---|---:|
-| **M0** Struttura | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE | 3-4 |
-| **M1** Normalizzazione e segmentazione, **in TS e in Dart** | Tabella generata, viste, offset, prime 80 fixture Unicode e separatori, parità già attiva | 6-8 |
-| **M2** Rilevatore e policy in TS | `word`, `prefix`, `phrase`, `compound`, `combo`, `pattern`, eccezioni, profili, API | 6-8 |
-| **M3** Curazione | 60-100 regole, 300 fixture, audit napolux, `curazione.md`, `sources.json`, `NOTICE` | 10-14 |
-| **M4** Rilevatore e policy in Dart | Port completo, parità al 100% | 5-7 |
-| **M5** Prova reale (shadow) | Report sui nickname salvati in RuttoFacile e maraffa, senza bloccare; valutazione dei falsi positivi | 2-3 |
-| **M6** Pubblicazione 0.1.0 | Workflow di release, README completo, smoke test, pubblicazione | 2-3 |
-| | **Totale v0.1** | **34-47** |
+| Fase                                                        | Contenuto                                                                                            | Ore stimate |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------: |
+| **M0** Struttura                                            | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE                    |         3-4 |
+| **M1** Normalizzazione e segmentazione, **in TS e in Dart** | Tabella generata, viste, offset, prime 80 fixture Unicode e separatori, parità già attiva            |         6-8 |
+| **M2** Rilevatore e policy in TS                            | `word`, `prefix`, `phrase`, `compound`, `combo`, `pattern`, eccezioni, profili, API                  |         6-8 |
+| **M3** Curazione                                            | 60-100 regole, 300 fixture, audit napolux, `curazione.md`, `sources.json`, `NOTICE`                  |       10-14 |
+| **M4** Rilevatore e policy in Dart                          | Port completo, parità al 100%                                                                        |         5-7 |
+| **M5** Prova reale (shadow)                                 | Report sui nickname salvati in RuttoFacile e maraffa, senza bloccare; valutazione dei falsi positivi |         2-3 |
+| **M6** Pubblicazione 0.1.0                                  | Workflow di release, README completo, smoke test, pubblicazione                                      |         2-3 |
+|                                                             | **Totale v0.1**                                                                                      |   **34-47** |
 
 La normalizzazione va fatta in entrambi i linguaggi già in **M1**, perché le divergenze Unicode emergono lì. Scoprirle in M4 costerebbe di più.
 
@@ -393,25 +393,25 @@ Dopo la v0.1, in ordine: romagnolo → `mask()` → CLI `scan` → demo web → 
 
 ## 12. Integrazione nei tuoi progetti
 
-| Progetto | Uso |
-|---|---|
-| RuttoFacile | `check()` con `contacts: true` nel route del nickname (`src/app/api/player/nickname/route.ts`), più lo stesso controllo lato client per la risposta immediata. In seguito: le regole aggiunte da admin arrivano dal database tramite `extraRules`. Fino alla v0.1, RuttoFacile usa un filtro interno con le stesse regole, poi passa alla libreria |
-| maraffa-romagnola | Sostituire i due filtri attuali (client `leo-profanity` + `italian-badwords-list`, server con lista a mano) con lo stesso pacchetto, così client e server danno lo stesso esito |
-| Progetti Flutter | `italian_profanity` nei validatori dei form. Se il backend è in Node, il pacchetto npm dà lo stesso esito |
+| Progetto          | Uso                                                                                                                                                                                                                                                                                                                                                |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RuttoFacile       | `check()` con `contacts: true` nel route del nickname (`src/app/api/player/nickname/route.ts`), più lo stesso controllo lato client per la risposta immediata. In seguito: le regole aggiunte da admin arrivano dal database tramite `extraRules`. Fino alla v0.1, RuttoFacile usa un filtro interno con le stesse regole, poi passa alla libreria |
+| maraffa-romagnola | Sostituire i due filtri attuali (client `leo-profanity` + `italian-badwords-list`, server con lista a mano) con lo stesso pacchetto, così client e server danno lo stesso esito                                                                                                                                                                    |
+| Progetti Flutter  | `italian_profanity` nei validatori dei form. Se il backend è in Node, il pacchetto npm dà lo stesso esito                                                                                                                                                                                                                                          |
 
 ---
 
 ## 13. Rischi
 
-| Rischio | Mitigazione |
-|---|---|
-| Falsi positivi su nomi reali | `word` come tipo predefinito, `combo` ancorata, audit su circa 47.000 nomi e cognomi, fixture negative in maggioranza |
-| Elusioni creative | Viste deleet e squeeze, punteggiatura dentro le parole, lettere spaziate, caratteri simili. Le segnalazioni diventano fixture |
-| Divergenza tra JS e Dart | Tabella e dati generati, parità byte per byte in CI, normalizzazione in entrambi già da M1 |
-| Un aggiornamento dei dati blocca testi prima accettati | `behavior-diff` in ogni release, versione fissata dalle app |
-| Licenze | MIT con regole scritte a mano, inventario delle fonti, HurtLex ed EVALITA esclusi |
-| Immagine di un repository pubblico pieno di bestemmie | Nome tecnico e neutro, README professionale, i termini solo dentro `data/` |
-| Manutenzione | Ambito stretto, PR con fixture obbligatorie, audit automatico |
+| Rischio                                                | Mitigazione                                                                                                                   |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| Falsi positivi su nomi reali                           | `word` come tipo predefinito, `combo` ancorata, audit su circa 47.000 nomi e cognomi, fixture negative in maggioranza         |
+| Elusioni creative                                      | Viste deleet e squeeze, punteggiatura dentro le parole, lettere spaziate, caratteri simili. Le segnalazioni diventano fixture |
+| Divergenza tra JS e Dart                               | Tabella e dati generati, parità byte per byte in CI, normalizzazione in entrambi già da M1                                    |
+| Un aggiornamento dei dati blocca testi prima accettati | `behavior-diff` in ogni release, versione fissata dalle app                                                                   |
+| Licenze                                                | MIT con regole scritte a mano, inventario delle fonti, HurtLex ed EVALITA esclusi                                             |
+| Immagine di un repository pubblico pieno di bestemmie  | Nome tecnico e neutro, README professionale, i termini solo dentro `data/`                                                    |
+| Manutenzione                                           | Ambito stretto, PR con fixture obbligatorie, audit automatico                                                                 |
 
 ---
 

@@ -19,11 +19,11 @@ Lingua: codice e identificatori in inglese; commenti, documentazione e messaggi 
 
 ## Comandi (dalla fase M0)
 
-| Comando | Cosa fa |
-|---|---|
-| `pnpm validate` | Schema, unicità degli id, termini già normalizzati, fixture per ogni regola |
-| `pnpm build:data` | Genera la tabella di normalizzazione e i dati per TS e Dart |
-| `pnpm test` | Test TS (Vitest) e Dart (`dart test`) |
-| `pnpm parity` | Esegue le fixture su entrambi i motori e confronta i risultati |
-| `pnpm audit:benign` | Controlla il corpus di nomi, cognomi e parole comuni |
-| `pnpm check` | Tutto quanto sopra più lint: **deve passare prima del merge** |
+| Comando             | Cosa fa                                                                     |
+| ------------------- | --------------------------------------------------------------------------- |
+| `pnpm validate`     | Schema, unicità degli id, termini già normalizzati, fixture per ogni regola |
+| `pnpm build:data`   | Genera la tabella di normalizzazione e i dati per TS e Dart                 |
+| `pnpm test`         | Test TS (Vitest) e Dart (`dart test`)                                       |
+| `pnpm parity`       | Esegue le fixture su entrambi i motori e confronta i risultati              |
+| `pnpm audit:benign` | Controlla il corpus di nomi, cognomi e parole comuni                        |
+| `pnpm check`        | Tutto quanto sopra più lint: **deve passare prima del merge**               |
