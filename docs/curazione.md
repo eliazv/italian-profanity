@@ -37,3 +37,16 @@ Le eccezioni sopprimono solo il match indicato, senza cancellare testo. Un'eccez
 L'audit corrente esegue il filtro su 127.842 input; due falsi positivi combinatori sono corretti con eccezioni e 34 collisioni distinte hanno motivazioni e azioni attese. Questo significa assenza di collisioni **non giustificate**, non assenza assoluta di falsi positivi. L'insieme campionato non rappresenta una prova su utenti reali.
 
 Restano revisione editoriale, altri termini comuni e frasi, consolidamento e prova sul campo senza blocco iniziale. Non si aggiungono regole solo per raggiungere una quota numerica. Dialetti e un nucleo inglese opzionale richiedono curazione dedicata; non vengono dedotti dall'algoritmo.
+
+## Curazione M3 — secondo nucleo (2026-11-03)
+
+Sono state proposte 20 nuove regole (tra lemmi e frasi) e 6 famiglie preesistenti ampliate. L'ampliamento è **manuale**, non una copia di wordlist esterne, ed è accompagnato da fixture positive e negativi vicini in `data/fixtures/mcuration.jsonl`. Le liste LDNOOBW e napolux rimangono strumenti di verifica, non fonti automaticamente incorporate. Il dataset non può essere considerato esaustivo.
+
+- Insulti composti: `pezzo di merda`, `vai a fanculo`, `figlio di troia`, `vai a cagare`; nuove parole come `pirla`, `cornuto`, `paraculo`, `cagasotto`.
+- Volgarità ed espressioni sessuali: forme di `fottere`, `trombare`, `chiavare`, `scopare`, `segaiolo`, `baldracca`, `zoccola`, `battona`, `pompinara` e varianti.
+- Discriminazione: ingiurie specifiche e combinazioni esplicitamente denigratorie; i termini identitari isolati restano neutri.
+- Le espressioni con significati alternativi (`cornuto`, `pirla`, `zoccola`, `trombare` e simili) sono `medium`: `balanced` le segnala per revisione anziché bloccarle automaticamente; le espressioni composte chiaramente ingiuriose sono `high`.
+
+**Omografie individuate in CI:** `recchione`, `recchioni` e `zoccola` compaiono anche tra i cognomi del corpus; sono mantenuti come `medium/review` nel profilo balanced e registrati individualmente in `accepted.jsonl`. Le frasi possono contenere preposizioni monosillabiche, senza rendere permissivo il matcher delle parole singole.
+
+**Da verificare obbligatoriamente prima del merge:** `pnpm check`, `pnpm audit:benign` e la CI GitHub. Ogni collisione aggiuntiva su nomi/cognomi deve essere valutata individualmente; non autorizzare accettazioni indiscriminate. Controllare sul campo gli omografi nominali. I dialetti rimangono pacchetti di curazione separati per una futura iterazione.

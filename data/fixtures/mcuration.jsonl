@@ -1,0 +1,123 @@
+{"id":"mcuration-001","input":"paraculo","profile":"balanced","rules":["it.insult.paraculo"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-002","input":"paracula","profile":"balanced","rules":["it.insult.paraculo"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-003","input":"paraculi","profile":"balanced","rules":["it.insult.paraculo"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-004","input":"paracule","profile":"balanced","rules":["it.insult.paraculo"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-005","input":"superparaculoextra","profile":"balanced","mustNotMatch":["it.insult.paraculo"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-006","input":"cagasotto","profile":"balanced","rules":["it.insult.cagasotto"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-007","input":"cagasotti","profile":"balanced","rules":["it.insult.cagasotto"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-008","input":"supercagasottoextra","profile":"balanced","mustNotMatch":["it.insult.cagasotto"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-009","input":"pirla","profile":"balanced","rules":["it.insult.pirla"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-010","input":"pirli","profile":"balanced","rules":["it.insult.pirla"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-011","input":"pirle","profile":"balanced","rules":["it.insult.pirla"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-012","input":"superpirlaextra","profile":"balanced","mustNotMatch":["it.insult.pirla"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-013","input":"cornuto","profile":"balanced","rules":["it.insult.cornuto"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-014","input":"cornuta","profile":"balanced","rules":["it.insult.cornuto"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-015","input":"cornuti","profile":"balanced","rules":["it.insult.cornuto"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-016","input":"cornute","profile":"balanced","rules":["it.insult.cornuto"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-017","input":"supercornutoextra","profile":"balanced","mustNotMatch":["it.insult.cornuto"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-018","input":"fottere","profile":"balanced","rules":["it.sexual.fottere"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-019","input":"fottersi","profile":"balanced","rules":["it.sexual.fottere"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-020","input":"fottuto","profile":"balanced","rules":["it.sexual.fottere"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-021","input":"fottuta","profile":"balanced","rules":["it.sexual.fottere"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-022","input":"fottuti","profile":"balanced","rules":["it.sexual.fottere"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-023","input":"fottute","profile":"balanced","rules":["it.sexual.fottere"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-024","input":"fottiti","profile":"balanced","rules":["it.sexual.fottere"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-025","input":"fottetevi","profile":"balanced","rules":["it.sexual.fottere"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-026","input":"superfottereextra","profile":"balanced","mustNotMatch":["it.sexual.fottere"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-027","input":"chiavare","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-028","input":"chiavata","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-029","input":"chiavate","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-030","input":"chiavato","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-031","input":"chiavati","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-032","input":"superchiavareextra","profile":"balanced","mustNotMatch":["it.sexual.chiavare"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-033","input":"trombare","profile":"balanced","rules":["it.sexual.trombare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-034","input":"trombata","profile":"balanced","rules":["it.sexual.trombare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-035","input":"trombate","profile":"balanced","rules":["it.sexual.trombare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-036","input":"trombato","profile":"balanced","rules":["it.sexual.trombare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-037","input":"trombati","profile":"balanced","rules":["it.sexual.trombare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-038","input":"trombando","profile":"balanced","rules":["it.sexual.trombare"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-039","input":"supertrombareextra","profile":"balanced","mustNotMatch":["it.sexual.trombare"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-040","input":"segaiolo","profile":"balanced","rules":["it.sexual.segaiolo"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-041","input":"segaiola","profile":"balanced","rules":["it.sexual.segaiolo"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-042","input":"segaioli","profile":"balanced","rules":["it.sexual.segaiolo"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-043","input":"segaiole","profile":"balanced","rules":["it.sexual.segaiolo"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-044","input":"supersegaioloextra","profile":"balanced","mustNotMatch":["it.sexual.segaiolo"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-045","input":"baldracca","profile":"balanced","rules":["it.sexual.baldracca"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-046","input":"baldracche","profile":"balanced","rules":["it.sexual.baldracca"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-047","input":"baldraccone","profile":"balanced","rules":["it.sexual.baldracca"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-048","input":"superbaldraccaextra","profile":"balanced","mustNotMatch":["it.sexual.baldracca"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-049","input":"zoccola","profile":"balanced","rules":["it.sexual.zoccola"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-050","input":"zoccole","profile":"balanced","rules":["it.sexual.zoccola"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-051","input":"superzoccolaextra","profile":"balanced","mustNotMatch":["it.sexual.zoccola"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-052","input":"battona","profile":"balanced","rules":["it.sexual.battona"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-053","input":"battone","profile":"balanced","rules":["it.sexual.battona"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-054","input":"superbattonaextra","profile":"balanced","mustNotMatch":["it.sexual.battona"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-055","input":"succhiacazzi","profile":"balanced","rules":["it.sexual.succhiacazzi"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-056","input":"supersucchiacazziextra","profile":"balanced","mustNotMatch":["it.sexual.succhiacazzi"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-057","input":"pompinara","profile":"balanced","rules":["it.sexual.pompinara"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-058","input":"pompinare","profile":"balanced","rules":["it.sexual.pompinara"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-059","input":"pompinaro","profile":"balanced","rules":["it.sexual.pompinara"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-060","input":"pompinari","profile":"balanced","rules":["it.sexual.pompinara"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-061","input":"superpompinaraextra","profile":"balanced","mustNotMatch":["it.sexual.pompinara"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-062","input":"cazzarola","profile":"balanced","rules":["it.vulgar.cazzarola"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-063","input":"cazzarole","profile":"balanced","rules":["it.vulgar.cazzarola"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-064","input":"supercazzarolaextra","profile":"balanced","mustNotMatch":["it.vulgar.cazzarola"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-065","input":"recchione","profile":"balanced","rules":["it.discriminatory.recchione"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-066","input":"recchioni","profile":"balanced","rules":["it.discriminatory.recchione"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-067","input":"ricchione","profile":"balanced","rules":["it.discriminatory.recchione"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-068","input":"ricchioni","profile":"balanced","rules":["it.discriminatory.recchione"],"note":"Forma nuova: parola intera"}
+{"id":"mcuration-069","input":"superrecchioneextra","profile":"balanced","mustNotMatch":["it.discriminatory.recchione"],"note":"Radice contenuta in una parola più lunga: non bloccare per sottostringa"}
+{"id":"mcuration-070","input":"pezzo di merda","profile":"balanced","rules":["it.insult.pezzo-di-merda"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-071","input":"pezzi di merda","profile":"balanced","rules":["it.insult.pezzo-di-merda"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-072","input":"superpezzo di merda","profile":"balanced","mustNotMatch":["it.insult.pezzo-di-merda"],"note":"Frase non valida quando il primo token è un nome più lungo"}
+{"id":"mcuration-073","input":"vai a fanculo","profile":"balanced","rules":["it.insult.vai-a-fanculo"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-074","input":"andate a fanculo","profile":"balanced","rules":["it.insult.vai-a-fanculo"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-075","input":"supervai a fanculo","profile":"balanced","mustNotMatch":["it.insult.vai-a-fanculo"],"note":"Frase non valida quando il primo token è un nome più lungo"}
+{"id":"mcuration-076","input":"figlio di troia","profile":"balanced","rules":["it.insult.figlio-di-troia"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-077","input":"figli di troia","profile":"balanced","rules":["it.insult.figlio-di-troia"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-078","input":"superfiglio di troia","profile":"balanced","mustNotMatch":["it.insult.figlio-di-troia"],"note":"Frase non valida quando il primo token è un nome più lungo"}
+{"id":"mcuration-079","input":"vai a cagare","profile":"balanced","rules":["it.insult.vai-a-cagare"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-080","input":"andate a cagare","profile":"balanced","rules":["it.insult.vai-a-cagare"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-081","input":"supervai a cagare","profile":"balanced","mustNotMatch":["it.insult.vai-a-cagare"],"note":"Frase non valida quando il primo token è un nome più lungo"}
+{"id":"mcuration-082","input":"sporco ebreo","profile":"balanced","rules":["it.discriminatory.ingiuria-identitaria"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-083","input":"sporchi ebrei","profile":"balanced","rules":["it.discriminatory.ingiuria-identitaria"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-084","input":"negro di merda","profile":"balanced","rules":["it.discriminatory.ingiuria-identitaria"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-085","input":"zingaro di merda","profile":"balanced","rules":["it.discriminatory.ingiuria-identitaria"],"note":"Frase esplicita, parole intere adiacenti"}
+{"id":"mcuration-086","input":"supersporco ebreo","profile":"balanced","mustNotMatch":["it.discriminatory.ingiuria-identitaria"],"note":"Frase non valida quando il primo token è un nome più lungo"}
+{"id":"mcuration-087","input":"scopare","profile":"balanced","rules":["it.sexual.scopata"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-088","input":"superscopareextra","profile":"balanced","mustNotMatch":["it.sexual.scopata"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-089","input":"scopando","profile":"balanced","rules":["it.sexual.scopata"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-090","input":"superscopandoextra","profile":"balanced","mustNotMatch":["it.sexual.scopata"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-091","input":"scopato","profile":"balanced","rules":["it.sexual.scopata"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-092","input":"superscopatoextra","profile":"balanced","mustNotMatch":["it.sexual.scopata"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-093","input":"scopati","profile":"balanced","rules":["it.sexual.scopata"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-094","input":"superscopatiextra","profile":"balanced","mustNotMatch":["it.sexual.scopata"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-095","input":"troiona","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-096","input":"supertroionaextra","profile":"balanced","mustNotMatch":["it.sexual.troia"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-097","input":"troione","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-098","input":"supertroioneextra","profile":"balanced","mustNotMatch":["it.sexual.troia"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-099","input":"troioni","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-100","input":"supertroioniextra","profile":"balanced","mustNotMatch":["it.sexual.troia"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-101","input":"rompicazzo","profile":"balanced","rules":["it.insult.rompipalle"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-102","input":"superrompicazzoextra","profile":"balanced","mustNotMatch":["it.insult.rompipalle"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-103","input":"rompicazzi","profile":"balanced","rules":["it.insult.rompipalle"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-104","input":"superrompicazziextra","profile":"balanced","mustNotMatch":["it.insult.rompipalle"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-105","input":"affanculo","profile":"balanced","rules":["it.insult.fanculo"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-106","input":"superaffanculoextra","profile":"balanced","mustNotMatch":["it.insult.fanculo"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-107","input":"merdaccia","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-108","input":"supermerdacciaextra","profile":"balanced","mustNotMatch":["it.vulgar.merda"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-109","input":"merdacce","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-110","input":"supermerdacceextra","profile":"balanced","mustNotMatch":["it.vulgar.merda"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-111","input":"cacare","profile":"balanced","rules":["it.vulgar.cagare"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-112","input":"supercacareextra","profile":"balanced","mustNotMatch":["it.vulgar.cagare"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-113","input":"cacata","profile":"balanced","rules":["it.vulgar.cagare"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-114","input":"supercacataextra","profile":"balanced","mustNotMatch":["it.vulgar.cagare"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-115","input":"cacate","profile":"balanced","rules":["it.vulgar.cagare"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-116","input":"supercacateextra","profile":"balanced","mustNotMatch":["it.vulgar.cagare"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-117","input":"cacato","profile":"balanced","rules":["it.vulgar.cagare"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-118","input":"supercacatoextra","profile":"balanced","mustNotMatch":["it.vulgar.cagare"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-119","input":"cacati","profile":"balanced","rules":["it.vulgar.cagare"],"note":"Nuova flessione di regola esistente"}
+{"id":"mcuration-120","input":"supercacatiextra","profile":"balanced","mustNotMatch":["it.vulgar.cagare"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-121","input":"Recchione","profile":"balanced","action":"review","rules":["it.discriminatory.recchione"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}
+{"id":"mcuration-122","input":"Recchioni","profile":"balanced","action":"review","rules":["it.discriminatory.recchione"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}
+{"id":"mcuration-123","input":"Zoccola","profile":"balanced","action":"review","rules":["it.sexual.zoccola"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}

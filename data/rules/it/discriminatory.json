@@ -40,6 +40,31 @@
       "terms": ["terrone", "terrona", "terroni"],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+    },
+    {
+      "id": "it.discriminatory.recchione",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["recchione", "recchioni", "ricchione", "ricchioni"],
+      "provenance": ["manual"],
+      "note": "Insulto esplicito, ma esistono i cognomi Recchione/Recchioni: review in balanced; non blocco automatico del solo cognome."
+    },
+    {
+      "id": "it.discriminatory.ingiuria-identitaria",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["sporco", "ebreo"],
+        ["sporchi", "ebrei"],
+        ["negro", "di", "merda"],
+        ["zingaro", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
     }
   ]
 }

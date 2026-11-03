@@ -7,7 +7,18 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["merda", "merde", "merdoso", "merdosa", "merdosi", "merdose", "merdata", "merdate"],
+      "terms": [
+        "merda",
+        "merde",
+        "merdoso",
+        "merdosa",
+        "merdosi",
+        "merdose",
+        "merdata",
+        "merdate",
+        "merdaccia",
+        "merdacce"
+      ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -28,7 +39,12 @@
         "cago",
         "caghi",
         "caga",
-        "cagano"
+        "cagano",
+        "cacare",
+        "cacata",
+        "cacate",
+        "cacato",
+        "cacati"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -157,6 +173,16 @@
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.cazzarola",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["cazzarola", "cazzarole"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     }
   ]
 }

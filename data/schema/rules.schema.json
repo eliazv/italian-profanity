@@ -83,7 +83,7 @@
               "items": {
                 "type": "array",
                 "minItems": 2,
-                "items": { "$ref": "#/$defs/term" }
+                "items": { "type": "string", "pattern": "^[a-z]+$", "minLength": 1 }
               }
             }
           }
