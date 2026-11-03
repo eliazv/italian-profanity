@@ -2,9 +2,11 @@
 
 [![CI](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml/badge.svg)](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml) · [Licenza MIT](LICENSE)
 
+[![npm beta](https://img.shields.io/npm/v/italian-profanity/beta?label=npm)](https://www.npmjs.com/package/italian-profanity) [![pub.dev](https://img.shields.io/pub/v/italian_profanity?include_prereleases&label=pub.dev)](https://pub.dev/packages/italian_profanity)
+
 Italian-first profanity detection for short user-generated text — nicknames, usernames, room and team names. Same rules and same verdicts in **TypeScript** and **Dart/Flutter**.
 
-> Beta 0.1.0-beta.0 per integrazioni sperimentali.
+> Beta 0.1.0-beta.1 per integrazioni sperimentali.
 
 Current status: first integration beta, with detection and policy APIs in both engines. The first curated Italian core has 65 rules and 244 declared word/prefix/compound forms, plus phrases and blasphemy combinations.
 
@@ -55,12 +57,12 @@ Keywords: profanity, italian, parolacce, bestemmie, insulti, moderation, nicknam
 ## Installazione della beta
 
 ```sh
-npm install --save-exact italian-profanity@0.1.0-beta.0
+npm install --save-exact italian-profanity@0.1.0-beta.1
 ```
 
 ```yaml
 dependencies:
-  italian_profanity: 0.1.0-beta.0
+  italian_profanity: 0.1.0-beta.1
 ```
 
 La [guida d'integrazione](docs/integrazione.md) descrive configurazione condivisa client/server, gestione di `review`, limiti e migrazione dei vecchi filtri. Il nucleo inglese minimo va attivato con `languages: ["it", "en"]`; non sostituisce una wordlist inglese completa.

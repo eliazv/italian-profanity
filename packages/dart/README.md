@@ -1,12 +1,16 @@
 # italian_profanity
 
+[![pub.dev](https://img.shields.io/pub/v/italian_profanity?include_prereleases&label=pub.dev)](https://pub.dev/packages/italian_profanity) [![npm beta](https://img.shields.io/npm/v/italian-profanity/beta?label=JavaScript%2FTypeScript)](https://www.npmjs.com/package/italian-profanity)
+
+[Repository](https://github.com/eliazv/italian-profanity) · [Guida d'integrazione](https://github.com/eliazv/italian-profanity/blob/master/docs/integrazione.md) · [Segnalazioni](https://github.com/eliazv/italian-profanity/issues/new/choose) · [Changelog](https://github.com/eliazv/italian-profanity/blob/master/packages/dart/CHANGELOG.md)
+
 Italian-first profanity detection for nicknames and short text, for Dart and Flutter. The npm package [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) gives the same verdicts.
 
-> Beta 0.1.0-beta.0 per integrazioni sperimentali.
+> Beta 0.1.0-beta.1 per integrazioni sperimentali.
 
 ```yaml
 dependencies:
-  italian_profanity: 0.1.0-beta.0
+  italian_profanity: 0.1.0-beta.1
 ```
 
 Libreria per riconoscere bestemmie, insulti e volgarità in italiano in nickname e testi brevi.
