@@ -118,3 +118,6 @@
 {"id":"mcuration-118","input":"supercacatoextra","profile":"balanced","mustNotMatch":["it.vulgar.cagare"],"note":"Test negativo vicino su forma aggiunta"}
 {"id":"mcuration-119","input":"cacati","profile":"balanced","rules":["it.vulgar.cagare"],"note":"Nuova flessione di regola esistente"}
 {"id":"mcuration-120","input":"supercacatiextra","profile":"balanced","mustNotMatch":["it.vulgar.cagare"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-121","input":"Recchione","profile":"balanced","action":"review","rules":["it.discriminatory.recchione"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}
+{"id":"mcuration-122","input":"Recchioni","profile":"balanced","action":"review","rules":["it.discriminatory.recchione"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}
+{"id":"mcuration-123","input":"Zoccola","profile":"balanced","action":"review","rules":["it.sexual.zoccola"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}

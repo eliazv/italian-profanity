@@ -71,7 +71,7 @@
       "kind": "word",
       "category": "discriminatory",
       "severity": 3,
-      "confidence": "high",
+      "confidence": "medium",
       "terms": [
         "recchione",
         "recchioni",
@@ -81,7 +81,7 @@
       "provenance": [
         "manual"
       ],
-      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+      "note": "Insulto esplicito, ma esistono i cognomi Recchione/Recchioni: review in balanced; non blocco automatico del solo cognome."
     },
     {
       "id": "it.discriminatory.ingiuria-identitaria",

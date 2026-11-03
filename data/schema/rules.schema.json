@@ -4,11 +4,20 @@
   "title": "File di regole",
   "description": "Regole lessicali. Vedi SPECIFICHE.md §5.",
   "type": "object",
-  "required": ["rules"],
+  "required": [
+    "rules"
+  ],
   "additionalProperties": false,
   "properties": {
-    "$schema": { "type": "string" },
-    "rules": { "type": "array", "items": { "$ref": "#/$defs/rule" } }
+    "$schema": {
+      "type": "string"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    }
   },
   "$defs": {
     "term": {
@@ -19,29 +28,67 @@
     },
     "terms": {
       "type": "array",
-      "items": { "$ref": "#/$defs/term" },
+      "items": {
+        "$ref": "#/$defs/term"
+      },
       "minItems": 1,
       "uniqueItems": true
     },
     "base": {
       "type": "object",
-      "required": ["id", "kind", "category", "severity", "confidence", "provenance"],
+      "required": [
+        "id",
+        "kind",
+        "category",
+        "severity",
+        "confidence",
+        "provenance"
+      ],
       "properties": {
         "id": {
           "description": "Stabile: compare nei risultati e nei changelog. Formato lingua.categoria.nome.",
           "type": "string",
           "pattern": "^(it|en)\\.(blasphemy|insult|sexual|discriminatory|vulgar)\\.[a-z0-9]+(-[a-z0-9]+)*$"
         },
-        "kind": { "enum": ["word", "prefix", "phrase", "compound", "combo"] },
-        "category": {
-          "enum": ["blasphemy", "insult", "sexual", "discriminatory", "vulgar"]
+        "kind": {
+          "enum": [
+            "word",
+            "prefix",
+            "phrase",
+            "compound",
+            "combo"
+          ]
         },
-        "severity": { "description": "1 lieve · 2 volgare · 3 grave", "enum": [1, 2, 3] },
-        "confidence": { "enum": ["high", "medium"] },
+        "category": {
+          "enum": [
+            "blasphemy",
+            "insult",
+            "sexual",
+            "discriminatory",
+            "vulgar"
+          ]
+        },
+        "severity": {
+          "description": "1 lieve · 2 volgare · 3 grave",
+          "enum": [
+            1,
+            2,
+            3
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium"
+          ]
+        },
         "provenance": {
           "description": "Origine del dato: manual oppure fonte@commit registrata in data/sources.json. Solo per i curatori.",
           "type": "array",
-          "items": { "type": "string", "pattern": "^(manual|[a-z0-9-]+@[0-9a-f]{7,40})$" },
+          "items": {
+            "type": "string",
+            "pattern": "^(manual|[a-z0-9-]+@[0-9a-f]{7,40})$"
+          },
           "minItems": 1,
           "uniqueItems": true
         },
@@ -55,67 +102,138 @@
       "oneOf": [
         {
           "description": "Parola intera uguale a una delle forme elencate.",
-          "allOf": [{ "$ref": "#/$defs/base" }],
+          "allOf": [
+            {
+              "$ref": "#/$defs/base"
+            }
+          ],
           "type": "object",
-          "required": ["terms"],
+          "required": [
+            "terms"
+          ],
           "unevaluatedProperties": false,
-          "properties": { "kind": { "const": "word" }, "terms": { "$ref": "#/$defs/terms" } }
+          "properties": {
+            "kind": {
+              "const": "word"
+            },
+            "terms": {
+              "$ref": "#/$defs/terms"
+            }
+          }
         },
         {
           "description": "Parola che inizia con il termine. Raro: richiede una nota di giustificazione.",
-          "allOf": [{ "$ref": "#/$defs/base" }],
+          "allOf": [
+            {
+              "$ref": "#/$defs/base"
+            }
+          ],
           "type": "object",
-          "required": ["terms", "note"],
+          "required": [
+            "terms",
+            "note"
+          ],
           "unevaluatedProperties": false,
-          "properties": { "kind": { "const": "prefix" }, "terms": { "$ref": "#/$defs/terms" } }
+          "properties": {
+            "kind": {
+              "const": "prefix"
+            },
+            "terms": {
+              "$ref": "#/$defs/terms"
+            }
+          }
         },
         {
           "description": "Sequenza di parole intere.",
-          "allOf": [{ "$ref": "#/$defs/base" }],
+          "allOf": [
+            {
+              "$ref": "#/$defs/base"
+            }
+          ],
           "type": "object",
-          "required": ["phrases"],
+          "required": [
+            "phrases"
+          ],
           "unevaluatedProperties": false,
           "properties": {
-            "kind": { "const": "phrase" },
+            "kind": {
+              "const": "phrase"
+            },
             "phrases": {
               "type": "array",
               "minItems": 1,
               "items": {
                 "type": "array",
                 "minItems": 2,
-                "items": { "$ref": "#/$defs/term" }
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z]+$",
+                  "minLength": 1
+                }
               }
             }
           }
         },
         {
           "description": "Composto noto dentro una sola parola, ancorato all'inizio e/o alla fine.",
-          "allOf": [{ "$ref": "#/$defs/base" }],
+          "allOf": [
+            {
+              "$ref": "#/$defs/base"
+            }
+          ],
           "type": "object",
-          "required": ["terms", "anchor"],
+          "required": [
+            "terms",
+            "anchor"
+          ],
           "unevaluatedProperties": false,
           "properties": {
-            "kind": { "const": "compound" },
-            "terms": { "$ref": "#/$defs/terms" },
-            "anchor": { "enum": ["start", "end", "both"] }
+            "kind": {
+              "const": "compound"
+            },
+            "terms": {
+              "$ref": "#/$defs/terms"
+            },
+            "anchor": {
+              "enum": [
+                "start",
+                "end",
+                "both"
+              ]
+            }
           }
         },
         {
           "description": "Bestemmie: concetto divino (a) adiacente a un insulto (b). Vedi SPECIFICHE.md §5.2.",
-          "allOf": [{ "$ref": "#/$defs/base" }],
+          "allOf": [
+            {
+              "$ref": "#/$defs/base"
+            }
+          ],
           "type": "object",
-          "required": ["a", "b"],
+          "required": [
+            "a",
+            "b"
+          ],
           "unevaluatedProperties": false,
           "properties": {
-            "kind": { "const": "combo" },
-            "a": { "$ref": "#/$defs/terms" },
+            "kind": {
+              "const": "combo"
+            },
+            "a": {
+              "$ref": "#/$defs/terms"
+            },
             "b": {
               "type": "object",
               "additionalProperties": false,
               "minProperties": 1,
               "properties": {
-                "forms": { "$ref": "#/$defs/terms" },
-                "prefixes": { "$ref": "#/$defs/terms" }
+                "forms": {
+                  "$ref": "#/$defs/terms"
+                },
+                "prefixes": {
+                  "$ref": "#/$defs/terms"
+                }
               }
             }
           }

@@ -47,4 +47,6 @@ Sono state proposte 20 nuove regole (tra lemmi e frasi) e 6 famiglie preesistent
 - Discriminazione: ingiurie specifiche e combinazioni esplicitamente denigratorie; i termini identitari isolati restano neutri.
 - Le espressioni con significati alternativi (`cornuto`, `pirla`, `zoccola`, `trombare` e simili) sono `medium`: `balanced` le segnala per revisione anziché bloccarle automaticamente; le espressioni composte chiaramente ingiuriose sono `high`.
 
+**Omografie individuate in CI:** `recchione`, `recchioni` e `zoccola` compaiono anche tra i cognomi del corpus; sono mantenuti come `medium/review` nel profilo balanced e registrati individualmente in `accepted.jsonl`. Le frasi possono contenere preposizioni monosillabiche, senza rendere permissivo il matcher delle parole singole.
+
 **Da verificare obbligatoriamente prima del merge:** `pnpm check`, `pnpm audit:benign` e la CI GitHub. Ogni collisione aggiuntiva su nomi/cognomi deve essere valutata individualmente; non autorizzare accettazioni indiscriminate. Controllare sul campo gli omografi nominali. I dialetti rimangono pacchetti di curazione separati per una futura iterazione.
