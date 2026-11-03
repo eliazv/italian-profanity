@@ -24,11 +24,18 @@ for (const api of [esm, cjs]) {
   for (const example of adoptionFixtures) {
     const result = api.check(example.input, example)
     assert.equal(result.action, example.action, example.id)
-    if (example.expectedMatches) assert.deepEqual(result.matches, example.expectedMatches, example.id)
+    if (example.expectedMatches)
+      assert.deepEqual(result.matches, example.expectedMatches, example.id)
     for (const ruleId of example.rules ?? [])
-      assert.ok(result.matches.some((match) => match.ruleId === ruleId), example.id)
+      assert.ok(
+        result.matches.some((match) => match.ruleId === ruleId),
+        example.id,
+      )
     for (const ruleId of example.mustNotMatch ?? [])
-      assert.ok(result.matches.every((match) => match.ruleId !== ruleId), example.id)
+      assert.ok(
+        result.matches.every((match) => match.ruleId !== ruleId),
+        example.id,
+      )
   }
 }
 console.log("✓ API ESM/CJS compilata: rilevamento, policy, offset e fixture di adozione verificati")
