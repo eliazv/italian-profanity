@@ -7,12 +7,12 @@ La prima versione è una beta: prima del passaggio in produzione confrontare i r
 Le istruzioni seguenti si riferiscono alla beta preparata nel repository; funzionano dopo la sua pubblicazione sui rispettivi registri.
 
 ```sh
-npm install --save-exact italian-profanity@0.1.0-beta.0
+npm install --save-exact italian-profanity@0.1.0-beta.1
 ```
 
 ```yaml
 dependencies:
-  italian_profanity: 0.1.0-beta.0
+  italian_profanity: 0.1.0-beta.1
 ```
 
 ## Policy senza coda di moderazione

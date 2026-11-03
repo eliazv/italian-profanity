@@ -1,7 +1,7 @@
 {
   "name": "italian-profanity",
-  "version": "0.1.0-beta.0",
-  "description": "Italian-first profanity detection for nicknames and short text: blasphemy-aware, evasion-resistant, precision-focused. Same verdicts as the Dart package.",
+  "version": "0.1.0-beta.1",
+  "description": "Italian profanity detection for nicknames and short text. Blasphemy-aware, offline, zero runtime dependencies. Matching TypeScript and Dart/Flutter engines.",
   "keywords": [
     "profanity",
     "italian",
@@ -9,10 +9,17 @@
     "parolacce",
     "bestemmie",
     "badwords",
+    "profanity-filter",
+    "content-moderation",
     "moderation",
     "nickname",
     "username",
-    "validation"
+    "validation",
+    "typescript",
+    "javascript",
+    "dart",
+    "flutter",
+    "offline"
   ],
   "license": "MIT",
   "author": "Elia Zavatta (https://eliazavatta.it)",
