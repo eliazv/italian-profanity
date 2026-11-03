@@ -1,4 +1,6 @@
 # italian-profanity — analisi e specifiche
+> **Revisione tecnica del 03/11/2026:** [docs/REVISIONE-2026-11-03.md](docs/REVISIONE-2026-11-03.md). La revisione aggiunge nuove fonti, corregge alcuni rischi del matcher e propone un MVP più rigoroso. In caso di divergenza su algoritmo, allowlist, normalizzazione Dart, lingue predefinite, test, licenze e stima, **prevale la revisione** fino al consolidamento delle specifiche.
+
 
 > Libreria per riconoscere parolacce, bestemmie e insulti **in italiano** in testi brevi (nickname, nomi di stanze, team, titoli), con due implementazioni allineate: **JavaScript/TypeScript** (npm) e **Dart** (pub.dev, per Flutter e server).
 >
