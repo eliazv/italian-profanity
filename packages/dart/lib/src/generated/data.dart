@@ -1,8 +1,8 @@
 // File generato da tools/build.ts a partire da data/: non modificare a mano.
 // ignore_for_file: lines_longer_than_80_chars
 
-const String version = '0.0.0';
-const String dataVersion = 'b2403176fb54';
+const String version = '0.1.0-beta.0';
+const String dataVersion = 'a9796defa04d';
 
 /// Tabella di normalizzazione condivisa con il pacchetto TypeScript (SPECIFICHE.md §4.4).
 const Map<String, String> foldTable = {
@@ -864,6 +864,33 @@ const Map<String, String> leetTable = {
 };
 
 const List<Map<String, Object>> rulesData = [
+  {
+    'id': 'en.insult.bitch',
+    'kind': 'word',
+    'category': 'insult',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['bitch', 'bitches'],
+    'language': 'en',
+  },
+  {
+    'id': 'en.vulgar.fuck',
+    'kind': 'word',
+    'category': 'vulgar',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['fuck', 'fucks', 'fucked', 'fucking', 'fucker', 'fuckers'],
+    'language': 'en',
+  },
+  {
+    'id': 'en.vulgar.shit',
+    'kind': 'word',
+    'category': 'vulgar',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['shit', 'shits', 'shitty', 'bullshit'],
+    'language': 'en',
+  },
   {
     'id': 'it.blasphemy.divine-insult',
     'kind': 'combo',

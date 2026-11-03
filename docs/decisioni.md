@@ -99,3 +99,9 @@ L'obiettivo rimane ridurre i falsi positivi sui nomi, ma il prodotto non promett
 ## D20 · Contatti attivati e soglie esplicite — 2026-11-03
 
 Precisa D11: quando l'app attiva `contacts`, URL, email e telefoni riconosciuti producono `block` con tutti i profili predefiniti, anche `lenient`. La scelta è indipendente dalla tolleranza lessicale. Una soglia esplicita per `contact`, anche `null`, permette all'app di cambiarla. Le soglie esplicite prevalgono sul profilo per ogni categoria senza eliminare i match. Il rilevatore di contatti è euristico e opera sul testo originale troncato.
+
+## D21 · Prima beta per integrazione — 2026-11-03
+
+Su richiesta del manutentore si prepara `0.1.0-beta.0` per npm e pub.dev, con versioni allineate e tag npm `beta`. La beta serve alla prova di integrazione prevista dalla roadmap e non dichiara completate M3–M6 o la validazione sul campo. La v0.1 stabile resta subordinata ai criteri già definiti. L'inglese resta disattivato per default (D9): il primo nucleo opzionale comprende tre famiglie curate manualmente, con fixture e audit, senza promettere equivalenza con liste esterne. I dialetti restano rinviati.
+
+La migrazione rimuove i filtri precedenti solo dopo confronto di copertura e prova comparativa. `review` può essere consentito dall'app, ma questa scelta non coincide con `isClean()`.

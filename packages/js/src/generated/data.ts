@@ -1,8 +1,8 @@
 // File generato da tools/build.ts a partire da data/: non modificare a mano.
 import type { CompiledException, CompiledRule } from "../types.ts"
 
-export const VERSION = "0.0.0"
-export const DATA_VERSION = "b2403176fb54"
+export const VERSION = "0.1.0-beta.0"
+export const DATA_VERSION = "a9796defa04d"
 
 /** Tabella di normalizzazione condivisa con il pacchetto Dart (SPECIFICHE.md §4.4). */
 export const FOLD: Readonly<Record<string, string>> = {
@@ -864,6 +864,33 @@ export const LEET: Readonly<Record<string, string>> = {
 }
 
 export const RULES: readonly CompiledRule[] = [
+  {
+    "id": "en.insult.bitch",
+    "kind": "word",
+    "category": "insult",
+    "severity": 2,
+    "confidence": "high",
+    "terms": ["bitch", "bitches"],
+    "language": "en",
+  },
+  {
+    "id": "en.vulgar.fuck",
+    "kind": "word",
+    "category": "vulgar",
+    "severity": 2,
+    "confidence": "high",
+    "terms": ["fuck", "fucks", "fucked", "fucking", "fucker", "fuckers"],
+    "language": "en",
+  },
+  {
+    "id": "en.vulgar.shit",
+    "kind": "word",
+    "category": "vulgar",
+    "severity": 2,
+    "confidence": "high",
+    "terms": ["shit", "shits", "shitty", "bullshit"],
+    "language": "en",
+  },
   {
     "id": "it.blasphemy.divine-insult",
     "kind": "combo",
