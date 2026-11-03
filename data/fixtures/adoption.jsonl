@@ -1,0 +1,29 @@
+{"id":"adoption-001","profile":"balanced","input":"fuck","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"adoption-002","profile":"balanced","input":"fucks","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"adoption-003","profile":"balanced","input":"fucked","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"adoption-004","profile":"balanced","input":"fucking","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"adoption-005","profile":"balanced","input":"fucker","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"adoption-006","profile":"balanced","input":"fuckers","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"adoption-007","profile":"balanced","input":"superfuckextra","languages":["it","en"],"action":"allow","mustNotMatch":["en.vulgar.fuck"]}
+{"id":"adoption-008","profile":"balanced","input":"fuck","action":"allow","mustNotMatch":["en.vulgar.fuck"],"note":"Il nucleo inglese ? disattivato per default."}
+{"id":"adoption-009","profile":"balanced","input":"shit","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"adoption-010","profile":"balanced","input":"shits","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"adoption-011","profile":"balanced","input":"shitty","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"adoption-012","profile":"balanced","input":"bullshit","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"adoption-013","profile":"balanced","input":"supershitextra","languages":["it","en"],"action":"allow","mustNotMatch":["en.vulgar.shit"]}
+{"id":"adoption-014","profile":"balanced","input":"shit","action":"allow","mustNotMatch":["en.vulgar.shit"],"note":"Il nucleo inglese ? disattivato per default."}
+{"id":"adoption-015","profile":"balanced","input":"bitch","languages":["it","en"],"action":"block","rules":["en.insult.bitch"]}
+{"id":"adoption-016","profile":"balanced","input":"bitches","languages":["it","en"],"action":"block","rules":["en.insult.bitch"]}
+{"id":"adoption-017","profile":"balanced","input":"superbitchextra","languages":["it","en"],"action":"allow","mustNotMatch":["en.insult.bitch"]}
+{"id":"adoption-018","profile":"balanced","input":"bitch","action":"allow","mustNotMatch":["en.insult.bitch"],"note":"Il nucleo inglese ? disattivato per default."}
+{"id":"adoption-019","profile":"balanced","input":"Ignazio","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Nome convenzionale o termine neutro: nessun controllo per sottostringa."}
+{"id":"adoption-020","profile":"balanced","input":"Troiani","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Nome convenzionale o termine neutro: nessun controllo per sottostringa."}
+{"id":"adoption-021","profile":"balanced","input":"Claudio","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Nome convenzionale o termine neutro: nessun controllo per sottostringa."}
+{"id":"adoption-022","profile":"balanced","input":"Diodato","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Nome convenzionale o termine neutro: nessun controllo per sottostringa."}
+{"id":"adoption-023","profile":"balanced","input":"Porcedda","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Nome convenzionale o termine neutro: nessun controllo per sottostringa."}
+{"id":"adoption-024","profile":"balanced","input":"dio","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Nome convenzionale o termine neutro: nessun controllo per sottostringa."}
+{"id":"adoption-025","profile":"balanced","input":"D10 p0rc0","languages":["it","en"],"action":"block","note":"Elusione da riconoscere in entrambi i motori."}
+{"id":"adoption-026","profile":"balanced","input":"c a z z o","languages":["it","en"],"action":"block","note":"Elusione da riconoscere in entrambi i motori."}
+{"id":"adoption-027","profile":"balanced","input":"f.u.c.k","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"adoption-028","profile":"balanced","input":"sh1t","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"adoption-029","profile":"balanced","input":"b1tch","languages":["it","en"],"action":"block","rules":["en.insult.bitch"]}

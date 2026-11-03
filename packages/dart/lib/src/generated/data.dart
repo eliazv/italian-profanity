@@ -1,8 +1,8 @@
 // File generato da tools/build.ts a partire da data/: non modificare a mano.
 // ignore_for_file: lines_longer_than_80_chars
 
-const String version = '0.0.0';
-const String dataVersion = '0abdd04486ce';
+const String version = '0.1.0-beta.0';
+const String dataVersion = 'a9796defa04d';
 
 /// Tabella di normalizzazione condivisa con il pacchetto TypeScript (SPECIFICHE.md §4.4).
 const Map<String, String> foldTable = {
@@ -865,6 +865,33 @@ const Map<String, String> leetTable = {
 
 const List<Map<String, Object>> rulesData = [
   {
+    'id': 'en.insult.bitch',
+    'kind': 'word',
+    'category': 'insult',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['bitch', 'bitches'],
+    'language': 'en',
+  },
+  {
+    'id': 'en.vulgar.fuck',
+    'kind': 'word',
+    'category': 'vulgar',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['fuck', 'fucks', 'fucked', 'fucking', 'fucker', 'fuckers'],
+    'language': 'en',
+  },
+  {
+    'id': 'en.vulgar.shit',
+    'kind': 'word',
+    'category': 'vulgar',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['shit', 'shits', 'shitty', 'bullshit'],
+    'language': 'en',
+  },
+  {
     'id': 'it.blasphemy.divine-insult',
     'kind': 'combo',
     'category': 'blasphemy',
@@ -896,12 +923,35 @@ const List<Map<String, Object>> rulesData = [
     'language': 'it',
   },
   {
+    'id': 'it.discriminatory.ingiuria-identitaria',
+    'kind': 'phrase',
+    'category': 'discriminatory',
+    'severity': 3,
+    'confidence': 'high',
+    'phrases': [
+      ['sporco', 'ebreo'],
+      ['sporchi', 'ebrei'],
+      ['negro', 'di', 'merda'],
+      ['zingaro', 'di', 'merda'],
+    ],
+    'language': 'it',
+  },
+  {
     'id': 'it.discriminatory.negraccio',
     'kind': 'word',
     'category': 'discriminatory',
     'severity': 3,
     'confidence': 'high',
     'terms': ['negraccio', 'negraccia', 'negracci', 'negracce'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.discriminatory.recchione',
+    'kind': 'word',
+    'category': 'discriminatory',
+    'severity': 3,
+    'confidence': 'medium',
+    'terms': ['recchione', 'recchioni', 'ricchione', 'ricchioni'],
     'language': 'it',
   },
   {
@@ -923,6 +973,15 @@ const List<Map<String, Object>> rulesData = [
     'language': 'it',
   },
   {
+    'id': 'it.insult.cagasotto',
+    'kind': 'word',
+    'category': 'insult',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['cagasotto', 'cagasotti'],
+    'language': 'it',
+  },
+  {
     'id': 'it.insult.coglionazzo',
     'kind': 'word',
     'category': 'insult',
@@ -938,6 +997,15 @@ const List<Map<String, Object>> rulesData = [
     'severity': 2,
     'confidence': 'high',
     'terms': ['coglione', 'coglioni', 'coglionata', 'coglionate'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.insult.cornuto',
+    'kind': 'word',
+    'category': 'insult',
+    'severity': 2,
+    'confidence': 'medium',
+    'terms': ['cornuto', 'cornuta', 'cornuti', 'cornute'],
     'language': 'it',
   },
   {
@@ -964,7 +1032,7 @@ const List<Map<String, Object>> rulesData = [
     'category': 'insult',
     'severity': 2,
     'confidence': 'high',
-    'terms': ['fanculo'],
+    'terms': ['fanculo', 'affanculo'],
     'language': 'it',
   },
   {
@@ -976,6 +1044,18 @@ const List<Map<String, Object>> rulesData = [
     'phrases': [
       ['figlio', 'di', 'puttana'],
       ['figli', 'di', 'puttana'],
+    ],
+    'language': 'it',
+  },
+  {
+    'id': 'it.insult.figlio-di-troia',
+    'kind': 'phrase',
+    'category': 'insult',
+    'severity': 3,
+    'confidence': 'high',
+    'phrases': [
+      ['figlio', 'di', 'troia'],
+      ['figli', 'di', 'troia'],
     ],
     'language': 'it',
   },
@@ -1007,6 +1087,36 @@ const List<Map<String, Object>> rulesData = [
     'language': 'it',
   },
   {
+    'id': 'it.insult.paraculo',
+    'kind': 'word',
+    'category': 'insult',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['paraculo', 'paracula', 'paraculi', 'paracule'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.insult.pezzo-di-merda',
+    'kind': 'phrase',
+    'category': 'insult',
+    'severity': 3,
+    'confidence': 'high',
+    'phrases': [
+      ['pezzo', 'di', 'merda'],
+      ['pezzi', 'di', 'merda'],
+    ],
+    'language': 'it',
+  },
+  {
+    'id': 'it.insult.pirla',
+    'kind': 'word',
+    'category': 'insult',
+    'severity': 2,
+    'confidence': 'medium',
+    'terms': ['pirla', 'pirli', 'pirle'],
+    'language': 'it',
+  },
+  {
     'id': 'it.insult.rincoglionito',
     'kind': 'word',
     'category': 'insult',
@@ -1021,7 +1131,7 @@ const List<Map<String, Object>> rulesData = [
     'category': 'insult',
     'severity': 2,
     'confidence': 'high',
-    'terms': ['rompipalle', 'rompiballe', 'rompicoglioni'],
+    'terms': ['rompipalle', 'rompiballe', 'rompicoglioni', 'rompicazzo', 'rompicazzi'],
     'language': 'it',
   },
   {
@@ -1091,6 +1201,48 @@ const List<Map<String, Object>> rulesData = [
     'language': 'it',
   },
   {
+    'id': 'it.insult.vai-a-cagare',
+    'kind': 'phrase',
+    'category': 'insult',
+    'severity': 2,
+    'confidence': 'high',
+    'phrases': [
+      ['vai', 'a', 'cagare'],
+      ['andate', 'a', 'cagare'],
+    ],
+    'language': 'it',
+  },
+  {
+    'id': 'it.insult.vai-a-fanculo',
+    'kind': 'phrase',
+    'category': 'insult',
+    'severity': 2,
+    'confidence': 'high',
+    'phrases': [
+      ['vai', 'a', 'fanculo'],
+      ['andate', 'a', 'fanculo'],
+    ],
+    'language': 'it',
+  },
+  {
+    'id': 'it.sexual.baldracca',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['baldracca', 'baldracche', 'baldraccone'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.sexual.battona',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'medium',
+    'terms': ['battona', 'battone'],
+    'language': 'it',
+  },
+  {
     'id': 'it.sexual.bocchino',
     'kind': 'word',
     'category': 'sexual',
@@ -1106,6 +1258,15 @@ const List<Map<String, Object>> rulesData = [
     'severity': 2,
     'confidence': 'high',
     'terms': ['cazzo', 'cazzi', 'cazzone', 'cazzoni', 'cazzata', 'cazzate'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.sexual.chiavare',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'medium',
+    'terms': ['chiavare', 'chiavata', 'chiavate', 'chiavato', 'chiavati'],
     'language': 'it',
   },
   {
@@ -1127,12 +1288,30 @@ const List<Map<String, Object>> rulesData = [
     'language': 'it',
   },
   {
+    'id': 'it.sexual.fottere',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['fottere', 'fottersi', 'fottuto', 'fottuta', 'fottuti', 'fottute', 'fottiti', 'fottetevi'],
+    'language': 'it',
+  },
+  {
     'id': 'it.sexual.mignotta',
     'kind': 'word',
     'category': 'sexual',
     'severity': 2,
     'confidence': 'high',
     'terms': ['mignotta', 'mignotte'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.sexual.pompinara',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['pompinara', 'pompinare', 'pompinaro', 'pompinari'],
     'language': 'it',
   },
   {
@@ -1168,7 +1347,25 @@ const List<Map<String, Object>> rulesData = [
     'category': 'sexual',
     'severity': 2,
     'confidence': 'medium',
-    'terms': ['scopata', 'scopate'],
+    'terms': ['scopata', 'scopate', 'scopare', 'scopando', 'scopato', 'scopati'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.sexual.segaiolo',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['segaiolo', 'segaiola', 'segaioli', 'segaiole'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.sexual.succhiacazzi',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'high',
+    'terms': ['succhiacazzi'],
     'language': 'it',
   },
   {
@@ -1177,7 +1374,25 @@ const List<Map<String, Object>> rulesData = [
     'category': 'sexual',
     'severity': 2,
     'confidence': 'medium',
-    'terms': ['troia', 'troie'],
+    'terms': ['troia', 'troie', 'troiona', 'troione', 'troioni'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.sexual.trombare',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'medium',
+    'terms': ['trombare', 'trombata', 'trombate', 'trombato', 'trombati', 'trombando'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.sexual.zoccola',
+    'kind': 'word',
+    'category': 'sexual',
+    'severity': 2,
+    'confidence': 'medium',
+    'terms': ['zoccola', 'zoccole'],
     'language': 'it',
   },
   {
@@ -1186,7 +1401,16 @@ const List<Map<String, Object>> rulesData = [
     'category': 'vulgar',
     'severity': 2,
     'confidence': 'high',
-    'terms': ['cagare', 'cagarsi', 'cagato', 'cagata', 'cagati', 'cagate', 'cagando', 'cago', 'caghi', 'caga', 'cagano'],
+    'terms': ['cagare', 'cagarsi', 'cagato', 'cagata', 'cagati', 'cagate', 'cagando', 'cago', 'caghi', 'caga', 'cagano', 'cacare', 'cacata', 'cacate', 'cacato', 'cacati'],
+    'language': 'it',
+  },
+  {
+    'id': 'it.vulgar.cazzarola',
+    'kind': 'word',
+    'category': 'vulgar',
+    'severity': 1,
+    'confidence': 'medium',
+    'terms': ['cazzarola', 'cazzarole'],
     'language': 'it',
   },
   {
@@ -1231,7 +1455,7 @@ const List<Map<String, Object>> rulesData = [
     'category': 'vulgar',
     'severity': 2,
     'confidence': 'high',
-    'terms': ['merda', 'merde', 'merdoso', 'merdosa', 'merdosi', 'merdose', 'merdata', 'merdate'],
+    'terms': ['merda', 'merde', 'merdoso', 'merdosa', 'merdosi', 'merdose', 'merdata', 'merdate', 'merdaccia', 'merdacce'],
     'language': 'it',
   },
   {

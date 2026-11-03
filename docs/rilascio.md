@@ -7,6 +7,16 @@
 3. Commit, poi tag `vX.Y.Z` e push del tag.
 4. Il workflow `release.yml` verifica che il tag coincida con la versione, esegue `pnpm check` e la parità con le attese, poi pubblica su npm e pub.dev.
 
+## Prima beta
+
+La prima versione di integrazione è `0.1.0-beta.0` su entrambi i registri (D21). Changesets è in modalità prerelease `beta`: per una beta successiva aggiungere changeset ed eseguire `pnpm release:version`; per uscire dalla beta usare `pnpm exec changeset pre exit`, poi il normale flusso di versione. Non modificare le versioni a mano.
+
+Prima della prima pubblicazione eseguire `pnpm check`, build e smoke test npm, `npm pack --dry-run` e `dart pub publish --dry-run`. La prima pubblicazione npm usa `npm publish --access public --tag beta`, senza `--provenance` locale: l'attestazione viene generata dalle pubblicazioni successive su GitHub Actions. Il workflow seleziona il tag npm dalla versione, mantenendo le prerelease fuori da `latest`.
+
+Completare la prima pubblicazione manuale e configurare entrambi i trusted publisher prima di inviare tag che attivano il workflow. La configurazione degli account non è sostituita dai file YAML. Le versioni pubblicate sono immutabili: controllare nome, contenuto e versione prima dell'invio.
+
+La prima beta non ha una release precedente con cui generare un confronto di comportamento. Il changelog descrive le API, la copertura aggiunta e gli omografi; per i rilasci successivi resta richiesto il confronto descritto sotto.
+
 ## Configurazione iniziale (una volta sola)
 
 Le pubblicazioni automatiche si possono configurare solo su pacchetti già esistenti: **la prima versione si pubblica a mano**.

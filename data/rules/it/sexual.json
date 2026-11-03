@@ -27,7 +27,7 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["troia", "troie"],
+      "terms": ["troia", "troie", "troiona", "troione", "troioni"],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -86,7 +86,7 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["scopata", "scopate"],
+      "terms": ["scopata", "scopate", "scopare", "scopando", "scopato", "scopati"],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -109,6 +109,105 @@
       "terms": ["fica", "fiche"],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+    },
+    {
+      "id": "it.sexual.fottere",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "fottere",
+        "fottersi",
+        "fottuto",
+        "fottuta",
+        "fottuti",
+        "fottute",
+        "fottiti",
+        "fottetevi"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.sexual.chiavare",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["chiavare", "chiavata", "chiavate", "chiavato", "chiavati"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.sexual.trombare",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["trombare", "trombata", "trombate", "trombato", "trombati", "trombando"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.sexual.segaiolo",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["segaiolo", "segaiola", "segaioli", "segaiole"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.sexual.baldracca",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["baldracca", "baldracche", "baldraccone"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.sexual.zoccola",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["zoccola", "zoccole"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.sexual.battona",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["battona", "battone"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.sexual.succhiacazzi",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["succhiacazzi"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.sexual.pompinara",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["pompinara", "pompinare", "pompinaro", "pompinari"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
     }
   ]
 }

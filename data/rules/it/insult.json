@@ -114,7 +114,7 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["fanculo"],
+      "terms": ["fanculo", "affanculo"],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -152,7 +152,7 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["rompipalle", "rompiballe", "rompicoglioni"],
+      "terms": ["rompipalle", "rompiballe", "rompicoglioni", "rompicazzo", "rompicazzi"],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -206,6 +206,86 @@
       "anchor": "both",
       "provenance": ["manual"],
       "note": "Composto noto: ammesso solo all’inizio o alla fine di una parola."
+    },
+    {
+      "id": "it.insult.paraculo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["paraculo", "paracula", "paraculi", "paracule"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.insult.cagasotto",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["cagasotto", "cagasotti"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.insult.pirla",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["pirla", "pirli", "pirle"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.insult.cornuto",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["cornuto", "cornuta", "cornuti", "cornute"],
+      "provenance": ["manual"],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.insult.pezzo-di-merda",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["pezzo", "di", "merda"], ["pezzi", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
+    },
+    {
+      "id": "it.insult.vai-a-fanculo",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["vai", "a", "fanculo"], ["andate", "a", "fanculo"]],
+      "provenance": ["manual"],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
+    },
+    {
+      "id": "it.insult.figlio-di-troia",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["figlio", "di", "troia"], ["figli", "di", "troia"]],
+      "provenance": ["manual"],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
+    },
+    {
+      "id": "it.insult.vai-a-cagare",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["vai", "a", "cagare"], ["andate", "a", "cagare"]],
+      "provenance": ["manual"],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
     }
   ]
 }

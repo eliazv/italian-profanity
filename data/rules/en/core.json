@@ -1,4 +1,35 @@
 {
   "$schema": "../../schema/rules.schema.json",
-  "rules": []
+  "rules": [
+    {
+      "id": "en.vulgar.fuck",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["fuck", "fucks", "fucked", "fucking", "fucker", "fuckers"],
+      "provenance": ["manual"],
+      "note": "Nucleo inglese minimo opzionale: forme esplicite, parola intera. Non equivale a una wordlist inglese completa."
+    },
+    {
+      "id": "en.vulgar.shit",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["shit", "shits", "shitty", "bullshit"],
+      "provenance": ["manual"],
+      "note": "Forme volgari esplicite, senza prefissi o sottostringhe."
+    },
+    {
+      "id": "en.insult.bitch",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["bitch", "bitches"],
+      "provenance": ["manual"],
+      "note": "Forma ingiuriosa comune selezionata per nickname. Il significato zoologico non viene disambiguato; eventuali eccezioni spettano alla configurazione dell?app."
+    }
+  ]
 }
