@@ -124,3 +124,6 @@
 {"id":"mcuration-124","input":"recchioni","profile":"strict","rules":["it.discriminatory.recchione"],"action":"block","note":"Lo stesso omografo resta bloccato in strict."}
 {"id":"mcuration-125","input":"zoccola","profile":"balanced","rules":["it.sexual.zoccola"],"action":"review","note":"Omografo nominale: revisione in balanced."}
 {"id":"mcuration-126","input":"zoccola","profile":"strict","rules":["it.sexual.zoccola"],"action":"block","note":"Lo stesso omografo resta bloccato in strict."}
+{"id":"mcuration-127","input":"Recchione","profile":"balanced","action":"review","rules":["it.discriminatory.recchione"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}
+{"id":"mcuration-128","input":"Recchioni","profile":"balanced","action":"review","rules":["it.discriminatory.recchione"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}
+{"id":"mcuration-129","input":"Zoccola","profile":"balanced","action":"review","rules":["it.sexual.zoccola"],"note":"Omografia con cognome: non bloccare automaticamente in balanced."}

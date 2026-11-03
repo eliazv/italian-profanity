@@ -51,6 +51,8 @@ Sono state proposte 20 nuove regole (tra lemmi e frasi) e 6 famiglie preesistent
 
 ## Verifiche per la prima beta
 
-Lo schema ammette parole di una lettera nelle frasi, mantenendo almeno due lettere nei termini isolati. Tre collisioni nominali del secondo nucleo sono documentate individualmente nell?audit: due forme discriminatorie e una sessuale restano `review` in balanced e `block` in strict, con fixture dedicate.
+Lo schema ammette parole di una lettera nelle frasi, mantenendo almeno due lettere nei termini isolati. Tre collisioni nominali del secondo nucleo sono documentate individualmente nell'audit: due forme discriminatorie e una sessuale restano `review` in balanced e `block` in strict, con fixture dedicate.
 
-Il dataset della beta contiene 65 regole italiane (244 forme nei campi `terms`, oltre alle frasi e combinazioni) e tre famiglie inglesi opzionali con 12 forme esplicite. Il nucleo inglese ? scritto manualmente, non deriva da liste esterne e non ne promette la copertura. Le fixture di adozione verificano anche l?attivazione esplicita della lingua e i confini di parola. Restano 127.842 input di audit e 37 collisioni distinte motivate; non ? una misura su nickname reali.
+Il dataset della beta contiene 65 regole italiane (244 forme nei campi `terms`, oltre alle frasi e combinazioni) e tre famiglie inglesi opzionali con 12 forme esplicite. Il nucleo inglese è scritto manualmente, non deriva da liste esterne e non ne promette la copertura. Le fixture di adozione verificano anche l'attivazione esplicita della lingua e i confini di parola. Restano 127.842 input di audit e 37 collisioni distinte motivate; non è una misura su nickname reali.
+
+**Omografie individuate in CI:** `recchione`, `recchioni` e `zoccola` compaiono anche tra i cognomi del corpus; sono mantenuti come `medium/review` nel profilo balanced e registrati individualmente in `accepted.jsonl`. Le frasi possono contenere preposizioni monosillabiche, senza rendere permissivo il matcher delle parole singole.

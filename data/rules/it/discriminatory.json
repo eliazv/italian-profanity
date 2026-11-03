@@ -49,7 +49,7 @@
       "confidence": "medium",
       "terms": ["recchione", "recchioni", "ricchione", "ricchioni"],
       "provenance": ["manual"],
-      "note": "Omografi di cognomi nel corpus di audit: balanced richiede revisione; strict blocca. Curazione manuale, parola intera."
+      "note": "Omografi di cognomi nel corpus di audit: balanced richiede revisione; strict blocca. Curazione manuale, parola intera. Insulto esplicito, ma esistono i cognomi Recchione/Recchioni: review in balanced; non blocco automatico del solo cognome."
     },
     {
       "id": "it.discriminatory.ingiuria-identitaria",

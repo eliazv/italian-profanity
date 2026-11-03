@@ -1,6 +1,6 @@
 # italian-profanity
 
-[![CI](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml/badge.svg)](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml) ? [Licenza MIT](LICENSE)
+[![CI](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml/badge.svg)](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml) · [Licenza MIT](LICENSE)
 
 Italian-first profanity detection for short user-generated text — nicknames, usernames, room and team names. Same rules and same verdicts in **TypeScript** and **Dart/Flutter**.
 
@@ -26,9 +26,9 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 
 Pacchetti previsti: npm `italian-profanity` · pub.dev `italian_profanity`.
 
-**Stato attuale: prima beta di integrazione; M3 in corso.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 65 regole e 244 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti restano da curare. L?inglese opzionale contiene tre famiglie minime.
+**Stato attuale: prima beta di integrazione; M3 in corso.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 65 regole e 244 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti restano da curare. L'inglese opzionale contiene tre famiglie minime.
 
-Le attese sono condivise su 1.093 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
+Le attese sono condivise su 1.096 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
 
 ```ts
 import { check, createChecker } from "italian-profanity"
@@ -48,7 +48,7 @@ final result = checker.check('D10 p0rc0');
 // result.action == Action.block
 ```
 
-La beta consente di provare l?integrazione. Prima della v0.1 stabile restano curazione, consolidamento e prova in una delle applicazioni previste.
+La beta consente di provare l'integrazione. Prima della v0.1 stabile restano curazione, consolidamento e prova in una delle applicazioni previste.
 
 Keywords: profanity, italian, parolacce, bestemmie, insulti, moderation, nickname, username, validation, flutter, dart.
 
@@ -63,7 +63,7 @@ dependencies:
   italian_profanity: 0.1.0-beta.0
 ```
 
-La [guida d?integrazione](docs/integrazione.md) descrive configurazione condivisa client/server, gestione di `review`, limiti e migrazione dei vecchi filtri. Il nucleo inglese minimo va attivato con `languages: ["it", "en"]`; non sostituisce una wordlist inglese completa.
+La [guida d'integrazione](docs/integrazione.md) descrive configurazione condivisa client/server, gestione di `review`, limiti e migrazione dei vecchi filtri. Il nucleo inglese minimo va attivato con `languages: ["it", "en"]`; non sostituisce una wordlist inglese completa.
 
 ## Sviluppo
 
