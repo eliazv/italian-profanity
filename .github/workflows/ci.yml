@@ -104,7 +104,7 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: .cache/napolux
           key: napolux-${{ hashFiles('tools/audit-benign.ts') }}
