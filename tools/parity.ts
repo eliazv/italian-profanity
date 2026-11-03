@@ -1,6 +1,7 @@
 // Esegue le fixture su entrambi i motori e confronta i risultati (SPECIFICHE.md §7.2).
 // Uso: node tools/parity.ts [--expectations]
-//   --expectations  verifica anche che i risultati rispettino le attese delle fixture
+//   Le attese expectedBase sono sempre verificate, anche prima del rilevatore.
+//   --expectations  verifica anche che i risultati rispettino le attese di rilevamento
 //                   (attivo in CI dalla fase M2, quando esiste il rilevatore).
 import { execFileSync } from "node:child_process"
 import { join } from "node:path"
@@ -74,6 +75,19 @@ for (const id of fixtures.keys()) {
     problems.push(
       `${id}: risultati diversi\n    TS:   ${canonicalJson(a)}\n    Dart: ${canonicalJson(b)}`,
     )
+  }
+  const expectedBase = fixtures.get(id)?.expectedBase
+  if (expectedBase !== undefined) {
+    for (const [label, result] of [
+      ["TS", a],
+      ["Dart", b],
+    ] as const) {
+      if (result.base !== expectedBase) {
+        problems.push(
+          `${id}: ${label} base attesa ${JSON.stringify(expectedBase)}, ottenuta ${JSON.stringify(result.base)}`,
+        )
+      }
+    }
   }
 }
 

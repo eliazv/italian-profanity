@@ -40,6 +40,7 @@ export interface Fixture {
   input: string
   profile: "balanced" | "strict" | "lenient"
   contacts?: boolean
+  expectedBase?: string
   action?: "allow" | "review" | "block"
   rules?: string[]
   mustNotMatch?: string[]

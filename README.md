@@ -35,3 +35,5 @@ pnpm check
 ```
 
 Regole, comandi e struttura sono descritti in [AGENTS.md](AGENTS.md), il rilascio in [docs/rilascio.md](docs/rilascio.md).
+
+Lo stato di M0, i prossimi controlli e i criteri per eventuali altri linguaggi sono in [docs/analisi-post-m0.md](docs/analisi-post-m0.md). La documentazione è pubblica e versionata; il corpus di audit resta in cache.

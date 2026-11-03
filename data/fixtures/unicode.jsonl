@@ -1,5 +1,11 @@
-{"id":"unicode-001","input":"ｃａｚｚｏ","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"fullwidth"}
-{"id":"unicode-002","input":"сazzо","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"c e o cirillici"}
-{"id":"unicode-003","input":"caz​zo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"zero-width"}
-{"id":"unicode-004","input":"Perché","profile":"balanced","action":"allow","note":"accento precomposto"}
-{"id":"unicode-005","input":"Perché","profile":"balanced","action":"allow","note":"accento decomposto"}
+{"id":"unicode-001","input":"ｃａｚｚｏ","profile":"balanced","expectedBase":"cazzo","action":"block","rules":["it.sexual.cazzo"],"note":"fullwidth"}
+{"id":"unicode-002","input":"сazzо","profile":"balanced","expectedBase":"cazzo","action":"block","rules":["it.sexual.cazzo"],"note":"c e o cirillici"}
+{"id":"unicode-003","input":"caz​zo","profile":"balanced","expectedBase":"cazzo","action":"block","rules":["it.sexual.cazzo"],"note":"zero-width"}
+{"id":"unicode-004","input":"Perché","profile":"balanced","expectedBase":"perche","action":"allow","note":"accento precomposto"}
+{"id":"unicode-005","input":"Perché","profile":"balanced","expectedBase":"perche","action":"allow","note":"accento decomposto"}
+{"id":"unicode-006","input":"Straße","profile":"balanced","expectedBase":"strasse","note":"espansione di un carattere in due lettere"}
+{"id":"unicode-007","input":"🙂A","profile":"balanced","expectedBase":"🙂a","note":"carattere fuori dal BMP conservato"}
+{"id":"unicode-008","input":"1993","profile":"balanced","expectedBase":"1993","note":"fold non applica il leetspeak"}
+{"id":"unicode-009","input":"A\u00a0B","profile":"balanced","expectedBase":"a b","note":"spazio non separabile"}
+{"id":"unicode-010","input":"Ａ＠！","profile":"balanced","expectedBase":"a@!","note":"i simboli leet restano disponibili dopo fold"}
+{"id":"unicode-011","input":"\u200b\u0301","profile":"balanced","expectedBase":"","note":"l'attesa vuota deve essere verificata"}

@@ -67,3 +67,25 @@ Le divergenze Unicode emergono nella normalizzazione: meglio scoprirle all'inizi
 ## D13 · Stima v0.1: 34-47 ore — 2026-11-03
 
 Sostituisce le 17-22 ore della prima stesura, che erano ottimistiche per due motori, 300 fixture, audit e CI.
+
+## D14 · Rilevatore e policy insieme in M2 — 2026-11-03
+
+La roadmap precedente prevedeva TS in M2 e il port Dart in M4, in conflitto con la parità nella stessa PR richiesta da AGENTS.md. Da M2 ogni comportamento si implementa in entrambi i motori, con attese di rilevamento attive e audit effettivo. M4 diventa consolidamento, fuzz, verifica offset e compatibilità. Si può sviluppare prima la funzione TS e poi quella Dart, mantenendole nella stessa PR. Non si lascia il motore Dart indietro durante la curazione.
+
+## D15 · Ripetizioni confrontate con la forma della regola — 2026-11-03
+
+Precisa e sostituisce D8: ridurre sempre le sequenze di almeno tre lettere a una sola non produce la doppia richiesta dall'esempio di D8. `squeeze` conserva le sequenze ripetute e le confronta con la forma dichiarata: una sequenza sorgente di una o due lettere deve avere la stessa lunghezza nella forma; una di almeno tre può corrispondere a una o due. Non si generano combinazioni esponenziali e non si riducono le doppie originali. Rappresentazione e offset in M1, confronto nel rilevatore e fixture positive e negative per ogni comportamento in M2.
+
+## D16 · Limiti in punti di codice, offset in UTF-16 — 2026-11-03
+
+Il limite predefinito è 64 punti di codice Unicode sull'input originale, prima della normalizzazione, senza dividere coppie surrogate valide. Non si contano i grafemi; un surrogato isolato vale un punto e resta invariato. `maxLength` deve essere un intero positivo finito. Gli intervalli restano UTF-16, come già previsto dall'API. Le trasformazioni conservano la provenienza dei caratteri, incluse espansioni e segni combinanti rimossi. Questo evita che le differenze fra iterazione di stringhe nei futuri port cambino il risultato.
+
+## D17 · Due linguaggi fino alla v0.1 e documentazione pubblica — 2026-11-03
+
+TS e Dart coprono gli utilizzi dichiarati. Fino alla v0.1 non si aggiungono altri motori né un nucleo Rust/WASM. Un port successivo richiede un utilizzatore concreto, disponibilità di manutenzione, runner delle fixture condivise e compatibilità di comportamento, inclusi offset UTF-16. Non basta distribuire il dataset.
+
+`docs/` resta pubblica e versionata: analisi, decisioni e procedure servono a utilizzatori e contributori. Cache, output temporanei e report con dati privati non vanno versionati; nei documenti pubblici non entrano nickname reali degli utenti.
+
+## D18 · Revisione della stima v0.1 — 2026-11-03
+
+Sostituisce D13: 37-52 ore indicative totali. Il lavoro del port viene anticipato in M2 (11-15 ore) e M4 mantiene un budget esplicito di consolidamento (3-5 ore). Le altre fasi restano invariate. Rivalutare dopo M1, senza trattare la stima come una scadenza.

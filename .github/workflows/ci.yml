@@ -60,6 +60,26 @@ jobs:
         run: dart pub publish --dry-run
         working-directory: packages/dart
 
+  node-min-runtime:
+    name: Pacchetto npm su Node 20
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter italian-profanity build
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+      - name: Import ESM e CommonJS sul runtime minimo
+        run: |
+          node --input-type=module -e "const m = await import('./packages/js/dist/index.js'); if (!m.VERSION) process.exit(1)"
+          node -e "const m = require('./packages/js/dist/index.cjs'); if (!m.VERSION) process.exit(1)"
+
   dart-min-sdk:
     name: Dart SDK minimo (3.4)
     runs-on: ubuntu-24.04

@@ -30,7 +30,7 @@ Node 24 o superiore, pnpm 10 (versione fissata in `packageManager`) e Dart SDK 3
 | `pnpm lint` / `pnpm format`  | Biome (TS, JSON, Markdown) più `dart format` e `dart analyze`                        |
 | `pnpm typecheck`             | `tsc` su `tools/` e sul pacchetto, con `isolatedDeclarations` sul codice pubblicato  |
 | `pnpm test`                  | Test TS (Vitest) e Dart (`dart test`)                                                |
-| `pnpm parity`                | Esegue le fixture su entrambi i motori e confronta i risultati                       |
+| `pnpm parity`                | Confronta i due motori e verifica sempre le attese `expectedBase`                    |
 | `pnpm parity --expectations` | Verifica anche le attese delle fixture: attivo in CI dalla fase M2                   |
 | `pnpm audit:benign`          | Controlla il corpus di nomi, cognomi e parole comuni (dalla fase M2)                 |
 | `pnpm check`                 | Validazione, build, lint, typecheck, test e parità: **deve passare prima del merge** |

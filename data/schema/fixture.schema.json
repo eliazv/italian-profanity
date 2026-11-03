@@ -2,11 +2,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/eliazv/italian-profanity/data/schema/fixture.schema.json",
   "title": "Caso di test (una riga JSONL)",
-  "description": "Vedi SPECIFICHE.md §7.1. Almeno uno tra action, rules e mustNotMatch.",
+  "description": "Vedi SPECIFICHE.md §7.1. Almeno uno tra expectedBase, action, rules e mustNotMatch.",
   "type": "object",
   "required": ["id", "input", "profile"],
   "additionalProperties": false,
   "anyOf": [
+    { "required": ["expectedBase"] },
     { "required": ["action"] },
     { "required": ["rules"] },
     { "required": ["mustNotMatch"] }
@@ -14,6 +15,10 @@
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z]+(-[a-z]+)*-[0-9]{3,}$" },
     "input": { "type": "string" },
+    "expectedBase": {
+      "type": "string",
+      "description": "Risultato atteso di fold sull'intero input, prima della segmentazione e dei limiti. Verificato sempre dalla parità."
+    },
     "profile": { "enum": ["balanced", "strict", "lenient"] },
     "contacts": { "type": "boolean" },
     "action": { "enum": ["allow", "review", "block"] },

@@ -80,7 +80,9 @@ Ho svolto la ricerca il 2026-11-03: le fonti dettagliate sono al §10 e nella re
 
 ### 4.1 Limiti di input
 
-Il testo viene troncato a `maxLength`, 64 caratteri per default. La segmentazione viene eseguita una sola volta. Le regex delle regole aggiunte dall'app vengono sempre convertite in testo letterale: l'app passa termini, non regex.
+Il testo viene troncato a `maxLength`, 64 **punti di codice Unicode** per default, prima della normalizzazione. `maxLength` deve essere un intero positivo finito; valori non validi causano un errore di argomento in entrambi i motori. Una coppia surrogata valida non viene mai divisa; un surrogato isolato conta come un punto ed è conservato. Non si contano i grafemi: un accento combinante conta separatamente dalla lettera. Gli offset dei risultati restano invece in **unità UTF-16** sul testo originale. La segmentazione viene eseguita una sola volta. Le regex delle regole aggiunte dall'app vengono sempre convertite in testo letterale: l'app passa termini, non regex.
+
+Ogni punto di codice prodotto dalla normalizzazione conserva l'intervallo UTF-16 della sua origine. In caso di espansione, tutti i caratteri prodotti condividono l'intervallo del carattere sorgente. L'intervallo di un match copre dall'inizio del primo carattere contribuente alla fine dell'ultimo, includendo separatori e invisibili interni. Per una lettera con segni combinanti rimossi, l'intervallo include anche quei segni successivi. Una fixture deve verificare esplicitamente questi casi: la sola parità non prova che gli offset siano corretti.
 
 ### 4.2 Segmentazione
 
@@ -95,23 +97,27 @@ Le regole che lavorano sulle parole vedono ogni parola con i frammenti **riuniti
 
 **Caratteri invisibili** (zero-width, soft hyphen, selettori di variante): vengono rimossi prima della segmentazione.
 
+**Ordine delle trasformazioni.** Si applica `fold` conservando gli intervalli originali, poi si individuano i confini di spazio sul testo così ottenuto (anche gli spazi fullwidth e non separabili diventano confini). Ogni parola conserva i propri simboli sorgente: nella vista `base` la punteggiatura viene ignorata per riunire i frammenti; nella vista `deleet` i simboli presenti nella mappa leet vengono prima convertiti, poi si ignora la punteggiatura rimanente. Il requisito di almeno una lettera si valuta dopo `fold`, prima delle conversioni leet. Non si eliminano quindi `@`, `$`, `€` e `!` prima di costruire `deleet`. Le due viste restano disponibili anche per i simboli a inizio o fine parola; le fixture devono coprire sia sostituzioni interne sia punteggiatura ordinaria.
+
 ### 4.3 Viste
 
 Ogni parola viene valutata in più viste. Basta che una delle viste corrisponda a una regola:
 
-| Vista     | Trasformazione                                                                                                                                          |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `base`    | Minuscole, rimozione degli accenti, caratteri fullwidth convertiti, caratteri simili ricondotti alle lettere latine                                     |
-| `deleet`  | `base` più la conversione del leetspeak: `0→o 1→i 3→e 4→a 5→s 7→t @→a $→s €→e !→i`                                                                      |
-| `squeeze` | `deleet` più la riduzione a una delle lettere ripetute **3 o più volte** (`porcooo` → `porco`, `cazzzzo` → `cazzo`). Le doppie italiane restano intatte |
+| Vista     | Trasformazione                                                                                                                                                                                                                                 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `base`    | Minuscole, rimozione degli accenti, caratteri fullwidth convertiti, caratteri simili ricondotti alle lettere latine                                                                                                                            |
+| `deleet`  | `base` più la conversione del leetspeak: `0→o 1→i 3→e 4→a 5→s 7→t @→a $→s €→e !→i`                                                                                                                                                             |
+| `squeeze` | Confronto delle sequenze di lettere ripetute di `deleet` con la forma dichiarata dalla regola: una sequenza di **3 o più** può corrispondere a una lettera singola o doppia. Le sequenze di una o due lettere devono corrispondere esattamente |
 
 `deleet` si applica solo alle parole che contengono almeno una lettera. Così "1993" non diventa "ieei", mentre "D10" diventa "dio".
+
+`squeeze` non produce una singola stringa distruttiva né tutte le combinazioni possibili: conserva lettera, numero di ripetizioni e intervallo originale per ogni sequenza. Il matcher confronta queste sequenze con quelle della forma dichiarata, in ordine. Così `cazzzzo` corrisponde a `cazzo`, `porcooo` a `porco`, ma `cazo` non corrisponde a `cazzo` e una doppia originale non viene ridotta a una singola. Il confronto vale anche per le forme usate da `prefix`, `phrase`, `compound` e `combo`; ogni forma mantiene i propri vincoli di confine. La rappresentazione viene costruita in M1, il confronto con le regole in M2 (D15).
 
 ### 4.4 Parità tra JS e Dart: tabella generata, zero dipendenze
 
 Dart non offre un equivalente di `String.normalize("NFKD")`. Per questo **nessuno dei due motori normalizza Unicode a runtime**: entrambi usano la stessa **tabella `char → string`**, generata al momento del build da `tools/` a partire da tre insiemi:
 
-- i caratteri latini con segni diacritici e le legature (tramite `normalize("NFKD")` di Node, con la versione Unicode dichiarata nella tabella);
+- i caratteri latini con segni diacritici e le legature (tramite `normalize("NFKD")` di Node su intervalli espliciti; nessuna versione del runtime nei file generati, che hanno un hash del contenuto);
 - i caratteri fullwidth;
 - un sottoinsieme mirato di caratteri simili, cirillici e greci identici a lettere latine, preso da UTS #39 (`confusables.txt`) con la versione fissata.
 
@@ -256,7 +262,9 @@ Le fixture sono file **JSONL**, una riga per caso, così i diff restano leggibil
 {"id":"uni-001","input":"ｃａｚｚｏ","profile":"balanced","action":"block","note":"fullwidth"}
 ```
 
-Campi: `action` (atteso), `rules` (devono comparire), `mustNotMatch` (non devono comparire), `profile`. Almeno uno tra `action`, `rules` e `mustNotMatch` è obbligatorio.
+Campi: `expectedBase` (risultato atteso di `fold` sull'intero input, prima di limiti e segmentazione), `action` (atteso), `rules` (devono comparire), `mustNotMatch` (non devono comparire), `profile`. Almeno uno tra `expectedBase`, `action`, `rules` e `mustNotMatch` è obbligatorio. `expectedBase`, anche quando è la stringa vuota, viene verificato sempre su entrambi i motori da `pnpm parity`; `--expectations` aggiunge le attese di rilevamento da M2.
+
+In M1 lo schema e i runner vanno estesi con attese esplicite per segmenti, viste e intervalli UTF-16: almeno 80 fixture, comprese espansioni, eliminazioni, emoji, troncamento e casi negativi vicini. Il confronto fra motori e quello con le attese sono due controlli distinti e obbligatori per i campi implementati. Il completamento di M1 non si misura soltanto dal numero di fixture.
 
 **Insieme minimo per la v0.1: 300 casi**, di cui almeno il 60% negativi (nomi, luoghi, parole vicine a quelle bloccate). Le famiglie obbligatorie sono quelle della tabella al §4 della revisione: nomi, toponimi, parole innocue simili a parolacce, `Dio santo`, leet, separatori, ripetizioni, lettere spaziate, Unicode composto e decomposto, fullwidth, caratteri cirillici misti, zero-width, numeri innocui ed emoji.
 
@@ -384,18 +392,20 @@ Gli strumenti principali:
 
 ## 11. Roadmap
 
-| Fase                                                        | Contenuto                                                                                            | Ore stimate |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------: |
-| ✅ **M0** Struttura                                         | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE                    |         3-4 |
-| **M1** Normalizzazione e segmentazione, **in TS e in Dart** | Tabella generata, viste, offset, prime 80 fixture Unicode e separatori, parità già attiva            |         6-8 |
-| **M2** Rilevatore e policy in TS                            | `word`, `prefix`, `phrase`, `compound`, `combo`, `pattern`, eccezioni, profili, API                  |         6-8 |
-| **M3** Curazione                                            | 60-100 regole, 300 fixture, audit napolux, `curazione.md`, `sources.json`, `NOTICE`                  |       10-14 |
-| **M4** Rilevatore e policy in Dart                          | Port completo, parità al 100%                                                                        |         5-7 |
-| **M5** Prova reale (shadow)                                 | Report sui nickname salvati in RuttoFacile e maraffa, senza bloccare; valutazione dei falsi positivi |         2-3 |
-| **M6** Pubblicazione 0.1.0                                  | Workflow di release, README completo, smoke test, pubblicazione                                      |         2-3 |
-|                                                             | **Totale v0.1**                                                                                      |   **34-47** |
+| Fase                                                        | Contenuto                                                                                                       | Ore stimate |
+| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------: |
+| ✅ **M0** Struttura                                         | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE                               |         3-4 |
+| **M1** Normalizzazione e segmentazione, **in TS e in Dart** | Tabella generata, viste, offset, prime 80 fixture Unicode e separatori, parità già attiva                       |         6-8 |
+| **M2** Rilevatore e policy in TS e Dart                     | `word`, `prefix`, `phrase`, `compound`, `combo`, `pattern`, eccezioni, profili, API; attese e audit obbligatori |       11-15 |
+| **M3** Curazione                                            | 60-100 regole, 300 fixture, audit napolux, `curazione.md`, `sources.json`, `NOTICE`                             |       10-14 |
+| **M4** Consolidamento dei due motori                        | Fuzz Unicode, verifica offset, compatibilità e smoke test dei pacchetti; correzioni in parità                   |         3-5 |
+| **M5** Prova reale (shadow)                                 | Report sui nickname salvati in RuttoFacile e maraffa, senza bloccare; valutazione dei falsi positivi            |         2-3 |
+| **M6** Pubblicazione 0.1.0                                  | Workflow di release, README completo, smoke test, pubblicazione                                                 |         2-3 |
+|                                                             | **Totale v0.1**                                                                                                 |   **37-52** |
 
-La normalizzazione va fatta in entrambi i linguaggi già in **M1**, perché le divergenze Unicode emergono lì. Scoprirle in M4 costerebbe di più.
+La normalizzazione va fatta in entrambi i linguaggi già in **M1**, perché le divergenze Unicode emergono lì. Anche rilevatore e policy vanno sviluppati insieme in **M2**, nella stessa PR per ogni comportamento: M4 non è più una fase di port (D14). Le stime sono indicative e vanno rivalutate dopo M1.
+
+M0 è completata per la struttura locale, non per il prodotto: la parità attuale riguarda `fold`, l'audit salta il rilevamento perché il motore non esiste ancora e le attese positive restano disattivate. Il primo push e la prima CI GitHub sono verifiche distinte dai controlli locali. L'analisi e i criteri per aggiungere altri linguaggi sono in [docs/analisi-post-m0.md](docs/analisi-post-m0.md).
 
 Dopo la v0.1, in ordine: romagnolo → `mask()` → CLI `scan` → demo web → altri dialetti.
 
