@@ -7,8 +7,21 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["merda", "merde", "merdoso", "merdosa", "merdosi", "merdose", "merdata", "merdate"],
-      "provenance": ["manual"],
+      "terms": [
+        "merda",
+        "merde",
+        "merdoso",
+        "merdosa",
+        "merdosi",
+        "merdose",
+        "merdata",
+        "merdate",
+        "merdaccia",
+        "merdacce"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -28,9 +41,16 @@
         "cago",
         "caghi",
         "caga",
-        "cagano"
+        "cagano",
+        "cacare",
+        "cacata",
+        "cacate",
+        "cacato",
+        "cacati"
       ],
-      "provenance": ["manual"],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -39,8 +59,15 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["culo", "culi", "culone", "culoni"],
-      "provenance": ["manual"],
+      "terms": [
+        "culo",
+        "culi",
+        "culone",
+        "culoni"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Omografo di un cognome presente nel corpus e di una forma accentata che fold riconduce alla stessa parola. Balanced richiede revisione; non promettiamo disambiguazione contestuale."
     },
     {
@@ -59,7 +86,9 @@
         "pisciando",
         "piscia"
       ],
-      "provenance": ["manual"],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -68,8 +97,17 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["minchia", "minchie", "minchiata", "minchiate", "minchione", "minchioni"],
-      "provenance": ["manual"],
+      "terms": [
+        "minchia",
+        "minchie",
+        "minchiata",
+        "minchiate",
+        "minchione",
+        "minchioni"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -90,7 +128,9 @@
         "incazza",
         "incazzano"
       ],
-      "provenance": ["manual"],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -99,8 +139,13 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["sticazzi", "stocazzo"],
-      "provenance": ["manual"],
+      "terms": [
+        "sticazzi",
+        "stocazzo"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -109,8 +154,13 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["fancazzista", "fancazzisti"],
-      "provenance": ["manual"],
+      "terms": [
+        "fancazzista",
+        "fancazzisti"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -119,8 +169,16 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["cazzeggio", "cazzeggiare", "cazzeggiato", "cazzeggiata", "cazzeggiano"],
-      "provenance": ["manual"],
+      "terms": [
+        "cazzeggio",
+        "cazzeggiare",
+        "cazzeggiato",
+        "cazzeggiata",
+        "cazzeggiano"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -138,7 +196,9 @@
         "scoregge",
         "scoreggiare"
       ],
-      "provenance": ["manual"],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -155,8 +215,25 @@
         "sputtanate",
         "sputtanamento"
       ],
-      "provenance": ["manual"],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.cazzarola",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": [
+        "cazzarola",
+        "cazzarole"
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     }
   ]
 }

@@ -7,8 +7,17 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["stronzo", "stronza", "stronzi", "stronze", "stronzata", "stronzate"],
-      "provenance": ["manual"],
+      "terms": [
+        "stronzo",
+        "stronza",
+        "stronzi",
+        "stronze",
+        "stronzata",
+        "stronzate"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -17,8 +26,15 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["coglione", "coglioni", "coglionata", "coglionate"],
-      "provenance": ["manual"],
+      "terms": [
+        "coglione",
+        "coglioni",
+        "coglionata",
+        "coglionate"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -27,8 +43,15 @@
       "category": "insult",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["bastardo", "bastarda", "bastardi", "bastarde"],
-      "provenance": ["manual"],
+      "terms": [
+        "bastardo",
+        "bastarda",
+        "bastardi",
+        "bastarde"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -37,8 +60,13 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["idiota", "idioti"],
-      "provenance": ["manual"],
+      "terms": [
+        "idiota",
+        "idioti"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -47,8 +75,13 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["imbecille", "imbecilli"],
-      "provenance": ["manual"],
+      "terms": [
+        "imbecille",
+        "imbecilli"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -57,8 +90,15 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["cretino", "cretina", "cretini", "cretine"],
-      "provenance": ["manual"],
+      "terms": [
+        "cretino",
+        "cretina",
+        "cretini",
+        "cretine"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -67,8 +107,13 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["deficiente", "deficienti"],
-      "provenance": ["manual"],
+      "terms": [
+        "deficiente",
+        "deficienti"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -77,8 +122,15 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["stupido", "stupida", "stupidi", "stupide"],
-      "provenance": ["manual"],
+      "terms": [
+        "stupido",
+        "stupida",
+        "stupidi",
+        "stupide"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -87,8 +139,15 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["scemo", "scema", "scemi", "sceme"],
-      "provenance": ["manual"],
+      "terms": [
+        "scemo",
+        "scema",
+        "scemi",
+        "sceme"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
     {
@@ -105,7 +164,9 @@
         "rincoglionire",
         "rincoglionirsi"
       ],
-      "provenance": ["manual"],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -114,8 +175,13 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["fanculo"],
-      "provenance": ["manual"],
+      "terms": [
+        "fanculo",
+        "affanculo"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -133,7 +199,9 @@
         "stronzona",
         "stronzoni"
       ],
-      "provenance": ["manual"],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -142,8 +210,13 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["leccaculo", "leccaculi"],
-      "provenance": ["manual"],
+      "terms": [
+        "leccaculo",
+        "leccaculi"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -152,8 +225,16 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["rompipalle", "rompiballe", "rompicoglioni"],
-      "provenance": ["manual"],
+      "terms": [
+        "rompipalle",
+        "rompiballe",
+        "rompicoglioni",
+        "rompicazzo",
+        "rompicazzi"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -162,8 +243,15 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["coglionazzo", "coglionazza", "coglionazzi", "coglionazze"],
-      "provenance": ["manual"],
+      "terms": [
+        "coglionazzo",
+        "coglionazza",
+        "coglionazzi",
+        "coglionazze"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -172,8 +260,12 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["vaffancul"],
-      "provenance": ["manual"],
+      "terms": [
+        "vaffancul"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Prefisso ammesso per suffissi enfatici del comando offensivo. Non è una radice nominale comune; audit obbligatorio e negativi con inizio diverso."
     },
     {
@@ -182,8 +274,16 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "phrases": [["testa", "di", "cazzo"]],
-      "provenance": ["manual"],
+      "phrases": [
+        [
+          "testa",
+          "di",
+          "cazzo"
+        ]
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Solo la sequenza dichiarata di parole adiacenti."
     },
     {
@@ -192,8 +292,21 @@
       "category": "insult",
       "severity": 3,
       "confidence": "high",
-      "phrases": [["figlio", "di", "puttana"], ["figli", "di", "puttana"]],
-      "provenance": ["manual"],
+      "phrases": [
+        [
+          "figlio",
+          "di",
+          "puttana"
+        ],
+        [
+          "figli",
+          "di",
+          "puttana"
+        ]
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Solo le sequenze dichiarate, non figlio o figli da soli."
     },
     {
@@ -202,10 +315,171 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["testadicazzo"],
+      "terms": [
+        "testadicazzo"
+      ],
       "anchor": "both",
-      "provenance": ["manual"],
+      "provenance": [
+        "manual"
+      ],
       "note": "Composto noto: ammesso solo all’inizio o alla fine di una parola."
+    },
+    {
+      "id": "it.insult.paraculo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "paraculo",
+        "paracula",
+        "paraculi",
+        "paracule"
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.insult.cagasotto",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "cagasotto",
+        "cagasotti"
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.insult.pirla",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": [
+        "pirla",
+        "pirli",
+        "pirle"
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.insult.cornuto",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": [
+        "cornuto",
+        "cornuta",
+        "cornuti",
+        "cornute"
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.insult.pezzo-di-merda",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        [
+          "pezzo",
+          "di",
+          "merda"
+        ],
+        [
+          "pezzi",
+          "di",
+          "merda"
+        ]
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
+    },
+    {
+      "id": "it.insult.vai-a-fanculo",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        [
+          "vai",
+          "a",
+          "fanculo"
+        ],
+        [
+          "andate",
+          "a",
+          "fanculo"
+        ]
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
+    },
+    {
+      "id": "it.insult.figlio-di-troia",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        [
+          "figlio",
+          "di",
+          "troia"
+        ],
+        [
+          "figli",
+          "di",
+          "troia"
+        ]
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
+    },
+    {
+      "id": "it.insult.vai-a-cagare",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        [
+          "vai",
+          "a",
+          "cagare"
+        ],
+        [
+          "andate",
+          "a",
+          "cagare"
+        ]
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
     }
   ]
 }

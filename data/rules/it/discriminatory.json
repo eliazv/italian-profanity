@@ -7,8 +7,15 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": ["frocio", "frocia", "froci", "frocie"],
-      "provenance": ["manual"],
+      "terms": [
+        "frocio",
+        "frocia",
+        "froci",
+        "frocie"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -17,8 +24,13 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": ["culattone", "culattoni"],
-      "provenance": ["manual"],
+      "terms": [
+        "culattone",
+        "culattoni"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -27,8 +39,15 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": ["negraccio", "negraccia", "negracci", "negracce"],
-      "provenance": ["manual"],
+      "terms": [
+        "negraccio",
+        "negraccia",
+        "negracci",
+        "negracce"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
     {
@@ -37,9 +56,63 @@
       "category": "discriminatory",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["terrone", "terrona", "terroni"],
-      "provenance": ["manual"],
+      "terms": [
+        "terrone",
+        "terrona",
+        "terroni"
+      ],
+      "provenance": [
+        "manual"
+      ],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+    },
+    {
+      "id": "it.discriminatory.recchione",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": [
+        "recchione",
+        "recchioni",
+        "ricchione",
+        "ricchioni"
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.discriminatory.ingiuria-identitaria",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        [
+          "sporco",
+          "ebreo"
+        ],
+        [
+          "sporchi",
+          "ebrei"
+        ],
+        [
+          "negro",
+          "di",
+          "merda"
+        ],
+        [
+          "zingaro",
+          "di",
+          "merda"
+        ]
+      ],
+      "provenance": [
+        "manual"
+      ],
+      "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
     }
   ]
 }
