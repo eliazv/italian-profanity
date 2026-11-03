@@ -17,13 +17,29 @@ Lingua: codice e identificatori in inglese; commenti, documentazione e messaggi 
 7. Tipo di regola predefinito: `word` con forme elencate. `prefix` solo se giustificato in `note` (§5.1).
 8. **Mai inserire nickname reali** di utenti nelle fixture o nei log. Usare esempi inventati o anonimizzati.
 
-## Comandi (dalla fase M0)
+## Requisiti
 
-| Comando             | Cosa fa                                                                     |
-| ------------------- | --------------------------------------------------------------------------- |
-| `pnpm validate`     | Schema, unicità degli id, termini già normalizzati, fixture per ogni regola |
-| `pnpm build:data`   | Genera la tabella di normalizzazione e i dati per TS e Dart                 |
-| `pnpm test`         | Test TS (Vitest) e Dart (`dart test`)                                       |
-| `pnpm parity`       | Esegue le fixture su entrambi i motori e confronta i risultati              |
-| `pnpm audit:benign` | Controlla il corpus di nomi, cognomi e parole comuni                        |
-| `pnpm check`        | Tutto quanto sopra più lint: **deve passare prima del merge**               |
+Node 24 o superiore, pnpm 10 (versione fissata in `packageManager`) e Dart SDK 3.4 o superiore. Al primo avvio: `pnpm install`, poi `dart pub get` in `packages/dart`.
+
+## Comandi
+
+| Comando                      | Cosa fa                                                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------ |
+| `pnpm validate`              | Schema, unicità degli id, termini già normalizzati, fixture per ogni regola          |
+| `pnpm build:data`            | Genera la tabella di normalizzazione e i dati per TS e Dart                          |
+| `pnpm lint` / `pnpm format`  | Biome (TS, JSON, Markdown) più `dart format` e `dart analyze`                        |
+| `pnpm typecheck`             | `tsc` su `tools/` e sul pacchetto, con `isolatedDeclarations` sul codice pubblicato  |
+| `pnpm test`                  | Test TS (Vitest) e Dart (`dart test`)                                                |
+| `pnpm parity`                | Esegue le fixture su entrambi i motori e confronta i risultati                       |
+| `pnpm parity --expectations` | Verifica anche le attese delle fixture: attivo in CI dalla fase M2                   |
+| `pnpm audit:benign`          | Controlla il corpus di nomi, cognomi e parole comuni (dalla fase M2)                 |
+| `pnpm check`                 | Validazione, build, lint, typecheck, test e parità: **deve passare prima del merge** |
+| `pnpm changeset`             | Registra una modifica per il prossimo rilascio                                       |
+| `pnpm release:version`       | Applica i changeset e allinea la versione Dart (vedi `docs/rilascio.md`)             |
+
+## Dove mettere le mani
+
+- **Una regola o un'eccezione**: `data/rules/<lingua>/<categoria>.json` o `data/exceptions/`, con le fixture in `data/fixtures/`, poi `pnpm build:data`.
+- **La normalizzazione**: le mappe stanno in `data/normalization/`; la logica sta in `packages/js/src/normalize.ts` e `packages/dart/lib/src/normalize.dart`, sempre insieme.
+- **Il formato dei risultati per la parità**: `packages/js/test/fixtures-runner.ts` e `packages/dart/tool/fixtures_runner.dart` devono produrre lo stesso JSON.
+- **Gli offset (`range`)** sono in unità UTF-16, native sia in JS sia in Dart.

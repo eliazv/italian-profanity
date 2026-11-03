@@ -219,7 +219,7 @@ const checker = createChecker({
 checker.check("…")
 ```
 
-- `range` si riferisce al testo originale. **Non va scritto nei log**, perché permetterebbe di risalire al nickname.
+- `range` si riferisce al testo originale, in **unità UTF-16** (native sia in JS sia in Dart, quindi identiche). **Non va scritto nei log**, perché permetterebbe di risalire al nickname.
 - Pubblicato come ESM con i tipi `.d.ts`, per Node 20 o superiore e i browser moderni. Nessuna dipendenza a runtime.
 
 ### 6.3 Dart
@@ -316,36 +316,46 @@ italian-profanity/
 ├─ LICENSE · NOTICE          MIT, attribuzioni delle fonti
 ├─ docs/
 │  ├─ decisioni.md           registro delle decisioni (ADR brevi)
+│  ├─ rilascio.md            flusso di rilascio e configurazione iniziale di npm e pub.dev
 │  ├─ curazione.md           guida per i curatori (M3)
 │  └─ REVISIONE-2026-11-03.md   storico, assorbita in v2
 ├─ data/                     ← unica fonte di regole e test
-│  ├─ schema/                JSON Schema di regole, eccezioni e fixture
+│  ├─ schema/                JSON Schema di regole, eccezioni, fixture, fonti e normalizzazione
 │  ├─ rules/it/              blasphemy.json · insult.json · sexual.json · discriminatory.json · vulgar.json
 │  ├─ rules/en/              core.json (pacchetto facoltativo)
 │  ├─ exceptions/it.json
-│  ├─ normalization/         leet.json · confusables-subset.json (input del build)
-│  ├─ fixtures/*.jsonl
+│  ├─ normalization/         leet · invisible · latin-extra · confusables-subset (input del build)
+│  ├─ fixtures/*.jsonl       id con prefisso uguale al nome del file
 │  ├─ audit/accepted.jsonl   collisioni valutate e accettate
 │  └─ sources.json
 ├─ tools/                    TypeScript, eseguito con Node 24 (type stripping)
-│  ├─ validate.ts            schema, unicità degli id, termini già normalizzati, casi per ogni regola
-│  ├─ build.ts               genera la tabella di normalizzazione e i dati per TS e Dart
-│  ├─ audit-benign.ts        corpus napolux (commit fissato, scaricato in cache)
-│  ├─ parity.ts              confronta i JSON dei due fixtures-runner
-│  └─ behavior-diff.ts       differenze di esito rispetto all'ultima release
+│  ├─ lib/                   caricamento dati, JSON canonico, percorsi
+│  ├─ validate.ts            schema e controlli semantici
+│  ├─ build.ts               genera la tabella fold e i dati per TS e Dart, copia LICENSE e NOTICE
+│  ├─ audit-benign.ts        corpus napolux (commit fissato, scaricato in .cache)
+│  ├─ parity.ts              confronta i JSON dei due runner; --expectations verifica le attese
+│  ├─ sync-version.ts        allinea pubspec e CHANGELOG alla versione npm
+│  └─ behavior-diff.ts       differenze di esito rispetto all'ultima release (M6)
 ├─ packages/
 │  ├─ js/                    npm "italian-profanity"
-│  │  ├─ src/                normalize.ts · segment.ts · matchers/ · policy.ts · index.ts
+│  │  ├─ src/                normalize.ts · segment.ts · matchers/ · policy.ts · types.ts · index.ts
 │  │  ├─ src/generated/      dati e tabella (generati, versionati)
-│  │  └─ test/               unit test + fixtures-runner
+│  │  ├─ test/               unit test (Vitest) + fixtures-runner.ts
+│  │  └─ tsconfig.build.json isolatedDeclarations solo sul codice pubblicato
 │  └─ dart/                  pub.dev "italian_profanity"
 │     ├─ lib/src/            stessi moduli
 │     ├─ lib/src/generated/  (generati, versionati)
-│     └─ test/               unit test + fixtures-runner
-├─ .github/workflows/
-│  ├─ ci.yml                 validate → build (diff pulito) → test TS → test Dart → parity → audit-benign → smoke
-│  └─ release.yml            pubblicazione da tag con OIDC (npm trusted publishing, pub.dev automated publishing)
-├─ package.json · pnpm-workspace.yaml
+│     ├─ test/               unit test
+│     └─ tool/               fixtures_runner.dart
+├─ .github/
+│  ├─ workflows/ci.yml       validate → build (diff pulito) → lint → typecheck → test → parity → smoke npm → dry-run pub;
+│  │                         job separati per Dart SDK 3.4 e per l'audit
+│  ├─ workflows/release.yml  da tag vX.Y.Z: verifica, poi npm (provenance, OIDC) e pub.dev (automated publishing)
+│  ├─ ISSUE_TEMPLATE/        falso positivo, falso negativo
+│  ├─ pull_request_template.md
+│  └─ dependabot.yml
+├─ .changeset/               Changesets
+├─ package.json · pnpm-workspace.yaml · tsconfig.base.json · biome.json
 └─ .editorconfig · .gitattributes   (fine riga LF, così il build è deterministico anche su Windows)
 ```
 
@@ -356,7 +366,7 @@ Gli strumenti principali:
 | Package manager JS   | pnpm, workspace con `packages/js` e la radice per `tools/`                                       |
 | Build TS             | `tsdown` (ESM, CJS e `.d.ts`), nessuna dipendenza a runtime                                      |
 | Test TS              | Vitest                                                                                           |
-| Lint e formattazione | Biome, sia per TS sia per JSON                                                                   |
+| Lint e formattazione | Biome per TS, JSON e Markdown                                                                    |
 | Dart                 | `dart test`, `dart analyze` con `lints/recommended`, `dart format`                               |
 | Versioni             | Changesets. **Le versioni npm e pub sono sempre identiche**: `tools/` sincronizza `pubspec.yaml` |
 
@@ -376,7 +386,7 @@ Gli strumenti principali:
 
 | Fase                                                        | Contenuto                                                                                            | Ore stimate |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------: |
-| **M0** Struttura                                            | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE                    |         3-4 |
+| ✅ **M0** Struttura                                         | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE                    |         3-4 |
 | **M1** Normalizzazione e segmentazione, **in TS e in Dart** | Tabella generata, viste, offset, prime 80 fixture Unicode e separatori, parità già attiva            |         6-8 |
 | **M2** Rilevatore e policy in TS                            | `word`, `prefix`, `phrase`, `compound`, `combo`, `pattern`, eccezioni, profili, API                  |         6-8 |
 | **M3** Curazione                                            | 60-100 regole, 300 fixture, audit napolux, `curazione.md`, `sources.json`, `NOTICE`                  |       10-14 |

@@ -23,3 +23,15 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni piÃ
 Pacchetti previsti: npm `italian-profanity` Â· pub.dev `italian_profanity`.
 
 Keywords: profanity, italian, parolacce, bestemmie, insulti, moderation, nickname, username, validation, flutter, dart.
+
+## Sviluppo
+
+Requisiti: Node 24 o superiore, pnpm 10 e Dart SDK 3.4 o superiore.
+
+```sh
+pnpm install
+(cd packages/dart && dart pub get)
+pnpm check
+```
+
+Regole, comandi e struttura sono descritti in [AGENTS.md](AGENTS.md), il rilascio in [docs/rilascio.md](docs/rilascio.md).
