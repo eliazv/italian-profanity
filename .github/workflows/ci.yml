@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Dati, motori e parità
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - run: pnpm install --frozen-lockfile
+      - run: dart pub get
+        working-directory: packages/dart
+
+      - name: Validazione dei dati
+        run: pnpm validate
+
+      - name: File generati aggiornati
+        run: |
+          pnpm build:data
+          git diff --exit-code || {
+            echo "::error::I file generati non sono aggiornati: esegui pnpm build:data e fai commit."
+            exit 1
+          }
+
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+
+      - name: Parità TS/Dart
+        run: pnpm parity
+
+      - name: Build e smoke test del pacchetto npm
+        run: |
+          pnpm --filter italian-profanity build
+          node --input-type=module -e "const m = await import('./packages/js/dist/index.js'); if (!m.VERSION) process.exit(1)"
+          node -e "const m = require('./packages/js/dist/index.cjs'); if (!m.VERSION) process.exit(1)"
+
+      - name: Verifica del pacchetto pub
+        run: dart pub publish --dry-run
+        working-directory: packages/dart
+
+  dart-min-sdk:
+    name: Dart SDK minimo (3.4)
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: packages/dart
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 3.4.0
+      - run: dart pub get
+      - run: dart test
+
+  audit:
+    name: Audit sul corpus innocuo
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - uses: actions/cache@v4
+        with:
+          path: .cache/napolux
+          key: napolux-${{ hashFiles('tools/audit-benign.ts') }}
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm audit:benign

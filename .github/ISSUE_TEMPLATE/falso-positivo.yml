@@ -1,0 +1,40 @@
+name: Falso positivo
+description: Un testo innocuo viene bloccato o segnalato
+title: "Falso positivo: "
+labels: ["falso-positivo", "dati"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie! Ogni segnalazione diventa un caso di test. **Non incollare nickname reali di altre persone**: riproduci il caso con un esempio inventato.
+  - type: input
+    id: input
+    attributes:
+      label: Testo
+      description: Il testo esatto che viene bloccato
+    validations:
+      required: true
+  - type: input
+    id: rule
+    attributes:
+      label: Regola segnalata
+      description: Il ruleId restituito da findMatches, se lo conosci
+  - type: dropdown
+    id: profile
+    attributes:
+      label: Profilo
+      options: [balanced, strict, lenient, personalizzato]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Perché è innocuo
+      description: Ad esempio nome proprio, cognome, toponimo, parola comune
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versione
+      description: Pacchetto e versione (es. italian-profanity 0.1.0 oppure italian_profanity 0.1.0)

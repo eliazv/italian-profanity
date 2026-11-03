@@ -1,0 +1,40 @@
+name: Falso negativo
+description: Un testo offensivo non viene riconosciuto
+title: "Falso negativo: "
+labels: ["falso-negativo", "dati"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie! Ogni segnalazione diventa un caso di test. **Non incollare nickname reali di altre persone**: riproduci il caso con un esempio inventato.
+  - type: input
+    id: input
+    attributes:
+      label: Testo
+      description: Il testo che dovrebbe essere riconosciuto
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      options:
+        [bestemmia, insulto, sessuale, discriminatorio, volgare, contatto (URL/email/telefono)]
+    validations:
+      required: true
+  - type: dropdown
+    id: profile
+    attributes:
+      label: Profilo
+      options: [balanced, strict, lenient, personalizzato]
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contesto
+      description: Variante regionale, elusione usata (leet, separatori, Unicode…), dove l'hai incontrato
+  - type: input
+    id: version
+    attributes:
+      label: Versione

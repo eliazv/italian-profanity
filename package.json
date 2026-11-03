@@ -20,7 +20,7 @@
     "format": "biome check --write . && cd packages/dart && dart format .",
     "check": "pnpm validate && pnpm build:data && pnpm lint && pnpm typecheck && pnpm test && pnpm parity",
     "changeset": "changeset",
-    "version": "changeset version && node tools/sync-version.ts && pnpm build:data"
+    "release:version": "changeset version && node tools/sync-version.ts && pnpm build:data"
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.4",

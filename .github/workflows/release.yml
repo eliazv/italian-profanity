@@ -1,0 +1,70 @@
+# Pubblicazione da tag vX.Y.Z (SPECIFICHE.md §10), con le stesse versioni su npm e pub.dev.
+# Prerequisiti, una volta sola (vedi docs/rilascio.md):
+#   - npm: prima pubblicazione manuale, poi trusted publisher configurato su questo workflow;
+#   - pub.dev: prima pubblicazione manuale, poi automated publishing da GitHub con tag pattern v{{version}}.
+name: Release
+
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+*"]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verifica versione e controlli completi
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: pnpm install --frozen-lockfile
+      - run: dart pub get
+        working-directory: packages/dart
+
+      - name: Il tag coincide con la versione dei pacchetti
+        run: |
+          version="$(node -p "require('./packages/js/package.json').version")"
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME diverso dalla versione $version"
+            exit 1
+          fi
+
+      - run: pnpm check
+      - run: pnpm parity --expectations
+
+  npm:
+    name: Pubblica su npm
+    needs: verify
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter italian-profanity build
+      - run: npm publish --provenance --access public
+        working-directory: packages/js
+
+  pub:
+    name: Pubblica su pub.dev
+    needs: verify
+    permissions:
+      id-token: write
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+    with:
+      working-directory: packages/dart
