@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.cache/
+*.tsbuildinfo
+
+# Dart
+.dart_tool/
+packages/dart/pubspec.lock
+packages/dart/build/
+
+# Sistema
+.DS_Store
+Thumbs.db

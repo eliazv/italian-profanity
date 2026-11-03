@@ -1,0 +1,14 @@
+italian-profanity
+Copyright (c) 2026 Elia Zavatta — MIT License (vedi LICENSE)
+
+Le regole in data/rules sono scritte a mano. Le fonti consultate, con licenza,
+commit e uso consentito, sono elencate in data/sources.json.
+
+Materiale di terzi incorporato nei pacchetti distribuiti:
+
+- Unicode Character Database e UTS #39 confusables (sottoinsieme in
+  data/normalization/confusables-subset.json), © Unicode, Inc.,
+  Unicode License v3 — https://www.unicode.org/license.txt
+
+Nessun altro dato di terzi è attualmente incorporato. Questo file va
+aggiornato ogni volta che una regola con provenance esterna entra nei dati.

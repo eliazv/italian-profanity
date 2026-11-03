@@ -1,0 +1,3 @@
+# Fine riga LF ovunque: il build dei dati deve essere deterministico anche su Windows.
+* text=auto eol=lf
+*.png binary
