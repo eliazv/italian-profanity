@@ -6,7 +6,11 @@
   "type": "object",
   "required": ["id", "input", "profile"],
   "additionalProperties": false,
-  "anyOf": [{ "required": ["action"] }, { "required": ["rules"] }, { "required": ["mustNotMatch"] }],
+  "anyOf": [
+    { "required": ["action"] },
+    { "required": ["rules"] },
+    { "required": ["mustNotMatch"] }
+  ],
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z]+(-[a-z]+)*-[0-9]{3,}$" },
     "input": { "type": "string" },

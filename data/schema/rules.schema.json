@@ -32,6 +32,7 @@
           "type": "string",
           "pattern": "^(it|en)\\.(blasphemy|insult|sexual|discriminatory|vulgar)\\.[a-z0-9]+(-[a-z0-9]+)*$"
         },
+        "kind": { "enum": ["word", "prefix", "phrase", "compound", "combo"] },
         "category": {
           "enum": ["blasphemy", "insult", "sexual", "discriminatory", "vulgar"]
         },
@@ -44,7 +45,10 @@
           "minItems": 1,
           "uniqueItems": true
         },
-        "note": { "description": "Solo per i curatori: non finisce nei pacchetti.", "type": "string" }
+        "note": {
+          "description": "Solo per i curatori: non finisce nei pacchetti.",
+          "type": "string"
+        }
       }
     },
     "rule": {
