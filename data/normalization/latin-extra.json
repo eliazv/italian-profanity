@@ -1,0 +1,21 @@
+{
+  "$schema": "../schema/normalization.schema.json",
+  "description": "Lettere latine senza scomposizione NFKD, aggiunte a mano alla tabella.",
+  "map": {
+    "ß": "ss",
+    "ẞ": "ss",
+    "æ": "ae",
+    "Æ": "ae",
+    "œ": "oe",
+    "Œ": "oe",
+    "ø": "o",
+    "Ø": "o",
+    "đ": "d",
+    "Đ": "d",
+    "ł": "l",
+    "Ł": "l",
+    "ı": "i",
+    "ħ": "h",
+    "Ħ": "h"
+  }
+}

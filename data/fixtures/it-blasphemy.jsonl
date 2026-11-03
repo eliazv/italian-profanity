@@ -1,0 +1,10 @@
+{"id":"it-blasphemy-001","input":"Dio porco","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"it-blasphemy-002","input":"porco Dio","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"it-blasphemy-003","input":"D10 p0rc0","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"leetspeak"}
+{"id":"it-blasphemy-004","input":"p0r-cò_Dio","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"punteggiatura dentro la parola"}
+{"id":"it-blasphemy-005","input":"Diocaneee","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"composto e ripetizioni"}
+{"id":"it-blasphemy-006","input":"Dio porcone","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"it-blasphemy-007","input":"Claudio porco","profile":"balanced","mustNotMatch":["it.blasphemy.divine-insult"],"note":"dio solo come fine di un nome"}
+{"id":"it-blasphemy-008","input":"Claudio Porcu","profile":"balanced","action":"allow","mustNotMatch":["it.blasphemy.divine-insult"]}
+{"id":"it-blasphemy-009","input":"Dio santo","profile":"balanced","action":"allow","mustNotMatch":["it.blasphemy.divine-insult"]}
+{"id":"it-blasphemy-010","input":"Madonna di Campiglio","profile":"balanced","action":"allow","mustNotMatch":["it.blasphemy.divine-insult"]}

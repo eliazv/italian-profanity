@@ -1,0 +1,51 @@
+{
+  "$schema": "./schema/sources.schema.json",
+  "sources": [
+    {
+      "id": "napolux",
+      "url": "https://github.com/napolux/paroleitaliane",
+      "license": "MIT (il README avverte che alcune liste hanno provenienza originaria ignota)",
+      "checked": "2026-11-03",
+      "use": "audit",
+      "files": [
+        "paroleitaliane/9000_nomi_propri.txt",
+        "paroleitaliane/lista_38000_cognomi.txt",
+        "paroleitaliane/60000_parole_italiane.txt"
+      ],
+      "note": "Corpus di audit dei falsi positivi: scaricato in .cache a un commit fissato, mai versionato né distribuito. lista_badwords.txt potrà essere usato come fonte di candidati, con attribuzione."
+    },
+    {
+      "id": "ldnoobw",
+      "url": "https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words",
+      "license": "CC-BY-4.0",
+      "checked": "2026-11-03",
+      "use": "coverage",
+      "files": ["it"],
+      "note": "Solo confronto di copertura: nessuna voce viene copiata."
+    },
+    {
+      "id": "hurtlex",
+      "url": "https://github.com/valeriobasile/hurtlex",
+      "license": "CC-BY-NC-SA-4.0",
+      "checked": "2026-11-03",
+      "use": "excluded",
+      "note": "Licenza non commerciale e share-alike, dichiarata nel README: incompatibile con un pacchetto MIT."
+    },
+    {
+      "id": "evalita",
+      "url": "https://github.com/evalita2018/data",
+      "license": "varie, alcune CC-BY-NC-SA",
+      "checked": "2026-11-03",
+      "use": "excluded",
+      "note": "Solo per ricerca, fuori dal repository."
+    },
+    {
+      "id": "unicode-confusables",
+      "url": "https://www.unicode.org/Public/security/16.0.0/confusables.txt",
+      "license": "Unicode-3.0",
+      "checked": "2026-11-03",
+      "use": "candidates",
+      "note": "Sottoinsieme in data/normalization/confusables-subset.json."
+    }
+  ]
+}

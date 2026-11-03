@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/normalization.schema.json",
+  "description": "Sostituzioni leetspeak della vista deleet, applicate solo a parole che contengono almeno una lettera (SPECIFICHE.md §4.3).",
+  "map": {
+    "0": "o",
+    "1": "i",
+    "3": "e",
+    "4": "a",
+    "5": "s",
+    "7": "t",
+    "@": "a",
+    "$": "s",
+    "€": "e",
+    "!": "i"
+  }
+}

@@ -1,0 +1,5 @@
+{"id":"unicode-001","input":"ｃａｚｚｏ","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"fullwidth"}
+{"id":"unicode-002","input":"сazzо","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"c e o cirillici"}
+{"id":"unicode-003","input":"caz​zo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"zero-width"}
+{"id":"unicode-004","input":"Perché","profile":"balanced","action":"allow","note":"accento precomposto"}
+{"id":"unicode-005","input":"Perché","profile":"balanced","action":"allow","note":"accento decomposto"}

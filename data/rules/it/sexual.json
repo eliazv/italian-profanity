@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.sexual.cazzo",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["cazzo", "cazzi", "cazzone", "cazzoni", "cazzata", "cazzate"],
+      "provenance": ["manual"],
+      "note": "Forme elencate e non prefisso: cazzotto, cazzuola e scazzottata devono passare."
+    }
+  ]
+}

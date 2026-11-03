@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/eliazv/italian-profanity/data/schema/sources.schema.json",
+  "title": "Inventario delle fonti",
+  "type": "object",
+  "required": ["sources"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "url", "license", "checked", "use"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "url": { "type": "string", "format": "uri" },
+          "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+          "license": { "type": "string" },
+          "checked": { "type": "string", "format": "date" },
+          "use": {
+            "description": "candidates: candidati per le regole (con attribuzione) · audit: solo corpus di audit, mai distribuito · coverage: solo confronto di copertura · excluded: non usare",
+            "enum": ["candidates", "audit", "coverage", "excluded"]
+          },
+          "files": { "type": "array", "items": { "type": "string" } },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

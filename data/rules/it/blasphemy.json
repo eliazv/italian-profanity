@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.blasphemy.divine-insult",
+      "kind": "combo",
+      "category": "blasphemy",
+      "severity": 3,
+      "confidence": "high",
+      "a": ["dio", "madonna", "gesu", "cristo"],
+      "b": {
+        "forms": ["boia", "bestia"],
+        "prefixes": ["porc", "can", "ladr", "merd", "serpent"]
+      },
+      "provenance": ["manual"],
+      "note": "Regola seme della fase M0: gli elenchi si completano in M3."
+    }
+  ]
+}

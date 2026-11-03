@@ -1,0 +1,5 @@
+{"id":"it-sexual-001","input":"cazzo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"]}
+{"id":"it-sexual-002","input":"c a z z o","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"lettere spaziate"}
+{"id":"it-sexual-003","input":"cazzzzo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"vista squeeze"}
+{"id":"it-sexual-004","input":"Scazzottata","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"]}
+{"id":"it-sexual-005","input":"cazzuola","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"]}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/eliazv/italian-profanity/data/schema/exceptions.schema.json",
+  "title": "Eccezioni",
+  "description": "Ogni eccezione sopprime un solo match (regola + parola); non rimuove testo. Vedi SPECIFICHE.md §5.3 e D6.",
+  "type": "object",
+  "required": ["exceptions"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ruleId", "word", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "ruleId": { "type": "string" },
+          "word": { "type": "string", "pattern": "^[a-z]+$" },
+          "reason": { "type": "string", "minLength": 3 }
+        }
+      }
+    }
+  }
+}

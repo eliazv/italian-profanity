@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/eliazv/italian-profanity/data/schema/normalization.schema.json",
+  "title": "Input della normalizzazione",
+  "description": "Mappe char → stringa usate dal build per generare la tabella condivisa. Vedi SPECIFICHE.md §4.4.",
+  "type": "object",
+  "required": ["map"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "description": { "type": "string" },
+    "source": { "type": "string" },
+    "map": {
+      "type": "object",
+      "propertyNames": { "minLength": 1, "maxLength": 2 },
+      "additionalProperties": { "type": "string", "pattern": "^[a-z]*$" }
+    }
+  }
+}
