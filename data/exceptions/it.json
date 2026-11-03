@@ -1,4 +1,15 @@
 {
   "$schema": "../schema/exceptions.schema.json",
-  "exceptions": []
+  "exceptions": [
+    {
+      "ruleId": "it.blasphemy.divine-insult",
+      "word": "candio",
+      "reason": "Cognome nel corpus di audit: la sequenza finale non è una bestemmia."
+    },
+    {
+      "ruleId": "it.blasphemy.divine-insult",
+      "word": "canidio",
+      "reason": "Nome nel corpus di audit: soppressione limitata alla singola parola e regola."
+    }
+  ]
 }

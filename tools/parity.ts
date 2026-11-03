@@ -2,7 +2,7 @@
 // Uso: node tools/parity.ts [--expectations]
 //   Le attese di normalizzazione, segmenti ed errori sono sempre verificate.
 //   --expectations  verifica anche che i risultati rispettino le attese di rilevamento
-//                   (attivo in CI dalla fase M2, quando esiste il rilevatore).
+//                   (obbligatorio in pnpm check e nella CI dalla fase M2).
 import { execFileSync } from "node:child_process"
 import { join } from "node:path"
 import type { Segment } from "../packages/js/src/segment.ts"
@@ -17,7 +17,7 @@ interface RunnerResult {
   segments?: Segment[]
   error?: string
   action?: string
-  matches?: Array<{ ruleId: string }>
+  matches?: import("../packages/js/src/types.ts").Match[]
 }
 
 const fixturesDir = join(DATA, "fixtures")
@@ -139,6 +139,16 @@ if (checkExpectations) {
   for (const [id, fixture] of fixtures) {
     const result = js.get(id)
     if (!result) continue
+    if (!fixture.expectedError && (!result.action || !Array.isArray(result.matches))) {
+      problems.push(`${id}: mancano action e matches del rilevatore`)
+      continue
+    }
+    if (
+      fixture.expectedMatches !== undefined &&
+      canonicalJson(result.matches) !== canonicalJson(fixture.expectedMatches)
+    ) {
+      problems.push(`${id}: match completi diversi dall'attesa`)
+    }
     const found = new Set((result.matches ?? []).map((match) => match.ruleId))
     if (fixture.action && result.action !== fixture.action) {
       problems.push(

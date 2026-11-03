@@ -12,7 +12,7 @@
 
 Il valore non è avere la lista più lunga, ma **precisione e affidabilità**:
 
-1. **Nessun falso positivo su nomi, cognomi, luoghi e parole comuni italiane.** Claudio, Diodato, Porcedda, Madonna di Campiglio e Scazzottata devono passare.
+1. **Ridurre i falsi positivi su nomi, cognomi, luoghi e parole comuni italiane.** Claudio, Diodato, Porcedda, Madonna di Campiglio e Scazzottata devono passare. Gli omografi fra nomi e termini offensivi richiedono una scelta editoriale esplicita: i casi noti sono documentati nell'audit e passano a `review` in `balanced` (D19), senza una promessa assoluta di disambiguazione.
 2. **Resistenza alle elusioni comuni**: leetspeak, separatori, accenti, lettere ripetute e caratteri Unicode simili.
 3. **Lo stesso verdetto in JS e in Dart**, verificato da un'unica suite di casi di test.
 
@@ -186,6 +186,10 @@ Le eccezioni hanno un file separato e **sopprimono solo un match specifico**:
 
 Un'eccezione **non toglie testo e non disattiva la regola altrove**. Se la stessa parola è coperta da un'altra regola, quella resta attiva.
 
+Le eccezioni si applicano ai match contenuti in un singolo segmento, confrontando l'intera parola nelle viste `base` o `deleet`. Un'eccezione su una parola non sopprime una regola `phrase` o `combo` che copre più parole: il testo e l'adiacenza restano disponibili a tutte le altre regole. I match duplicati fra viste vengono eliminati per `ruleId` e intervallo.
+
+Per `word`, `prefix` e `combo` l'intervallo copre il segmento o la coppia riconosciuta, esclusa la punteggiatura esterna senza contributo lessicale. Per `compound` copre la porzione ancorata effettivamente riconosciuta. Le frasi usano solo le parole originali adiacenti, mai i candidati aggiuntivi delle lettere spaziate. Dopo offset iniziale, gravità e `ruleId`, la fine dell'intervallo risolve eventuali ulteriori parità d'ordine.
+
 `provenance` e `note` servono solo ai curatori: il build li toglie dai dati distribuiti nei pacchetti.
 
 ### 5.4 Gravità e categorie
@@ -207,6 +211,12 @@ Un'eccezione **non toglie testo e non disattiva la regola altrove**. Se la stess
 | personalizzato       | Esigenze specifiche      | Soglie per categoria, termini ed eccezioni dell'app                   |
 
 `review` indica un caso dubbio: l'app decide se rifiutare il testo o mandarlo in moderazione manuale. Per i nickname conviene trattarlo come un rifiuto.
+
+Le forme con `confidence: medium` producono `review` anche a gravità 1 in `balanced`. In `lenient`, solo `blasphemy` e `discriminatory` producono un'azione lessicale: `high` porta a `block`, `medium` a `review`. `strict` porta a `block` ogni match attivo. Il risultato aggregato sceglie `block` prima di `review`, poi `allow`; l'elenco dei match resta sempre completo.
+
+`thresholds` permette di impostare per categoria il minimo di gravità (1, 2 o 3), oppure `null` per disattivarne l'azione. Le soglie esplicite prevalgono sul profilo, senza rimuovere i match; per un match ammesso dalla soglia resta il trattamento della confidenza. L'opzione `contacts: true` blocca i contatti in tutti i profili predefiniti (D20), salvo una soglia esplicita diversa.
+
+I contatti si riconoscono sull'input originale troncato: URL con `http://`, `https://` o `www.`, email ASCII con dominio e numeri telefonici di 9-15 cifre, anche con separatori. È un rilevatore euristico: una sequenza numerica isolata di tale lunghezza può essere classificata come telefono. Non è una validazione completa degli standard di email e URL né un normalizzatore di contatti Unicode.
 
 ### 6.2 TypeScript
 
@@ -230,6 +240,10 @@ const checker = createChecker({
 })
 checker.check("…")
 ```
+
+`extraRules` accetta solo regole `word` letterali; `id` è facoltativo e, se omesso, diventa `app.word.<indice>`. Un id duplicato o nel namespace `contact.` è rifiutato. Le forme e le eccezioni locali vengono normalizzate come parole alfabetiche singole, senza eseguire regex; termini vuoti, simboli senza lettere o frasi richiedono un errore di configurazione. Le regole locali restano attive anche con `languages: []`. `createChecker()` compila una copia delle opzioni e non legge le successive mutazioni degli array dell'app.
+
+Il nucleo inglese è ancora vuoto: `languages: ["en"]` disattiva le regole italiane e non aggiunge una copertura inglese inesistente. Le lingue diverse da `it` ed `en` vengono rifiutate. Nessuna lingua aggiuntiva viene attivata per default.
 
 - `range` si riferisce al testo originale, in **unità UTF-16** (native sia in JS sia in Dart, quindi identiche). **Non va scritto nei log**, perché permetterebbe di risalire al nickname.
 - Pubblicato come ESM con i tipi `.d.ts`, per Node 20 o superiore e i browser moderni. Nessuna dipendenza a runtime.
@@ -272,6 +286,8 @@ Campi: `expectedBase` (risultato atteso di `fold` sull'intero input, prima di li
 
 `expectedSegments` specifica l'elenco completo e ordinato dei segmenti: `kind`, `range`, `base` e `deleet` sono obbligatori per ciascuno; `fragments`, `baseOrigins`, `deleetOrigins` e `squeeze` sono opzionali. Ogni campo presente viene confrontato esattamente, inclusi lunghezza e ordine degli array: non è un confronto parziale degli elementi. Le strutture complete prodotte dai due motori vengono comunque sempre confrontate in parità. `expectedBase` ed `expectedSegments` accettano attese vuote. `expectedError: "invalidMaxLength"` richiede un `maxLength` invalido ed esclude attese sui segmenti o sul rilevamento.
 
+Da M2 `expectedMatches` verifica l'elenco completo e ordinato dei match, compresi metadati e intervalli. Le fixture possono passare `languages`, `extraRules`, `exceptions` e `thresholds`; `expectedError: "invalidOptions"` verifica configurazioni non ammesse. I test di entrambi i pacchetti e `pnpm parity --expectations` controllano le attese lessicali. `pnpm check` e la CI richiedono tale modalità e l'audit effettivo: l'assenza del rilevatore non è più uno skip consentito.
+
 M1 ha 107 nuove fixture condivise per segmenti, viste, intervalli UTF-16 ed errori, oltre alle 31 iniziali: comprendono espansioni, eliminazioni, emoji, surrogati isolati, troncamento e casi negativi vicini. Gli stessi casi sono verificati anche dai test di entrambi i pacchetti, con invarianti su provenienza, lunghezza delle viste e ricostruzione delle ripetizioni. Il confronto fra motori e quello con le attese sono due controlli distinti e obbligatori per i campi implementati.
 
 **Insieme minimo per la v0.1: 300 casi**, di cui almeno il 60% negativi (nomi, luoghi, parole vicine a quelle bloccate). Le famiglie obbligatorie sono quelle della tabella al §4 della revisione: nomi, toponimi, parole innocue simili a parolacce, `Dio santo`, leet, separatori, ripetizioni, lettere spaziate, Unicode composto e decomposto, fullwidth, caratteri cirillici misti, zero-width, numeri innocui ed emoji.
@@ -289,6 +305,8 @@ Lo script `tools/audit-benign` esegue il rilevatore TS su:
 - combinazioni nome + cognome campionate, unite da spazio, `.`, `_` e senza separatore (`Claudio Porcu`, `amadio.cane`, `Mario_Rossi`). Nei nickname la punteggiatura unisce le parole (§4.2), quindi un `compound` ancorato alla fine può scattare su un nome seguito da un cognome: è esattamente il caso che l'audit deve intercettare.
 
 Ogni collisione va **valutata da un curatore**, non corretta in automatico. La soluzione può essere un'eccezione, una regola più stretta o un `prefix` trasformato in `word`. Una regola nuova o modificata **non entra** finché l'audit non è pulito o ogni collisione non è stata giustificata in `data/audit/accepted.jsonl`.
+
+Il report distingue `name`, `surname`, `word` e `pair`: il dizionario contiene anche termini realmente offensivi e non è interamente innocuo. Le collisioni accettate specificano provenienza, motivo e azione attesa in `balanced`; un passaggio inatteso da `review` a `block` fa fallire l'audit. Il nucleo corrente ha due eccezioni nominali e 34 collisioni distinte motivate, non un tasso misurato di falsi positivi su utenti reali.
 
 ### 7.4 Altre verifiche
 
@@ -318,7 +336,7 @@ Ogni collisione va **valutata da un curatore**, non corretta in automatico. La s
 4. Si esegue l'audit del corpus innocuo e si valutano le collisioni.
 5. Si apre una PR. La CI mostra la **differenza di comportamento** rispetto alla release precedente.
 
-La guida operativa per i curatori è in [docs/curazione.md](docs/curazione.md), da scrivere nella fase M3.
+La guida operativa per i curatori è in [docs/curazione.md](docs/curazione.md).
 
 ---
 
@@ -404,8 +422,8 @@ Gli strumenti principali:
 | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------: |
 | ✅ **M0** Struttura                                            | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE                               |         3-4 |
 | ✅ **M1** Normalizzazione e segmentazione, **in TS e in Dart** | Viste, segmenti, ripetizioni, origini UTF-16, 107 nuove fixture con attese; 138 fixture totali                  |         6-8 |
-| **M2** Rilevatore e policy in TS e Dart                        | `word`, `prefix`, `phrase`, `compound`, `combo`, `pattern`, eccezioni, profili, API; attese e audit obbligatori |       11-15 |
-| **M3** Curazione                                               | 60-100 regole, 300 fixture, audit napolux, `curazione.md`, `sources.json`, `NOTICE`                             |       10-14 |
+| ✅ **M2** Rilevatore e policy in TS e Dart                     | Tutti i tipi di regola, contatti, eccezioni, profili, API; attese e audit obbligatori                           |       11-15 |
+| **M3** Curazione, avviata                                      | Primo nucleo: 45 regole, 173 forme dichiarate, 938 fixture; restano revisione e ampliamento verso 60-100 regole |       10-14 |
 | **M4** Consolidamento dei due motori                           | Fuzz Unicode, verifica offset, compatibilità e smoke test dei pacchetti; correzioni in parità                   |         3-5 |
 | **M5** Prova reale (shadow)                                    | Report sui nickname salvati in RuttoFacile e maraffa, senza bloccare; valutazione dei falsi positivi            |         2-3 |
 | **M6** Pubblicazione 0.1.0                                     | Workflow di release, README completo, smoke test, pubblicazione                                                 |         2-3 |
@@ -413,7 +431,7 @@ Gli strumenti principali:
 
 La normalizzazione va fatta in entrambi i linguaggi già in **M1**, perché le divergenze Unicode emergono lì. Anche rilevatore e policy vanno sviluppati insieme in **M2**, nella stessa PR per ogni comportamento: M4 non è più una fase di port (D14). Le stime sono indicative e vanno rivalutate dopo M1.
 
-M0 e M1 sono completate per struttura e normalizzazione, non per il prodotto: la parità riguarda ora anche segmenti, viste e origini UTF-16. L'audit salta ancora il rilevamento perché il motore lessicale arriva in M2 e le attese positive restano disattivate fino ad allora. La prima CI GitHub di M0 è passata sul commit `6e8bd9a`; ogni fase successiva richiede le proprie verifiche. L'analisi e i criteri per aggiungere altri linguaggi sono in [docs/analisi-post-m0.md](docs/analisi-post-m0.md).
+M0, M1 e M2 sono completate: la parità riguarda segmenti, viste, policy e match con origini UTF-16, e l'audit esegue il rilevatore. Il primo nucleo lessicale copre tutte le categorie italiane; inglese e dialetti restano da curare. Il prodotto non è ancora pubblicato: M3-M6 richiedono ulteriore revisione, consolidamento e prova reale. L'analisi storica e i criteri per aggiungere altri linguaggi sono in [docs/analisi-post-m0.md](docs/analisi-post-m0.md).
 
 Dopo la v0.1, in ordine: romagnolo → `mask()` → CLI `scan` → demo web → altri dialetti.
 

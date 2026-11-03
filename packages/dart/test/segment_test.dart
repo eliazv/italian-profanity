@@ -22,7 +22,7 @@ void main() {
   group('contratto M1 condiviso', () {
     for (final fixture in fixtures) {
       if (!fixture.containsKey('expectedSegments') &&
-          !fixture.containsKey('expectedError')) {
+          fixture['expectedError'] != 'invalidMaxLength') {
         continue;
       }
       test(fixture['id'] as String, () {

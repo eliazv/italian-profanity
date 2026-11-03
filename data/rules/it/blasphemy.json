@@ -7,13 +7,34 @@
       "category": "blasphemy",
       "severity": 3,
       "confidence": "high",
-      "a": ["dio", "madonna", "gesu", "cristo"],
+      "a": ["dio", "dii", "madonna", "madonne", "gesu", "cristo", "gesucristo"],
       "b": {
-        "forms": ["boia", "bestia"],
+        "forms": [
+          "boia",
+          "bestia",
+          "maiale",
+          "maiali",
+          "puttana",
+          "puttane",
+          "stronzo",
+          "stronza",
+          "stronzi",
+          "stronze",
+          "bastardo",
+          "bastarda",
+          "bastardi",
+          "bastarde",
+          "infame",
+          "infami",
+          "assassino",
+          "assassina",
+          "assassini",
+          "assassine"
+        ],
         "prefixes": ["porc", "can", "ladr", "merd", "serpent"]
       },
       "provenance": ["manual"],
-      "note": "Regola seme della fase M0: gli elenchi si completano in M3."
+      "note": "Concetto divino esatto e insulto adiacente o composto ancorato. I prefissi di B ammettono flessioni e suffissi enfatici solo accanto al concetto divino; non sono regole di insulto isolate. Candio e Canidio hanno eccezioni specifiche emerse dall’audit."
     }
   ]
 }

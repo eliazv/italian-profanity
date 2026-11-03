@@ -1,0 +1,109 @@
+{"id":"engine-001","input":"c@zzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}]}
+{"id":"engine-002","input":"cazzoooo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":8}}]}
+{"id":"engine-003","input":"caaazzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":7}}]}
+{"id":"engine-004","input":"CAZZO","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}]}
+{"id":"engine-005","input":"caz​zo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":6}}]}
+{"id":"engine-006","input":"cazzzzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":7}}]}
+{"id":"engine-007","input":"c a z z o","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":9}}]}
+{"id":"engine-008","input":"cazo","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-009","input":"caazzo","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-010","input":"xcazzox","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-011","input":"cazzoide","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-012","input":"Claudio porco","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-013","input":"Dio santo","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-014","input":"Dio - porco","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-015","input":"Dio santo porco","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-016","input":"xxxdioporco","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-017","input":"porcodioxxx","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-018","input":"Candio","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-019","input":"Canidio","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-020","input":"Claudio.Porcu","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-021","input":"Dio porco","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":9}}]}
+{"id":"engine-022","input":"D10 p0rc0","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":9}}]}
+{"id":"engine-023","input":"porcodio","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":8}}]}
+{"id":"engine-024","input":"xxxporcodio","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":11}}]}
+{"id":"engine-025","input":"dioboiabella","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":12}}]}
+{"id":"engine-026","input":"Dio.porcone","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":11}}]}
+{"id":"engine-027","input":"Dio caneee","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":10}}]}
+{"id":"engine-028","input":"cane Dio","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":8}}]}
+{"id":"engine-029","input":"🙂 cazzo!","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":3,"end":8}}]}
+{"id":"engine-030","input":"cazzó","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":6}}]}
+{"id":"engine-031","input":"Candio cazzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":7,"end":12}}]}
+{"id":"engine-032","input":"Candio porco Dio","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":7,"end":16}}]}
+{"id":"engine-033","input":"cazzo cazzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}},{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":6,"end":11}}]}
+{"id":"engine-034","input":"cazzo","profile":"lenient","action":"allow","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}]}
+{"id":"engine-035","input":"cazzo","profile":"strict","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}]}
+{"id":"engine-036","input":"idiota","profile":"balanced","action":"review","rules":["it.insult.idiota"]}
+{"id":"engine-037","input":"idiota","profile":"strict","action":"block","rules":["it.insult.idiota"]}
+{"id":"engine-038","input":"idiota","profile":"lenient","action":"allow","rules":["it.insult.idiota"]}
+{"id":"engine-039","input":"scorreggia","profile":"balanced","action":"allow","rules":["it.vulgar.scorreggia"]}
+{"id":"engine-040","input":"scorreggia","profile":"strict","action":"block","rules":["it.vulgar.scorreggia"]}
+{"id":"engine-041","input":"frocio","profile":"lenient","action":"block","rules":["it.discriminatory.frocio"]}
+{"id":"engine-042","input":"terrone","profile":"lenient","action":"review","rules":["it.discriminatory.terrone"]}
+{"id":"engine-043","input":"Dio porco","profile":"lenient","action":"block","expectedMatches":[{"ruleId":"it.blasphemy.divine-insult","category":"blasphemy","severity":3,"confidence":"high","kind":"combo","range":{"start":0,"end":9}}]}
+{"id":"engine-044","input":"testa di cazzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.insult.testa-di-cazzo","category":"insult","severity":2,"confidence":"high","kind":"phrase","range":{"start":0,"end":14}},{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":9,"end":14}}]}
+{"id":"engine-045","input":"testa-di-cazzo","profile":"balanced","action":"block","rules":["it.insult.testadicazzo"]}
+{"id":"engine-046","input":"xtestadicazzox","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-047","input":"xtestadicazzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.insult.testadicazzo","category":"insult","severity":2,"confidence":"high","kind":"compound","range":{"start":1,"end":13}}]}
+{"id":"engine-048","input":"testadicazzox","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.insult.testadicazzo","category":"insult","severity":2,"confidence":"high","kind":"compound","range":{"start":0,"end":12}}]}
+{"id":"engine-049","input":"testadicazzotestadicazzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.insult.testadicazzo","category":"insult","severity":2,"confidence":"high","kind":"compound","range":{"start":0,"end":12}},{"ruleId":"it.insult.testadicazzo","category":"insult","severity":2,"confidence":"high","kind":"compound","range":{"start":12,"end":24}}]}
+{"id":"engine-050","input":"testa bella di cazzo","profile":"balanced","action":"block","mustNotMatch":["it.insult.testa-di-cazzo"],"rules":["it.sexual.cazzo"]}
+{"id":"engine-051","input":"testa - di cavolo","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-052","input":"testa di cazzo","profile":"balanced","exceptions":[{"ruleId":"it.sexual.cazzo","word":"cazzo"}],"action":"block","expectedMatches":[{"ruleId":"it.insult.testa-di-cazzo","category":"insult","severity":2,"confidence":"high","kind":"phrase","range":{"start":0,"end":14}}]}
+{"id":"engine-053","input":"cazzo","profile":"balanced","exceptions":[{"ruleId":"it.sexual.cazzo","word":"cazzo"}],"action":"allow","expectedMatches":[]}
+{"id":"engine-054","input":"cazzo","profile":"balanced","languages":["en"],"action":"allow","expectedMatches":[]}
+{"id":"engine-055","input":"cazzo","profile":"balanced","languages":[],"action":"allow","expectedMatches":[]}
+{"id":"engine-056","input":"cazzo","profile":"balanced","languages":["it","en"],"action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}]}
+{"id":"engine-057","input":"cazzo","profile":"balanced","thresholds":{"sexual":null},"action":"allow","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}]}
+{"id":"engine-058","input":"cazzo","profile":"balanced","thresholds":{"sexual":3},"action":"allow","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}]}
+{"id":"engine-059","input":"idiota","profile":"balanced","thresholds":{"insult":1},"action":"review","rules":["it.insult.idiota"]}
+{"id":"engine-060","input":"scorreggia","profile":"balanced","thresholds":{"vulgar":1},"action":"block","rules":["it.vulgar.scorreggia"]}
+{"id":"engine-061","input":"cazzo","profile":"balanced","maxLength":4,"action":"allow","expectedMatches":[]}
+{"id":"engine-062","input":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa cazzo","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-063","input":"🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂cazzo","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"engine-064","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":2}],"action":"block","expectedMatches":[{"ruleId":"app.word.0","category":"insult","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":8}}]}
+{"id":"engine-065","input":"xnebulinox","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":2}],"action":"allow","expectedMatches":[]}
+{"id":"engine-066","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":2,"confidence":"medium"}],"action":"review"}
+{"id":"engine-067","input":"nebulino","profile":"strict","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":2,"confidence":"medium"}],"action":"block"}
+{"id":"engine-068","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":1}],"action":"allow","rules":["app.word.0"]}
+{"id":"engine-069","input":"nebulino","profile":"strict","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":1}],"action":"block"}
+{"id":"engine-070","input":"nebulino","profile":"balanced","languages":[],"extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":2}],"action":"block"}
+{"id":"engine-071","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":2}],"exceptions":[{"ruleId":"app.word.0","word":"NEBULINO"}],"action":"allow","expectedMatches":[]}
+{"id":"engine-072","input":"cazzo","profile":"balanced","extraRules":[{"kind":"word","terms":["cazzo"],"category":"insult","severity":2}],"exceptions":[{"ruleId":"it.sexual.cazzo","word":"cazzo"}],"action":"block","expectedMatches":[{"ruleId":"app.word.0","category":"insult","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}]}
+{"id":"engine-073","input":"www.example.org","profile":"balanced","contacts":true,"action":"block","expectedMatches":[{"ruleId":"contact.url","category":"contact","severity":2,"confidence":"high","kind":"pattern","range":{"start":0,"end":15}}]}
+{"id":"engine-074","input":"www.example.org","profile":"balanced","contacts":false,"action":"allow","expectedMatches":[]}
+{"id":"engine-075","input":"https://example.org/a","profile":"balanced","contacts":true,"action":"block","expectedMatches":[{"ruleId":"contact.url","category":"contact","severity":2,"confidence":"high","kind":"pattern","range":{"start":0,"end":21}}]}
+{"id":"engine-076","input":"https://example.org/a","profile":"balanced","contacts":false,"action":"allow","expectedMatches":[]}
+{"id":"engine-077","input":"a@example.org","profile":"balanced","contacts":true,"action":"block","expectedMatches":[{"ruleId":"contact.email","category":"contact","severity":2,"confidence":"high","kind":"pattern","range":{"start":0,"end":13}}]}
+{"id":"engine-078","input":"a@example.org","profile":"balanced","contacts":false,"action":"allow","expectedMatches":[]}
+{"id":"engine-079","input":"333 1234567","profile":"balanced","contacts":true,"action":"block","expectedMatches":[{"ruleId":"contact.phone","category":"contact","severity":2,"confidence":"high","kind":"pattern","range":{"start":0,"end":11}}]}
+{"id":"engine-080","input":"333 1234567","profile":"balanced","contacts":false,"action":"allow","expectedMatches":[]}
+{"id":"engine-081","input":"+39 333 1234567","profile":"balanced","contacts":true,"action":"block","expectedMatches":[{"ruleId":"contact.phone","category":"contact","severity":2,"confidence":"high","kind":"pattern","range":{"start":0,"end":15}}]}
+{"id":"engine-082","input":"+39 333 1234567","profile":"balanced","contacts":false,"action":"allow","expectedMatches":[]}
+{"id":"engine-083","input":"1993","profile":"balanced","contacts":true,"action":"allow","expectedMatches":[]}
+{"id":"engine-084","input":"12345678","profile":"balanced","contacts":true,"action":"allow","expectedMatches":[]}
+{"id":"engine-085","input":"abc3331234567","profile":"balanced","contacts":true,"action":"allow","expectedMatches":[]}
+{"id":"engine-086","input":"abcwww.example.org","profile":"balanced","contacts":true,"action":"allow","expectedMatches":[]}
+{"id":"engine-087","input":"www.example","profile":"balanced","contacts":true,"action":"allow","expectedMatches":[]}
+{"id":"engine-088","input":"a@example","profile":"balanced","contacts":true,"action":"allow","expectedMatches":[]}
+{"id":"engine-089","input":"www.example.org","profile":"lenient","contacts":true,"action":"block","rules":["contact.url"]}
+{"id":"engine-090","input":"www.example.org","profile":"balanced","contacts":true,"thresholds":{"contact":null},"action":"allow","rules":["contact.url"]}
+{"id":"engine-091","input":"🙂 www.example.org","profile":"balanced","contacts":true,"action":"block","expectedMatches":[{"ruleId":"contact.url","category":"contact","severity":2,"confidence":"high","kind":"pattern","range":{"start":3,"end":18}}]}
+{"id":"engine-092","input":"bastardo","profile":"balanced","action":"review","note":"Omografo esplicitamente accettato nell’audit: non promettiamo disambiguazione contestuale"}
+{"id":"engine-093","input":"bocchino","profile":"balanced","action":"review","note":"Omografo esplicitamente accettato nell’audit: non promettiamo disambiguazione contestuale"}
+{"id":"engine-094","input":"culo","profile":"balanced","action":"review","note":"Omografo esplicitamente accettato nell’audit: non promettiamo disambiguazione contestuale"}
+{"id":"engine-095","input":"scema","profile":"balanced","action":"review","note":"Omografo esplicitamente accettato nell’audit: non promettiamo disambiguazione contestuale"}
+{"id":"engine-096","input":"terrone","profile":"balanced","action":"review","note":"Omografo esplicitamente accettato nell’audit: non promettiamo disambiguazione contestuale"}
+{"id":"engine-097","input":"troia","profile":"balanced","action":"review","note":"Omografo esplicitamente accettato nell’audit: non promettiamo disambiguazione contestuale"}
+{"id":"engine-098","input":"de troia","profile":"balanced","action":"review","note":"Omografo esplicitamente accettato nell’audit: non promettiamo disambiguazione contestuale"}
+{"id":"engine-099","input":"nebulino","profile":"balanced","languages":["xx"],"expectedError":"invalidOptions"}
+{"id":"engine-100","input":"nebulino","profile":"balanced","thresholds":{"sexual":9},"expectedError":"invalidOptions"}
+{"id":"engine-101","input":"nebulino","profile":"balanced","exceptions":[{"ruleId":"missing","word":"nebulino"}],"expectedError":"invalidOptions"}
+{"id":"engine-102","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":2,"id":"it.sexual.cazzo"}],"expectedError":"invalidOptions"}
+{"id":"engine-103","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":2,"id":"contact.custom"}],"expectedError":"invalidOptions"}
+{"id":"engine-104","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":[],"category":"insult","severity":2}],"expectedError":"invalidOptions"}
+{"id":"engine-105","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":[".*"],"category":"insult","severity":2}],"expectedError":"invalidOptions"}
+{"id":"engine-106","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["due parole"],"category":"insult","severity":2}],"expectedError":"invalidOptions"}
+{"id":"engine-107","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":9}],"expectedError":"invalidOptions"}
+{"id":"engine-108","input":"nebulino","profile":"balanced","extraRules":[{"kind":"prefix","terms":["Nebulino"],"category":"insult","severity":2}],"expectedError":"invalidOptions"}
+{"id":"engine-109","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"contact","severity":2}],"expectedError":"invalidOptions"}

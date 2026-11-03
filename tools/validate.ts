@@ -151,7 +151,14 @@ for (const file of loadFixtureFiles()) {
       fail(where, `l'id deve iniziare con "${file.name}-"`)
 
     for (const id of [...(fixture.rules ?? []), ...(fixture.mustNotMatch ?? [])]) {
-      if (!ruleIds.has(id)) fail(where, `regola inesistente ${id}`)
+      const extraIds =
+        fixture.extraRules?.map((rule, index) => rule.id ?? `app.word.${index}`) ?? []
+      if (
+        !ruleIds.has(id) &&
+        !extraIds.includes(id) &&
+        !["contact.email", "contact.url", "contact.phone"].includes(id)
+      )
+        fail(where, `regola inesistente ${id}`)
     }
     for (const id of fixture.rules ?? []) {
       positives.add(id)
@@ -170,12 +177,24 @@ for (const id of ruleIds.keys()) {
 
 // --- Collisioni accettate dall'audit -------------------------------------------
 const acceptedPath = join(DATA, "audit", "accepted.jsonl")
-for (const { line, value } of readJsonl<{ ruleId?: string; input?: string; reason?: string }>(
-  acceptedPath,
-)) {
+const acceptedKeys = new Set<string>()
+for (const { line, value } of readJsonl<{
+  ruleId?: string
+  input?: string
+  reason?: string
+  corpus?: string
+  action?: string
+}>(acceptedPath)) {
   const where = `${rel(acceptedPath)}:${line}`
   if (!value.ruleId || !value.input || !value.reason) fail(where, "servono ruleId, input e reason")
   else if (!ruleIds.has(value.ruleId)) fail(where, `regola inesistente ${value.ruleId}`)
+  if (value.corpus !== undefined && !["name", "surname", "word", "pair"].includes(value.corpus))
+    fail(where, "corpus di audit non valido")
+  if (value.action !== undefined && !["allow", "review", "block"].includes(value.action))
+    fail(where, "azione di audit non valida")
+  const key = `${value.ruleId}:${value.corpus ?? "*"}:${value.input}`
+  if (acceptedKeys.has(key)) fail(where, "collisione di audit duplicata")
+  acceptedKeys.add(key)
 }
 
 // --- Versioni allineate tra npm e pub ------------------------------------------

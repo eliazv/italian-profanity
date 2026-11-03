@@ -12,7 +12,8 @@
         "paroleitaliane/lista_38000_cognomi.txt",
         "paroleitaliane/60000_parole_italiane.txt"
       ],
-      "note": "Corpus di audit dei falsi positivi: scaricato in .cache a un commit fissato, mai versionato né distribuito. lista_badwords.txt potrà essere usato come fonte di candidati, con attribuzione."
+      "note": "Corpus di audit dei falsi positivi: scaricato in .cache a un commit fissato, mai versionato né distribuito. lista_badwords.txt potrà essere usato come fonte di candidati, con attribuzione.",
+      "commit": "2951524b6d5b67986f542937cef16a54af63ff84"
     },
     {
       "id": "ldnoobw",
@@ -21,7 +22,8 @@
       "checked": "2026-11-03",
       "use": "coverage",
       "files": ["it"],
-      "note": "Solo confronto di copertura: nessuna voce viene copiata."
+      "note": "Solo confronto di copertura: nessuna voce viene copiata.",
+      "commit": "5faf2ba42d7b1c0977169ec3611df25a3c08eb13"
     },
     {
       "id": "hurtlex",

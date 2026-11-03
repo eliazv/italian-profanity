@@ -64,3 +64,9 @@ La generazione della tabella non include la versione Unicode del runtime nei fil
 La prima CI GitHub di M0 è passata sul commit `6e8bd9a`. La fase M1 implementa ora in TS e Dart segmenti, frammenti, viste `base` e `deleet`, sequenze ripetute per `squeeze` e provenienza dei caratteri in UTF-16. Il limite viene applicato prima del fold e non spezza coppie surrogate valide.
 
 Sono aggiunte 107 fixture M1, per un totale di 138; i test dei pacchetti verificano direttamente le attese e le invarianti, e la parità confronta le strutture complete. `pnpm check` passa con 253 test per linguaggio. Il confronto delle sequenze ripetute con le regole, rilevatore, policy e attivazione obbligatoria delle attese lessicali e dell'audit restano in M2. L'elenco delle due regole seme non è stato ampliato: la curazione resta in M3.
+
+## Esito M2 e primo nucleo M3
+
+M2 aggiunge in entrambi i linguaggi tutti i matcher, API, policy, eccezioni, contatti opzionali e configurazioni locali. `pnpm check` e la CI richiedono le attese lessicali e l'audit effettivo, che non può più essere saltato. Gli smoke test ESM/CJS eseguono ora il rilevatore compilato, anche su Node 20.
+
+Il nucleo manuale arriva a 45 regole, 173 forme dichiarate oltre a frasi e combinazioni, e 938 fixture. L'audit distingue i corpus e verifica anche l'azione delle collisioni accettate. Due falsi positivi combinatori hanno eccezioni; 34 collisioni distinte sono motivate, con gli omografi nominali a `review` in `balanced`. La guida è in [curazione.md](curazione.md). M3 resta avviata: non si dichiara copertura completa né una prova su utenti reali.

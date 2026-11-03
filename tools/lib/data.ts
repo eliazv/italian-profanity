@@ -2,6 +2,7 @@
 import { readdirSync } from "node:fs"
 import { basename, join, relative } from "node:path"
 import type { Segment } from "../../packages/js/src/segment.ts"
+import type { CheckerOptions, Match } from "../../packages/js/src/types.ts"
 
 import { readJson, readJsonl } from "./json.ts"
 import { DATA, ROOT } from "./paths.ts"
@@ -36,7 +37,7 @@ export interface SourceException {
   reason: string
 }
 
-export interface Fixture {
+export interface Fixture extends CheckerOptions {
   id: string
   input: string
   profile: "balanced" | "strict" | "lenient"
@@ -44,7 +45,8 @@ export interface Fixture {
   expectedBase?: string
   maxLength?: number
   expectedSegments?: Array<Pick<Segment, "kind" | "range" | "base" | "deleet"> & Partial<Segment>>
-  expectedError?: "invalidMaxLength"
+  expectedError?: "invalidMaxLength" | "invalidOptions"
+  expectedMatches?: Match[]
   action?: "allow" | "review" | "block"
   rules?: string[]
   mustNotMatch?: string[]

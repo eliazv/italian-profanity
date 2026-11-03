@@ -48,13 +48,12 @@ jobs:
       - run: pnpm test
 
       - name: Parità TS/Dart
-        run: pnpm parity
+        run: pnpm parity --expectations
 
       - name: Build e smoke test del pacchetto npm
         run: |
           pnpm --filter italian-profanity build
-          node --input-type=module -e "const m = await import('./packages/js/dist/index.js'); if (!m.VERSION) process.exit(1)"
-          node -e "const m = require('./packages/js/dist/index.cjs'); if (!m.VERSION) process.exit(1)"
+          node tools/smoke.mjs
 
       - name: Verifica del pacchetto pub
         run: dart pub publish --dry-run
@@ -77,8 +76,7 @@ jobs:
           node-version: 20
       - name: Import ESM e CommonJS sul runtime minimo
         run: |
-          node --input-type=module -e "const m = await import('./packages/js/dist/index.js'); if (!m.VERSION) process.exit(1)"
-          node -e "const m = require('./packages/js/dist/index.cjs'); if (!m.VERSION) process.exit(1)"
+          node tools/smoke.mjs
 
   dart-min-sdk:
     name: Dart SDK minimo (3.4)

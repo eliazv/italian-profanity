@@ -1,4 +1,45 @@
 {
   "$schema": "../../schema/rules.schema.json",
-  "rules": []
+  "rules": [
+    {
+      "id": "it.discriminatory.frocio",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["frocio", "frocia", "froci", "frocie"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.discriminatory.culattone",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["culattone", "culattoni"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.discriminatory.negraccio",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["negraccio", "negraccia", "negracci", "negracce"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.discriminatory.terrone",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["terrone", "terrona", "terroni"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+    }
+  ]
 }

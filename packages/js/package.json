@@ -1,7 +1,7 @@
 {
   "name": "italian-profanity",
   "version": "0.0.0",
-  "description": "Italian-first profanity detection for nicknames and short text: blasphemy-aware, evasion-resistant, no false positives on Italian names. Same verdicts as the Dart package.",
+  "description": "Italian-first profanity detection for nicknames and short text: blasphemy-aware, evasion-resistant, precision-focused. Same verdicts as the Dart package.",
   "keywords": [
     "profanity",
     "italian",

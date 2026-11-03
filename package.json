@@ -16,9 +16,9 @@
     "parity": "node tools/parity.ts",
     "audit:benign": "node tools/audit-benign.ts",
     "typecheck": "tsc -p tsconfig.json && pnpm --filter italian-profanity typecheck",
-    "lint": "biome check . && cd packages/dart && dart format --output=none --set-exit-if-changed . && dart analyze --fatal-infos",
-    "format": "biome check --write . && cd packages/dart && dart format .",
-    "check": "pnpm validate && pnpm build:data && pnpm lint && pnpm typecheck && pnpm test && pnpm parity",
+    "lint": "biome check . && node tools/format-dart.ts && cd packages/dart && dart analyze --fatal-infos",
+    "format": "biome check --write . && node tools/format-dart.ts --write",
+    "check": "pnpm validate && pnpm build:data && pnpm lint && pnpm typecheck && pnpm test && pnpm parity --expectations && pnpm audit:benign",
     "changeset": "changeset",
     "release:version": "changeset version && node tools/sync-version.ts && pnpm build:data"
   },

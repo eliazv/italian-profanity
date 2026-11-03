@@ -1,7 +1,7 @@
 name: italian_profanity
 description: >-
   Italian-first profanity detection for nicknames and short text: blasphemy-aware,
-  evasion-resistant, no false positives on Italian names. Same verdicts as the npm package.
+  evasion-resistant, precision-focused. Same verdicts as the npm package.
 version: 0.0.0
 repository: https://github.com/eliazv/italian-profanity/tree/master/packages/dart
 issue_tracker: https://github.com/eliazv/italian-profanity/issues

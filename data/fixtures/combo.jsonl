@@ -1,0 +1,18 @@
+{"id":"combo-001","input":"Dio maiale","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"combo-002","input":"maiale Dio","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"combo-003","input":"Dio puttana","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult","it.sexual.puttana"]}
+{"id":"combo-004","input":"Madonna puttana","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult","it.sexual.puttana"]}
+{"id":"combo-005","input":"Gesù bastardo","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult","it.insult.bastardo"]}
+{"id":"combo-006","input":"Gesucristo infame","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"combo-007","input":"madonne assassine","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"combo-008","input":"madonne assassina","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"combo-009","input":"Cristo santo","profile":"balanced","action":"allow","expectedMatches":[]}
+{"id":"combo-010","input":"Claudio maiale","profile":"balanced","action":"allow","mustNotMatch":["it.blasphemy.divine-insult"]}
+{"id":"combo-011","input":"maiale Diodato","profile":"balanced","action":"allow","mustNotMatch":["it.blasphemy.divine-insult"]}
+{"id":"combo-012","input":"Madonna di Campiglio","profile":"strict","action":"allow","expectedMatches":[]}
+{"id":"combo-013","input":"Dio e maiale","profile":"balanced","action":"allow","mustNotMatch":["it.blasphemy.divine-insult"]}
+{"id":"combo-014","input":"madonnaputtana","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"combo-015","input":"porcogesucristo","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"]}
+{"id":"combo-016","input":"Candio","profile":"strict","action":"allow","expectedMatches":[]}
+{"id":"combo-017","input":"Canidio","profile":"strict","action":"allow","expectedMatches":[]}
+{"id":"combo-018","input":"madonne assise","profile":"balanced","action":"allow","mustNotMatch":["it.blasphemy.divine-insult"],"note":"Parola vicina non offensiva: nessuna ricerca parziale"}

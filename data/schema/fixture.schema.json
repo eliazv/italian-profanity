@@ -9,6 +9,7 @@
   "anyOf": [
     { "required": ["expectedSegments"] },
     { "required": ["expectedError"] },
+    { "required": ["expectedMatches"] },
     { "required": ["expectedBase"] },
     { "required": ["action"] },
     { "required": ["rules"] },
@@ -21,7 +22,37 @@
       "type": "number",
       "description": "Può essere invalido nelle fixture di errore."
     },
-    "expectedError": { "const": "invalidMaxLength" },
+    "expectedError": { "enum": ["invalidMaxLength", "invalidOptions"] },
+    "languages": { "type": "array", "items": { "type": "string" } },
+    "thresholds": { "type": "object", "additionalProperties": { "type": ["integer", "null"] } },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ruleId", "word"],
+        "additionalProperties": false,
+        "properties": { "ruleId": { "type": "string" }, "word": { "type": "string" } }
+      }
+    },
+    "extraRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "terms", "category", "severity"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "kind": { "enum": ["word", "prefix"] },
+          "terms": { "type": "array", "items": { "type": "string" } },
+          "category": {
+            "enum": ["blasphemy", "insult", "sexual", "discriminatory", "vulgar", "contact"]
+          },
+          "severity": { "type": "integer" },
+          "confidence": { "enum": ["high", "medium"] }
+        }
+      }
+    },
+    "expectedMatches": { "type": "array", "items": { "$ref": "#/$defs/match" } },
     "expectedSegments": {
       "type": "array",
       "items": { "$ref": "#/$defs/segment" },
@@ -45,7 +76,10 @@
   },
   "allOf": [
     {
-      "if": { "required": ["expectedError"] },
+      "if": {
+        "required": ["expectedError"],
+        "properties": { "expectedError": { "const": "invalidMaxLength" } }
+      },
       "then": {
         "required": ["maxLength"],
         "not": {
@@ -67,6 +101,21 @@
       "properties": {
         "start": { "type": "integer", "minimum": 0 },
         "end": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "match": {
+      "type": "object",
+      "required": ["ruleId", "category", "severity", "confidence", "kind", "range"],
+      "additionalProperties": false,
+      "properties": {
+        "ruleId": { "type": "string" },
+        "category": {
+          "enum": ["blasphemy", "insult", "sexual", "discriminatory", "vulgar", "contact"]
+        },
+        "severity": { "enum": [1, 2, 3] },
+        "confidence": { "enum": ["high", "medium"] },
+        "kind": { "enum": ["word", "prefix", "phrase", "compound", "combo", "pattern"] },
+        "range": { "$ref": "#/$defs/range" }
       }
     },
     "fragment": {

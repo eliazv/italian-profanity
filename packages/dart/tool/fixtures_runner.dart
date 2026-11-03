@@ -7,6 +7,8 @@ import 'dart:io';
 
 import 'package:italian_profanity/src/normalize.dart';
 import 'package:italian_profanity/src/segment.dart';
+import 'package:italian_profanity/italian_profanity.dart';
+import 'fixture_options.dart';
 
 void main(List<String> args) {
   if (args.isEmpty) {
@@ -39,6 +41,15 @@ void main(List<String> args) {
             .toList();
       } on ArgumentError {
         result['error'] = 'invalidMaxLength';
+      }
+      if (!result.containsKey('error')) {
+        try {
+          result.addAll(
+              check(fixture['input']! as String, fixtureOptions(fixture))
+                  .toJson());
+        } on ArgumentError {
+          result['error'] = 'invalidOptions';
+        }
       }
       results.add(result);
     }

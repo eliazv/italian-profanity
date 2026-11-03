@@ -10,6 +10,105 @@
       "terms": ["cazzo", "cazzi", "cazzone", "cazzoni", "cazzata", "cazzate"],
       "provenance": ["manual"],
       "note": "Forme elencate e non prefisso: cazzotto, cazzuola e scazzottata devono passare."
+    },
+    {
+      "id": "it.sexual.puttana",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["puttana", "puttane", "puttanata", "puttanate", "puttaniere", "puttanieri"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.sexual.troia",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["troia", "troie"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+    },
+    {
+      "id": "it.sexual.mignotta",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["mignotta", "mignotte"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.sexual.sborra",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "sborra",
+        "sborrare",
+        "sborrata",
+        "sborrate",
+        "sborrato",
+        "sborrati",
+        "sborrone",
+        "sborroni"
+      ],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.sexual.pompino",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["pompino", "pompini"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.sexual.bocchino",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["bocchino", "bocchini"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+    },
+    {
+      "id": "it.sexual.scopata",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["scopata", "scopate"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+    },
+    {
+      "id": "it.sexual.figa",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["figa", "fighe"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+    },
+    {
+      "id": "it.sexual.fica",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["fica", "fiche"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     }
   ]
 }

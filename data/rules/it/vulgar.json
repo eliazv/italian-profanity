@@ -1,4 +1,162 @@
 {
   "$schema": "../../schema/rules.schema.json",
-  "rules": []
+  "rules": [
+    {
+      "id": "it.vulgar.merda",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["merda", "merde", "merdoso", "merdosa", "merdosi", "merdose", "merdata", "merdate"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.cagare",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "cagare",
+        "cagarsi",
+        "cagato",
+        "cagata",
+        "cagati",
+        "cagate",
+        "cagando",
+        "cago",
+        "caghi",
+        "caga",
+        "cagano"
+      ],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.culo",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["culo", "culi", "culone", "culoni"],
+      "provenance": ["manual"],
+      "note": "Omografo di un cognome presente nel corpus e di una forma accentata che fold riconduce alla stessa parola. Balanced richiede revisione; non promettiamo disambiguazione contestuale."
+    },
+    {
+      "id": "it.vulgar.piscio",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "high",
+      "terms": [
+        "piscio",
+        "pisciare",
+        "pisciata",
+        "pisciate",
+        "pisciato",
+        "pisciati",
+        "pisciando",
+        "piscia"
+      ],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.minchia",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["minchia", "minchie", "minchiata", "minchiate", "minchione", "minchioni"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.incazzato",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "incazzato",
+        "incazzata",
+        "incazzati",
+        "incazzate",
+        "incazzare",
+        "incazzarsi",
+        "incazzo",
+        "incazzi",
+        "incazza",
+        "incazzano"
+      ],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.sticazzi",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["sticazzi", "stocazzo"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.fancazzista",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["fancazzista", "fancazzisti"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.cazzeggio",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["cazzeggio", "cazzeggiare", "cazzeggiato", "cazzeggiata", "cazzeggiano"],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.scorreggia",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "high",
+      "terms": [
+        "scorreggia",
+        "scorregge",
+        "scorreggiare",
+        "scorreggiato",
+        "scoreggia",
+        "scoregge",
+        "scoreggiare"
+      ],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    },
+    {
+      "id": "it.vulgar.sputtanare",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "sputtanare",
+        "sputtanato",
+        "sputtanata",
+        "sputtanati",
+        "sputtanate",
+        "sputtanamento"
+      ],
+      "provenance": ["manual"],
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+    }
+  ]
 }

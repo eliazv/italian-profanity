@@ -1,0 +1,673 @@
+{"id":"core-001","input":"stronzo","profile":"balanced","action":"block","rules":["it.insult.stronzo"]}
+{"id":"core-002","input":"xstronzox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-003","input":"stronzox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-004","input":"stronza","profile":"balanced","action":"block","rules":["it.insult.stronzo"]}
+{"id":"core-005","input":"xstronzax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-006","input":"stronzax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-007","input":"stronzi","profile":"balanced","action":"block","rules":["it.insult.stronzo"]}
+{"id":"core-008","input":"xstronzix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-009","input":"stronzix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-010","input":"stronze","profile":"balanced","action":"block","rules":["it.insult.stronzo"]}
+{"id":"core-011","input":"xstronzex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-012","input":"stronzex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-013","input":"stronzata","profile":"balanced","action":"block","rules":["it.insult.stronzo"]}
+{"id":"core-014","input":"xstronzatax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-015","input":"stronzatax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-016","input":"stronzate","profile":"balanced","action":"block","rules":["it.insult.stronzo"]}
+{"id":"core-017","input":"xstronzatex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-018","input":"stronzatex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-019","input":"stronzio","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-020","input":"coglione","profile":"balanced","action":"block","rules":["it.insult.coglione"]}
+{"id":"core-021","input":"xcoglionex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-022","input":"coglionex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-023","input":"coglioni","profile":"balanced","action":"block","rules":["it.insult.coglione"]}
+{"id":"core-024","input":"xcoglionix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-025","input":"coglionix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-026","input":"coglionata","profile":"balanced","action":"block","rules":["it.insult.coglione"]}
+{"id":"core-027","input":"xcoglionatax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-028","input":"coglionatax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-029","input":"coglionate","profile":"balanced","action":"block","rules":["it.insult.coglione"]}
+{"id":"core-030","input":"xcoglionatex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-031","input":"coglionatex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-032","input":"coglitore","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglione"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-033","input":"bastardo","profile":"balanced","action":"review","rules":["it.insult.bastardo"]}
+{"id":"core-034","input":"xbastardox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-035","input":"bastardox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-036","input":"bastarda","profile":"balanced","action":"review","rules":["it.insult.bastardo"]}
+{"id":"core-037","input":"xbastardax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-038","input":"bastardax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-039","input":"bastardi","profile":"balanced","action":"review","rules":["it.insult.bastardo"]}
+{"id":"core-040","input":"xbastardix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-041","input":"bastardix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-042","input":"bastarde","profile":"balanced","action":"review","rules":["it.insult.bastardo"]}
+{"id":"core-043","input":"xbastardex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-044","input":"bastardex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-045","input":"bastone","profile":"balanced","action":"allow","mustNotMatch":["it.insult.bastardo"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-046","input":"idiota","profile":"balanced","action":"review","rules":["it.insult.idiota"]}
+{"id":"core-047","input":"xidiotax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.idiota"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-048","input":"idiotax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.idiota"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-049","input":"idioti","profile":"balanced","action":"review","rules":["it.insult.idiota"]}
+{"id":"core-050","input":"xidiotix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.idiota"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-051","input":"idiotix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.idiota"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-052","input":"idolo","profile":"balanced","action":"allow","mustNotMatch":["it.insult.idiota"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-053","input":"imbecille","profile":"balanced","action":"review","rules":["it.insult.imbecille"]}
+{"id":"core-054","input":"ximbecillex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.imbecille"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-055","input":"imbecillex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.imbecille"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-056","input":"imbecilli","profile":"balanced","action":"review","rules":["it.insult.imbecille"]}
+{"id":"core-057","input":"ximbecillix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.imbecille"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-058","input":"imbecillix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.imbecille"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-059","input":"imbuto","profile":"balanced","action":"allow","mustNotMatch":["it.insult.imbecille"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-060","input":"cretino","profile":"balanced","action":"review","rules":["it.insult.cretino"]}
+{"id":"core-061","input":"xcretinox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-062","input":"cretinox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-063","input":"cretina","profile":"balanced","action":"review","rules":["it.insult.cretino"]}
+{"id":"core-064","input":"xcretinax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-065","input":"cretinax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-066","input":"cretini","profile":"balanced","action":"review","rules":["it.insult.cretino"]}
+{"id":"core-067","input":"xcretinix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-068","input":"cretinix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-069","input":"cretine","profile":"balanced","action":"review","rules":["it.insult.cretino"]}
+{"id":"core-070","input":"xcretinex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-071","input":"cretinex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-072","input":"cretaceo","profile":"balanced","action":"allow","mustNotMatch":["it.insult.cretino"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-073","input":"deficiente","profile":"balanced","action":"review","rules":["it.insult.deficiente"]}
+{"id":"core-074","input":"xdeficientex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.deficiente"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-075","input":"deficientex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.deficiente"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-076","input":"deficienti","profile":"balanced","action":"review","rules":["it.insult.deficiente"]}
+{"id":"core-077","input":"xdeficientix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.deficiente"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-078","input":"deficientix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.deficiente"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-079","input":"definizione","profile":"balanced","action":"allow","mustNotMatch":["it.insult.deficiente"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-080","input":"stupido","profile":"balanced","action":"review","rules":["it.insult.stupido"]}
+{"id":"core-081","input":"xstupidox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-082","input":"stupidox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-083","input":"stupida","profile":"balanced","action":"review","rules":["it.insult.stupido"]}
+{"id":"core-084","input":"xstupidax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-085","input":"stupidax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-086","input":"stupidi","profile":"balanced","action":"review","rules":["it.insult.stupido"]}
+{"id":"core-087","input":"xstupidix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-088","input":"stupidix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-089","input":"stupide","profile":"balanced","action":"review","rules":["it.insult.stupido"]}
+{"id":"core-090","input":"xstupidex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-091","input":"stupidex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-092","input":"stupendo","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stupido"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-093","input":"scemo","profile":"balanced","action":"review","rules":["it.insult.scemo"]}
+{"id":"core-094","input":"xscemox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-095","input":"scemox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-096","input":"scema","profile":"balanced","action":"review","rules":["it.insult.scemo"]}
+{"id":"core-097","input":"xscemax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-098","input":"scemax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-099","input":"scemi","profile":"balanced","action":"review","rules":["it.insult.scemo"]}
+{"id":"core-100","input":"xscemix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-101","input":"scemix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-102","input":"sceme","profile":"balanced","action":"review","rules":["it.insult.scemo"]}
+{"id":"core-103","input":"xscemex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-104","input":"scemex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-105","input":"scena","profile":"balanced","action":"allow","mustNotMatch":["it.insult.scemo"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-106","input":"rincoglionito","profile":"balanced","action":"block","rules":["it.insult.rincoglionito"]}
+{"id":"core-107","input":"xrincoglionitox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-108","input":"rincoglionitox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-109","input":"rincoglionita","profile":"balanced","action":"block","rules":["it.insult.rincoglionito"]}
+{"id":"core-110","input":"xrincoglionitax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-111","input":"rincoglionitax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-112","input":"rincoglioniti","profile":"balanced","action":"block","rules":["it.insult.rincoglionito"]}
+{"id":"core-113","input":"xrincoglionitix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-114","input":"rincoglionitix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-115","input":"rincoglionite","profile":"balanced","action":"block","rules":["it.insult.rincoglionito"]}
+{"id":"core-116","input":"xrincoglionitex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-117","input":"rincoglionitex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-118","input":"rincoglionire","profile":"balanced","action":"block","rules":["it.insult.rincoglionito"]}
+{"id":"core-119","input":"xrincoglionirex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-120","input":"rincoglionirex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-121","input":"rincoglionirsi","profile":"balanced","action":"block","rules":["it.insult.rincoglionito"]}
+{"id":"core-122","input":"xrincoglionirsix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-123","input":"rincoglionirsix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-124","input":"riconoscimento","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rincoglionito"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-125","input":"fanculo","profile":"balanced","action":"block","rules":["it.insult.fanculo"]}
+{"id":"core-126","input":"xfanculox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.fanculo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-127","input":"fanculox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.fanculo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-128","input":"fanciullo","profile":"balanced","action":"allow","mustNotMatch":["it.insult.fanculo"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-129","input":"stronzetto","profile":"balanced","action":"block","rules":["it.insult.stronzetto"]}
+{"id":"core-130","input":"xstronzettox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-131","input":"stronzettox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-132","input":"stronzetta","profile":"balanced","action":"block","rules":["it.insult.stronzetto"]}
+{"id":"core-133","input":"xstronzettax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-134","input":"stronzettax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-135","input":"stronzetti","profile":"balanced","action":"block","rules":["it.insult.stronzetto"]}
+{"id":"core-136","input":"xstronzettix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-137","input":"stronzettix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-138","input":"stronzette","profile":"balanced","action":"block","rules":["it.insult.stronzetto"]}
+{"id":"core-139","input":"xstronzettex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-140","input":"stronzettex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-141","input":"stronzone","profile":"balanced","action":"block","rules":["it.insult.stronzetto"]}
+{"id":"core-142","input":"xstronzonex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-143","input":"stronzonex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-144","input":"stronzona","profile":"balanced","action":"block","rules":["it.insult.stronzetto"]}
+{"id":"core-145","input":"xstronzonax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-146","input":"stronzonax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-147","input":"stronzoni","profile":"balanced","action":"block","rules":["it.insult.stronzetto"]}
+{"id":"core-148","input":"xstronzonix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-149","input":"stronzonix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-150","input":"struttura","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzetto"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-151","input":"leccaculo","profile":"balanced","action":"block","rules":["it.insult.leccaculo"]}
+{"id":"core-152","input":"xleccaculox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.leccaculo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-153","input":"leccaculox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.leccaculo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-154","input":"leccaculi","profile":"balanced","action":"block","rules":["it.insult.leccaculo"]}
+{"id":"core-155","input":"xleccaculix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.leccaculo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-156","input":"leccaculix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.leccaculo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-157","input":"leccalecca","profile":"balanced","action":"allow","mustNotMatch":["it.insult.leccaculo"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-158","input":"rompipalle","profile":"balanced","action":"block","rules":["it.insult.rompipalle"]}
+{"id":"core-159","input":"xrompipallex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rompipalle"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-160","input":"rompipallex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rompipalle"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-161","input":"rompiballe","profile":"balanced","action":"block","rules":["it.insult.rompipalle"]}
+{"id":"core-162","input":"xrompiballex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rompipalle"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-163","input":"rompiballex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rompipalle"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-164","input":"rompicoglioni","profile":"balanced","action":"block","rules":["it.insult.rompipalle"]}
+{"id":"core-165","input":"xrompicoglionix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rompipalle"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-166","input":"rompicoglionix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rompipalle"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-167","input":"rompicapo","profile":"balanced","action":"allow","mustNotMatch":["it.insult.rompipalle"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-168","input":"coglionazzo","profile":"balanced","action":"block","rules":["it.insult.coglionazzo"]}
+{"id":"core-169","input":"xcoglionazzox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-170","input":"coglionazzox","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-171","input":"coglionazza","profile":"balanced","action":"block","rules":["it.insult.coglionazzo"]}
+{"id":"core-172","input":"xcoglionazzax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-173","input":"coglionazzax","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-174","input":"coglionazzi","profile":"balanced","action":"block","rules":["it.insult.coglionazzo"]}
+{"id":"core-175","input":"xcoglionazzix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-176","input":"coglionazzix","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-177","input":"coglionazze","profile":"balanced","action":"block","rules":["it.insult.coglionazzo"]}
+{"id":"core-178","input":"xcoglionazzex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-179","input":"coglionazzex","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-180","input":"cognizione","profile":"balanced","action":"allow","mustNotMatch":["it.insult.coglionazzo"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-181","input":"merda","profile":"balanced","action":"block","rules":["it.vulgar.merda"]}
+{"id":"core-182","input":"xmerdax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-183","input":"merdax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-184","input":"merde","profile":"balanced","action":"block","rules":["it.vulgar.merda"]}
+{"id":"core-185","input":"xmerdex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-186","input":"merdex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-187","input":"merdoso","profile":"balanced","action":"block","rules":["it.vulgar.merda"]}
+{"id":"core-188","input":"xmerdosox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-189","input":"merdosox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-190","input":"merdosa","profile":"balanced","action":"block","rules":["it.vulgar.merda"]}
+{"id":"core-191","input":"xmerdosax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-192","input":"merdosax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-193","input":"merdosi","profile":"balanced","action":"block","rules":["it.vulgar.merda"]}
+{"id":"core-194","input":"xmerdosix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-195","input":"merdosix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-196","input":"merdose","profile":"balanced","action":"block","rules":["it.vulgar.merda"]}
+{"id":"core-197","input":"xmerdosex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-198","input":"merdosex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-199","input":"merdata","profile":"balanced","action":"block","rules":["it.vulgar.merda"]}
+{"id":"core-200","input":"xmerdatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-201","input":"merdatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-202","input":"merdate","profile":"balanced","action":"block","rules":["it.vulgar.merda"]}
+{"id":"core-203","input":"xmerdatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-204","input":"merdatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-205","input":"merlo","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.merda"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-206","input":"cagare","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-207","input":"xcagarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-208","input":"cagarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-209","input":"cagarsi","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-210","input":"xcagarsix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-211","input":"cagarsix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-212","input":"cagato","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-213","input":"xcagatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-214","input":"cagatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-215","input":"cagata","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-216","input":"xcagatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-217","input":"cagatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-218","input":"cagati","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-219","input":"xcagatix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-220","input":"cagatix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-221","input":"cagate","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-222","input":"xcagatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-223","input":"cagatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-224","input":"cagando","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-225","input":"xcagandox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-226","input":"cagandox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-227","input":"cago","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-228","input":"xcagox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-229","input":"cagox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-230","input":"caghi","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-231","input":"xcaghix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-232","input":"caghix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-233","input":"caga","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-234","input":"xcagax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-235","input":"cagax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-236","input":"cagano","profile":"balanced","action":"block","rules":["it.vulgar.cagare"]}
+{"id":"core-237","input":"xcaganox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-238","input":"caganox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-239","input":"cagnolino","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cagare"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-240","input":"culo","profile":"balanced","action":"review","rules":["it.vulgar.culo"]}
+{"id":"core-241","input":"xculox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-242","input":"culox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-243","input":"culi","profile":"balanced","action":"review","rules":["it.vulgar.culo"]}
+{"id":"core-244","input":"xculix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-245","input":"culix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-246","input":"culone","profile":"balanced","action":"review","rules":["it.vulgar.culo"]}
+{"id":"core-247","input":"xculonex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-248","input":"culonex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-249","input":"culoni","profile":"balanced","action":"review","rules":["it.vulgar.culo"]}
+{"id":"core-250","input":"xculonix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-251","input":"culonix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-252","input":"culmine","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.culo"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-253","input":"piscio","profile":"balanced","action":"allow","rules":["it.vulgar.piscio"]}
+{"id":"core-254","input":"xpisciox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-255","input":"pisciox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-256","input":"pisciare","profile":"balanced","action":"allow","rules":["it.vulgar.piscio"]}
+{"id":"core-257","input":"xpisciarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-258","input":"pisciarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-259","input":"pisciata","profile":"balanced","action":"allow","rules":["it.vulgar.piscio"]}
+{"id":"core-260","input":"xpisciatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-261","input":"pisciatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-262","input":"pisciate","profile":"balanced","action":"allow","rules":["it.vulgar.piscio"]}
+{"id":"core-263","input":"xpisciatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-264","input":"pisciatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-265","input":"pisciato","profile":"balanced","action":"allow","rules":["it.vulgar.piscio"]}
+{"id":"core-266","input":"xpisciatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-267","input":"pisciatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-268","input":"pisciati","profile":"balanced","action":"allow","rules":["it.vulgar.piscio"]}
+{"id":"core-269","input":"xpisciatix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-270","input":"pisciatix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-271","input":"pisciando","profile":"balanced","action":"allow","rules":["it.vulgar.piscio"]}
+{"id":"core-272","input":"xpisciandox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-273","input":"pisciandox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-274","input":"piscia","profile":"balanced","action":"allow","rules":["it.vulgar.piscio"]}
+{"id":"core-275","input":"xpisciax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-276","input":"pisciax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-277","input":"piscina","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.piscio"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-278","input":"minchia","profile":"balanced","action":"block","rules":["it.vulgar.minchia"]}
+{"id":"core-279","input":"xminchiax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-280","input":"minchiax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-281","input":"minchie","profile":"balanced","action":"block","rules":["it.vulgar.minchia"]}
+{"id":"core-282","input":"xminchiex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-283","input":"minchiex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-284","input":"minchiata","profile":"balanced","action":"block","rules":["it.vulgar.minchia"]}
+{"id":"core-285","input":"xminchiatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-286","input":"minchiatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-287","input":"minchiate","profile":"balanced","action":"block","rules":["it.vulgar.minchia"]}
+{"id":"core-288","input":"xminchiatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-289","input":"minchiatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-290","input":"minchione","profile":"balanced","action":"block","rules":["it.vulgar.minchia"]}
+{"id":"core-291","input":"xminchionex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-292","input":"minchionex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-293","input":"minchioni","profile":"balanced","action":"block","rules":["it.vulgar.minchia"]}
+{"id":"core-294","input":"xminchionix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-295","input":"minchionix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-296","input":"minestra","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.minchia"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-297","input":"incazzato","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-298","input":"xincazzatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-299","input":"incazzatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-300","input":"incazzata","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-301","input":"xincazzatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-302","input":"incazzatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-303","input":"incazzati","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-304","input":"xincazzatix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-305","input":"incazzatix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-306","input":"incazzate","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-307","input":"xincazzatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-308","input":"incazzatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-309","input":"incazzare","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-310","input":"xincazzarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-311","input":"incazzarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-312","input":"incazzarsi","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-313","input":"xincazzarsix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-314","input":"incazzarsix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-315","input":"incazzo","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-316","input":"xincazzox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-317","input":"incazzox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-318","input":"incazzi","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-319","input":"xincazzix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-320","input":"incazzix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-321","input":"incazza","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-322","input":"xincazzax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-323","input":"incazzax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-324","input":"incazzano","profile":"balanced","action":"block","rules":["it.vulgar.incazzato"]}
+{"id":"core-325","input":"xincazzanox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-326","input":"incazzanox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-327","input":"incastro","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.incazzato"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-328","input":"sticazzi","profile":"balanced","action":"block","rules":["it.vulgar.sticazzi"]}
+{"id":"core-329","input":"xsticazzix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sticazzi"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-330","input":"sticazzix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sticazzi"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-331","input":"stocazzo","profile":"balanced","action":"block","rules":["it.vulgar.sticazzi"]}
+{"id":"core-332","input":"xstocazzox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sticazzi"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-333","input":"stocazzox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sticazzi"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-334","input":"stivale","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sticazzi"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-335","input":"fancazzista","profile":"balanced","action":"block","rules":["it.vulgar.fancazzista"]}
+{"id":"core-336","input":"xfancazzistax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.fancazzista"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-337","input":"fancazzistax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.fancazzista"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-338","input":"fancazzisti","profile":"balanced","action":"block","rules":["it.vulgar.fancazzista"]}
+{"id":"core-339","input":"xfancazzistix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.fancazzista"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-340","input":"fancazzistix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.fancazzista"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-341","input":"fantasia","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.fancazzista"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-342","input":"cazzeggio","profile":"balanced","action":"block","rules":["it.vulgar.cazzeggio"]}
+{"id":"core-343","input":"xcazzeggiox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-344","input":"cazzeggiox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-345","input":"cazzeggiare","profile":"balanced","action":"block","rules":["it.vulgar.cazzeggio"]}
+{"id":"core-346","input":"xcazzeggiarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-347","input":"cazzeggiarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-348","input":"cazzeggiato","profile":"balanced","action":"block","rules":["it.vulgar.cazzeggio"]}
+{"id":"core-349","input":"xcazzeggiatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-350","input":"cazzeggiatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-351","input":"cazzeggiata","profile":"balanced","action":"block","rules":["it.vulgar.cazzeggio"]}
+{"id":"core-352","input":"xcazzeggiatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-353","input":"cazzeggiatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-354","input":"cazzeggiano","profile":"balanced","action":"block","rules":["it.vulgar.cazzeggio"]}
+{"id":"core-355","input":"xcazzeggianox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-356","input":"cazzeggianox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-357","input":"categorizzare","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.cazzeggio"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-358","input":"scorreggia","profile":"balanced","action":"allow","rules":["it.vulgar.scorreggia"]}
+{"id":"core-359","input":"xscorreggiax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-360","input":"scorreggiax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-361","input":"scorregge","profile":"balanced","action":"allow","rules":["it.vulgar.scorreggia"]}
+{"id":"core-362","input":"xscorreggex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-363","input":"scorreggex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-364","input":"scorreggiare","profile":"balanced","action":"allow","rules":["it.vulgar.scorreggia"]}
+{"id":"core-365","input":"xscorreggiarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-366","input":"scorreggiarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-367","input":"scorreggiato","profile":"balanced","action":"allow","rules":["it.vulgar.scorreggia"]}
+{"id":"core-368","input":"xscorreggiatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-369","input":"scorreggiatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-370","input":"scoreggia","profile":"balanced","action":"allow","rules":["it.vulgar.scorreggia"]}
+{"id":"core-371","input":"xscoreggiax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-372","input":"scoreggiax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-373","input":"scoregge","profile":"balanced","action":"allow","rules":["it.vulgar.scorreggia"]}
+{"id":"core-374","input":"xscoreggex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-375","input":"scoreggex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-376","input":"scoreggiare","profile":"balanced","action":"allow","rules":["it.vulgar.scorreggia"]}
+{"id":"core-377","input":"xscoreggiarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-378","input":"scoreggiarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-379","input":"scorrere","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.scorreggia"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-380","input":"sputtanare","profile":"balanced","action":"block","rules":["it.vulgar.sputtanare"]}
+{"id":"core-381","input":"xsputtanarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-382","input":"sputtanarex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-383","input":"sputtanato","profile":"balanced","action":"block","rules":["it.vulgar.sputtanare"]}
+{"id":"core-384","input":"xsputtanatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-385","input":"sputtanatox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-386","input":"sputtanata","profile":"balanced","action":"block","rules":["it.vulgar.sputtanare"]}
+{"id":"core-387","input":"xsputtanatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-388","input":"sputtanatax","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-389","input":"sputtanati","profile":"balanced","action":"block","rules":["it.vulgar.sputtanare"]}
+{"id":"core-390","input":"xsputtanatix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-391","input":"sputtanatix","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-392","input":"sputtanate","profile":"balanced","action":"block","rules":["it.vulgar.sputtanare"]}
+{"id":"core-393","input":"xsputtanatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-394","input":"sputtanatex","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-395","input":"sputtanamento","profile":"balanced","action":"block","rules":["it.vulgar.sputtanare"]}
+{"id":"core-396","input":"xsputtanamentox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-397","input":"sputtanamentox","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-398","input":"spuntare","profile":"balanced","action":"allow","mustNotMatch":["it.vulgar.sputtanare"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-399","input":"puttana","profile":"balanced","action":"block","rules":["it.sexual.puttana"]}
+{"id":"core-400","input":"xputtanax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-401","input":"puttanax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-402","input":"puttane","profile":"balanced","action":"block","rules":["it.sexual.puttana"]}
+{"id":"core-403","input":"xputtanex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-404","input":"puttanex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-405","input":"puttanata","profile":"balanced","action":"block","rules":["it.sexual.puttana"]}
+{"id":"core-406","input":"xputtanatax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-407","input":"puttanatax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-408","input":"puttanate","profile":"balanced","action":"block","rules":["it.sexual.puttana"]}
+{"id":"core-409","input":"xputtanatex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-410","input":"puttanatex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-411","input":"puttaniere","profile":"balanced","action":"block","rules":["it.sexual.puttana"]}
+{"id":"core-412","input":"xputtanierex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-413","input":"puttanierex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-414","input":"puttanieri","profile":"balanced","action":"block","rules":["it.sexual.puttana"]}
+{"id":"core-415","input":"xputtanierix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-416","input":"puttanierix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-417","input":"putativo","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.puttana"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-418","input":"troia","profile":"balanced","action":"review","rules":["it.sexual.troia"]}
+{"id":"core-419","input":"xtroiax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.troia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-420","input":"troiax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.troia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-421","input":"troie","profile":"balanced","action":"review","rules":["it.sexual.troia"]}
+{"id":"core-422","input":"xtroiex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.troia"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-423","input":"troiex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.troia"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-424","input":"tromba","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.troia"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-425","input":"mignotta","profile":"balanced","action":"block","rules":["it.sexual.mignotta"]}
+{"id":"core-426","input":"xmignottax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.mignotta"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-427","input":"mignottax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.mignotta"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-428","input":"mignotte","profile":"balanced","action":"block","rules":["it.sexual.mignotta"]}
+{"id":"core-429","input":"xmignottex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.mignotta"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-430","input":"mignottex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.mignotta"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-431","input":"miglio","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.mignotta"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-432","input":"sborra","profile":"balanced","action":"block","rules":["it.sexual.sborra"]}
+{"id":"core-433","input":"xsborrax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-434","input":"sborrax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-435","input":"sborrare","profile":"balanced","action":"block","rules":["it.sexual.sborra"]}
+{"id":"core-436","input":"xsborrarex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-437","input":"sborrarex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-438","input":"sborrata","profile":"balanced","action":"block","rules":["it.sexual.sborra"]}
+{"id":"core-439","input":"xsborratax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-440","input":"sborratax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-441","input":"sborrate","profile":"balanced","action":"block","rules":["it.sexual.sborra"]}
+{"id":"core-442","input":"xsborratex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-443","input":"sborratex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-444","input":"sborrato","profile":"balanced","action":"block","rules":["it.sexual.sborra"]}
+{"id":"core-445","input":"xsborratox","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-446","input":"sborratox","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-447","input":"sborrati","profile":"balanced","action":"block","rules":["it.sexual.sborra"]}
+{"id":"core-448","input":"xsborratix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-449","input":"sborratix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-450","input":"sborrone","profile":"balanced","action":"block","rules":["it.sexual.sborra"]}
+{"id":"core-451","input":"xsborronex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-452","input":"sborronex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-453","input":"sborroni","profile":"balanced","action":"block","rules":["it.sexual.sborra"]}
+{"id":"core-454","input":"xsborronix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-455","input":"sborronix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-456","input":"sbarra","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.sborra"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-457","input":"pompino","profile":"balanced","action":"block","rules":["it.sexual.pompino"]}
+{"id":"core-458","input":"xpompinox","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.pompino"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-459","input":"pompinox","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.pompino"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-460","input":"pompini","profile":"balanced","action":"block","rules":["it.sexual.pompino"]}
+{"id":"core-461","input":"xpompinix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.pompino"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-462","input":"pompinix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.pompino"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-463","input":"pompiere","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.pompino"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-464","input":"bocchino","profile":"balanced","action":"review","rules":["it.sexual.bocchino"]}
+{"id":"core-465","input":"xbocchinox","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.bocchino"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-466","input":"bocchinox","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.bocchino"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-467","input":"bocchini","profile":"balanced","action":"review","rules":["it.sexual.bocchino"]}
+{"id":"core-468","input":"xbocchinix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.bocchino"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-469","input":"bocchinix","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.bocchino"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-470","input":"boccia","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.bocchino"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-471","input":"scopata","profile":"balanced","action":"review","rules":["it.sexual.scopata"]}
+{"id":"core-472","input":"xscopatax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.scopata"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-473","input":"scopatax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.scopata"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-474","input":"scopate","profile":"balanced","action":"review","rules":["it.sexual.scopata"]}
+{"id":"core-475","input":"xscopatex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.scopata"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-476","input":"scopatex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.scopata"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-477","input":"scoperta","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.scopata"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-478","input":"figa","profile":"balanced","action":"review","rules":["it.sexual.figa"]}
+{"id":"core-479","input":"xfigax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.figa"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-480","input":"figax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.figa"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-481","input":"fighe","profile":"balanced","action":"review","rules":["it.sexual.figa"]}
+{"id":"core-482","input":"xfighex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.figa"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-483","input":"fighex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.figa"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-484","input":"figura","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.figa"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-485","input":"fica","profile":"balanced","action":"review","rules":["it.sexual.fica"]}
+{"id":"core-486","input":"xficax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.fica"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-487","input":"ficax","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.fica"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-488","input":"fiche","profile":"balanced","action":"review","rules":["it.sexual.fica"]}
+{"id":"core-489","input":"xfichex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.fica"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-490","input":"fichex","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.fica"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-491","input":"ficus","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.fica"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-492","input":"frocio","profile":"balanced","action":"block","rules":["it.discriminatory.frocio"]}
+{"id":"core-493","input":"xfrociox","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-494","input":"frociox","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-495","input":"frocia","profile":"balanced","action":"block","rules":["it.discriminatory.frocio"]}
+{"id":"core-496","input":"xfrociax","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-497","input":"frociax","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-498","input":"froci","profile":"balanced","action":"block","rules":["it.discriminatory.frocio"]}
+{"id":"core-499","input":"xfrocix","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-500","input":"frocix","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-501","input":"frocie","profile":"balanced","action":"block","rules":["it.discriminatory.frocio"]}
+{"id":"core-502","input":"xfrociex","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-503","input":"frociex","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-504","input":"fronde","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.frocio"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-505","input":"culattone","profile":"balanced","action":"block","rules":["it.discriminatory.culattone"]}
+{"id":"core-506","input":"xculattonex","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.culattone"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-507","input":"culattonex","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.culattone"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-508","input":"culattoni","profile":"balanced","action":"block","rules":["it.discriminatory.culattone"]}
+{"id":"core-509","input":"xculattonix","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.culattone"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-510","input":"culattonix","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.culattone"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-511","input":"colazione","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.culattone"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-512","input":"negraccio","profile":"balanced","action":"block","rules":["it.discriminatory.negraccio"]}
+{"id":"core-513","input":"xnegracciox","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-514","input":"negracciox","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-515","input":"negraccia","profile":"balanced","action":"block","rules":["it.discriminatory.negraccio"]}
+{"id":"core-516","input":"xnegracciax","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-517","input":"negracciax","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-518","input":"negracci","profile":"balanced","action":"block","rules":["it.discriminatory.negraccio"]}
+{"id":"core-519","input":"xnegraccix","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-520","input":"negraccix","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-521","input":"negracce","profile":"balanced","action":"block","rules":["it.discriminatory.negraccio"]}
+{"id":"core-522","input":"xnegraccex","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-523","input":"negraccex","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-524","input":"nero","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.negraccio"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-525","input":"terrone","profile":"balanced","action":"review","rules":["it.discriminatory.terrone"]}
+{"id":"core-526","input":"xterronex","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.terrone"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-527","input":"terronex","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.terrone"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-528","input":"terrona","profile":"balanced","action":"review","rules":["it.discriminatory.terrone"]}
+{"id":"core-529","input":"xterronax","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.terrone"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-530","input":"terronax","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.terrone"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-531","input":"terroni","profile":"balanced","action":"review","rules":["it.discriminatory.terrone"]}
+{"id":"core-532","input":"xterronix","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.terrone"],"expectedMatches":[],"note":"Controesempio sintetico inventato: nessuna ricerca di sottostringhe"}
+{"id":"core-533","input":"terronix","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.terrone"],"expectedMatches":[],"note":"Forma non dichiarata: nessuna flessione implicita"}
+{"id":"core-534","input":"terreno","profile":"balanced","action":"allow","mustNotMatch":["it.discriminatory.terrone"],"expectedMatches":[],"note":"Parola innocua vicina"}
+{"id":"core-535","input":"vaffanculoooo","profile":"balanced","action":"block","rules":["it.insult.vaffanculo"]}
+{"id":"core-536","input":"avvaffanculo","profile":"balanced","action":"allow","mustNotMatch":["it.insult.vaffanculo"]}
+{"id":"core-537","input":"testa di cazzo","profile":"balanced","action":"block","rules":["it.insult.testa-di-cazzo"]}
+{"id":"core-538","input":"testa di cavolo","profile":"balanced","action":"allow","mustNotMatch":["it.insult.testa-di-cazzo"]}
+{"id":"core-539","input":"figlio di puttana","profile":"balanced","action":"block","rules":["it.insult.figlio-di-puttana"]}
+{"id":"core-540","input":"figlio di famiglia","profile":"balanced","action":"allow","mustNotMatch":["it.insult.figlio-di-puttana"]}
+{"id":"core-541","input":"testadicazzo","profile":"balanced","action":"block","rules":["it.insult.testadicazzo"]}
+{"id":"core-542","input":"testadicavolo","profile":"balanced","action":"allow","mustNotMatch":["it.insult.testadicazzo"]}
+{"id":"core-543","input":"Claudio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-544","input":"Diodato","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-545","input":"Cristiano","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-546","input":"Porcedda","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-547","input":"Marco","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-548","input":"Luca","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-549","input":"Paolo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-550","input":"Giulia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-551","input":"Silvia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-552","input":"Elena","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-553","input":"Andrea","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-554","input":"Simone","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-555","input":"Alessio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-556","input":"Matteo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-557","input":"Filippo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-558","input":"Lorenzo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-559","input":"Michele","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-560","input":"Davide","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-561","input":"Gabriele","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-562","input":"Riccardo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-563","input":"Pietro","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-564","input":"Antonio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-565","input":"Francesco","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-566","input":"Federico","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-567","input":"Stefano","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-568","input":"Roberto","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-569","input":"Alberto","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-570","input":"Daniele","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-571","input":"Alessandro","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-572","input":"Massimo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-573","input":"Giorgio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-574","input":"Luigi","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-575","input":"Carlo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-576","input":"Giovanni","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-577","input":"Giuseppe","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-578","input":"Salvatore","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-579","input":"Vincenzo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-580","input":"Enrico","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-581","input":"Leonardo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-582","input":"Tommaso","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-583","input":"Nicola","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-584","input":"Fabio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-585","input":"Sergio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-586","input":"Bruno","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-587","input":"Franco","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-588","input":"Mauro","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-589","input":"Mario","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-590","input":"Rosa","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-591","input":"Anna","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-592","input":"Maria","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-593","input":"Sara","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-594","input":"Laura","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-595","input":"Marta","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-596","input":"Chiara","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-597","input":"Alice","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-598","input":"Sofia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-599","input":"Aurora","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-600","input":"Beatrice","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-601","input":"Caterina","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-602","input":"Teresa","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-603","input":"Valentina","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-604","input":"Francesca","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-605","input":"Federica","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-606","input":"Martina","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-607","input":"Michela","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-608","input":"Daniela","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-609","input":"Roberta","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-610","input":"Alessandra","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-611","input":"Nicoletta","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-612","input":"Cristina","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-613","input":"Paola","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-614","input":"Giovanna","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-615","input":"Antonella","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-616","input":"Gabriella","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-617","input":"Patrizia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-618","input":"Eleonora","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-619","input":"Vittoria","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-620","input":"Ludovica","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-621","input":"Camilla","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-622","input":"Cecilia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-623","input":"Emilia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-624","input":"Irene","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-625","input":"Arianna","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-626","input":"Noemi","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-627","input":"Elisa","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-628","input":"Lucia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-629","input":"Bianca","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-630","input":"Viola","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-631","input":"Stella","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-632","input":"Ricerca","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-633","input":"Scazzottata","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-634","input":"cazzuola","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-635","input":"cazzotto","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-636","input":"stronzio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-637","input":"coglitore","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-638","input":"merlo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-639","input":"culmine","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-640","input":"piscina","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-641","input":"minestra","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-642","input":"incastro","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-643","input":"stivale","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-644","input":"fantasia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-645","input":"scorrere","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-646","input":"spuntare","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-647","input":"putativo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-648","input":"tromba","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-649","input":"miglio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-650","input":"sbarra","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-651","input":"pompiere","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-652","input":"boccia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-653","input":"scoperta","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-654","input":"figura","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-655","input":"ficus","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-656","input":"terreno","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-657","input":"gay","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-658","input":"lesbica","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-659","input":"omosessuale","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-660","input":"transgender","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-661","input":"ebreo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-662","input":"musulmano","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-663","input":"rom","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-664","input":"disabile","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-665","input":"finocchio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-666","input":"sega","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-667","input":"palle","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-668","input":"porco","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-669","input":"cane","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-670","input":"bestia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-671","input":"boia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-672","input":"nero","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}
+{"id":"core-673","input":"neri","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome convenzionale o parola innocua; nessun nickname reale di utente"}

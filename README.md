@@ -4,9 +4,9 @@ Italian-first profanity detection for short user-generated text — nicknames, u
 
 > 🚧 Work in progress — not yet published. Design: [SPECIFICHE.md](SPECIFICHE.md) (Italian).
 
-Current status: M1 complete (Unicode normalization, segmentation, views and UTF-16 origins in both engines). Detection and policy APIs arrive in M2; the capabilities below describe the intended product.
+Current status: M2 complete, with detection and policy APIs in both engines. The first curated Italian core has 45 rules and 173 declared word/prefix/compound forms, plus phrases and blasphemy combinations. Coverage and field validation are still in progress.
 
-- Precision first: Italian names, surnames and places such as _Claudio_, _Diodato_ or _Madonna di Campiglio_ are not flagged.
+- Precision first: whole-word rules, explicit exceptions and an audit on Italian names, surnames and common words.
 - Catches common evasions: leetspeak, separators, accents, repeated letters, spaced letters and Unicode look-alikes.
 - Blasphemy-aware: divine terms are only flagged in combination with an insult (_dio_ alone is fine).
 - Detection separated from policy: `balanced`, `strict` and `lenient` profiles, plus custom rules and exceptions.
@@ -24,7 +24,29 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 
 Pacchetti previsti: npm `italian-profanity` · pub.dev `italian_profanity`.
 
-**Stato attuale: M1 completata.** Normalizzazione, segmentazione, viste e origini UTF-16 sono implementate in entrambi i motori e verificate su 138 fixture condivise. Le API `findMatches()`, `check()` e `isClean()` arrivano in M2: il pacchetto non è ancora un filtro utilizzabile.
+**Stato attuale: M2 completata, M3 avviata.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 45 regole e 173 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; dialetti e lessico inglese restano da curare.
+
+Le attese sono condivise su 938 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
+
+```ts
+import { check, createChecker } from "italian-profanity"
+
+check("D10 p0rc0").action // "block"
+check("Claudio").action // "allow"
+
+const checker = createChecker({ profile: "balanced", contacts: true })
+checker.check("www.example.org").action // "block"
+```
+
+```dart
+import 'package:italian_profanity/italian_profanity.dart';
+
+final checker = ItalianProfanity.createChecker(contacts: true);
+final result = checker.check('D10 p0rc0');
+// result.action == Action.block
+```
+
+Le API sono implementate nel repository, ma i pacchetti non sono ancora pubblicati. Prima della v0.1 restano curazione, consolidamento e prova in una delle applicazioni previste.
 
 Keywords: profanity, italian, parolacce, bestemmie, insulti, moderation, nickname, username, validation, flutter, dart.
 

@@ -42,15 +42,16 @@ const [names, surnames, words] = await Promise.all([
 type FindMatches = (input: string) => Array<{ ruleId: string }>
 const engine = (await import(pathToFileURL(join(JS_PKG, "src", "index.ts")).href)) as {
   findMatches?: FindMatches
+  check?: (input: string) => { action: string }
 }
 
-if (typeof engine.findMatches !== "function") {
-  console.log(
-    `• corpus pronto (${names.length} nomi, ${surnames.length} cognomi, ${words.length} parole): rilevatore non ancora disponibile, audit saltato (fase M2)`,
+if (typeof engine.findMatches !== "function" || typeof engine.check !== "function") {
+  throw new Error(
+    "Audit impossibile: findMatches non è disponibile. Il controllo non può essere saltato.",
   )
-  process.exit(0)
 }
 const findMatches = engine.findMatches
+const check = engine.check
 
 // Campionamento deterministico delle coppie nome + cognome (LCG con seme fisso).
 let seed = 42
@@ -60,36 +61,45 @@ const random = () => {
 }
 const pick = <T>(list: T[]): T => list[Math.floor(random() * list.length)] as T
 
-const inputs = [
-  ...names,
-  ...surnames,
-  ...words,
-  ...Array.from(
-    { length: PAIR_SAMPLE },
-    () => `${pick(names)}${pick(SEPARATORS)}${pick(surnames)}`,
-  ),
+type Corpus = "name" | "surname" | "word" | "pair"
+const inputs: Array<{ input: string; corpus: Corpus }> = [
+  ...names.map((input) => ({ input, corpus: "name" as const })),
+  ...surnames.map((input) => ({ input, corpus: "surname" as const })),
+  ...words.map((input) => ({ input, corpus: "word" as const })),
+  ...Array.from({ length: PAIR_SAMPLE }, () => ({
+    input: `${pick(names)}${pick(SEPARATORS)}${pick(surnames)}`,
+    corpus: "pair" as const,
+  })),
 ]
 
-const accepted = new Set(
-  readJsonl<{ ruleId: string; input: string }>(join(DATA, "audit", "accepted.jsonl")).map(
-    ({ value }) => `${value.ruleId}\u0000${value.input}`,
+const accepted = new Map(
+  readJsonl<{ ruleId: string; input: string; corpus?: Corpus; action?: string }>(
+    join(DATA, "audit", "accepted.jsonl"),
+  ).map(
+    ({ value }) =>
+      [`${value.ruleId}\u0000${value.corpus ?? "*"}\u0000${value.input}`, value] as const,
   ),
 )
 
 const collisions: string[] = []
-for (const input of inputs) {
+for (const { input, corpus } of inputs) {
   for (const match of findMatches(input)) {
-    if (!accepted.has(`${match.ruleId}\u0000${input}`)) collisions.push(`${match.ruleId}  ${input}`)
+    const justification =
+      accepted.get(`${match.ruleId}\u0000${corpus}\u0000${input}`) ??
+      accepted.get(`${match.ruleId}\u0000*\u0000${input}`)
+    if (!justification || (justification.action && check(input).action !== justification.action)) {
+      collisions.push(`${match.ruleId} [${corpus}] ${input}`)
+    }
   }
 }
 
 if (collisions.length > 0) {
   console.error(
-    `✗ ${collisions.length} collisioni su testi innocui. Valutale una per una (SPECIFICHE.md §7.3):\n`,
+    `✗ ${collisions.length} collisioni da valutare per provenienza (SPECIFICHE.md §7.3):\n`,
   )
   for (const collision of collisions.slice(0, 200)) console.error(`  ${collision}`)
   if (collisions.length > 200) console.error(`  … e altre ${collisions.length - 200}`)
   process.exit(1)
 }
 
-console.log(`✓ nessuna collisione su ${inputs.length} testi innocui`)
+console.log(`✓ audit completato su ${inputs.length} input: nessuna collisione non giustificata`)

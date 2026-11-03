@@ -89,3 +89,13 @@ TS e Dart coprono gli utilizzi dichiarati. Fino alla v0.1 non si aggiungono altr
 ## D18 · Revisione della stima v0.1 — 2026-11-03
 
 Sostituisce D13: 37-52 ore indicative totali. Il lavoro del port viene anticipato in M2 (11-15 ore) e M4 mantiene un budget esplicito di consolidamento (3-5 ore). Le altre fasi restano invariate. Rivalutare dopo M1, senza trattare la stima come una scadenza.
+
+## D19 · Omografi nominali espliciti, senza promessa di zero falsi positivi — 2026-11-03
+
+L'audit effettivo di M2 trova sia termini offensivi presenti nel dizionario sia cognomi omografi di parole volgari. I falsi positivi combinatori su Candio e Canidio vengono soppressi con eccezioni limitate a parola e regola. Le forme polisemiche mantenute nel nucleo usano `confidence: medium`, con `review` in `balanced`; `strict` resta più restrittivo. Il curatore documenta ogni collisione e la sua azione attesa, senza chiamare innocuo l'intero dizionario. Un'app può aggiungere eccezioni locali quando conosce il contesto.
+
+L'obiettivo rimane ridurre i falsi positivi sui nomi, ma il prodotto non promette di disambiguare tutti gli omografi con un controllo lessicale. Specifica, README e descrizioni dei pacchetti esplicitano questo limite. Le collisioni accettate non sono una misura di qualità su nickname reali.
+
+## D20 · Contatti attivati e soglie esplicite — 2026-11-03
+
+Precisa D11: quando l'app attiva `contacts`, URL, email e telefoni riconosciuti producono `block` con tutti i profili predefiniti, anche `lenient`. La scelta è indipendente dalla tolleranza lessicale. Una soglia esplicita per `contact`, anche `null`, permette all'app di cambiarla. Le soglie esplicite prevalgono sul profilo per ogni categoria senza eliminare i match. Il rilevatore di contatti è euristico e opera sul testo originale troncato.

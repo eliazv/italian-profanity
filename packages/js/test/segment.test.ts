@@ -7,7 +7,8 @@ const fixtures = loadFixtureFiles().flatMap((file) => file.fixtures.map(({ value
 
 describe("contratto M1 condiviso", () => {
   for (const fixture of fixtures) {
-    if (fixture.expectedSegments === undefined && fixture.expectedError === undefined) continue
+    if (fixture.expectedSegments === undefined && fixture.expectedError !== "invalidMaxLength")
+      continue
     it(fixture.id, () => {
       if (fixture.expectedError) {
         expect(() => segment(fixture.input, fixture.maxLength)).toThrow(RangeError)
