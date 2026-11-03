@@ -1,0 +1,64 @@
+{
+  "name": "italian-profanity",
+  "version": "0.0.0",
+  "description": "Italian-first profanity detection for nicknames and short text: blasphemy-aware, evasion-resistant, no false positives on Italian names. Same verdicts as the Dart package.",
+  "keywords": [
+    "profanity",
+    "italian",
+    "italiano",
+    "parolacce",
+    "bestemmie",
+    "badwords",
+    "moderation",
+    "nickname",
+    "username",
+    "validation"
+  ],
+  "license": "MIT",
+  "author": "Elia Zavatta (https://eliazavatta.it)",
+  "homepage": "https://github.com/eliazv/italian-profanity#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliazv/italian-profanity.git",
+    "directory": "packages/js"
+  },
+  "bugs": "https://github.com/eliazv/italian-profanity/issues",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsdown": "^0.23.5",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.0"
+  }
+}
