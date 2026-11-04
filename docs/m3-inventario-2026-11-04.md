@@ -4,13 +4,13 @@ Data: 4 novembre 2026 · Commit di lavoro sul branch `feat/m3-large-curated-ital
 
 ## Stato quantitativo
 
-| Metrica                                          | Prima |      Ora |
-| ------------------------------------------------ | ----: | -------: |
-| Regole italiane                                  |   126 |  **290** |
+| Metrica                                          | Prima |       Ora |
+| ------------------------------------------------ | ----: | --------: |
+| Regole italiane                                  |   126 |   **290** |
 | Forme uniche dichiarate nei `terms`              |   517 | **1.034** |
-| Varianti di frasi dichiarate                     |     — |  **187** |
-| Forme divine nella regola combinatoria           |     7 |   **10** |
-| Forme offensive esatte nella regola combinatoria |    36 |   **70** |
+| Varianti di frasi dichiarate                     |     — |   **187** |
+| Forme divine nella regola combinatoria           |     7 |    **10** |
+| Forme offensive esatte nella regola combinatoria |    36 |    **70** |
 | Fixture condivise TS/Dart                        | 1.583 | **2.618** |
 
 Le 290 regole si distribuiscono in: **117 insulti**, **64 regole sessuali**, **60 volgari**, **41 discriminatorie**, **8 bestemmie**. I numeri indicano regole e forme, non precisione, recall o copertura di tutti i dialetti italiani. La moltiplicazione delle forme della regola combinatoria non va confusa con forme dichiarate indipendenti.
