@@ -64,7 +64,7 @@
 {"id":"lexicon-064","input":"pugnetta","profile":"strict","action":"block","rules":["it.sexual.pugnetta"],"note":"Strict blocca anche il termine ambiguo"}
 {"id":"lexicon-065","input":"fregna","profile":"balanced","rules":["it.sexual.fregna"],"note":"Forma nuova curata"}
 {"id":"lexicon-066","input":"fregne","profile":"balanced","rules":["it.sexual.fregna"],"note":"Forma nuova curata"}
-{"id":"lexicon-067","input":"extrafregnatest","profile":"balanced","mustNotMatch":["it.sexual.fregna"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-067","input":"extrafregnatest","profile":"balanced","action":"review","rules":["it.sexual.fregna"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo: nessuna corrispondenza su sottostringa)"}
 {"id":"lexicon-068","input":"fregna","profile":"strict","action":"block","rules":["it.sexual.fregna"],"note":"Strict blocca anche il termine ambiguo"}
 {"id":"lexicon-069","input":"patonza","profile":"balanced","rules":["it.sexual.patonza"],"note":"Forma nuova curata"}
 {"id":"lexicon-070","input":"patonze","profile":"balanced","rules":["it.sexual.patonza"],"note":"Forma nuova curata"}
@@ -159,7 +159,7 @@
 {"id":"lexicon-159","input":"coglioncelle","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-160","input":"coglioneria","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-161","input":"coglionerie","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
-{"id":"lexicon-162","input":"extracoglionatest","profile":"balanced","mustNotMatch":["it.insult.coglione"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-162","input":"extracoglionatest","profile":"balanced","action":"block","rules":["it.insult.coglione"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo su sottostringa)"}
 {"id":"lexicon-163","input":"cretinetto","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-164","input":"cretinetta","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-165","input":"cretinetti","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
@@ -193,7 +193,7 @@
 {"id":"lexicon-193","input":"puttanone","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-194","input":"puttanella","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-195","input":"puttanelle","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
-{"id":"lexicon-196","input":"extraputtanacciatest","profile":"balanced","mustNotMatch":["it.sexual.puttana"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-196","input":"extraputtanacciatest","profile":"balanced","action":"block","rules":["it.sexual.puttana"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo su sottostringa)"}
 {"id":"lexicon-197","input":"troiaccia","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-198","input":"troiacce","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-199","input":"troietta","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione esplicita"}
@@ -229,7 +229,7 @@
 {"id":"lexicon-229","input":"frocetti","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-230","input":"frocione","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-231","input":"frocioni","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Nuova flessione esplicita"}
-{"id":"lexicon-232","input":"extrafrocettotest","profile":"balanced","mustNotMatch":["it.discriminatory.frocio"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-232","input":"extrafrocettotest","profile":"balanced","action":"block","rules":["it.discriminatory.frocio"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo su sottostringa)"}
 {"id":"lexicon-233","input":"terronaccio","profile":"balanced","rules":["it.discriminatory.terrone"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-234","input":"terronaccia","profile":"balanced","rules":["it.discriminatory.terrone"],"note":"Nuova flessione esplicita"}
 {"id":"lexicon-235","input":"terronacci","profile":"balanced","rules":["it.discriminatory.terrone"],"note":"Nuova flessione esplicita"}

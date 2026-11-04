@@ -62,8 +62,9 @@
         "coglioncina",
         "coglioncine"
       ],
+      "infix": ["coglion"],
       "provenance": ["manual"],
-      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "it.insult.bastardo",

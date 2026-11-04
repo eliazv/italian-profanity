@@ -54,12 +54,16 @@
     "rule": {
       "oneOf": [
         {
-          "description": "Parola intera uguale a una delle forme elencate.",
+          "description": "Parola intera uguale a una delle forme elencate. `infix`: radici cercate anche dentro una parola (D26).",
           "allOf": [{ "$ref": "#/$defs/base" }],
           "type": "object",
           "required": ["terms"],
           "unevaluatedProperties": false,
-          "properties": { "kind": { "const": "word" }, "terms": { "$ref": "#/$defs/terms" } }
+          "properties": {
+            "kind": { "const": "word" },
+            "terms": { "$ref": "#/$defs/terms" },
+            "infix": { "$ref": "#/$defs/terms" }
+          }
         },
         {
           "description": "Parola che inizia con il termine. Raro: richiede una nota di giustificazione.",

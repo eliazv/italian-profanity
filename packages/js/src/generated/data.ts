@@ -2,7 +2,7 @@
 import type { CompiledException, CompiledRule } from "../types.ts"
 
 export const VERSION = "0.2.0"
-export const DATA_VERSION = "39c6cb127381"
+export const DATA_VERSION = "0cfc987ddde7"
 
 /** Tabella di normalizzazione condivisa con il pacchetto Dart (SPECIFICHE.md §4.4). */
 export const FOLD: Readonly<Record<string, string>> = {
@@ -1810,6 +1810,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 3,
     "confidence": "high",
     "terms": ["nigger", "niggers", "nigga", "niggas"],
+    "infix": ["nigger", "nigga"],
     "language": "en",
   },
   {
@@ -2149,6 +2150,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["porn", "porno", "pornos", "pornography", "pornographic"],
+    "infix": ["porno"],
     "language": "en",
   },
   {
@@ -2185,6 +2187,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["fuck", "fucks", "fucked", "fucking", "fucker", "fuckers", "fuckup", "fuckups"],
+    "infix": ["fuck"],
     "language": "en",
   },
   {
@@ -2238,9 +2241,9 @@ export const RULES: readonly CompiledRule[] = [
     "category": "blasphemy",
     "severity": 3,
     "confidence": "high",
-    "a": ["dio", "dii", "madonna", "madonne", "gesu", "cristo", "gesucristo", "allah", "iddio", "padreterno"],
+    "a": ["dio", "dii", "madonna", "madonne", "gesu", "cristo", "gesucristo", "allah", "iddio", "padreterno", "deus"],
     "b": {
-      "forms": ["boia", "bestia", "maiale", "maiali", "puttana", "puttane", "stronzo", "stronza", "stronzi", "stronze", "bastardo", "bastarda", "bastardi", "bastarde", "infame", "infami", "assassino", "assassina", "assassini", "assassine", "troia", "troie", "coglione", "coglioni", "vacca", "vacche", "maledetto", "maledetta", "maledetti", "maledette", "capra", "verme", "schifoso", "schifosa", "puttano", "puttani", "baldracca", "baldracche", "merdoso", "merdosa", "merdosi", "merdose", "puttanaccia", "puttanacce", "bestiaccia", "bestiacce", "cagna", "cagne", "cazzone", "cazzoni", "fetente", "fetenti", "fottuto", "fottuta", "fottuti", "fottute", "farabutto", "farabutta", "impestato", "impestata", "impiccato", "impiccata", "lurido", "lurida", "sudicio", "sudicia", "isterica", "isterico", "minchione", "minchioni"],
+      "forms": ["boia", "bestia", "maiale", "maiali", "puttana", "puttane", "stronzo", "stronza", "stronzi", "stronze", "bastardo", "bastarda", "bastardi", "bastarde", "infame", "infami", "assassino", "assassina", "assassini", "assassine", "troia", "troie", "coglione", "coglioni", "vacca", "vacche", "maledetto", "maledetta", "maledetti", "maledette", "capra", "verme", "schifoso", "schifosa", "puttano", "puttani", "baldracca", "baldracche", "merdoso", "merdosa", "merdosi", "merdose", "puttanaccia", "puttanacce", "bestiaccia", "bestiacce", "cagna", "cagne", "cazzone", "cazzoni", "fetente", "fetenti", "fottuto", "fottuta", "fottuti", "fottute", "farabutto", "farabutta", "impestato", "impestata", "impiccato", "impiccata", "lurido", "lurida", "sudicio", "sudicia", "isterica", "isterico", "minchione", "minchioni", "vigliacco", "vigliacca", "vigliacchi", "vigliacche", "laido", "laida", "laidi", "laide", "troi"],
       "prefixes": ["porc", "can", "ladr", "merd", "serpent"],
     },
     "language": "it",
@@ -2427,6 +2430,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 3,
     "confidence": "high",
     "terms": ["frocio", "frocia", "froci", "frocie", "frocetto", "frocetti", "frocione", "frocioni", "frocissimo", "frocissima", "frocissimi", "frocissime"],
+    "infix": ["froci", "froce"],
     "language": "it",
   },
   {
@@ -2977,6 +2981,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["coglione", "coglioni", "coglionata", "coglionate", "cogliona", "coglioncello", "coglioncella", "coglioncelli", "coglioncelle", "coglioneria", "coglionerie", "coglionaggine", "coglionaggini", "coglionare", "coglionatore", "coglionatori", "coglionatrice", "coglionatrici", "coglionatura", "coglionature", "coglioncino", "coglioncini", "coglioncina", "coglioncine"],
+    "infix": ["coglion"],
     "language": "it",
   },
   {
@@ -3995,7 +4000,8 @@ export const RULES: readonly CompiledRule[] = [
     "category": "sexual",
     "severity": 2,
     "confidence": "high",
-    "terms": ["cazzo", "cazzi", "cazzone", "cazzoni", "cazzata", "cazzate", "cazzaccio", "cazzacci", "cazzetto", "cazzetti", "cazzona", "cazzonata", "cazzonate"],
+    "terms": ["cazzo", "cazzi", "cazzone", "cazzoni", "cazzata", "cazzate", "cazzaccio", "cazzacci", "cazzetto", "cazzetti", "cazzona", "cazzonata", "cazzonate", "cazzillo", "cazzilli"],
+    "infix": ["cazzon", "cazzoduro", "cazzill"],
     "language": "it",
   },
   {
@@ -4098,6 +4104,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "medium",
     "terms": ["fregna", "fregne"],
+    "infix": ["fregna", "fregne"],
     "language": "it",
   },
   {
@@ -4116,6 +4123,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["inculare", "incularsi", "inculato", "inculata", "inculati", "inculate", "inculando", "inculandosi", "inculamento"],
+    "infix": ["inculat", "incule", "inculo"],
     "language": "it",
   },
   {
@@ -4200,6 +4208,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["pompino", "pompini"],
+    "infix": ["pompin"],
     "language": "it",
   },
   {
@@ -4245,6 +4254,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["puttana", "puttane", "puttanata", "puttanate", "puttaniere", "puttanieri", "puttanaccia", "puttanacce", "puttanona", "puttanone", "puttanella", "puttanelle"],
+    "infix": ["puttana"],
     "language": "it",
   },
   {
@@ -4290,6 +4300,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["sborra", "sborrare", "sborrata", "sborrate", "sborrato", "sborrati", "sborrone", "sborroni", "sborro", "sborri", "sborrano", "sborratona", "sborratina", "sborratine"],
+    "infix": ["sborr"],
     "language": "it",
   },
   {
@@ -4299,6 +4310,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["sburra", "sburrare", "sburrato", "sburrata", "sburrati", "sburrate"],
+    "infix": ["sburr"],
     "language": "it",
   },
   {
@@ -4471,6 +4483,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "medium",
     "terms": ["troia", "troie", "troiona", "troione", "troioni", "troiaccia", "troiacce", "troietta", "troiette", "troioncella", "troioncelle"],
+    "infix": ["troie", "troiett"],
     "language": "it",
   },
   {
@@ -4751,6 +4764,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["kazzo", "kazzi", "kazzata", "kazzate", "caxxo", "caxxi", "caxxata", "caxxate"],
+    "infix": ["kazz"],
     "language": "it",
   },
   {
@@ -4791,6 +4805,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["merda", "merde", "merdoso", "merdosa", "merdosi", "merdose", "merdata", "merdate", "merdaccia", "merdacce", "merdina", "merdine", "merdone", "merdona", "merdoni", "merdolina", "merdoline"],
+    "infix": ["merda", "merde"],
     "language": "it",
   },
   {
@@ -4809,6 +4824,7 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 2,
     "confidence": "high",
     "terms": ["minchia", "minchie", "minchiata", "minchiate", "minchione", "minchioni", "minchiella", "minchionata", "minchionate", "minchiatona", "minchiatone"],
+    "infix": ["minchi"],
     "language": "it",
   },
   {

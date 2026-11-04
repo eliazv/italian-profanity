@@ -228,7 +228,7 @@
 {"id":"context-231","input":"coglioncini","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-232","input":"coglioncina","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-233","input":"coglioncine","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
-{"id":"context-234","input":"extracoglionagginexyz","profile":"balanced","mustNotMatch":["it.insult.coglione"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-234","input":"extracoglionagginexyz","profile":"balanced","action":"block","rules":["it.insult.coglione"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo vicino per derivato aggiunto)"}
 {"id":"context-235","input":"stronzissimo","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-236","input":"stronzissima","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-237","input":"stronzissimi","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
@@ -316,7 +316,7 @@
 {"id":"context-319","input":"sborratona","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-320","input":"sborratina","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-321","input":"sborratine","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
-{"id":"context-322","input":"extrasborroxyz","profile":"balanced","mustNotMatch":["it.sexual.sborra"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-322","input":"extrasborroxyz","profile":"balanced","action":"block","rules":["it.sexual.sborra"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo vicino per derivato aggiunto)"}
 {"id":"context-323","input":"inculando","profile":"balanced","rules":["it.sexual.inculare"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-324","input":"inculandosi","profile":"balanced","rules":["it.sexual.inculare"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-325","input":"inculamento","profile":"balanced","rules":["it.sexual.inculare"],"note":"Flessione o derivato di una regola preesistente"}
@@ -326,7 +326,7 @@
 {"id":"context-329","input":"minchionate","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-330","input":"minchiatona","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-331","input":"minchiatone","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Flessione o derivato di una regola preesistente"}
-{"id":"context-332","input":"extraminchiellaxyz","profile":"balanced","mustNotMatch":["it.vulgar.minchia"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-332","input":"extraminchiellaxyz","profile":"balanced","action":"block","rules":["it.vulgar.minchia"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo vicino per derivato aggiunto)"}
 {"id":"context-333","input":"merdolina","profile":"balanced","rules":["it.vulgar.merda"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-334","input":"merdoline","profile":"balanced","rules":["it.vulgar.merda"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-335","input":"extramerdolinaxyz","profile":"balanced","mustNotMatch":["it.vulgar.merda"],"note":"Negativo vicino per derivato aggiunto"}
@@ -350,7 +350,7 @@
 {"id":"context-353","input":"frocissima","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-354","input":"frocissimi","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-355","input":"frocissime","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Flessione o derivato di una regola preesistente"}
-{"id":"context-356","input":"extrafrocissimoxyz","profile":"balanced","mustNotMatch":["it.discriminatory.frocio"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-356","input":"extrafrocissimoxyz","profile":"balanced","action":"block","rules":["it.discriminatory.frocio"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo vicino per derivato aggiunto)"}
 {"id":"context-357","input":"recchiona","profile":"balanced","rules":["it.discriminatory.recchione"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-358","input":"ricchiona","profile":"balanced","rules":["it.discriminatory.recchione"],"note":"Flessione o derivato di una regola preesistente"}
 {"id":"context-359","input":"extrarecchionaxyz","profile":"balanced","mustNotMatch":["it.discriminatory.recchione"],"note":"Negativo vicino per derivato aggiunto"}

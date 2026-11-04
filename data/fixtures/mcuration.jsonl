@@ -105,9 +105,9 @@
 {"id":"mcuration-105","input":"affanculo","profile":"balanced","rules":["it.insult.fanculo"],"note":"Nuova flessione di regola esistente"}
 {"id":"mcuration-106","input":"superaffanculoextra","profile":"balanced","mustNotMatch":["it.insult.fanculo"],"note":"Test negativo vicino su forma aggiunta"}
 {"id":"mcuration-107","input":"merdaccia","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione di regola esistente"}
-{"id":"mcuration-108","input":"supermerdacciaextra","profile":"balanced","mustNotMatch":["it.vulgar.merda"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-108","input":"supermerdacciaextra","profile":"balanced","action":"block","rules":["it.vulgar.merda"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Test negativo vicino su forma aggiunta)"}
 {"id":"mcuration-109","input":"merdacce","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione di regola esistente"}
-{"id":"mcuration-110","input":"supermerdacceextra","profile":"balanced","mustNotMatch":["it.vulgar.merda"],"note":"Test negativo vicino su forma aggiunta"}
+{"id":"mcuration-110","input":"supermerdacceextra","profile":"balanced","action":"block","rules":["it.vulgar.merda"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Test negativo vicino su forma aggiunta)"}
 {"id":"mcuration-111","input":"cacare","profile":"balanced","rules":["it.vulgar.cagare"],"note":"Nuova flessione di regola esistente"}
 {"id":"mcuration-112","input":"supercacareextra","profile":"balanced","mustNotMatch":["it.vulgar.cagare"],"note":"Test negativo vicino su forma aggiunta"}
 {"id":"mcuration-113","input":"cacata","profile":"balanced","rules":["it.vulgar.cagare"],"note":"Nuova flessione di regola esistente"}

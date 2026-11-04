@@ -97,7 +97,7 @@
 {"id":"coverage-097","input":"sburrata","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
 {"id":"coverage-098","input":"sburrati","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
 {"id":"coverage-099","input":"sburrate","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
-{"id":"coverage-100","input":"supersburraextra","profile":"balanced","mustNotMatch":["it.sexual.sburra"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-100","input":"supersburraextra","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Confine: la radice non basta a segnalare una parola più lunga)"}
 {"id":"coverage-101","input":"loffa","profile":"balanced","action":"review","rules":["it.vulgar.loffa"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
 {"id":"coverage-102","input":"loffe","profile":"balanced","action":"review","rules":["it.vulgar.loffa"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
 {"id":"coverage-103","input":"loffare","profile":"balanced","action":"review","rules":["it.vulgar.loffa"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}

@@ -4,7 +4,7 @@
 {"id":"adoption-004","profile":"balanced","input":"fucking","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
 {"id":"adoption-005","profile":"balanced","input":"fucker","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
 {"id":"adoption-006","profile":"balanced","input":"fuckers","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
-{"id":"adoption-007","profile":"balanced","input":"superfuckextra","languages":["it","en"],"action":"allow","mustNotMatch":["en.vulgar.fuck"]}
+{"id":"adoption-007","input":"superfuckextra","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.vulgar.fuck"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta"}
 {"id":"adoption-008","profile":"balanced","input":"fuck","action":"allow","mustNotMatch":["en.vulgar.fuck"],"note":"Il nucleo inglese ? disattivato per default."}
 {"id":"adoption-009","profile":"balanced","input":"shit","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"]}
 {"id":"adoption-010","profile":"balanced","input":"shits","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"]}

@@ -65,7 +65,8 @@ interface CompiledRuleBase {
 }
 
 export type CompiledRule =
-  | (CompiledRuleBase & { kind: "word" | "prefix"; terms: string[] })
+  | (CompiledRuleBase & { kind: "word"; terms: string[]; infix?: string[] })
+  | (CompiledRuleBase & { kind: "prefix"; terms: string[] })
   | (CompiledRuleBase & { kind: "phrase"; phrases: string[][] })
   | (CompiledRuleBase & { kind: "compound"; terms: string[]; anchor: "start" | "end" | "both" })
   | (CompiledRuleBase & {

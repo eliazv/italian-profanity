@@ -133,4 +133,4 @@
 {"id":"engine-133","input":"Mario_Rossi","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: nome e cognome con underscore"}
 {"id":"engine-134","input":"Anna-Maria.Cane","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: frammenti innocui"}
 {"id":"engine-135","input":"Marco_93","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: frammento di sole cifre"}
-{"id":"engine-136","input":"sborratore_x","profile":"balanced","mustNotMatch":["it.sexual.sborra"],"note":"Il frammento deve corrispondere per intero, niente sottostringhe"}
+{"id":"engine-136","input":"sborratore_x","profile":"balanced","action":"block","rules":["it.sexual.sborra"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Il frammento deve corrispondere per intero, niente sottostringhe)"}
