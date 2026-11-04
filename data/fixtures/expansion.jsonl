@@ -1,0 +1,397 @@
+{"id":"expansion-001","input":"fesso","profile":"balanced","rules":["it.insult.fesso"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-002","input":"fessa","profile":"balanced","rules":["it.insult.fesso"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-003","input":"fessi","profile":"balanced","rules":["it.insult.fesso"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-004","input":"fesse","profile":"balanced","rules":["it.insult.fesso"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-005","input":"extrafessoxyz","profile":"balanced","mustNotMatch":["it.insult.fesso"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-006","input":"fesso","profile":"strict","rules":["it.insult.fesso"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-007","input":"gonzo","profile":"balanced","rules":["it.insult.gonzo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-008","input":"gonza","profile":"balanced","rules":["it.insult.gonzo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-009","input":"gonzi","profile":"balanced","rules":["it.insult.gonzo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-010","input":"gonze","profile":"balanced","rules":["it.insult.gonzo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-011","input":"extragonzoxyz","profile":"balanced","mustNotMatch":["it.insult.gonzo"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-012","input":"gonzo","profile":"strict","rules":["it.insult.gonzo"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-013","input":"citrullo","profile":"balanced","rules":["it.insult.citrullo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-014","input":"citrulla","profile":"balanced","rules":["it.insult.citrullo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-015","input":"citrulli","profile":"balanced","rules":["it.insult.citrullo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-016","input":"citrulle","profile":"balanced","rules":["it.insult.citrullo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-017","input":"extracitrulloxyz","profile":"balanced","mustNotMatch":["it.insult.citrullo"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-018","input":"citrullo","profile":"strict","rules":["it.insult.citrullo"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-019","input":"rincitrullito","profile":"balanced","rules":["it.insult.rincitrullito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-020","input":"rincitrullita","profile":"balanced","rules":["it.insult.rincitrullito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-021","input":"rincitrulliti","profile":"balanced","rules":["it.insult.rincitrullito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-022","input":"rincitrullite","profile":"balanced","rules":["it.insult.rincitrullito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-023","input":"rincitrullire","profile":"balanced","rules":["it.insult.rincitrullito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-024","input":"extrarincitrullitoxyz","profile":"balanced","mustNotMatch":["it.insult.rincitrullito"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-025","input":"rincitrullito","profile":"strict","rules":["it.insult.rincitrullito"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-026","input":"babbione","profile":"balanced","rules":["it.insult.babbione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-027","input":"babbiona","profile":"balanced","rules":["it.insult.babbione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-028","input":"babbioni","profile":"balanced","rules":["it.insult.babbione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-029","input":"extrababbionexyz","profile":"balanced","mustNotMatch":["it.insult.babbione"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-030","input":"babbione","profile":"strict","rules":["it.insult.babbione"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-031","input":"cialtrone","profile":"balanced","rules":["it.insult.cialtrone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-032","input":"cialtrona","profile":"balanced","rules":["it.insult.cialtrone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-033","input":"cialtroni","profile":"balanced","rules":["it.insult.cialtrone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-034","input":"extracialtronexyz","profile":"balanced","mustNotMatch":["it.insult.cialtrone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-035","input":"cialtrone","profile":"strict","rules":["it.insult.cialtrone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-036","input":"buffone","profile":"balanced","rules":["it.insult.buffone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-037","input":"buffona","profile":"balanced","rules":["it.insult.buffone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-038","input":"buffoni","profile":"balanced","rules":["it.insult.buffone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-039","input":"extrabuffonexyz","profile":"balanced","mustNotMatch":["it.insult.buffone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-040","input":"buffone","profile":"strict","rules":["it.insult.buffone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-041","input":"pagliaccio","profile":"balanced","rules":["it.insult.pagliaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-042","input":"pagliaccia","profile":"balanced","rules":["it.insult.pagliaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-043","input":"pagliacci","profile":"balanced","rules":["it.insult.pagliaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-044","input":"pagliacce","profile":"balanced","rules":["it.insult.pagliaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-045","input":"extrapagliaccioxyz","profile":"balanced","mustNotMatch":["it.insult.pagliaccio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-046","input":"pagliaccio","profile":"strict","rules":["it.insult.pagliaccio"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-047","input":"pagliaccione","profile":"balanced","rules":["it.insult.pagliaccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-048","input":"pagliacciona","profile":"balanced","rules":["it.insult.pagliaccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-049","input":"pagliaccioni","profile":"balanced","rules":["it.insult.pagliaccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-050","input":"extrapagliaccionexyz","profile":"balanced","mustNotMatch":["it.insult.pagliaccione"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-051","input":"pagliaccione","profile":"strict","rules":["it.insult.pagliaccione"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-052","input":"cafone","profile":"balanced","rules":["it.insult.cafone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-053","input":"cafona","profile":"balanced","rules":["it.insult.cafone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-054","input":"cafoni","profile":"balanced","rules":["it.insult.cafone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-055","input":"extracafonexyz","profile":"balanced","mustNotMatch":["it.insult.cafone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-056","input":"cafone","profile":"strict","rules":["it.insult.cafone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-057","input":"burino","profile":"balanced","rules":["it.insult.burino"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-058","input":"burina","profile":"balanced","rules":["it.insult.burino"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-059","input":"burini","profile":"balanced","rules":["it.insult.burino"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-060","input":"burine","profile":"balanced","rules":["it.insult.burino"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-061","input":"extraburinoxyz","profile":"balanced","mustNotMatch":["it.insult.burino"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-062","input":"burino","profile":"strict","rules":["it.insult.burino"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-063","input":"buzzurro","profile":"balanced","rules":["it.insult.buzzurro"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-064","input":"buzzurra","profile":"balanced","rules":["it.insult.buzzurro"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-065","input":"buzzurri","profile":"balanced","rules":["it.insult.buzzurro"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-066","input":"buzzurre","profile":"balanced","rules":["it.insult.buzzurro"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-067","input":"extrabuzzurroxyz","profile":"balanced","mustNotMatch":["it.insult.buzzurro"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-068","input":"buzzurro","profile":"strict","rules":["it.insult.buzzurro"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-069","input":"moccioso","profile":"balanced","rules":["it.insult.moccioso"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-070","input":"mocciosa","profile":"balanced","rules":["it.insult.moccioso"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-071","input":"mocciosi","profile":"balanced","rules":["it.insult.moccioso"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-072","input":"mocciose","profile":"balanced","rules":["it.insult.moccioso"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-073","input":"extramocciosoxyz","profile":"balanced","mustNotMatch":["it.insult.moccioso"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-074","input":"moccioso","profile":"strict","rules":["it.insult.moccioso"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-075","input":"rimbambito","profile":"balanced","rules":["it.insult.rimbambito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-076","input":"rimbambita","profile":"balanced","rules":["it.insult.rimbambito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-077","input":"rimbambiti","profile":"balanced","rules":["it.insult.rimbambito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-078","input":"rimbambite","profile":"balanced","rules":["it.insult.rimbambito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-079","input":"rimbambire","profile":"balanced","rules":["it.insult.rimbambito"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-080","input":"extrarimbambitoxyz","profile":"balanced","mustNotMatch":["it.insult.rimbambito"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-081","input":"rimbambito","profile":"strict","rules":["it.insult.rimbambito"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-082","input":"bamboccio","profile":"balanced","rules":["it.insult.bamboccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-083","input":"bamboccia","profile":"balanced","rules":["it.insult.bamboccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-084","input":"bambocci","profile":"balanced","rules":["it.insult.bamboccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-085","input":"bambocce","profile":"balanced","rules":["it.insult.bamboccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-086","input":"extrabamboccioxyz","profile":"balanced","mustNotMatch":["it.insult.bamboccio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-087","input":"bamboccio","profile":"strict","rules":["it.insult.bamboccio"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-088","input":"vigliacco","profile":"balanced","rules":["it.insult.vigliacco"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-089","input":"vigliacca","profile":"balanced","rules":["it.insult.vigliacco"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-090","input":"vigliacchi","profile":"balanced","rules":["it.insult.vigliacco"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-091","input":"vigliacche","profile":"balanced","rules":["it.insult.vigliacco"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-092","input":"extravigliaccoxyz","profile":"balanced","mustNotMatch":["it.insult.vigliacco"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-093","input":"vigliacco","profile":"strict","rules":["it.insult.vigliacco"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-094","input":"miserabile","profile":"balanced","rules":["it.insult.miserabile"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-095","input":"miserabili","profile":"balanced","rules":["it.insult.miserabile"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-096","input":"extramiserabilexyz","profile":"balanced","mustNotMatch":["it.insult.miserabile"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-097","input":"miserabile","profile":"strict","rules":["it.insult.miserabile"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-098","input":"straccione","profile":"balanced","rules":["it.insult.straccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-099","input":"stracciona","profile":"balanced","rules":["it.insult.straccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-100","input":"straccioni","profile":"balanced","rules":["it.insult.straccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-101","input":"extrastraccionexyz","profile":"balanced","mustNotMatch":["it.insult.straccione"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-102","input":"straccione","profile":"strict","rules":["it.insult.straccione"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-103","input":"maledetto","profile":"balanced","rules":["it.insult.maledetto"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-104","input":"maledetta","profile":"balanced","rules":["it.insult.maledetto"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-105","input":"maledetti","profile":"balanced","rules":["it.insult.maledetto"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-106","input":"maledette","profile":"balanced","rules":["it.insult.maledetto"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-107","input":"extramaledettoxyz","profile":"balanced","mustNotMatch":["it.insult.maledetto"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-108","input":"maledetto","profile":"strict","rules":["it.insult.maledetto"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-109","input":"sborone","profile":"balanced","rules":["it.insult.sborone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-110","input":"sborona","profile":"balanced","rules":["it.insult.sborone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-111","input":"sboroni","profile":"balanced","rules":["it.insult.sborone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-112","input":"extrasboronexyz","profile":"balanced","mustNotMatch":["it.insult.sborone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-113","input":"sborone","profile":"strict","rules":["it.insult.sborone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-114","input":"bimbominkia","profile":"balanced","rules":["it.insult.bimbominkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-115","input":"bimbominkie","profile":"balanced","rules":["it.insult.bimbominkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-116","input":"bimbominchia","profile":"balanced","rules":["it.insult.bimbominkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-117","input":"bimbominchie","profile":"balanced","rules":["it.insult.bimbominkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-118","input":"extrabimbominkiaxyz","profile":"balanced","mustNotMatch":["it.insult.bimbominkia"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-119","input":"baciaculo","profile":"balanced","rules":["it.insult.baciaculo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-120","input":"baciaculi","profile":"balanced","rules":["it.insult.baciaculo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-121","input":"extrabaciaculoxyz","profile":"balanced","mustNotMatch":["it.insult.baciaculo"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-122","input":"scassamaroni","profile":"balanced","rules":["it.insult.scassamaroni"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-123","input":"scassapalle","profile":"balanced","rules":["it.insult.scassamaroni"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-124","input":"extrascassamaronixyz","profile":"balanced","mustNotMatch":["it.insult.scassamaroni"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-125","input":"rompimaroni","profile":"balanced","rules":["it.insult.rompimaroni"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-126","input":"rompimarone","profile":"balanced","rules":["it.insult.rompimaroni"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-127","input":"extrarompimaronixyz","profile":"balanced","mustNotMatch":["it.insult.rompimaroni"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-128","input":"suca","profile":"balanced","rules":["it.insult.suca"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-129","input":"sucate","profile":"balanced","rules":["it.insult.suca"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-130","input":"sucare","profile":"balanced","rules":["it.insult.suca"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-131","input":"sucami","profile":"balanced","rules":["it.insult.suca"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-132","input":"sucamela","profile":"balanced","rules":["it.insult.suca"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-133","input":"sucamelo","profile":"balanced","rules":["it.insult.suca"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-134","input":"extrasucaxyz","profile":"balanced","mustNotMatch":["it.insult.suca"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-135","input":"suca","profile":"strict","rules":["it.insult.suca"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-136","input":"vafanculo","profile":"balanced","rules":["it.insult.vafanculo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-137","input":"vaffancu","profile":"balanced","rules":["it.insult.vafanculo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-138","input":"vafancu","profile":"balanced","rules":["it.insult.vafanculo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-139","input":"extravafanculoxyz","profile":"balanced","mustNotMatch":["it.insult.vafanculo"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-140","input":"sbruffone","profile":"balanced","rules":["it.insult.sbruffone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-141","input":"sbruffona","profile":"balanced","rules":["it.insult.sbruffone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-142","input":"sbruffoni","profile":"balanced","rules":["it.insult.sbruffone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-143","input":"extrasbruffonexyz","profile":"balanced","mustNotMatch":["it.insult.sbruffone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-144","input":"sbruffone","profile":"strict","rules":["it.insult.sbruffone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-145","input":"cagone","profile":"balanced","rules":["it.insult.cagone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-146","input":"cagona","profile":"balanced","rules":["it.insult.cagone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-147","input":"cagoni","profile":"balanced","rules":["it.insult.cagone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-148","input":"extracagonexyz","profile":"balanced","mustNotMatch":["it.insult.cagone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-149","input":"cagone","profile":"strict","rules":["it.insult.cagone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-150","input":"disgraziato","profile":"balanced","rules":["it.insult.disgraziato"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-151","input":"disgraziata","profile":"balanced","rules":["it.insult.disgraziato"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-152","input":"disgraziati","profile":"balanced","rules":["it.insult.disgraziato"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-153","input":"disgraziate","profile":"balanced","rules":["it.insult.disgraziato"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-154","input":"extradisgraziatoxyz","profile":"balanced","mustNotMatch":["it.insult.disgraziato"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-155","input":"disgraziato","profile":"strict","rules":["it.insult.disgraziato"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-156","input":"ciccione","profile":"balanced","rules":["it.insult.ciccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-157","input":"cicciona","profile":"balanced","rules":["it.insult.ciccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-158","input":"ciccioni","profile":"balanced","rules":["it.insult.ciccione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-159","input":"extraciccionexyz","profile":"balanced","mustNotMatch":["it.insult.ciccione"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-160","input":"ciccione","profile":"strict","rules":["it.insult.ciccione"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-161","input":"femminuccia","profile":"balanced","rules":["it.insult.femminuccia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-162","input":"femminucce","profile":"balanced","rules":["it.insult.femminuccia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-163","input":"extrafemminucciaxyz","profile":"balanced","mustNotMatch":["it.insult.femminuccia"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-164","input":"femminuccia","profile":"strict","rules":["it.insult.femminuccia"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-165","input":"tetta","profile":"balanced","rules":["it.sexual.tetta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-166","input":"tette","profile":"balanced","rules":["it.sexual.tetta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-167","input":"tettina","profile":"balanced","rules":["it.sexual.tetta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-168","input":"tettine","profile":"balanced","rules":["it.sexual.tetta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-169","input":"tettone","profile":"balanced","rules":["it.sexual.tetta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-170","input":"tettona","profile":"balanced","rules":["it.sexual.tetta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-171","input":"tettoni","profile":"balanced","rules":["it.sexual.tetta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-172","input":"extratettaxyz","profile":"balanced","mustNotMatch":["it.sexual.tetta"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-173","input":"zinne","profile":"balanced","rules":["it.sexual.zinne"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-174","input":"zinna","profile":"balanced","rules":["it.sexual.zinne"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-175","input":"extrazinnexyz","profile":"balanced","mustNotMatch":["it.sexual.zinne"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-176","input":"zinne","profile":"strict","rules":["it.sexual.zinne"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-177","input":"potta","profile":"balanced","rules":["it.sexual.potta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-178","input":"potte","profile":"balanced","rules":["it.sexual.potta"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-179","input":"extrapottaxyz","profile":"balanced","mustNotMatch":["it.sexual.potta"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-180","input":"potta","profile":"strict","rules":["it.sexual.potta"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-181","input":"sticchio","profile":"balanced","rules":["it.sexual.sticchio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-182","input":"sticchi","profile":"balanced","rules":["it.sexual.sticchio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-183","input":"extrasticchioxyz","profile":"balanced","mustNotMatch":["it.sexual.sticchio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-184","input":"sticchio","profile":"strict","rules":["it.sexual.sticchio"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-185","input":"picio","profile":"balanced","rules":["it.sexual.picio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-186","input":"picia","profile":"balanced","rules":["it.sexual.picio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-187","input":"picie","profile":"balanced","rules":["it.sexual.picio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-188","input":"extrapicioxyz","profile":"balanced","mustNotMatch":["it.sexual.picio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-189","input":"picio","profile":"strict","rules":["it.sexual.picio"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-190","input":"mussa","profile":"balanced","rules":["it.sexual.mussa"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-191","input":"musse","profile":"balanced","rules":["it.sexual.mussa"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-192","input":"extramussaxyz","profile":"balanced","mustNotMatch":["it.sexual.mussa"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-193","input":"mussa","profile":"strict","rules":["it.sexual.mussa"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-194","input":"goldone","profile":"balanced","rules":["it.sexual.goldone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-195","input":"goldoni","profile":"balanced","rules":["it.sexual.goldone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-196","input":"extragoldonexyz","profile":"balanced","mustNotMatch":["it.sexual.goldone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-197","input":"goldone","profile":"strict","rules":["it.sexual.goldone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-198","input":"slinguare","profile":"balanced","rules":["it.sexual.slinguare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-199","input":"slinguato","profile":"balanced","rules":["it.sexual.slinguare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-200","input":"slinguata","profile":"balanced","rules":["it.sexual.slinguare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-201","input":"slinguati","profile":"balanced","rules":["it.sexual.slinguare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-202","input":"slinguate","profile":"balanced","rules":["it.sexual.slinguare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-203","input":"slinguando","profile":"balanced","rules":["it.sexual.slinguare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-204","input":"extraslinguarexyz","profile":"balanced","mustNotMatch":["it.sexual.slinguare"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-205","input":"slinguare","profile":"strict","rules":["it.sexual.slinguare"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-206","input":"allupato","profile":"balanced","rules":["it.sexual.allupato"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-207","input":"allupata","profile":"balanced","rules":["it.sexual.allupato"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-208","input":"allupati","profile":"balanced","rules":["it.sexual.allupato"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-209","input":"allupate","profile":"balanced","rules":["it.sexual.allupato"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-210","input":"extraallupatoxyz","profile":"balanced","mustNotMatch":["it.sexual.allupato"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-211","input":"allupato","profile":"strict","rules":["it.sexual.allupato"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-212","input":"sveltina","profile":"balanced","rules":["it.sexual.sveltina"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-213","input":"sveltine","profile":"balanced","rules":["it.sexual.sveltina"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-214","input":"extrasveltinaxyz","profile":"balanced","mustNotMatch":["it.sexual.sveltina"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-215","input":"sveltina","profile":"strict","rules":["it.sexual.sveltina"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-216","input":"scopamico","profile":"balanced","rules":["it.sexual.scopamico"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-217","input":"scopamica","profile":"balanced","rules":["it.sexual.scopamico"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-218","input":"scopamici","profile":"balanced","rules":["it.sexual.scopamico"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-219","input":"scopamiche","profile":"balanced","rules":["it.sexual.scopamico"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-220","input":"extrascopamicoxyz","profile":"balanced","mustNotMatch":["it.sexual.scopamico"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-221","input":"scopamico","profile":"strict","rules":["it.sexual.scopamico"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-222","input":"scopatore","profile":"balanced","rules":["it.sexual.scopatore"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-223","input":"scopatrice","profile":"balanced","rules":["it.sexual.scopatore"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-224","input":"scopatori","profile":"balanced","rules":["it.sexual.scopatore"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-225","input":"scopatrici","profile":"balanced","rules":["it.sexual.scopatore"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-226","input":"extrascopatorexyz","profile":"balanced","mustNotMatch":["it.sexual.scopatore"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-227","input":"scopatore","profile":"strict","rules":["it.sexual.scopatore"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-228","input":"smandrappata","profile":"balanced","rules":["it.sexual.smandrappata"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-229","input":"smandrappato","profile":"balanced","rules":["it.sexual.smandrappata"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-230","input":"smandrappate","profile":"balanced","rules":["it.sexual.smandrappata"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-231","input":"smandrappati","profile":"balanced","rules":["it.sexual.smandrappata"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-232","input":"extrasmandrappataxyz","profile":"balanced","mustNotMatch":["it.sexual.smandrappata"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-233","input":"smandrappata","profile":"strict","rules":["it.sexual.smandrappata"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-234","input":"puttaneggiare","profile":"balanced","rules":["it.sexual.puttaneggiare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-235","input":"puttaneggiando","profile":"balanced","rules":["it.sexual.puttaneggiare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-236","input":"puttaneggiato","profile":"balanced","rules":["it.sexual.puttaneggiare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-237","input":"puttaneggiata","profile":"balanced","rules":["it.sexual.puttaneggiare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-238","input":"extraputtaneggiarexyz","profile":"balanced","mustNotMatch":["it.sexual.puttaneggiare"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-239","input":"porcella","profile":"balanced","rules":["it.sexual.porcella"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-240","input":"porcelle","profile":"balanced","rules":["it.sexual.porcella"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-241","input":"porcellone","profile":"balanced","rules":["it.sexual.porcella"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-242","input":"porcellona","profile":"balanced","rules":["it.sexual.porcella"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-243","input":"extraporcellaxyz","profile":"balanced","mustNotMatch":["it.sexual.porcella"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-244","input":"porcella","profile":"strict","rules":["it.sexual.porcella"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-245","input":"vaccona","profile":"balanced","rules":["it.sexual.vaccona"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-246","input":"vaccone","profile":"balanced","rules":["it.sexual.vaccona"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-247","input":"vacconi","profile":"balanced","rules":["it.sexual.vaccona"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-248","input":"extravacconaxyz","profile":"balanced","mustNotMatch":["it.sexual.vaccona"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-249","input":"vaccona","profile":"strict","rules":["it.sexual.vaccona"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-250","input":"sverginare","profile":"balanced","rules":["it.sexual.sverginare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-251","input":"sverginato","profile":"balanced","rules":["it.sexual.sverginare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-252","input":"sverginata","profile":"balanced","rules":["it.sexual.sverginare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-253","input":"sverginati","profile":"balanced","rules":["it.sexual.sverginare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-254","input":"sverginando","profile":"balanced","rules":["it.sexual.sverginare"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-255","input":"extrasverginarexyz","profile":"balanced","mustNotMatch":["it.sexual.sverginare"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-256","input":"sverginare","profile":"strict","rules":["it.sexual.sverginare"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-257","input":"arrapone","profile":"balanced","rules":["it.sexual.arrapone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-258","input":"arrapona","profile":"balanced","rules":["it.sexual.arrapone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-259","input":"arraponi","profile":"balanced","rules":["it.sexual.arrapone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-260","input":"extraarraponexyz","profile":"balanced","mustNotMatch":["it.sexual.arrapone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-261","input":"arrapone","profile":"strict","rules":["it.sexual.arrapone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-262","input":"ciucciapalle","profile":"balanced","rules":["it.sexual.ciucciapalle"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-263","input":"extraciucciapallexyz","profile":"balanced","mustNotMatch":["it.sexual.ciucciapalle"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-264","input":"pigliacazzi","profile":"balanced","rules":["it.sexual.pigliacazzi"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-265","input":"extrapigliacazzixyz","profile":"balanced","mustNotMatch":["it.sexual.pigliacazzi"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-266","input":"cacchio","profile":"balanced","rules":["it.vulgar.cacchio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-267","input":"cacchi","profile":"balanced","rules":["it.vulgar.cacchio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-268","input":"cacchiata","profile":"balanced","rules":["it.vulgar.cacchio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-269","input":"cacchiate","profile":"balanced","rules":["it.vulgar.cacchio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-270","input":"extracacchioxyz","profile":"balanced","mustNotMatch":["it.vulgar.cacchio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-271","input":"cacchio","profile":"strict","rules":["it.vulgar.cacchio"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-272","input":"minkia","profile":"balanced","rules":["it.vulgar.minkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-273","input":"minkie","profile":"balanced","rules":["it.vulgar.minkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-274","input":"minkiata","profile":"balanced","rules":["it.vulgar.minkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-275","input":"minkiate","profile":"balanced","rules":["it.vulgar.minkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-276","input":"minkione","profile":"balanced","rules":["it.vulgar.minkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-277","input":"minkioni","profile":"balanced","rules":["it.vulgar.minkia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-278","input":"extraminkiaxyz","profile":"balanced","mustNotMatch":["it.vulgar.minkia"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-279","input":"merdume","profile":"balanced","rules":["it.vulgar.merdume"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-280","input":"extramerdumexyz","profile":"balanced","mustNotMatch":["it.vulgar.merdume"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-281","input":"cazzimma","profile":"balanced","rules":["it.vulgar.cazzimma"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-282","input":"extracazzimmaxyz","profile":"balanced","mustNotMatch":["it.vulgar.cazzimma"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-283","input":"cazzimma","profile":"strict","rules":["it.vulgar.cazzimma"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-284","input":"sfaccimma","profile":"balanced","rules":["it.vulgar.sfaccimma"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-285","input":"sfaccimm","profile":"balanced","rules":["it.vulgar.sfaccimma"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-286","input":"extrasfaccimmaxyz","profile":"balanced","mustNotMatch":["it.vulgar.sfaccimma"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-287","input":"sfaccimma","profile":"strict","rules":["it.vulgar.sfaccimma"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-288","input":"soccia","profile":"balanced","rules":["it.vulgar.soccia"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-289","input":"extrasocciaxyz","profile":"balanced","mustNotMatch":["it.vulgar.soccia"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-290","input":"soccia","profile":"strict","rules":["it.vulgar.soccia"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-291","input":"ostrega","profile":"balanced","rules":["it.vulgar.ostrega"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-292","input":"extraostregaxyz","profile":"balanced","mustNotMatch":["it.vulgar.ostrega"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-293","input":"ostrega","profile":"strict","rules":["it.vulgar.ostrega"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-294","input":"belandi","profile":"balanced","rules":["it.vulgar.belandi"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-295","input":"extrabelandixyz","profile":"balanced","mustNotMatch":["it.vulgar.belandi"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-296","input":"belandi","profile":"strict","rules":["it.vulgar.belandi"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-297","input":"tarzanello","profile":"balanced","rules":["it.vulgar.tarzanello"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-298","input":"tarzanelli","profile":"balanced","rules":["it.vulgar.tarzanello"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-299","input":"extratarzanelloxyz","profile":"balanced","mustNotMatch":["it.vulgar.tarzanello"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-300","input":"tarzanello","profile":"strict","rules":["it.vulgar.tarzanello"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-301","input":"scorreggione","profile":"balanced","rules":["it.vulgar.scorreggione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-302","input":"scorreggiona","profile":"balanced","rules":["it.vulgar.scorreggione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-303","input":"scoreggione","profile":"balanced","rules":["it.vulgar.scorreggione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-304","input":"scoreggiona","profile":"balanced","rules":["it.vulgar.scorreggione"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-305","input":"extrascorreggionexyz","profile":"balanced","mustNotMatch":["it.vulgar.scorreggione"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-306","input":"minchiadura","profile":"balanced","rules":["it.vulgar.minchiadura"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-307","input":"minchiaduro","profile":"balanced","rules":["it.vulgar.minchiadura"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-308","input":"minchiadure","profile":"balanced","rules":["it.vulgar.minchiadura"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-309","input":"extraminchiaduraxyz","profile":"balanced","mustNotMatch":["it.vulgar.minchiadura"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-310","input":"porcozio","profile":"balanced","rules":["it.vulgar.porcozio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-311","input":"porcozzio","profile":"balanced","rules":["it.vulgar.porcozio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-312","input":"extraporcozioxyz","profile":"balanced","mustNotMatch":["it.vulgar.porcozio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-313","input":"porcozio","profile":"strict","rules":["it.vulgar.porcozio"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-314","input":"porcamiseria","profile":"balanced","rules":["it.vulgar.porcamiseria"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-315","input":"extraporcamiseriaxyz","profile":"balanced","mustNotMatch":["it.vulgar.porcamiseria"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-316","input":"porcamiseria","profile":"strict","rules":["it.vulgar.porcamiseria"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-317","input":"porcheria","profile":"balanced","rules":["it.vulgar.porcheria"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-318","input":"porcherie","profile":"balanced","rules":["it.vulgar.porcheria"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-319","input":"extraporcheriaxyz","profile":"balanced","mustNotMatch":["it.vulgar.porcheria"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-320","input":"porcheria","profile":"strict","rules":["it.vulgar.porcheria"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-321","input":"porcata","profile":"balanced","rules":["it.vulgar.porcata"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-322","input":"porcate","profile":"balanced","rules":["it.vulgar.porcata"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-323","input":"extraporcataxyz","profile":"balanced","mustNotMatch":["it.vulgar.porcata"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-324","input":"porcata","profile":"strict","rules":["it.vulgar.porcata"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-325","input":"culaccio","profile":"balanced","rules":["it.vulgar.culaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-326","input":"culacci","profile":"balanced","rules":["it.vulgar.culaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-327","input":"extraculaccioxyz","profile":"balanced","mustNotMatch":["it.vulgar.culaccio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-328","input":"culaccio","profile":"strict","rules":["it.vulgar.culaccio"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-329","input":"cacarella","profile":"balanced","rules":["it.vulgar.cacarella"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-330","input":"cacarelle","profile":"balanced","rules":["it.vulgar.cacarella"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-331","input":"extracacarellaxyz","profile":"balanced","mustNotMatch":["it.vulgar.cacarella"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-332","input":"cacarella","profile":"strict","rules":["it.vulgar.cacarella"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-333","input":"fracicone","profile":"balanced","rules":["it.discriminatory.fracicone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-334","input":"fraciconi","profile":"balanced","rules":["it.discriminatory.fracicone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-335","input":"fracicona","profile":"balanced","rules":["it.discriminatory.fracicone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-336","input":"extrafraciconexyz","profile":"balanced","mustNotMatch":["it.discriminatory.fracicone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-337","input":"fracicone","profile":"strict","rules":["it.discriminatory.fracicone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-338","input":"culattina","profile":"balanced","rules":["it.discriminatory.culattina"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-339","input":"culattine","profile":"balanced","rules":["it.discriminatory.culattina"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-340","input":"extraculattinaxyz","profile":"balanced","mustNotMatch":["it.discriminatory.culattina"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-341","input":"culattina","profile":"strict","rules":["it.discriminatory.culattina"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-342","input":"busone","profile":"balanced","rules":["it.discriminatory.busone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-343","input":"busoni","profile":"balanced","rules":["it.discriminatory.busone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-344","input":"extrabusonexyz","profile":"balanced","mustNotMatch":["it.discriminatory.busone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-345","input":"busone","profile":"strict","rules":["it.discriminatory.busone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-346","input":"bucaiolo","profile":"balanced","rules":["it.discriminatory.bucaiolo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-347","input":"bucaiola","profile":"balanced","rules":["it.discriminatory.bucaiolo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-348","input":"bucaioli","profile":"balanced","rules":["it.discriminatory.bucaiolo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-349","input":"bucaiole","profile":"balanced","rules":["it.discriminatory.bucaiolo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-350","input":"extrabucaioloxyz","profile":"balanced","mustNotMatch":["it.discriminatory.bucaiolo"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-351","input":"bucaiolo","profile":"strict","rules":["it.discriminatory.bucaiolo"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-352","input":"polentone","profile":"balanced","rules":["it.discriminatory.polentone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-353","input":"polentona","profile":"balanced","rules":["it.discriminatory.polentone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-354","input":"polentoni","profile":"balanced","rules":["it.discriminatory.polentone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-355","input":"extrapolentonexyz","profile":"balanced","mustNotMatch":["it.discriminatory.polentone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-356","input":"polentone","profile":"strict","rules":["it.discriminatory.polentone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-357","input":"zingaraccio","profile":"balanced","rules":["it.discriminatory.zingaraccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-358","input":"zingaraccia","profile":"balanced","rules":["it.discriminatory.zingaraccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-359","input":"zingaracci","profile":"balanced","rules":["it.discriminatory.zingaraccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-360","input":"zingaracce","profile":"balanced","rules":["it.discriminatory.zingaraccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-361","input":"extrazingaraccioxyz","profile":"balanced","mustNotMatch":["it.discriminatory.zingaraccio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-362","input":"giudeaccio","profile":"balanced","rules":["it.discriminatory.giudeaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-363","input":"giudeaccia","profile":"balanced","rules":["it.discriminatory.giudeaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-364","input":"giudeacci","profile":"balanced","rules":["it.discriminatory.giudeaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-365","input":"giudeacce","profile":"balanced","rules":["it.discriminatory.giudeaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-366","input":"extragiudeaccioxyz","profile":"balanced","mustNotMatch":["it.discriminatory.giudeaccio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-367","input":"negrone","profile":"balanced","rules":["it.discriminatory.negrone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-368","input":"negrona","profile":"balanced","rules":["it.discriminatory.negrone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-369","input":"negroni","profile":"balanced","rules":["it.discriminatory.negrone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-370","input":"extranegronexyz","profile":"balanced","mustNotMatch":["it.discriminatory.negrone"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-371","input":"negrone","profile":"strict","rules":["it.discriminatory.negrone"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-372","input":"negretto","profile":"balanced","rules":["it.discriminatory.negretto"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-373","input":"negretta","profile":"balanced","rules":["it.discriminatory.negretto"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-374","input":"negretti","profile":"balanced","rules":["it.discriminatory.negretto"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-375","input":"negrette","profile":"balanced","rules":["it.discriminatory.negretto"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-376","input":"extranegrettoxyz","profile":"balanced","mustNotMatch":["it.discriminatory.negretto"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-377","input":"negretto","profile":"strict","rules":["it.discriminatory.negretto"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-378","input":"terronazzo","profile":"balanced","rules":["it.discriminatory.terronazzo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-379","input":"terronazza","profile":"balanced","rules":["it.discriminatory.terronazzo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-380","input":"terronazzi","profile":"balanced","rules":["it.discriminatory.terronazzo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-381","input":"terronazze","profile":"balanced","rules":["it.discriminatory.terronazzo"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-382","input":"extraterronazzoxyz","profile":"balanced","mustNotMatch":["it.discriminatory.terronazzo"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-383","input":"terronazzo","profile":"strict","rules":["it.discriminatory.terronazzo"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-384","input":"finocchiaccio","profile":"balanced","rules":["it.discriminatory.finocchiaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-385","input":"finocchiaccia","profile":"balanced","rules":["it.discriminatory.finocchiaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-386","input":"finocchiacci","profile":"balanced","rules":["it.discriminatory.finocchiaccio"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-387","input":"extrafinocchiaccioxyz","profile":"balanced","mustNotMatch":["it.discriminatory.finocchiaccio"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-388","input":"finocchiaccio","profile":"strict","rules":["it.discriminatory.finocchiaccio"],"note":"Termine ambiguo presente anche in strict"}
+{"id":"expansion-389","input":"frociarola","profile":"balanced","rules":["it.discriminatory.frociarola"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-390","input":"frociarolo","profile":"balanced","rules":["it.discriminatory.frociarola"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-391","input":"frociara","profile":"balanced","rules":["it.discriminatory.frociarola"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-392","input":"frociaro","profile":"balanced","rules":["it.discriminatory.frociarola"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-393","input":"extrafrociarolaxyz","profile":"balanced","mustNotMatch":["it.discriminatory.frociarola"],"note":"Negativo: radice interna a una parola più lunga"}
+{"id":"expansion-394","input":"porcoddio","profile":"balanced","rules":["it.blasphemy.grafie-offensive-composte"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-395","input":"porcodiddio","profile":"balanced","rules":["it.blasphemy.grafie-offensive-composte"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-396","input":"porcaddio","profile":"balanced","rules":["it.blasphemy.grafie-offensive-composte"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-397","input":"extraporcoddioxyz","profile":"balanced","mustNotMatch":["it.blasphemy.grafie-offensive-composte"],"note":"Negativo: radice interna a una parola più lunga"}

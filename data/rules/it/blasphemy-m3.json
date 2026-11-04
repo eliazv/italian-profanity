@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.blasphemy.grafie-offensive-composte",
+      "kind": "word",
+      "category": "blasphemy",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["porcoddio", "porcodiddio", "porcaddio"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: grafia composta esplicitamente blasfema. Le invocazioni religiose neutre restano escluse."
+    }
+  ]
+}
