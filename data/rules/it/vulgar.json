@@ -289,7 +289,7 @@
       "category": "vulgar",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["belin", "belino"],
+      "terms": ["belin", "belino", "belan"],
       "provenance": ["manual"],
       "note": "Termine regionale o polisemico: review in balanced, parola intera."
     },

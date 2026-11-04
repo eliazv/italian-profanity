@@ -17,7 +17,10 @@
         "cazzaccio",
         "cazzacci",
         "cazzetto",
-        "cazzetti"
+        "cazzetti",
+        "cazzona",
+        "cazzonata",
+        "cazzonate"
       ],
       "provenance": ["manual"],
       "note": "Forme elencate e non prefisso: cazzotto, cazzuola e scazzottata devono passare."
@@ -194,7 +197,16 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["chiavare", "chiavata", "chiavate", "chiavato", "chiavati"],
+      "terms": [
+        "chiavare",
+        "chiavata",
+        "chiavate",
+        "chiavato",
+        "chiavati",
+        "chiavatona",
+        "chiavatone",
+        "chiavando"
+      ],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },

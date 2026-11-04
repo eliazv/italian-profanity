@@ -1,0 +1,107 @@
+{"id":"variants-001","input":"figata","profile":"balanced","rules":["it.vulgar.figata"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-002","input":"figate","profile":"balanced","rules":["it.vulgar.figata"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-003","input":"superfigataextra","profile":"balanced","mustNotMatch":["it.vulgar.figata"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-004","input":"ficata","profile":"balanced","rules":["it.vulgar.ficata"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-005","input":"ficate","profile":"balanced","rules":["it.vulgar.ficata"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-006","input":"superficataextra","profile":"balanced","mustNotMatch":["it.vulgar.ficata"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-007","input":"fregnaccia","profile":"balanced","rules":["it.vulgar.fregnaccia"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-008","input":"fregnacce","profile":"balanced","rules":["it.vulgar.fregnaccia"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-009","input":"superfregnacciaextra","profile":"balanced","mustNotMatch":["it.vulgar.fregnaccia"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-010","input":"kazzo","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-011","input":"kazzi","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-012","input":"kazzata","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-013","input":"kazzate","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-014","input":"caxxo","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-015","input":"caxxi","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-016","input":"caxxata","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-017","input":"caxxate","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-018","input":"superkazzoextra","profile":"balanced","mustNotMatch":["it.vulgar.kazzo-grafie"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-019","input":"truzzo","profile":"balanced","rules":["it.insult.truzzo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-020","input":"truzza","profile":"balanced","rules":["it.insult.truzzo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-021","input":"truzzi","profile":"balanced","rules":["it.insult.truzzo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-022","input":"truzze","profile":"balanced","rules":["it.insult.truzzo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-023","input":"supertruzzoextra","profile":"balanced","mustNotMatch":["it.insult.truzzo"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-024","input":"tamarro","profile":"balanced","rules":["it.insult.tamarro"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-025","input":"tamarra","profile":"balanced","rules":["it.insult.tamarro"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-026","input":"tamarri","profile":"balanced","rules":["it.insult.tamarro"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-027","input":"tamarre","profile":"balanced","rules":["it.insult.tamarro"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-028","input":"tamarrata","profile":"balanced","rules":["it.insult.tamarro"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-029","input":"tamarrate","profile":"balanced","rules":["it.insult.tamarro"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-030","input":"supertamarroextra","profile":"balanced","mustNotMatch":["it.insult.tamarro"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-031","input":"grullo","profile":"balanced","rules":["it.insult.grullo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-032","input":"grulla","profile":"balanced","rules":["it.insult.grullo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-033","input":"grulli","profile":"balanced","rules":["it.insult.grullo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-034","input":"grulle","profile":"balanced","rules":["it.insult.grullo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-035","input":"supergrulloextra","profile":"balanced","mustNotMatch":["it.insult.grullo"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-036","input":"scimunito","profile":"balanced","rules":["it.insult.scimunito"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-037","input":"scimunita","profile":"balanced","rules":["it.insult.scimunito"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-038","input":"scimuniti","profile":"balanced","rules":["it.insult.scimunito"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-039","input":"scimunite","profile":"balanced","rules":["it.insult.scimunito"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-040","input":"superscimunitoextra","profile":"balanced","mustNotMatch":["it.insult.scimunito"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-041","input":"zoticone","profile":"balanced","rules":["it.insult.zoticone"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-042","input":"zoticona","profile":"balanced","rules":["it.insult.zoticone"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-043","input":"zoticoni","profile":"balanced","rules":["it.insult.zoticone"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-044","input":"superzoticoneextra","profile":"balanced","mustNotMatch":["it.insult.zoticone"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-045","input":"caccolone","profile":"balanced","rules":["it.insult.caccolone"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-046","input":"caccolona","profile":"balanced","rules":["it.insult.caccolone"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-047","input":"caccoloni","profile":"balanced","rules":["it.insult.caccolone"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
+{"id":"variants-048","input":"supercaccoloneextra","profile":"balanced","mustNotMatch":["it.insult.caccolone"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-049","input":"vacca boia","profile":"balanced","rules":["it.vulgar.vacca-boia"],"note":"Intercalare in forma contestuale"}
+{"id":"variants-050","input":"vacca da latte","profile":"balanced","mustNotMatch":["it.vulgar.vacca-boia"],"note":"Espressione innocua"}
+{"id":"variants-051","input":"cafonata","profile":"balanced","rules":["it.insult.cafone"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-052","input":"cafonate","profile":"balanced","rules":["it.insult.cafone"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-053","input":"extracafonataxyz","profile":"balanced","mustNotMatch":["it.insult.cafone"],"note":"Negativo vicino"}
+{"id":"variants-054","input":"buffonata","profile":"balanced","rules":["it.insult.buffone"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-055","input":"buffonate","profile":"balanced","rules":["it.insult.buffone"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-056","input":"extrabuffonataxyz","profile":"balanced","mustNotMatch":["it.insult.buffone"],"note":"Negativo vicino"}
+{"id":"variants-057","input":"burinata","profile":"balanced","rules":["it.insult.burino"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-058","input":"burinate","profile":"balanced","rules":["it.insult.burino"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-059","input":"extraburinataxyz","profile":"balanced","mustNotMatch":["it.insult.burino"],"note":"Negativo vicino"}
+{"id":"variants-060","input":"vigliaccata","profile":"balanced","rules":["it.insult.vigliacco"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-061","input":"vigliaccate","profile":"balanced","rules":["it.insult.vigliacco"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-062","input":"extravigliaccataxyz","profile":"balanced","mustNotMatch":["it.insult.vigliacco"],"note":"Negativo vicino"}
+{"id":"variants-063","input":"cialtronata","profile":"balanced","rules":["it.insult.cialtrone"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-064","input":"cialtronate","profile":"balanced","rules":["it.insult.cialtrone"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-065","input":"extracialtronataxyz","profile":"balanced","mustNotMatch":["it.insult.cialtrone"],"note":"Negativo vicino"}
+{"id":"variants-066","input":"pagliacciata","profile":"balanced","rules":["it.insult.pagliaccio"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-067","input":"pagliacciate","profile":"balanced","rules":["it.insult.pagliaccio"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-068","input":"extrapagliacciataxyz","profile":"balanced","mustNotMatch":["it.insult.pagliaccio"],"note":"Negativo vicino"}
+{"id":"variants-069","input":"disgraziataccio","profile":"balanced","rules":["it.insult.disgraziato"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-070","input":"disgraziataccia","profile":"balanced","rules":["it.insult.disgraziato"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-071","input":"extradisgraziataccioxyz","profile":"balanced","mustNotMatch":["it.insult.disgraziato"],"note":"Negativo vicino"}
+{"id":"variants-072","input":"pataccata","profile":"balanced","rules":["it.insult.patacca"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-073","input":"pataccate","profile":"balanced","rules":["it.insult.patacca"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-074","input":"extrapataccataxyz","profile":"balanced","mustNotMatch":["it.insult.patacca"],"note":"Negativo vicino"}
+{"id":"variants-075","input":"idiotone","profile":"balanced","rules":["it.insult.idiota"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-076","input":"idiotona","profile":"balanced","rules":["it.insult.idiota"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-077","input":"idiotoni","profile":"balanced","rules":["it.insult.idiota"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-078","input":"extraidiotonexyz","profile":"balanced","mustNotMatch":["it.insult.idiota"],"note":"Negativo vicino"}
+{"id":"variants-079","input":"cazzona","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-080","input":"cazzonata","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-081","input":"cazzonate","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-082","input":"extracazzonaxyz","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"Negativo vicino"}
+{"id":"variants-083","input":"chiavatona","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-084","input":"chiavatone","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-085","input":"chiavando","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-086","input":"extrachiavatonaxyz","profile":"balanced","mustNotMatch":["it.sexual.chiavare"],"note":"Negativo vicino"}
+{"id":"variants-087","input":"puttaneggiano","profile":"balanced","rules":["it.sexual.puttaneggiare"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-088","input":"extraputtaneggianoxyz","profile":"balanced","mustNotMatch":["it.sexual.puttaneggiare"],"note":"Negativo vicino"}
+{"id":"variants-089","input":"frociaroli","profile":"balanced","rules":["it.discriminatory.frociarola"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-090","input":"frociarole","profile":"balanced","rules":["it.discriminatory.frociarola"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-091","input":"extrafrociarolixyz","profile":"balanced","mustNotMatch":["it.discriminatory.frociarola"],"note":"Negativo vicino"}
+{"id":"variants-092","input":"belan","profile":"balanced","rules":["it.vulgar.belin"],"note":"Derivazione morfologica selezionata"}
+{"id":"variants-093","input":"extrabelanxyz","profile":"balanced","mustNotMatch":["it.vulgar.belin"],"note":"Negativo vicino"}
+{"id":"variants-094","input":"dio farabutto","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-095","input":"dio farabutta","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-096","input":"dio impestato","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-097","input":"dio impestata","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-098","input":"dio impiccato","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-099","input":"dio impiccata","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-100","input":"dio lurido","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-101","input":"dio lurida","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-102","input":"dio sudicio","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-103","input":"dio sudicia","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-104","input":"dio isterica","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-105","input":"dio isterico","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-106","input":"dio minchione","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}
+{"id":"variants-107","input":"dio minchioni","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Combinazione con termine religioso esatto"}

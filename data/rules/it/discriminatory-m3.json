@@ -117,7 +117,7 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": ["frociarola", "frociarolo", "frociara", "frociaro"],
+      "terms": ["frociarola", "frociarolo", "frociara", "frociaro", "frociaroli", "frociarole"],
       "provenance": ["manual"],
       "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
     }

@@ -137,7 +137,13 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": ["puttaneggiare", "puttaneggiando", "puttaneggiato", "puttaneggiata"],
+      "terms": [
+        "puttaneggiare",
+        "puttaneggiando",
+        "puttaneggiato",
+        "puttaneggiata",
+        "puttaneggiano"
+      ],
       "provenance": ["manual"],
       "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
     },

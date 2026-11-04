@@ -93,7 +93,17 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["idiota", "idioti", "idiotissimo", "idiotissima", "idiotissimi", "idiotissime"],
+      "terms": [
+        "idiota",
+        "idioti",
+        "idiotissimo",
+        "idiotissima",
+        "idiotissimi",
+        "idiotissime",
+        "idiotone",
+        "idiotona",
+        "idiotoni"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -510,7 +520,7 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["patacca", "patacche"],
+      "terms": ["patacca", "patacche", "pataccata", "pataccate"],
       "provenance": ["manual"],
       "note": "Termine regionale o polisemico: review in balanced, parola intera."
     },
