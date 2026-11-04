@@ -30,7 +30,7 @@ Pacchetti: npm [`italian-profanity`](https://www.npmjs.com/package/italian-profa
 
 **Prima beta di integrazione.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 126 regole e 517 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti restano da curare. L'inglese opzionale contiene tre famiglie minime.
 
-Le attese sono condivise su 1567 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
+Le attese sono condivise su 1583 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
 
 ```ts
 import { check, createChecker } from "italian-profanity"

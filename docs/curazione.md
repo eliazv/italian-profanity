@@ -82,3 +82,7 @@ Confrontate le categorie italiane con le **liste già censite** in `data/sources
 - **Omografi delicati:** forme come `Negro` e `Negri` possono essere **cognomi reali**: il termine discriminatorio isolato è `medium`, quindi `review` in balanced, mai `block` automatico. Termini identitari neutri come `gay` e `disabile` restano fuori dalla blacklist.
 
 **Nota di qualità:** un confronto testuale con una wordlist sovrastima i falsi negativi, perché il motore rileva già parole eluse, composti, varianti e combinazioni; non conta solo la presenza di una stringa in `terms`. Non inserire automaticamente parole innocue come `sega`, `palle`, `fava` o `finocchio` senza segnali contestuali. L'audit sui nomi e cognomi rimane bloccante, e nessuna collisione nuova è automaticamente accettata. Servono ancora prove in shadow mode su input realistici prima di definire completa M3.
+
+### Revisione delle collisioni della quarta iterazione
+
+Il primo audit ha individuato **25 collisioni** con cognomi e parole del dizionario. Le voci sono state valutate individualmente in `data/audit/accepted.jsonl`: Cazzaro, Negro/Negri (anche nei cognomi composti), Raspone/Rasponi, forme verbali `cessa`, `cessi`, `cessò`, aggettivi `infame` e `schifoso` e `lecchino`. L'azione attesa è sempre `review` in `balanced`, mai `block`. La revisione non dimostra che l'espressione sia offensiva: è un'omografia non risolvibile tramite il filtro lessicale. Sono state aggiunte regressioni mirate per cognomi e falsi positivi. `strict` rimane intenzionalmente più restrittivo.

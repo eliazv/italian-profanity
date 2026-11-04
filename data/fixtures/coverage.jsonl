@@ -207,3 +207,19 @@
 {"id":"coverage-207","input":"schifoso","profile":"lenient","action":"allow","rules":["it.insult.schifoso"],"note":"Profilo lenient più permissivo per insulti non gravi"}
 {"id":"coverage-208","input":"mannaggia a Dio","profile":"strict","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Bestemmia contestuale anche in strict"}
 {"id":"coverage-209","input":"Di0 maledett0","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Elusione leetspeak di una combinazione curata"}
+{"id":"coverage-210","input":"Dal Negro","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-211","input":"De Negri","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-212","input":"Cazzaro","profile":"balanced","action":"review","rules":["it.insult.cazzaro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-213","input":"Raspone","profile":"balanced","action":"review","rules":["it.sexual.raspone"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-214","input":"Rasponi","profile":"balanced","action":"review","rules":["it.sexual.raspone"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-215","input":"Cessa","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-216","input":"Cessi","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-217","input":"Cessò","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-218","input":"Schifosa","profile":"balanced","action":"review","rules":["it.insult.schifoso"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-219","input":"Infame","profile":"balanced","action":"review","rules":["it.insult.infame"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-220","input":"Lecchino","profile":"balanced","action":"review","rules":["it.insult.lecchino"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-221","input":"Negra","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-222","input":"Negro","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-223","input":"Negroni","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: il termine innocuo deve passare"}
+{"id":"coverage-224","input":"Cessione","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: il termine innocuo deve passare"}
+{"id":"coverage-225","input":"Scazzottata","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: il termine innocuo deve passare"}
