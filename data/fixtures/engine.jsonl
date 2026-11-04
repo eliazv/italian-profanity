@@ -107,3 +107,21 @@
 {"id":"engine-107","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"insult","severity":9}],"expectedError":"invalidOptions"}
 {"id":"engine-108","input":"nebulino","profile":"balanced","extraRules":[{"kind":"prefix","terms":["Nebulino"],"category":"insult","severity":2}],"expectedError":"invalidOptions"}
 {"id":"engine-109","input":"nebulino","profile":"balanced","extraRules":[{"kind":"word","terms":["Nebulino"],"category":"contact","severity":2}],"expectedError":"invalidOptions"}
+{"id":"engine-110","input":"stronzo_99","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.insult.stronzo","category":"insult","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":7}}],"note":"Frammento di sole cifre dopo la parola: si confronta anche la parte con lettere"}
+{"id":"engine-111","input":"stronzo99","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.insult.stronzo","category":"insult","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":7}}],"note":"Cifre finali attaccate: suffisso numerico, non leet"}
+{"id":"engine-112","input":"88puttana","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.puttana","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":2,"end":9}}],"note":"Cifre iniziali attaccate"}
+{"id":"engine-113","input":"c4zz0_99","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.sexual.cazzo","category":"sexual","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":5}}],"note":"Il leet interno resta: si tolgono solo i frammenti di sole cifre"}
+{"id":"engine-114","input":"porcodio_99","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Combo con suffisso numerico"}
+{"id":"engine-115","input":"candio99","profile":"balanced","action":"allow","mustNotMatch":["it.blasphemy.divine-insult"],"expectedMatches":[],"note":"L'eccezione su candio vale anche sulla vista senza cifre"}
+{"id":"engine-116","input":"rossi_99","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: nome con suffisso numerico"}
+{"id":"engine-117","input":"agent_007","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: cifre iniziali con zeri, nessuna regola"}
+{"id":"engine-118","input":"burp3000","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: cifre finali senza parola sensibile"}
+{"id":"engine-119","input":"stronzone99x","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"note":"Le cifre interne non vengono tolte: nessuna ricerca dentro la parola"}
+{"id":"engine-120","input":"StronzoRutto","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.insult.stronzo","category":"insult","severity":2,"confidence":"high","kind":"word","range":{"start":0,"end":7}}],"note":"Parole unite in CamelCase: ogni pezzo è una vista"}
+{"id":"engine-121","input":"RuttoStronzo","profile":"balanced","action":"block","expectedMatches":[{"ruleId":"it.insult.stronzo","category":"insult","severity":2,"confidence":"high","kind":"word","range":{"start":5,"end":12}}],"note":"CamelCase con il termine in seconda posizione"}
+{"id":"engine-122","input":"PorcoDio","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"CamelCase già coperto dalla parola riunita"}
+{"id":"engine-123","input":"stronzorutto","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"note":"Senza maiuscole non si cercano sottostringhe"}
+{"id":"engine-124","input":"STRONZORUTTO","profile":"balanced","action":"allow","mustNotMatch":["it.insult.stronzo"],"note":"Tutto maiuscolo: nessun confine CamelCase"}
+{"id":"engine-125","input":"McDonald","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: CamelCase innocuo"}
+{"id":"engine-126","input":"MarioRossi","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: nome e cognome uniti"}
+{"id":"engine-127","input":"CazzolaFan","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"],"note":"Il pezzo deve corrispondere per intero"}

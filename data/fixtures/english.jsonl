@@ -532,3 +532,10 @@
 {"id":"english-532","profile":"balanced","input":"f​uck","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
 {"id":"english-533","profile":"balanced","input":"f u c k","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
 {"id":"english-534","profile":"balanced","input":"fúck","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-535","profile":"balanced","input":"nigga","languages":["en"],"action":"block","rules":["en.discriminatory.nigger"]}
+{"id":"english-536","profile":"balanced","input":"niggas","languages":["en"],"action":"block","rules":["en.discriminatory.nigger"]}
+{"id":"english-537","profile":"balanced","input":"nigga","languages":["it"],"mustNotMatch":["en.discriminatory.nigger"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-538","profile":"balanced","input":"niggaz_99","languages":["it","en"],"mustNotMatch":["en.discriminatory.nigger"],"note":"Forma non dichiarata: nessuna flessione implicita."}
+{"id":"english-539","profile":"balanced","input":"nigger_88","languages":["it","en"],"action":"block","rules":["en.discriminatory.nigger"],"note":"Suffisso numerico separato dalla parola."}
+{"id":"english-540","profile":"balanced","input":"FuckYou","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Parole unite in CamelCase."}
+{"id":"english-541","profile":"balanced","input":"fuckyou","languages":["it","en"],"mustNotMatch":["en.vulgar.fuck"],"note":"Senza maiuscole non si cercano sottostringhe."}

@@ -119,3 +119,11 @@ L’audit deve passare sia in italiano sia con italiano e inglese attivi. Termin
 Il manutentore richiede la pubblicazione di 0.1.0 su npm e pub.dev, senza beta, e ne pianifica l’integrazione in due proprie applicazioni. Si supera quindi il vincolo di D21 che subordinava l’uscita dalla beta alla prova reale M5: la prova comparativa resta aperta, viene tracciata esplicitamente e non è dichiarata completata nel changelog. La stabilità del numero di versione non dimostra precisione su utenti reali né assenza di falsi positivi.
 
 Il rilascio richiede CI verde, versioni allineate, smoke test ESM/CJS/browser, dry-run dei pacchetti e confronto degli esiti con l’artefatto 0.1.0-beta.1 pubblicato. Pubblicazione via tag v0.1.0 e workflow esistente; tag npm latest per la versione senza prerelease. Nomi, API, italiano predefinito, inglese opzionale e zero dipendenze a runtime restano invariati.
+
+## D24 · Cifre esterne e CamelCase nei nickname — 2026-11-04
+
+La prova di integrazione in RuttoFacile mostra che i suffissi numerici aggirano il rilevatore: `stronzo_99`, `porcodio_99` e `puttana88` passavano, perché la punteggiatura unisce i frammenti (D4) e il deleet trasforma le cifre finali in lettere. Nei nickname le cifre esterne sono quasi sempre un suffisso, non un'elusione leet.
+
+Regola adottata: per ogni parola il rilevatore aggiunge viste ridotte senza i frammenti di sole cifre e senza le cifre iniziali e finali. Le viste complete restano prioritarie, le cifre interne non vengono tolte e le eccezioni valgono anche sulle viste ridotte. Per lo stesso motivo una parola in CamelCase (`StronzoRutto`, `FuckYou`) aggiunge una vista per ogni pezzo: il confine è una maiuscola ASCII dopo una minuscola ASCII, quindi `stronzorutto` e `STRONZORUTTO` restano senza ricerca di sottostringhe (D4). Stessa logica nei due motori, nessuna parola nel codice. L'audit su nomi, cognomi e parole comuni non registra collisioni nuove.
+
+Si aggiungono anche le forme `nigga` e `niggas` alla regola inglese esistente. `negro` resta `review` in `balanced`, come già deciso per l'omografia con cognomi reali: l'app che vuole bloccarlo nei nickname lo decide nella propria policy.
