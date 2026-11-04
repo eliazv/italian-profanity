@@ -1,6 +1,6 @@
 # Integrazione client e server
 
-La 0.1.0 è il primo rilascio senza suffisso prerelease. Prima del passaggio in produzione confrontare i risultati con i filtri attuali; la prova nelle due applicazioni del manutentore è pianificata e resta da completare. Usare la stessa versione esatta, le stesse lingue, lo stesso profilo, le stesse soglie e le stesse personalizzazioni sul client e sul server. Il server resta autorevole e ricontrolla sempre il testo ricevuto.
+Prima del passaggio in produzione confrontare i risultati con i filtri attuali. Usare la stessa versione esatta, le stesse lingue, lo stesso profilo, le stesse soglie e le stesse personalizzazioni sul client e sul server. Il server resta autorevole e ricontrolla sempre il testo ricevuto.
 
 ## Installazione
 
