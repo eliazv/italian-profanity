@@ -1,6 +1,6 @@
 # Curazione delle regole
 
-La fonte normativa è [SPECIFICHE.md](../SPECIFICHE.md), §§5, 7 e 8. Il primo nucleo contiene 45 regole italiane e 173 forme distinte nei campi `terms`, più frasi e i gruppi della regola `combo`. Il numero di forme non misura da solo copertura o qualità. M3 è avviata, non conclusa.
+La fonte normativa è [SPECIFICHE.md](../SPECIFICHE.md), §§5, 7 e 8. Il lessico italiano contiene ora 98 regole e 409 forme distinte nei campi `terms`, oltre a frasi e combinazioni. Il numero di forme non misura da solo copertura o qualità; M3 prosegue.
 
 ## Scelte del primo nucleo
 
@@ -56,3 +56,17 @@ Sono state proposte 20 nuove regole (tra lemmi e frasi) e 6 famiglie preesistent
 Lo schema ammette parole di una lettera nelle frasi, mantenendo almeno due lettere nei termini isolati. Tre collisioni nominali del secondo nucleo sono documentate individualmente nell'audit: due forme discriminatorie e una sessuale restano `review` in balanced e `block` in strict, con fixture dedicate.
 
 Il dataset della beta contiene 65 regole italiane (244 forme nei campi `terms`, oltre alle frasi e combinazioni) e tre famiglie inglesi opzionali con 12 forme esplicite. Il nucleo inglese è scritto manualmente, non deriva da liste esterne e non ne promette la copertura. Le fixture di adozione verificano anche l'attivazione esplicita della lingua e i confini di parola. Restano 127.842 input di audit e 37 collisioni distinte motivate; non è una misura su nickname reali.
+
+## Terzo ampliamento M3 — 4 novembre 2026
+
+Aggiunte **33 regole**, ampliate **15 famiglie di parole** e **2 famiglie di frasi**, con **259 nuove fixture** in `data/fixtures/lexicon.jsonl`. Le raccolte napolux e LDNOOBW già inventariate sono state consultate per confronto di copertura, non importate in blocco; ogni termine qui è frutto di selezione editoriale manuale.
+
+- Derivati e forme femminili: `cogliona`, `bastardaccio`, `cazzetto`, `stronzino`, `troiaccia`, `puttanaccia`, `incazzatura`.
+- Insulti composti: `mezzasega`, `scassacazzo`, `faccia da culo`, `faccia di merda`, `figlia di puttana`, `testa di minchia`.
+- Volgarità: `inculare`, `pugnetta`, `smerdare`, `pisciasotto`, `cagacazzo` e varianti.
+- Regionalismi: `socmel` (Romagna), `mona` (Veneto), `bischero` (Toscana), `belin` (Liguria), `balengo` (Piemonte), `patacca` (Romagna/italiano); non equivalgono a copertura dialettale completa.
+- Omografie: `checca` è anche un nome familiare, `patacca` e altri sono polisemici. Questi termini sono `medium` e in `balanced` producono `review`, non blocco automatico. Non sono stati aggiunti termini identitari neutri.
+
+La prima esecuzione dell'audit ha trovato sette collisioni nominali o lessicali, tutte classificate `review` in `balanced`: Checca (cognome e ipocoristico), Fregna (cognome), Patacca (cognome), Pezzente/Pezzenti (cognomi e voci del dizionario). Sono motivate una per una in `data/audit/accepted.jsonl`, con regressioni specifiche. Nessuna produce `block` automatico in `balanced`.
+
+Prima del merge, `pnpm check` e l'audit sul corpus devono essere verdi: eventuali collisioni vanno giustificate singolarmente e non accettate in blocco. Resta necessaria una prova su nickname reali in shadow mode.

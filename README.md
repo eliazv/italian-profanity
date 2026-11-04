@@ -8,7 +8,7 @@ Italian-first profanity detection for short user-generated text — nicknames, u
 
 > Beta 0.1.0-beta.1 per integrazioni sperimentali.
 
-Current status: first integration beta, with detection and policy APIs in both engines. The first curated Italian core has 65 rules and 244 declared word/prefix/compound forms, plus phrases and blasphemy combinations.
+Current status: first integration beta, with detection and policy APIs in both engines. The first curated Italian core has 98 rules and 409 declared word/prefix/compound forms, plus phrases and blasphemy combinations.
 
 - Precision first: whole-word rules, explicit exceptions and an audit on Italian names, surnames and common words.
 - Catches common evasions: leetspeak, separators, accents, repeated letters, spaced letters and Unicode look-alikes.
@@ -28,7 +28,7 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 
 Pacchetti: npm [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) · pub.dev [`italian_profanity`](https://pub.dev/packages/italian_profanity).
 
-**Prima beta di integrazione.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 65 regole e 244 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti restano da curare. L'inglese opzionale contiene tre famiglie minime.
+**Prima beta di integrazione.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 98 regole e 409 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti restano da curare. L'inglese opzionale contiene tre famiglie minime.
 
 Le attese sono condivise su 1.096 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
 
@@ -82,3 +82,7 @@ Regole, comandi e struttura sono descritti in [AGENTS.md](AGENTS.md), il rilasci
 Lo stato di M0, i prossimi controlli e i criteri per eventuali altri linguaggi sono in [docs/analisi-post-m0.md](docs/analisi-post-m0.md). La documentazione è pubblica e versionata; il corpus di audit resta in cache.
 
 Per contribuire, leggere [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Supporto e integrazioni
+
+Il progetto resta gratuito e MIT. Per sostenerne la manutenzione è previsto [GitHub Sponsors](https://github.com/sponsors/eliazv), disponibile dopo l'attivazione del profilo. Per integrazioni, consulenza e sviluppo software su misura: [eliazavatta.it](https://eliazavatta.it).

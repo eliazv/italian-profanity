@@ -22,12 +22,14 @@ const checker = createChecker({ contacts: true })
 checker.check("Claudio").action // "allow"
 ```
 
-65 regole italiane curate, 244 forme dichiarate più frasi e combinazioni. `findMatches()` separa il rilevamento dalla policy di `check()`. Profili: `balanced`, `strict`, `lenient`; opzioni: `maxLength`, `contacts`, `extraRules`, `exceptions`, `thresholds`.
+98 regole italiane curate, 409 forme dichiarate più frasi e combinazioni. `findMatches()` separa il rilevamento dalla policy di `check()`. Profili: `balanced`, `strict`, `lenient`; opzioni: `maxLength`, `contacts`, `extraRules`, `exceptions`, `thresholds`.
 
 È un controllo lessicale: la copertura è limitata e alcuni omografi richiedono revisione. `isClean()` è vero solo per `allow`. I contatti sono disattivati per default; se attivati, bloccano con tutti i profili predefiniti. `range` usa offset UTF-16 sul testo originale e non va registrato nei log.
 
 Inglese opzionale: tre famiglie minime, da attivare con `languages`. Dialetti non ancora coperti. Versione esatta e opzioni devono coincidere fra client e server. Se l'app consente `review`, verificare che l'azione sia diversa da `block`: `isClean()` consente solo `allow`.
 
 [Guida alla migrazione](https://github.com/eliazv/italian-profanity/blob/master/docs/integrazione.md).
+
+Per integrazioni e sviluppo personalizzato: [Elia Zavatta](https://eliazavatta.it).
 
 MIT License.

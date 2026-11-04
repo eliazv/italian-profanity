@@ -17,7 +17,12 @@
         "merdata",
         "merdate",
         "merdaccia",
-        "merdacce"
+        "merdacce",
+        "merdina",
+        "merdine",
+        "merdone",
+        "merdona",
+        "merdoni"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -104,7 +109,13 @@
         "incazzo",
         "incazzi",
         "incazza",
-        "incazzano"
+        "incazzano",
+        "incazzatura",
+        "incazzature",
+        "incazzatissimo",
+        "incazzatissima",
+        "incazzatissimi",
+        "incazzatissime"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -183,6 +194,86 @@
       "terms": ["cazzarola", "cazzarole"],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
+    },
+    {
+      "id": "it.vulgar.cagacazzo",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["cagacazzo", "cagacazzi", "cagaminchia", "cacaminchia"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.vulgar.smerdare",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["smerdare", "smerdarsi", "smerdato", "smerdata", "smerdati", "smerdate"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.vulgar.pisciasotto",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["pisciasotto", "pisciasotti"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.vulgar.boiata",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["boiata", "boiate"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.vulgar.socmel",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["socmel"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.vulgar.belin",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["belin", "belino"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.vulgar.scazzato",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["scazzare", "scazzato", "scazzata", "scazzati", "scazzate"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.vulgar.esclamazioni-composte",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["checcazzo", "ecchecazzo", "mavaffanculo", "staminchia", "staminchie"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
     }
   ]
 }

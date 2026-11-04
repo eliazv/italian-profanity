@@ -7,7 +7,18 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": ["cazzo", "cazzi", "cazzone", "cazzoni", "cazzata", "cazzate"],
+      "terms": [
+        "cazzo",
+        "cazzi",
+        "cazzone",
+        "cazzoni",
+        "cazzata",
+        "cazzate",
+        "cazzaccio",
+        "cazzacci",
+        "cazzetto",
+        "cazzetti"
+      ],
       "provenance": ["manual"],
       "note": "Forme elencate e non prefisso: cazzotto, cazzuola e scazzottata devono passare."
     },
@@ -17,7 +28,20 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": ["puttana", "puttane", "puttanata", "puttanate", "puttaniere", "puttanieri"],
+      "terms": [
+        "puttana",
+        "puttane",
+        "puttanata",
+        "puttanate",
+        "puttaniere",
+        "puttanieri",
+        "puttanaccia",
+        "puttanacce",
+        "puttanona",
+        "puttanone",
+        "puttanella",
+        "puttanelle"
+      ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -27,7 +51,17 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["troia", "troie", "troiona", "troione", "troioni"],
+      "terms": [
+        "troia",
+        "troie",
+        "troiona",
+        "troione",
+        "troioni",
+        "troiaccia",
+        "troiacce",
+        "troietta",
+        "troiette"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -37,7 +71,7 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": ["mignotta", "mignotte"],
+      "terms": ["mignotta", "mignotte", "mignottona", "mignottone", "mignottoni"],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -124,7 +158,11 @@
         "fottuti",
         "fottute",
         "fottiti",
-        "fottetevi"
+        "fottetevi",
+        "fottutissimo",
+        "fottutissima",
+        "fottutissimi",
+        "fottutissime"
       ],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
@@ -175,7 +213,7 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["zoccola", "zoccole"],
+      "terms": ["zoccola", "zoccole", "zoccolona", "zoccolone", "zoccoloni"],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },
@@ -208,6 +246,96 @@
       "terms": ["pompinara", "pompinare", "pompinaro", "pompinari"],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
+    },
+    {
+      "id": "it.sexual.inculare",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["inculare", "incularsi", "inculato", "inculata", "inculati", "inculate"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.sexual.pugnetta",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["pugnetta", "pugnette"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.sexual.fregna",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["fregna", "fregne"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.sexual.patonza",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["patonza", "patonze"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.sexual.nerchia",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["nerchia", "nerchie"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.sexual.sorca",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["sorca", "sorche"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.sexual.sbocchinare",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["sbocchinare", "sbocchinato", "sbocchinata", "sbocchinati", "sbocchinate"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.sexual.spompinare",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["spompinare", "spompinato", "spompinata", "spompinati", "spompinate"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.sexual.arrapato",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["arrapato", "arrapata", "arrapati", "arrapate", "arrapare", "arraparsi"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
     }
   ]
 }
