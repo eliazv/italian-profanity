@@ -9,3 +9,10 @@
 {"id":"unicode-009","input":"A\u00a0B","profile":"balanced","expectedBase":"a b","note":"spazio non separabile"}
 {"id":"unicode-010","input":"Ａ＠！","profile":"balanced","expectedBase":"a@!","note":"i simboli leet restano disponibili dopo fold"}
 {"id":"unicode-011","input":"\u200b\u0301","profile":"balanced","expectedBase":"","note":"l'attesa vuota deve essere verificata"}
+{"id":"unicode-012","input":"ⅽazzo","profile":"balanced","expectedBase":"cazzo","action":"block","rules":["it.sexual.cazzo"],"note":"c come numero romano"}
+{"id":"unicode-013","input":"Ⓒⓐⓩⓩⓞ","profile":"balanced","expectedBase":"cazzo","action":"block","rules":["it.sexual.cazzo"],"note":"lettere cerchiate"}
+{"id":"unicode-014","input":"𝐜𝐚𝐳𝐳𝐨","profile":"balanced","expectedBase":"cazzo","action":"block","rules":["it.sexual.cazzo"],"note":"alfanumerici matematici, coppie surrogate"}
+{"id":"unicode-015","input":"𝐃𝐢𝐨 𝐩𝐨𝐫𝐜𝐨","profile":"balanced","expectedBase":"dio porco","action":"block","rules":["it.blasphemy.divine-insult"],"note":"bestemmia in grassetto matematico"}
+{"id":"unicode-016","input":"Ⓜarco ①","profile":"balanced","expectedBase":"marco 1","action":"allow","note":"simboli innocui ricondotti a lettere e cifre"}
+{"id":"unicode-017","input":"Squadra™ ⑩ Ⅻ","profile":"balanced","expectedBase":"squadra™ ⑩ Ⅻ","action":"allow","note":"i simboli che diventerebbero più caratteri restano invariati"}
+{"id":"unicode-018","input":"𝟏𝟗𝟗𝟑","profile":"balanced","expectedBase":"1993","action":"allow","note":"cifre matematiche innocue"}

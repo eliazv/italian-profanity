@@ -15,7 +15,7 @@
 {"id":"variants-015","input":"caxxi","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
 {"id":"variants-016","input":"caxxata","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
 {"id":"variants-017","input":"caxxate","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
-{"id":"variants-018","input":"superkazzoextra","profile":"balanced","mustNotMatch":["it.vulgar.kazzo-grafie"],"note":"Negativo: non riconoscere la forma come sottostringa"}
+{"id":"variants-018","input":"superkazzoextra","profile":"balanced","action":"block","rules":["it.vulgar.kazzo-grafie"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo: non riconoscere la forma come sottostringa)"}
 {"id":"variants-019","input":"truzzo","profile":"balanced","rules":["it.insult.truzzo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
 {"id":"variants-020","input":"truzza","profile":"balanced","rules":["it.insult.truzzo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
 {"id":"variants-021","input":"truzzi","profile":"balanced","rules":["it.insult.truzzo"],"note":"Forma esatta selezionata; nessun prefisso automatico"}
@@ -79,7 +79,7 @@
 {"id":"variants-079","input":"cazzona","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Derivazione morfologica selezionata"}
 {"id":"variants-080","input":"cazzonata","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Derivazione morfologica selezionata"}
 {"id":"variants-081","input":"cazzonate","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Derivazione morfologica selezionata"}
-{"id":"variants-082","input":"extracazzonaxyz","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"Negativo vicino"}
+{"id":"variants-082","input":"extracazzonaxyz","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Negativo vicino)"}
 {"id":"variants-083","input":"chiavatona","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Derivazione morfologica selezionata"}
 {"id":"variants-084","input":"chiavatone","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Derivazione morfologica selezionata"}
 {"id":"variants-085","input":"chiavando","profile":"balanced","rules":["it.sexual.chiavare"],"note":"Derivazione morfologica selezionata"}

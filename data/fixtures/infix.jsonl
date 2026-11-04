@@ -1,0 +1,45 @@
+{"id":"infix-001","input":"ilsborrone","profile":"balanced","rules":["it.sexual.sborra"],"note":"Positivo D26"}
+{"id":"infix-002","input":"s.b.o.r.r.o.n.e","profile":"balanced","rules":["it.sexual.sborra"],"note":"Positivo D26"}
+{"id":"infix-003","input":"grandesburrone","profile":"balanced","rules":["it.sexual.sburra"],"note":"Positivo D26"}
+{"id":"infix-004","input":"superkazzo","profile":"balanced","rules":["it.vulgar.kazzo-grafie"],"note":"Positivo D26"}
+{"id":"infix-005","input":"uncazzone","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Positivo D26"}
+{"id":"infix-006","input":"tizio_cazzillo","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Positivo D26"}
+{"id":"infix-007","input":"Dildora","languages":["it","en"],"profile":"balanced","action":"allow","mustNotMatch":["en.sexual.dildo"],"note":"Negativo D26: nome proprio, dildo resta senza radice infix"}
+{"id":"infix-008","input":"seiinculato","profile":"balanced","rules":["it.sexual.inculare"],"note":"Positivo D26"}
+{"id":"infix-009","input":"superfrocio","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Positivo D26"}
+{"id":"infix-010","input":"fuckamico","languages":["it","en"],"profile":"balanced","rules":["en.vulgar.fuck"],"note":"Positivo D26"}
+{"id":"infix-011","input":"latroietta99","profile":"balanced","rules":["it.sexual.troia"],"note":"Positivo D26"}
+{"id":"infix-012","input":"superniggers","languages":["it","en"],"profile":"balanced","rules":["en.discriminatory.nigger"],"note":"Positivo D26"}
+{"id":"infix-013","input":"cittamerda","profile":"balanced","rules":["it.vulgar.merda"],"note":"Positivo D26"}
+{"id":"infix-014","input":"bellefregnacce","profile":"balanced","rules":["it.sexual.fregna"],"note":"Positivo D26"}
+{"id":"infix-015","input":"pornostar","languages":["it","en"],"profile":"balanced","rules":["en.sexual.porn"],"note":"Positivo D26"}
+{"id":"infix-016","input":"ilpompinaro","profile":"balanced","rules":["it.sexual.pompino"],"note":"Positivo D26"}
+{"id":"infix-017","input":"nonnaputtana","profile":"balanced","rules":["it.sexual.puttana"],"note":"Positivo D26"}
+{"id":"infix-018","input":"supercoglione","profile":"balanced","rules":["it.insult.coglione"],"note":"Positivo D26"}
+{"id":"infix-019","input":"laminchiata","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Positivo D26"}
+{"id":"infix-020","input":"Dio vigliacco","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Positivo D26"}
+{"id":"infix-021","input":"diolaido","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Positivo D26"}
+{"id":"infix-022","input":"Deus_boia","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Positivo D26"}
+{"id":"infix-023","input":"diotroi","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Positivo D26"}
+{"id":"infix-024","input":"Borromeo","profile":"balanced","mustNotMatch":["it.sexual.sborra"],"note":"Negativo vicino D26"}
+{"id":"infix-025","input":"Burrasca","profile":"balanced","mustNotMatch":["it.sexual.sburra"],"note":"Negativo vicino D26"}
+{"id":"infix-026","input":"Kazakistan","profile":"balanced","mustNotMatch":["it.vulgar.kazzo-grafie"],"note":"Negativo vicino D26"}
+{"id":"infix-027","input":"Cazzaniga","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"Negativo vicino D26"}
+{"id":"infix-028","input":"Ildo","languages":["it","en"],"profile":"balanced","mustNotMatch":["en.sexual.dildo"],"note":"Negativo vicino D26"}
+{"id":"infix-029","input":"inculcato","profile":"balanced","mustNotMatch":["it.sexual.inculare"],"note":"Negativo vicino D26"}
+{"id":"infix-030","input":"Feroci","profile":"balanced","mustNotMatch":["it.discriminatory.frocio"],"note":"Negativo vicino D26"}
+{"id":"infix-031","input":"Fuchs","languages":["it","en"],"profile":"balanced","mustNotMatch":["en.vulgar.fuck"],"note":"Negativo vicino D26"}
+{"id":"infix-032","input":"Mastroianni","profile":"balanced","mustNotMatch":["it.sexual.troia"],"note":"Negativo vicino D26"}
+{"id":"infix-033","input":"Nigeria","languages":["it","en"],"profile":"balanced","mustNotMatch":["en.discriminatory.nigger"],"note":"Negativo vicino D26"}
+{"id":"infix-034","input":"Merano","profile":"balanced","mustNotMatch":["it.vulgar.merda"],"note":"Negativo vicino D26"}
+{"id":"infix-035","input":"Fregene","profile":"balanced","mustNotMatch":["it.sexual.fregna"],"note":"Negativo vicino D26"}
+{"id":"infix-036","input":"Pornassio","languages":["it","en"],"profile":"balanced","mustNotMatch":["en.sexual.porn"],"note":"Negativo vicino D26"}
+{"id":"infix-037","input":"Pompei","profile":"balanced","mustNotMatch":["it.sexual.pompino"],"note":"Negativo vicino D26"}
+{"id":"infix-038","input":"puttanesca","profile":"balanced","mustNotMatch":["it.sexual.puttana"],"note":"Negativo vicino D26"}
+{"id":"infix-039","input":"Coglianese","profile":"balanced","mustNotMatch":["it.insult.coglione"],"note":"Negativo vicino D26"}
+{"id":"infix-040","input":"Mincio","profile":"balanced","mustNotMatch":["it.vulgar.minchia"],"note":"Negativo vicino D26"}
+{"id":"infix-041","input":"Deus ex machina","profile":"balanced","mustNotMatch":["it.blasphemy.divine-insult"],"note":"Negativo vicino D26"}
+{"id":"infix-042","input":"fre_gnocchi","profile":"balanced","mustNotMatch":["it.sexual.fregna"],"note":"Negativo vicino D26"}
+{"id":"infix-043","input":"fias_coglioso","profile":"balanced","mustNotMatch":["it.insult.coglione"],"note":"Negativo vicino D26"}
+{"id":"infix-044","input":"Mastronzo","profile":"balanced","mustNotMatch":["it.insult.stronzo"],"note":"Negativo vicino D26"}
+{"id":"infix-045","input":"zoccolante","profile":"balanced","mustNotMatch":["it.sexual.zoccola"],"note":"Negativo vicino D26"}

@@ -1,5 +1,19 @@
 # italian-profanity
 
+## 0.3.0
+
+### Minor Changes
+
+- 9cff8c1: Le regole `word` possono dichiarare radici `infix`, cercate anche dentro una parola: `babysborra`, `SBORRAMAN`, `superkazzo` e `fuckamico` ora vengono bloccati. Le radici sono scelte solo se non compaiono in nomi, cognomi e parole del corpus di audit, e la ricerca non attraversa due parole unite da punteggiatura. Aggiunte alla combinazione divina `deus`, `vigliacco`, `laido` e la forma tronca `troi`. Stessa logica in TS e Dart (D26).
+- 1037130: Riconduce a lettere e cifre i simboli Unicode che NFKD trasforma in un solo carattere alfanumerico: numeri romani, lettere cerchiate, alfanumerici matematici, apici e pedici. Così `ⅽazzo`, `Ⓒⓐⓩⓩⓞ` e `𝐜𝐚𝐳𝐳𝐨` vengono riconosciuti in entrambi i motori. I simboli che diventerebbero più caratteri (`™`, `⑩`) restano invariati.
+- e128688: Nei nickname con `_`, `-` o `.` ogni frammento con lettere viene controllato anche da solo, intero e senza cifre esterne: `sborra_verde`, `adolf-nigger` e `x_sborra99` ora vengono bloccati. La parola riunita resta, quindi `p0r-cò_Dio` è riconosciuto come prima. Stessa logica in TS e Dart (D25).
+
+### Differenze dalla 0.2.0
+
+Sulle 3.531 fixture valide cambiano 275 risultati: 169 cambiano azione (162 da `allow` a `block`, 6 da `allow` a `review` e uno da `review` a `block`). Gli altri 106 conservano l'azione e cambiano match, metadati o intervalli. Nessuna regola già rilevata scompare dai risultati e nessuna azione diventa meno restrittiva. I cambiamenti riguardano simboli Unicode, frammenti separati da punteggiatura, radici `infix` e le nuove forme della combinazione divina. L'audit non registra collisioni non giustificate; le 8 coppie nominali con omografi già noti restano `review` in `balanced` e sono documentate nelle collisioni accettate (D25).
+
+Tabella completa e risultati riproducibili: [confronto di comportamento](https://github.com/eliazv/italian-profanity/blob/v0.3.0/data/releases/0.3.0/behavior-diff.md). Le fixture pubbliche non misurano la frequenza dei cambiamenti su utenti reali.
+
 ## 0.2.0 — 2026-11-04
 
 ### Minor Changes

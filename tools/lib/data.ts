@@ -20,7 +20,8 @@ interface RuleBase {
 }
 
 export type SourceRule =
-  | (RuleBase & { kind: "word" | "prefix"; terms: string[] })
+  | (RuleBase & { kind: "word"; terms: string[]; infix?: string[] })
+  | (RuleBase & { kind: "prefix"; terms: string[] })
   | (RuleBase & { kind: "phrase"; phrases: string[][] })
   | (RuleBase & { kind: "compound"; terms: string[]; anchor: "start" | "end" | "both" })
   | (RuleBase & { kind: "combo"; a: string[]; b: { forms?: string[]; prefixes?: string[] } })

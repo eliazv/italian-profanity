@@ -12,6 +12,8 @@ interface View {
   flexible: boolean
   /** Vista senza le cifre esterne: usata solo se le viste complete non trovano la regola. */
   trimmed?: boolean
+  /** Riunisce due o più parole vere separate da punteggiatura: niente ricerca `infix`. */
+  joined?: boolean
 }
 interface PreparedRule {
   rule: CompiledRule
@@ -20,6 +22,7 @@ interface PreparedRule {
   a: Pattern[]
   forms: Pattern[]
   prefixes: Pattern[]
+  infix: Pattern[]
 }
 
 function pattern(term: string): Pattern {
@@ -40,6 +43,7 @@ function prepare(rule: CompiledRule): PreparedRule {
     a: rule.kind === "combo" ? rule.a.map(pattern) : [],
     forms: rule.kind === "combo" ? (rule.b.forms ?? []).map(pattern) : [],
     prefixes: rule.kind === "combo" ? (rule.b.prefixes ?? []).map(pattern) : [],
+    infix: rule.kind === "word" ? (rule.infix ?? []).map(pattern) : [],
   }
 }
 
@@ -65,6 +69,15 @@ function consume(view: View, term: Pattern, start = 0): number | undefined {
 
 function full(view: View, term: Pattern): boolean {
   return consume(view, term) === view.chars.length
+}
+
+// Prima occorrenza della radice in qualunque punto della vista (D26).
+function inside(view: View, term: Pattern): [number, number] | undefined {
+  for (let start = 0; start < view.chars.length; start++) {
+    const end = consume(view, term, start)
+    if (end !== undefined) return [start, end]
+  }
+  return undefined
 }
 
 function suffix(view: View, term: Pattern): number | undefined {
@@ -97,7 +110,8 @@ function within(view: View, from: number, to: number): View {
 // senza sostituire quelle complete: prima senza i frammenti di sole cifre
 // (`c4zz0_99` → `c4zz0`), poi senza le cifre esterne (`puttana88` → `puttana`).
 // Le parole unite in CamelCase (`StronzoRutto`, `FuckYou`) danno una vista per
-// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII.
+// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII, e
+// le parole con più frammenti di lettere una vista per frammento (D25).
 function trimmedViews(part: Segment, base: View, deleet: View, input: string): View[] {
   const spans: Range[] = []
   const cuts = [0]
@@ -119,6 +133,29 @@ function trimmedViews(part: Segment, base: View, deleet: View, input: string): V
   const last = lettered.at(-1)
   if (first && last && lettered.length < part.fragments.length)
     spans.push({ start: first.range.start, end: last.range.end })
+  // I frammenti uniti dalla punteggiatura (`sborra_verde`, `adolf-nigger`) danno
+  // anche una vista ciascuno, senza le cifre esterne del frammento: nei nickname
+  // `_` e `-` separano parole vere più spesso di quanto mascherino una parola.
+  if (lettered.length > 1) {
+    for (const fragment of lettered) {
+      const inside = base.origins.flatMap((origin, index) =>
+        origin.start >= fragment.range.start && origin.end <= fragment.range.end ? [index] : [],
+      )
+      let low = 0
+      let high = inside.length
+      while (low < high && isDigit(base.chars[inside[low] ?? -1])) low++
+      while (high > low && isDigit(base.chars[inside[high - 1] ?? -1])) high--
+      // Prima il frammento intero (`n3gr4` resta leet), poi senza cifre esterne.
+      for (const [left, right] of [
+        [0, inside.length],
+        [low, high],
+      ] as const) {
+        const from = base.origins[inside[left] ?? -1]
+        const to = base.origins[inside[right - 1] ?? -1]
+        if (left < right && from && to) spans.push({ start: from.start, end: to.end })
+      }
+    }
+  }
   let start = 0
   let end = base.chars.length
   while (start < end && isDigit(base.chars[start])) start++
@@ -140,10 +177,29 @@ function trimmedViews(part: Segment, base: View, deleet: View, input: string): V
   return result
 }
 
+// Una vista che attraversa due frammenti di almeno tre caratteri unisce parole
+// vere (`rosco_patorn`): cercarvi una radice troverebbe sequenze a cavallo del
+// separatore. Le lettere isolate (`s.b.o.r.r.a`) sono invece un'elusione.
+function isJoined(view: View, part: Segment): boolean {
+  let words = 0
+  for (const fragment of part.fragments) {
+    if (isDigitText(fragment.text) || [...fragment.text].length < 3) continue
+    if (
+      view.origins.some(
+        (origin) => origin.start >= fragment.range.start && origin.end <= fragment.range.end,
+      )
+    )
+      words++
+  }
+  return words > 1
+}
+
 function views(part: Segment, input: string): View[] {
   const base: View = { chars: [...part.base], origins: part.baseOrigins, flexible: false }
   const deleet: View = { chars: [...part.deleet], origins: part.deleetOrigins, flexible: true }
-  return [base, deleet, ...trimmedViews(part, base, deleet, input)]
+  const all = [base, deleet, ...trimmedViews(part, base, deleet, input)]
+  for (const view of all) view.joined = isJoined(view, part)
+  return all
 }
 
 function interval(view: View, start = 0, end = view.chars.length): Range | undefined {
@@ -318,6 +374,15 @@ export function createChecker(options: CheckerOptions = {}): Checker {
               )
             )
               hit = add(rule, interval(view), part) || hit
+            else if (!view.joined) {
+              for (const term of prepared.infix) {
+                const found = inside(view, term)
+                if (found) {
+                  hit = add(rule, interval(view, found[0], found[1]), part) || hit
+                  break
+                }
+              }
+            }
           } else if (rule.kind === "compound") {
             for (const term of prepared.terms) {
               if (rule.anchor !== "end") {

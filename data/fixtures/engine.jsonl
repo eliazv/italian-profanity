@@ -125,3 +125,12 @@
 {"id":"engine-125","input":"McDonald","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: CamelCase innocuo"}
 {"id":"engine-126","input":"MarioRossi","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: nome e cognome uniti"}
 {"id":"engine-127","input":"CazzolaFan","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"],"note":"Il pezzo deve corrispondere per intero"}
+{"id":"engine-128","input":"sborra_verde","profile":"balanced","action":"block","rules":["it.sexual.sborra"],"note":"Frammento unito da underscore: vista per frammento (D25)"}
+{"id":"engine-129","input":"verde-sborra","profile":"balanced","action":"block","rules":["it.sexual.sborra"],"note":"Frammento finale unito da trattino"}
+{"id":"engine-130","input":"adolf-nigger","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.discriminatory.nigger"],"note":"Frammento inglese"}
+{"id":"engine-131","input":"x_sborra99","profile":"balanced","action":"block","rules":["it.sexual.sborra"],"note":"Cifre esterne tolte anche dal frammento"}
+{"id":"engine-132","input":"Biscia-n3gr4","profile":"strict","action":"block","rules":["it.discriminatory.negro"],"note":"Il frammento intero conserva il leet finale"}
+{"id":"engine-133","input":"Mario_Rossi","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: nome e cognome con underscore"}
+{"id":"engine-134","input":"Anna-Maria.Cane","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: frammenti innocui"}
+{"id":"engine-135","input":"Marco_93","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: frammento di sole cifre"}
+{"id":"engine-136","input":"sborratore_x","profile":"balanced","action":"block","rules":["it.sexual.sborra"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Il frammento deve corrispondere per intero, niente sottostringhe)"}

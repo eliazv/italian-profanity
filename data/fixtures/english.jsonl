@@ -17,7 +17,7 @@
 {"id":"english-017","profile":"balanced","input":"fuchsia","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.fuck"],"note":"Negativo vicino con confine o significato neutro."}
 {"id":"english-018","profile":"strict","input":"fuck","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
 {"id":"english-019","profile":"lenient","input":"fuck","languages":["en"],"action":"allow","rules":["en.vulgar.fuck"]}
-{"id":"english-020","profile":"balanced","input":"antefuckpost","languages":["it","en"],"mustNotMatch":["en.vulgar.fuck"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-020","input":"antefuckpost","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.vulgar.fuck"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Non si cercano sottostringhe inglesi in parole concatenate)"}
 {"id":"english-021","profile":"balanced","input":"shit","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
 {"id":"english-022","profile":"balanced","input":"shit","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
 {"id":"english-023","profile":"balanced","input":"shits","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
@@ -297,7 +297,7 @@
 {"id":"english-297","profile":"balanced","input":"Dildora","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.dildo"],"note":"Negativo vicino con confine o significato neutro."}
 {"id":"english-298","profile":"strict","input":"dildo","languages":["it","en"],"action":"block","rules":["en.sexual.dildo"]}
 {"id":"english-299","profile":"lenient","input":"dildo","languages":["en"],"action":"allow","rules":["en.sexual.dildo"]}
-{"id":"english-300","profile":"balanced","input":"antedildopost","languages":["it","en"],"mustNotMatch":["en.sexual.dildo"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-300","input":"antedildopost","languages":["it","en"],"profile":"balanced","action":"allow","mustNotMatch":["en.sexual.dildo"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Non si cercano sottostringhe inglesi in parole concatenate)"}
 {"id":"english-301","profile":"balanced","input":"jizz","languages":["en"],"action":"block","rules":["en.sexual.jizz"]}
 {"id":"english-302","profile":"balanced","input":"jizz","languages":["it"],"mustNotMatch":["en.sexual.jizz"],"note":"Il dataset inglese non si attiva senza en."}
 {"id":"english-303","profile":"balanced","input":"jizzed","languages":["en"],"action":"block","rules":["en.sexual.jizz"]}
@@ -363,7 +363,7 @@
 {"id":"english-363","profile":"balanced","input":"Nigella","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.nigger"],"note":"Negativo vicino con confine o significato neutro."}
 {"id":"english-364","profile":"strict","input":"nigger","languages":["it","en"],"action":"block","rules":["en.discriminatory.nigger"]}
 {"id":"english-365","profile":"lenient","input":"nigger","languages":["en"],"action":"block","rules":["en.discriminatory.nigger"]}
-{"id":"english-366","profile":"balanced","input":"anteniggerpost","languages":["it","en"],"mustNotMatch":["en.discriminatory.nigger"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-366","input":"anteniggerpost","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.discriminatory.nigger"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Non si cercano sottostringhe inglesi in parole concatenate)"}
 {"id":"english-367","profile":"balanced","input":"faggot","languages":["en"],"action":"review","rules":["en.discriminatory.faggot"]}
 {"id":"english-368","profile":"balanced","input":"faggot","languages":["it"],"mustNotMatch":["en.discriminatory.faggot"],"note":"Il dataset inglese non si attiva senza en."}
 {"id":"english-369","profile":"balanced","input":"faggots","languages":["en"],"action":"review","rules":["en.discriminatory.faggot"]}
@@ -535,7 +535,7 @@
 {"id":"english-535","profile":"balanced","input":"nigga","languages":["en"],"action":"block","rules":["en.discriminatory.nigger"]}
 {"id":"english-536","profile":"balanced","input":"niggas","languages":["en"],"action":"block","rules":["en.discriminatory.nigger"]}
 {"id":"english-537","profile":"balanced","input":"nigga","languages":["it"],"mustNotMatch":["en.discriminatory.nigger"],"note":"Il dataset inglese non si attiva senza en."}
-{"id":"english-538","profile":"balanced","input":"niggaz_99","languages":["it","en"],"mustNotMatch":["en.discriminatory.nigger"],"note":"Forma non dichiarata: nessuna flessione implicita."}
+{"id":"english-538","input":"niggaz_99","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.discriminatory.nigger"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Forma non dichiarata: nessuna flessione implicita)"}
 {"id":"english-539","profile":"balanced","input":"nigger_88","languages":["it","en"],"action":"block","rules":["en.discriminatory.nigger"],"note":"Suffisso numerico separato dalla parola."}
 {"id":"english-540","profile":"balanced","input":"FuckYou","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Parole unite in CamelCase."}
-{"id":"english-541","profile":"balanced","input":"fuckyou","languages":["it","en"],"mustNotMatch":["en.vulgar.fuck"],"note":"Senza maiuscole non si cercano sottostringhe."}
+{"id":"english-541","input":"fuckyou","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.vulgar.fuck"],"note":"Radice infix D26: la forma dentro la parola ora è riconosciuta (era: Senza maiuscole non si cercano sottostringhe)"}

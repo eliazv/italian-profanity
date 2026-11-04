@@ -8,8 +8,9 @@
       "severity": 3,
       "confidence": "high",
       "terms": ["nigger", "niggers", "nigga", "niggas"],
+      "infix": ["nigger", "nigga"],
       "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
-      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "en.discriminatory.faggot",

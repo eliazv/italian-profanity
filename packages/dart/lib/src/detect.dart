@@ -33,6 +33,10 @@ class _View {
   /// Vista senza le cifre esterne: usata solo se le viste complete non trovano
   /// la regola.
   final bool trimmed;
+
+  /// Riunisce due o più parole vere separate da punteggiatura: niente ricerca
+  /// `infix`.
+  bool joined = false;
 }
 
 List<String> _strings(Object? value) =>
@@ -50,7 +54,10 @@ class _PreparedRule {
         phrases = (data['phrases'] as List<Object?>? ?? [])
             .map((phrase) => _strings(phrase).map(_Pattern.new).toList())
             .toList(),
-        a = _strings(data['a']).map(_Pattern.new).toList() {
+        a = _strings(data['a']).map(_Pattern.new).toList(),
+        infix = data['kind'] == 'word'
+            ? _strings(data['infix']).map(_Pattern.new).toList()
+            : <_Pattern>[] {
     final b = data['b'] as Map<String, Object>?;
     forms = _strings(b?['forms']).map(_Pattern.new).toList();
     prefixes = _strings(b?['prefixes']).map(_Pattern.new).toList();
@@ -64,6 +71,7 @@ class _PreparedRule {
   final List<_Pattern> terms;
   final List<List<_Pattern>> phrases;
   final List<_Pattern> a;
+  final List<_Pattern> infix;
   late final List<_Pattern> forms;
   late final List<_Pattern> prefixes;
 }
@@ -98,6 +106,15 @@ int? _consume(_View view, _Pattern term, [int start = 0]) {
 bool _full(_View view, _Pattern term) =>
     _consume(view, term) == view.chars.length;
 
+// Prima occorrenza della radice in qualunque punto della vista (D26).
+(int, int)? _inside(_View view, _Pattern term) {
+  for (var start = 0; start < view.chars.length; start++) {
+    final end = _consume(view, term, start);
+    if (end != null) return (start, end);
+  }
+  return null;
+}
+
 int? _suffix(_View view, _Pattern term) {
   for (var start = 0; start < view.chars.length; start++) {
     if (_consume(view, term, start) == view.chars.length) return start;
@@ -127,7 +144,8 @@ _View _within(_View view, int from, int to) {
 // senza sostituire quelle complete: prima senza i frammenti di sole cifre
 // (`c4zz0_99` → `c4zz0`), poi senza le cifre esterne (`puttana88` → `puttana`).
 // Le parole unite in CamelCase (`StronzoRutto`, `FuckYou`) danno una vista per
-// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII.
+// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII, e
+// le parole con più frammenti di lettere una vista per frammento (D25).
 List<_View> _trimmedViews(
     Segment part, _View base, _View deleet, String input) {
   final spans = <TextRange>[];
@@ -149,6 +167,34 @@ List<_View> _trimmedViews(
       .toList();
   if (lettered.isNotEmpty && lettered.length < part.fragments.length) {
     spans.add(TextRange(lettered.first.range.start, lettered.last.range.end));
+  }
+  // I frammenti uniti dalla punteggiatura (`sborra_verde`, `adolf-nigger`) danno
+  // anche una vista ciascuno, senza le cifre esterne del frammento: nei nickname
+  // `_` e `-` separano parole vere più spesso di quanto mascherino una parola.
+  if (lettered.length > 1) {
+    for (final fragment in lettered) {
+      final inside = [
+        for (var index = 0; index < base.origins.length; index++)
+          if (base.origins[index].start >= fragment.range.start &&
+              base.origins[index].end <= fragment.range.end)
+            index,
+      ];
+      var low = 0;
+      var high = inside.length;
+      while (low < high && _digit.hasMatch(base.chars[inside[low]])) {
+        low++;
+      }
+      while (high > low && _digit.hasMatch(base.chars[inside[high - 1]])) {
+        high--;
+      }
+      // Prima il frammento intero (`n3gr4` resta leet), poi senza cifre esterne.
+      for (final (left, right) in [(0, inside.length), (low, high)]) {
+        if (left < right) {
+          spans.add(TextRange(base.origins[inside[left]].start,
+              base.origins[inside[right - 1]].end));
+        }
+      }
+    }
   }
   var start = 0;
   var end = base.chars.length;
@@ -172,12 +218,34 @@ List<_View> _trimmedViews(
   return result;
 }
 
+// Una vista che attraversa due frammenti di almeno tre caratteri unisce parole
+// vere (`rosco_patorn`): cercarvi una radice troverebbe sequenze a cavallo del
+// separatore. Le lettere isolate (`s.b.o.r.r.a`) sono invece un'elusione.
+bool _isJoined(_View view, Segment part) {
+  var words = 0;
+  for (final fragment in part.fragments) {
+    if (_digitText.hasMatch(fragment.text) || fragment.text.runes.length < 3) {
+      continue;
+    }
+    if (view.origins.any((origin) =>
+        origin.start >= fragment.range.start &&
+        origin.end <= fragment.range.end)) {
+      words++;
+    }
+  }
+  return words > 1;
+}
+
 List<_View> _views(Segment part, String input) {
   final base = _View(part.base.runes.map(String.fromCharCode).toList(),
       part.baseOrigins, false);
   final deleet = _View(part.deleet.runes.map(String.fromCharCode).toList(),
       part.deleetOrigins, true);
-  return [base, deleet, ..._trimmedViews(part, base, deleet, input)];
+  final all = [base, deleet, ..._trimmedViews(part, base, deleet, input)];
+  for (final view in all) {
+    view.joined = _isJoined(view, part);
+  }
+  return all;
 }
 
 MatchRange? _interval(_View view, [int start = 0, int? end]) {
@@ -367,6 +435,15 @@ class ProfanityChecker {
                 ? _consume(view, term) != null
                 : _full(view, term))) {
               hit = add(rule, _interval(view), part) || hit;
+            } else if (!view.joined) {
+              for (final term in rule.infix) {
+                final found = _inside(view, term);
+                if (found != null) {
+                  hit = add(rule, _interval(view, found.$1, found.$2), part) ||
+                      hit;
+                  break;
+                }
+              }
             }
           } else if (rule.kind == RuleKind.compound) {
             for (final term in rule.terms) {

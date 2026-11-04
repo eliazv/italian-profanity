@@ -39,7 +39,7 @@
       "confidence": "high",
       "terms": ["dildo", "dildos"],
       "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
-      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise. Nessuna radice infix: Dildora è un nome proprio (D26)."
     },
     {
       "id": "en.sexual.jizz",
@@ -68,8 +68,9 @@
       "severity": 2,
       "confidence": "high",
       "terms": ["porn", "porno", "pornos", "pornography", "pornographic"],
+      "infix": ["porno"],
       "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
-      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "en.sexual.hentai",

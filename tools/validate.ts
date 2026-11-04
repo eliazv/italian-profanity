@@ -105,7 +105,14 @@ for (const file of loadRuleFiles()) {
     if (rule.kind === "combo" && rule.category !== "blasphemy")
       fail(at, "combo è riservata alla categoria blasphemy")
 
-    for (const term of termsOf(rule)) {
+    if (rule.kind === "word" && rule.infix) {
+      // D26: una radice corta compare per caso dentro troppe parole innocue.
+      for (const stem of rule.infix)
+        if (stem.length < 4) fail(at, `radice infix "${stem}" più corta di 4 lettere`)
+      if (!rule.note) fail(at, "infix richiede una nota che ne giustifichi le radici")
+    }
+
+    for (const term of [...termsOf(rule), ...(rule.kind === "word" ? (rule.infix ?? []) : [])]) {
       if (REPEATED.test(term))
         fail(at, `"${term}" ha lettere ripetute 3+ volte: scrivilo già normalizzato`)
     }

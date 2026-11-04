@@ -38,8 +38,9 @@
       "severity": 2,
       "confidence": "high",
       "terms": ["kazzo", "kazzi", "kazzata", "kazzate", "caxxo", "caxxi", "caxxata", "caxxate"],
+      "infix": ["kazz"],
       "provenance": ["manual"],
-      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "it.insult.truzzo",

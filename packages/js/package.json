@@ -1,6 +1,6 @@
 {
   "name": "italian-profanity",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Italian profanity detection for nicknames and short text. Blasphemy-aware, offline, zero runtime dependencies. Matching TypeScript and Dart/Flutter engines.",
   "keywords": [
     "profanity",

@@ -20,10 +20,13 @@
         "cazzetti",
         "cazzona",
         "cazzonata",
-        "cazzonate"
+        "cazzonate",
+        "cazzillo",
+        "cazzilli"
       ],
+      "infix": ["cazzon", "cazzoduro", "cazzill"],
       "provenance": ["manual"],
-      "note": "Forme elencate e non prefisso: cazzotto, cazzuola e scazzottata devono passare."
+      "note": "Forme elencate e non prefisso: cazzotto, cazzuola e scazzottata devono passare. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "it.sexual.puttana",
@@ -45,8 +48,9 @@
         "puttanella",
         "puttanelle"
       ],
+      "infix": ["puttana"],
       "provenance": ["manual"],
-      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "it.sexual.troia",
@@ -67,8 +71,9 @@
         "troioncella",
         "troioncelle"
       ],
+      "infix": ["troie", "troiett"],
       "provenance": ["manual"],
-      "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
+      "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "it.sexual.mignotta",
@@ -102,8 +107,9 @@
         "sborratina",
         "sborratine"
       ],
+      "infix": ["sborr"],
       "provenance": ["manual"],
-      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "it.sexual.pompino",
@@ -112,8 +118,9 @@
       "severity": 2,
       "confidence": "high",
       "terms": ["pompino", "pompini"],
+      "infix": ["pompin"],
       "provenance": ["manual"],
-      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
+      "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "it.sexual.bocchino",
@@ -313,8 +320,9 @@
         "inculandosi",
         "inculamento"
       ],
+      "infix": ["inculat", "incule", "inculo"],
       "provenance": ["manual"],
-      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     },
     {
       "id": "it.sexual.pugnetta",
@@ -333,8 +341,9 @@
       "severity": 2,
       "confidence": "medium",
       "terms": ["fregna", "fregne"],
+      "infix": ["fregna", "fregne"],
       "provenance": ["manual"],
-      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+      "note": "Termine regionale o polisemico: review in balanced, parola intera. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera. Radice fregn esclusa: i cognomi Fregni e Fregno."
     },
     {
       "id": "it.sexual.patonza",
@@ -463,8 +472,9 @@
       "severity": 2,
       "confidence": "high",
       "terms": ["sburra", "sburrare", "sburrato", "sburrata", "sburrati", "sburrate"],
+      "infix": ["sburr"],
       "provenance": ["manual"],
-      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera. Radici infix (D26): nessuna compare dentro nomi, cognomi o parole del corpus di audit; le forme con collisioni restano a parola intera."
     }
   ]
 }
