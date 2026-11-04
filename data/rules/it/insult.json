@@ -104,7 +104,11 @@
         "cretinetti",
         "cretinette",
         "cretinata",
-        "cretinate"
+        "cretinate",
+        "cretinaccio",
+        "cretinaccia",
+        "cretinacci",
+        "cretinacce"
       ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
@@ -276,7 +280,7 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["cagasotto", "cagasotti"],
+      "terms": ["cagasotto", "cagasotti", "cacasotto", "cacasotti"],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
     },
@@ -499,6 +503,143 @@
       "phrases": [["testa", "di", "minchia"]],
       "provenance": ["manual"],
       "note": "Frase ingiuriosa esplicita, senza blocco delle parole neutre isolate."
+    },
+    {
+      "id": "it.insult.incoglionito",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "incoglionito",
+        "incoglionita",
+        "incoglioniti",
+        "incoglionite",
+        "incoglionire",
+        "incoglionirsi"
+      ],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+    },
+    {
+      "id": "it.insult.cazzaro",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["cazzaro", "cazzara", "cazzari", "cazzare"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.cesso",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["cesso", "cessa", "cessi", "cesse"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.palloso",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["palloso", "pallosa", "pallosi", "pallose"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.lecchino",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["lecchino", "lecchina", "lecchini", "lecchine"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.ruffiano",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["ruffiano", "ruffiana", "ruffiani", "ruffiane"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.infame",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["infame", "infami"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.farabutto",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["farabutto", "farabutta", "farabutti", "farabutte"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.schifoso",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["schifoso", "schifosa", "schifosi", "schifose"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.lurido",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["lurido", "lurida", "luridi", "luride"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.zozzone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["zozzone", "zozzona", "zozzoni"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.insult.rompiminchia",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["rompiminchia", "rompiminchie"],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+    },
+    {
+      "id": "it.insult.faccia-di-cazzo",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["faccia", "di", "cazzo"]],
+      "provenance": ["manual"],
+      "note": "Combinazione contestuale offensiva, termini isolati innocui non bloccati da questa regola."
     }
   ]
 }
