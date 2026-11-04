@@ -38,7 +38,7 @@ Un'eccezione sopprime una regola su una parola. Non cancella mai testo, perché 
 
 ## D7 · Normalizzazione con tabella generata, zero dipendenze — 2026-11-03
 
-Dart non ha un equivalente di NFKD. Invece di aggiungere `unorm_dart` e avere due algoritmi diversi, il build genera una sola tabella (caratteri latini con diacritici, fullwidth, sottoinsieme di confusables UTS #39, con la versione fissata) usata da entrambi i motori. Ne risultano parità garantita e zero dipendenze. La copertura limitata è dichiarata nel README.
+Dart non ha un equivalente di NFKD. Invece di aggiungere `unorm_dart` e avere due algoritmi diversi, il build genera una sola tabella (caratteri latini con diacritici, fullwidth, sottoinsieme di confusables UTS #39, con la versione fissata) usata da entrambi i motori. Ne risultano parità garantita e zero dipendenze. La copertura limitata è dichiarata nel README. Dal 2026-11-04 la tabella include anche i simboli letterali, numerici, cerchiati e matematici che NFKD riconduce a un singolo carattere alfanumerico (vedi SPECIFICHE.md §4.4).
 
 ## D8 · Ripetizioni: si riducono solo le sequenze di 3 o più lettere — 2026-11-03
 

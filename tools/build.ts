@@ -30,6 +30,18 @@ const NFKD_RANGES: Array<[number, number]> = [
   [0xfb00, 0xfb06], // legature latine
   [0xff01, 0xff5e], // forme fullwidth
 ]
+// Simboli che NFKD riconduce a una lettera o cifra: numeri romani ("ⅽazzo"), lettere
+// cerchiate, matematiche e apici. Si prende la forma solo se è un singolo carattere
+// alfanumerico, così un simbolo non diventa mai una parola (™ → "tm", ℡ → "tel", ⑩ → "10").
+const SYMBOL_NFKD_RANGES: Array<[number, number]> = [
+  [0x2070, 0x209f], // apici e pedici
+  [0x2100, 0x214f], // simboli letterali (ℂ, ℓ, ℯ)
+  [0x2150, 0x218f], // forme numeriche (numeri romani)
+  [0x2460, 0x24ff], // alfanumerici cerchiati
+  [0x1d400, 0x1d7ff], // alfanumerici matematici
+  [0x1f100, 0x1f1ff], // alfanumerici racchiusi, supplemento
+]
+const SINGLE_ALNUM = /^[a-z0-9]$/
 const COMBINING_MARKS: [number, number] = [0x0300, 0x036f]
 const PRINTABLE_ASCII = /^[\x20-\x7e]+$/
 
@@ -56,6 +68,14 @@ for (const [start, end] of NFKD_RANGES) {
     const char = String.fromCodePoint(code)
     const value = char.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase()
     if (value !== char && PRINTABLE_ASCII.test(value)) setFold(char, value, "nfkd")
+  }
+}
+
+for (const [start, end] of SYMBOL_NFKD_RANGES) {
+  for (let code = start; code <= end; code++) {
+    const char = String.fromCodePoint(code)
+    const value = char.normalize("NFKD").replace(/\p{M}/gu, "").toLowerCase()
+    if (value !== char && SINGLE_ALNUM.test(value)) setFold(char, value, "nfkd-symbol")
   }
 }
 

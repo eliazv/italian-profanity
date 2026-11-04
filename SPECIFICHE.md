@@ -127,6 +127,7 @@ Dart non offre un equivalente di `String.normalize("NFKD")`. Per questo **nessun
 
 - i caratteri latini con segni diacritici e le legature (tramite `normalize("NFKD")` di Node su intervalli espliciti; nessuna versione del runtime nei file generati, che hanno un hash del contenuto);
 - i caratteri fullwidth;
+- i simboli che NFKD riconduce a **una sola** lettera o cifra: numeri romani, lettere cerchiate e matematiche, apici e pedici (`ⅽazzo`, `Ⓒⓐⓩⓩⓞ`, `𝐜𝐚𝐳𝐳𝐨`). I simboli che diventerebbero più caratteri (`™`, `℡`, `⑩`, `⒜`) restano invariati, così un simbolo non si trasforma mai in una parola;
 - un sottoinsieme mirato di caratteri simili, cirillici e greci identici a lettere latine, preso da UTS #39 (`confusables.txt`) con la versione fissata.
 
 Questo approccio ha tre vantaggi:
