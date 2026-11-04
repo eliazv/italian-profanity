@@ -257,3 +257,6 @@
 {"id":"lexicon-257","input":"Checca","profile":"balanced","action":"review","rules":["it.discriminatory.checca"],"note":"Omografo o regionalismo: review"}
 {"id":"lexicon-258","input":"Patacca","profile":"balanced","action":"review","rules":["it.insult.patacca"],"note":"Omografo o regionalismo: review"}
 {"id":"lexicon-259","input":"Bischero","profile":"balanced","action":"review","rules":["it.insult.bischero"],"note":"Omografo o regionalismo: review"}
+{"id":"lexicon-260","input":"Fregna","profile":"balanced","action":"review","rules":["it.sexual.fregna"],"note":"Omografo di cognome o voce di dizionario: balanced demanda a review"}
+{"id":"lexicon-261","input":"Pezzente","profile":"balanced","action":"review","rules":["it.insult.pezzente"],"note":"Omografo di cognome o voce di dizionario: balanced demanda a review"}
+{"id":"lexicon-262","input":"Pezzenti","profile":"balanced","action":"review","rules":["it.insult.pezzente"],"note":"Omografo di cognome o voce di dizionario: balanced demanda a review"}

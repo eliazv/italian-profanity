@@ -67,4 +67,6 @@ Aggiunte **33 regole**, ampliate **15 famiglie di parole** e **2 famiglie di fra
 - Regionalismi: `socmel` (Romagna), `mona` (Veneto), `bischero` (Toscana), `belin` (Liguria), `balengo` (Piemonte), `patacca` (Romagna/italiano); non equivalgono a copertura dialettale completa.
 - Omografie: `checca` è anche un nome familiare, `patacca` e altri sono polisemici. Questi termini sono `medium` e in `balanced` producono `review`, non blocco automatico. Non sono stati aggiunti termini identitari neutri.
 
+La prima esecuzione dell'audit ha trovato sette collisioni nominali o lessicali, tutte classificate `review` in `balanced`: Checca (cognome e ipocoristico), Fregna (cognome), Patacca (cognome), Pezzente/Pezzenti (cognomi e voci del dizionario). Sono motivate una per una in `data/audit/accepted.jsonl`, con regressioni specifiche. Nessuna produce `block` automatico in `balanced`.
+
 Prima del merge, `pnpm check` e l'audit sul corpus devono essere verdi: eventuali collisioni vanno giustificate singolarmente e non accettate in blocco. Resta necessaria una prova su nickname reali in shadow mode.
