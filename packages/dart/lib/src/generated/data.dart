@@ -1,7 +1,7 @@
 // File generato da tools/build.ts a partire da data/: non modificare a mano.
 // ignore_for_file: lines_longer_than_80_chars
 
-const String version = '0.2.0';
+const String version = '0.3.0';
 const String dataVersion = '0cfc987ddde7';
 
 /// Tabella di normalizzazione condivisa con il pacchetto TypeScript (SPECIFICHE.md §4.4).

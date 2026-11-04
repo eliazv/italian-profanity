@@ -1,0 +1,17 @@
+{
+  "baselineVersion": "0.2.0",
+  "baselineDataVersion": "8c7e75a521cd",
+  "version": "0.3.0",
+  "dataVersion": "0cfc987ddde7",
+  "compared": 3531,
+  "changed": 275,
+  "actionChanged": 169,
+  "transitions": {
+    "allow → block": 162,
+    "block → block": 101,
+    "allow → review": 6,
+    "allow → allow": 3,
+    "review → block": 1,
+    "review → review": 2
+  }
+}
