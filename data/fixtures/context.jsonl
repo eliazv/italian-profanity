@@ -152,9 +152,6 @@
 {"id":"context-152","input":"maremma bucaiola","profile":"balanced","rules":["it.vulgar.maremma-bucaiola"],"note":"Frase intenzionale e adiacente; contesto necessario"}
 {"id":"context-153","input":"extramaremma bucaiola","profile":"balanced","mustNotMatch":["it.vulgar.maremma-bucaiola"],"note":"Negativo vicino: il primo token è più lungo"}
 {"id":"context-154","input":"maremma bucaiola","profile":"strict","rules":["it.vulgar.maremma-bucaiola"],"note":"Espressione ambigua rilevata anche in strict"}
-{"id":"context-155","input":"mannaggia la miseria","profile":"balanced","rules":["it.vulgar.mannaggia-la-miseria"],"note":"Frase intenzionale e adiacente; contesto necessario"}
-{"id":"context-156","input":"extramannaggia la miseria","profile":"balanced","mustNotMatch":["it.vulgar.mannaggia-la-miseria"],"note":"Negativo vicino: il primo token è più lungo"}
-{"id":"context-157","input":"mannaggia la miseria","profile":"strict","rules":["it.vulgar.mannaggia-la-miseria"],"note":"Espressione ambigua rilevata anche in strict"}
 {"id":"context-158","input":"porco mondo","profile":"balanced","rules":["it.vulgar.porco-mondo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
 {"id":"context-159","input":"extraporco mondo","profile":"balanced","mustNotMatch":["it.vulgar.porco-mondo"],"note":"Negativo vicino: il primo token è più lungo"}
 {"id":"context-160","input":"porco mondo","profile":"strict","rules":["it.vulgar.porco-mondo"],"note":"Espressione ambigua rilevata anche in strict"}

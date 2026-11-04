@@ -77,7 +77,7 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "medium",
-      "terms": ["negrone", "negrona", "negroni"],
+      "terms": ["negrone", "negrona"],
       "provenance": ["manual"],
       "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
     },

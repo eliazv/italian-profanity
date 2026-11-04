@@ -4,16 +4,16 @@ Data: 4 novembre 2026 · Commit di lavoro sul branch `feat/m3-large-curated-ital
 
 ## Stato quantitativo
 
-| Metrica | Prima | Ora |
-| --- | ---: | ---: |
-| Regole italiane | 126 | **291** |
-| Forme uniche dichiarate nei `terms` | 517 | **1.035** |
-| Varianti di frasi dichiarate | — | **188** |
-| Forme divine nella regola combinatoria | 7 | **10** |
-| Forme offensive esatte nella regola combinatoria | 36 | **70** |
-| Fixture condivise TS/Dart | 1.583 | **2.621** |
+| Metrica                                          | Prima |      Ora |
+| ------------------------------------------------ | ----: | -------: |
+| Regole italiane                                  |   126 |  **290** |
+| Forme uniche dichiarate nei `terms`              |   517 | **1.034** |
+| Varianti di frasi dichiarate                     |     — |  **187** |
+| Forme divine nella regola combinatoria           |     7 |   **10** |
+| Forme offensive esatte nella regola combinatoria |    36 |   **70** |
+| Fixture condivise TS/Dart                        | 1.583 | **2.618** |
 
-Le 291 regole si distribuiscono in: **117 insulti**, **64 regole sessuali**, **61 volgari**, **41 discriminatorie**, **8 bestemmie**. I numeri indicano regole e forme, non precisione, recall o copertura di tutti i dialetti italiani. La moltiplicazione delle forme della regola combinatoria non va confusa con forme dichiarate indipendenti.
+Le 290 regole si distribuiscono in: **117 insulti**, **64 regole sessuali**, **60 volgari**, **41 discriminatorie**, **8 bestemmie**. I numeri indicano regole e forme, non precisione, recall o copertura di tutti i dialetti italiani. La moltiplicazione delle forme della regola combinatoria non va confusa con forme dichiarate indipendenti.
 
 ## Come è stato ampliato
 
@@ -36,6 +36,10 @@ Non inserire isolatamente parole comuni, identità o termini sanitari/descrittiv
 
 - Non confondere **matched** con **da bloccare**: le parole ambigue richiedono `review` in balanced; il profilo strict è più aggressivo.
 - L'audit di 127.842 input contiene nomi, cognomi e parole italiane, ma **non dimostra** una precisione su nickname in produzione o messaggi lunghi.
-- Serve una valutazione in *shadow mode* su esempi anonimi e non identificativi, con analisi di falsi negativi, falsi positivi e distribuzione delle azioni. Non conservare nickname reali o identificativi nelle fixture.
+- Serve una valutazione in _shadow mode_ su esempi anonimi e non identificativi, con analisi di falsi negativi, falsi positivi e distribuzione delle azioni. Non conservare nickname reali o identificativi nelle fixture.
 - Dialetti, eufemismi nuovi, ironia, contesti allusivi e grafie creative restano **aperti**, come per ogni filtro lessicale. Il dataset non può essere dichiarato esaustivo senza un perimetro di copertura misurabile.
 - Un successivo rilascio npm/pub.dev è necessario perché gli utilizzatori ricevano effettivamente le nuove regole. Nessuna pubblicazione automatica è inclusa in questa PR.
+
+## Esclusioni aggiunte dopo il controllo qualitativo
+
+«Negroni» è sia cognome sia nome di cocktail: eliminato dalle forme denigratorie isolate, evitando un falso positivo riproducibile. L'eufemismo «mannaggia la miseria» non è sufficientemente specifico per la moderazione automatica: rimossa la relativa regola contestuale. Queste scelte privilegiano la precisione e preservano le fixture negative già presenti. Le collisioni anagrafiche e lessicali effettive sono documentate singolarmente nell'audit come `review` oppure `allow` per le forme anatomiche lievi.

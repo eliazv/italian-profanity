@@ -22,7 +22,7 @@ const checker = createChecker({ contacts: true })
 checker.check("Claudio").action // "allow"
 ```
 
-291 regole italiane curate, 1.035 forme dichiarate più frasi e combinazioni. `findMatches()` separa il rilevamento dalla policy di `check()`. Profili: `balanced`, `strict`, `lenient`; opzioni: `maxLength`, `contacts`, `extraRules`, `exceptions`, `thresholds`.
+290 regole italiane curate, 1.034 forme dichiarate più frasi e combinazioni. `findMatches()` separa il rilevamento dalla policy di `check()`. Profili: `balanced`, `strict`, `lenient`; opzioni: `maxLength`, `contacts`, `extraRules`, `exceptions`, `thresholds`.
 
 I numeri descrivono il dataset del repository, che verrà distribuito nel prossimo rilascio; la beta già pubblicata può contenere meno forme.
 

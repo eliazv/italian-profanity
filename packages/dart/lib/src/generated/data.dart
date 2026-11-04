@@ -2,7 +2,7 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 const String version = '0.1.0-beta.1';
-const String dataVersion = '8584971ca0e1';
+const String dataVersion = '8d37a97ba40d';
 
 /// Tabella di normalizzazione condivisa con il pacchetto TypeScript (SPECIFICHE.md §4.4).
 const Map<String, String> foldTable = {
@@ -1256,7 +1256,7 @@ const List<Map<String, Object>> rulesData = [
     'category': 'discriminatory',
     'severity': 3,
     'confidence': 'medium',
-    'terms': ['negrone', 'negrona', 'negroni'],
+    'terms': ['negrone', 'negrona'],
     'language': 'it',
   },
   {
@@ -3428,17 +3428,6 @@ const List<Map<String, Object>> rulesData = [
     'severity': 1,
     'confidence': 'medium',
     'terms': ['loffa', 'loffe', 'loffare', 'lofare'],
-    'language': 'it',
-  },
-  {
-    'id': 'it.vulgar.mannaggia-la-miseria',
-    'kind': 'phrase',
-    'category': 'vulgar',
-    'severity': 1,
-    'confidence': 'medium',
-    'phrases': [
-      ['mannaggia', 'la', 'miseria'],
-    ],
     'language': 'it',
   },
   {

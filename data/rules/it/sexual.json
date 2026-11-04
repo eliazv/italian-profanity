@@ -161,7 +161,16 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["fica", "fiche", "ficona", "ficone", "fichette", "fichetta", "fichetti", "fichetto"],
+      "terms": [
+        "fica",
+        "fiche",
+        "ficona",
+        "ficone",
+        "fichette",
+        "fichetta",
+        "fichetti",
+        "fichetto"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },

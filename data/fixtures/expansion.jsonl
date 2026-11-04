@@ -366,7 +366,7 @@
 {"id":"expansion-366","input":"extragiudeaccioxyz","profile":"balanced","mustNotMatch":["it.discriminatory.giudeaccio"],"note":"Negativo: radice interna a una parola più lunga"}
 {"id":"expansion-367","input":"negrone","profile":"balanced","rules":["it.discriminatory.negrone"],"note":"Forma esatta selezionata manualmente"}
 {"id":"expansion-368","input":"negrona","profile":"balanced","rules":["it.discriminatory.negrone"],"note":"Forma esatta selezionata manualmente"}
-{"id":"expansion-369","input":"negroni","profile":"balanced","rules":["it.discriminatory.negrone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-369","input":"negroni","profile":"balanced","note":"Negroni è un cognome e un cocktail: non è una forma offensiva da segnalare isolatamente.","action":"allow","mustNotMatch":["it.discriminatory.negrone"]}
 {"id":"expansion-370","input":"extranegronexyz","profile":"balanced","mustNotMatch":["it.discriminatory.negrone"],"note":"Negativo: radice interna a una parola più lunga"}
 {"id":"expansion-371","input":"negrone","profile":"strict","rules":["it.discriminatory.negrone"],"note":"Termine ambiguo presente anche in strict"}
 {"id":"expansion-372","input":"negretto","profile":"balanced","rules":["it.discriminatory.negretto"],"note":"Forma esatta selezionata manualmente"}

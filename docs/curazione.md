@@ -1,6 +1,6 @@
 # Curazione delle regole
 
-La fonte normativa è [SPECIFICHE.md](../SPECIFICHE.md), §§5, 7 e 8. Il lessico italiano contiene ora 291 regole e 1.035 forme distinte nei campi `terms`, oltre a frasi e combinazioni. Il numero di forme non misura da solo copertura o qualità; M3 prosegue.
+La fonte normativa è [SPECIFICHE.md](../SPECIFICHE.md), §§5, 7 e 8. Il lessico italiano contiene ora 290 regole e 1.034 forme distinte nei campi `terms`, oltre a frasi e combinazioni. Il numero di forme non misura da solo copertura o qualità; M3 prosegue.
 
 ## Scelte del primo nucleo
 
@@ -89,12 +89,16 @@ Il primo audit ha individuato **25 collisioni** con cognomi e parole del diziona
 
 ## Curazione M3 — ampliamento esteso del 4 novembre 2026
 
-Questa iterazione porta il lessico italiano da **126 a 291 regole** e da **517 a 1.035 forme distinte** nei campi `terms`. Le espressioni `phrase` comprendono **188 varianti dichiarate**; la regola `combo` contiene ora 10 forme divine, 70 forme offensive esatte e 5 prefissi selezionati. Questi gruppi non costituiscono altrettante parole indipendenti e non vanno sommati alle forme singole.
+Questa iterazione porta il lessico italiano da **126 a 290 regole** e da **517 a 1.034 forme distinte** nei campi `terms`. Le espressioni `phrase` comprendono **187 varianti dichiarate**; la regola `combo` contiene ora 10 forme divine, 70 forme offensive esatte e 5 prefissi selezionati. Questi gruppi non costituiscono altrettante parole indipendenti e non vanno sommati alle forme singole.
 
 La curazione è organizzata in file nuovi per categoria (`*-m3.json`, `*-phrases-m3.json`, `compounds-m3.json`, `variants-m3.json`) e in estensioni controllate alle regole già esistenti. Non sono state copiate liste terze in blocco. Ogni nuova regola ha un positivo e un negativo vicino; ci sono fixture dedicate a soprannomi concatenati, grafie alternative, inflessioni, espressioni regionali e frasi discriminatorie contestuali. Sono stati aggiunti anche 40 guardrail per parole religiose, cognomi, utensili, alimenti e identità neutre.
 
 Le principali lacune risolte includono: `figliodiputtana`, `facciadimerda`, `diodimerda`, `mortacci tua`, `fatti i cazzi tuoi`, `porca miseria`, grafie `kazzo`/`caxxo`/`koglione` e termini regionali come `strunz`, `grullo`, `ostrega`, `belandi`. I termini identitari isolati restano fuori dai nuovi blocchi; le offese esplicite che li accompagnano sono rappresentate come frasi, non come prefissi indiscriminati.
 
-Il conteggio aggiornato delle fixture condivise è **2.621**. L'audit su 127.842 input rimane obbligatorio e deve ancora essere rieseguito su questo ampliamento prima del merge. Ogni nuova collisione richiede valutazione individuale; non aggiungere automaticamente tutte le collisioni a `accepted.jsonl`. `balanced` non deve bloccare automaticamente gli omografi `medium`.
+Il conteggio aggiornato delle fixture condivise è **2.618**. L'audit su 127.842 input rimane obbligatorio e deve ancora essere rieseguito su questo ampliamento prima del merge. Ogni nuova collisione richiede valutazione individuale; non aggiungere automaticamente tutte le collisioni a `accepted.jsonl`. `balanced` non deve bloccare automaticamente gli omografi `medium`.
 
 La copertura non è un dizionario esaustivo della lingua: è un insieme curato per la moderazione di nickname e testi brevi. Restano forme creative, dialetti con ortografie variabili e contesti impossibili da disambiguare lessicalmente; vedi [inventario M3](m3-inventario-2026-11-04.md).
+
+### Controllo finale del corpus: esclusioni prima delle accettazioni
+
+Le revisioni hanno rimosso la forma isolata `negroni` (cognome e cocktail) e la regola `mannaggia la miseria` (esclamazione non necessariamente offensiva), mantenendo i controlli di assenza di match. Ulteriori collisioni effettive con cognomi o voci di dizionario sono state annotate individualmente con azione attesa `review` nel profilo balanced; per `tetta`/`tette` (gravità 1) l'azione attesa è `allow`. Questo controllo non garantisce una comprensione del contesto né un recall esaustivo: le nuove regole richiedono comunque osservazione in produzione senza blocco iniziale.

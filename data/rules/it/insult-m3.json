@@ -37,7 +37,13 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["rincitrullito", "rincitrullita", "rincitrulliti", "rincitrullite", "rincitrullire"],
+      "terms": [
+        "rincitrullito",
+        "rincitrullita",
+        "rincitrulliti",
+        "rincitrullite",
+        "rincitrullire"
+      ],
       "provenance": ["manual"],
       "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
     },

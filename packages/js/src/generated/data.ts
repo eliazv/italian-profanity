@@ -2,7 +2,7 @@
 import type { CompiledException, CompiledRule } from "../types.ts"
 
 export const VERSION = "0.1.0-beta.1"
-export const DATA_VERSION = "8584971ca0e1"
+export const DATA_VERSION = "8d37a97ba40d"
 
 /** Tabella di normalizzazione condivisa con il pacchetto Dart (SPECIFICHE.md §4.4). */
 export const FOLD: Readonly<Record<string, string>> = {
@@ -1256,7 +1256,7 @@ export const RULES: readonly CompiledRule[] = [
     "category": "discriminatory",
     "severity": 3,
     "confidence": "medium",
-    "terms": ["negrone", "negrona", "negroni"],
+    "terms": ["negrone", "negrona"],
     "language": "it",
   },
   {
@@ -3428,17 +3428,6 @@ export const RULES: readonly CompiledRule[] = [
     "severity": 1,
     "confidence": "medium",
     "terms": ["loffa", "loffe", "loffare", "lofare"],
-    "language": "it",
-  },
-  {
-    "id": "it.vulgar.mannaggia-la-miseria",
-    "kind": "phrase",
-    "category": "vulgar",
-    "severity": 1,
-    "confidence": "medium",
-    "phrases": [
-      ["mannaggia", "la", "miseria"],
-    ],
     "language": "it",
   },
   {

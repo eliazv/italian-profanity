@@ -112,16 +112,6 @@
       "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
     },
     {
-      "id": "it.vulgar.mannaggia-la-miseria",
-      "kind": "phrase",
-      "category": "vulgar",
-      "severity": 1,
-      "confidence": "medium",
-      "phrases": [["mannaggia", "la", "miseria"]],
-      "provenance": ["manual"],
-      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
-    },
-    {
       "id": "it.vulgar.porco-mondo",
       "kind": "phrase",
       "category": "vulgar",

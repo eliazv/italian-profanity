@@ -23,7 +23,7 @@ final result = checker.check('D10 p0rc0');
 // result.action == Action.block
 ```
 
-291 regole italiane curate, 1.035 forme dichiarate più frasi e combinazioni. Disponibili `ItalianProfanity`, `ProfanityChecker`, `CheckerOptions` e le funzioni `check`, `findMatches`, `isClean`, `createChecker`. Il pacchetto è Dart puro, senza dipendenze Flutter.
+290 regole italiane curate, 1.034 forme dichiarate più frasi e combinazioni. Disponibili `ItalianProfanity`, `ProfanityChecker`, `CheckerOptions` e le funzioni `check`, `findMatches`, `isClean`, `createChecker`. Il pacchetto è Dart puro, senza dipendenze Flutter.
 
 I numeri descrivono il dataset del repository, che verrà distribuito nel prossimo rilascio; la beta già pubblicata può contenere meno forme.
 
