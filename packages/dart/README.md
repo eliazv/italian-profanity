@@ -6,8 +6,6 @@
 
 Italian-first profanity detection for nicknames and short text, for Dart and Flutter. The npm package [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) gives the same verdicts.
 
-> Versione 0.1.0, primo rilascio senza suffisso prerelease.
-
 ```yaml
 dependencies:
   italian_profanity: 0.1.0
@@ -24,8 +22,6 @@ final result = checker.check('D10 p0rc0');
 ```
 
 290 regole italiane curate, 1.034 forme dichiarate più frasi e combinazioni. Disponibili `ItalianProfanity`, `ProfanityChecker`, `CheckerOptions` e le funzioni `check`, `findMatches`, `isClean`, `createChecker`. Il pacchetto è Dart puro, senza dipendenze Flutter.
-
-Questi dati sono inclusi nella versione 0.1.0. Il changelog descrive i progressi rispetto alla beta; la prova comparativa nelle due applicazioni del manutentore è pianificata e resta da completare.
 
 È un controllo lessicale: la copertura è limitata e alcuni omografi richiedono revisione. `isClean()` è vero solo per `Action.allow`. I contatti sono disattivati per default; se attivati, bloccano con tutti i profili predefiniti. `range` usa offset UTF-16 sul testo originale e non va registrato nei log.
 

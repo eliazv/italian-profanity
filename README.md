@@ -6,10 +6,6 @@
 
 Italian-first profanity detection for short user-generated text — nicknames, usernames, room and team names. Same rules and same verdicts in **TypeScript** and **Dart/Flutter**.
 
-> Versione 0.1.0, primo rilascio senza suffisso prerelease.
-
-Stato: prima versione senza suffisso prerelease, con rilevamento e policy in entrambi i motori. The first curated Italian core has 290 rules and 1,034 declared word/prefix/compound forms, plus phrases and blasphemy combinations.
-
 - Precision first: whole-word rules, explicit exceptions and an audit on Italian names, surnames and common words.
 - Catches common evasions: leetspeak, separators, accents, repeated letters, spaced letters and Unicode look-alikes.
 - Blasphemy-aware: divine terms are only flagged in combination with an insult (_dio_ alone is fine).
@@ -28,7 +24,7 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 
 Pacchetti: npm [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) · pub.dev [`italian_profanity`](https://pub.dev/packages/italian_profanity).
 
-**Versione 0.1.0.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 290 regole e 1.034 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti sono coperti solo parzialmente. L’inglese opzionale contiene 51 regole curate, con 110 forme e 20 varianti di frase, senza dipendenze aggiuntive.
+Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 290 regole e 1.034 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti sono coperti solo parzialmente. L’inglese opzionale contiene 51 regole curate, con 110 forme e 20 varianti di frase, senza dipendenze aggiuntive.
 
 Le attese sono condivise su 3.459 fixture. L’audit esegue il rilevatore su 127.842 input per ciascuna configurazione (`it` e `it+en`) e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
 
@@ -51,8 +47,6 @@ final result = checker.check('D10 p0rc0');
 ```
 
 **Aggiornamento dalla beta:** la 0.1.0 amplia il lessico e può cambiare gli esiti. Consultare il changelog e il [confronto di comportamento](data/releases/0.1.0/behavior-diff.md) prima dell’aggiornamento.
-
-Il consolidamento tecnico è completato. La prova comparativa nelle due applicazioni del manutentore è pianificata e resta da completare; non viene dichiarata una misura di precisione su utenti reali.
 
 Keywords: profanity, italian, parolacce, bestemmie, insulti, moderation, nickname, username, validation, flutter, dart.
 
@@ -87,4 +81,4 @@ Per contribuire, leggere [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Supporto e integrazioni
 
-Il progetto resta gratuito e MIT. Per sostenerne la manutenzione è previsto [GitHub Sponsors](https://github.com/sponsors/eliazv), disponibile dopo l'attivazione del profilo. Per integrazioni, consulenza e sviluppo software su misura: [eliazavatta.it](https://eliazavatta.it).
+Il progetto resta gratuito e MIT. Puoi sostenerne la manutenzione tramite [GitHub Sponsors](https://github.com/sponsors/eliazv). Per integrazioni, consulenza e sviluppo software su misura: [eliazavatta.it](https://eliazavatta.it).
