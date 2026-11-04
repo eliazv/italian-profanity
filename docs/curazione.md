@@ -1,6 +1,6 @@
 # Curazione delle regole
 
-La fonte normativa è [SPECIFICHE.md](../SPECIFICHE.md), §§5, 7 e 8. Il lessico italiano contiene ora 98 regole e 409 forme distinte nei campi `terms`, oltre a frasi e combinazioni. Il numero di forme non misura da solo copertura o qualità; M3 prosegue.
+La fonte normativa è [SPECIFICHE.md](../SPECIFICHE.md), §§5, 7 e 8. Il lessico italiano contiene ora 126 regole e 517 forme distinte nei campi `terms`, oltre a frasi e combinazioni. Il numero di forme non misura da solo copertura o qualità; M3 prosegue.
 
 ## Scelte del primo nucleo
 
@@ -70,3 +70,15 @@ Aggiunte **33 regole**, ampliate **15 famiglie di parole** e **2 famiglie di fra
 La prima esecuzione dell'audit ha trovato sette collisioni nominali o lessicali, tutte classificate `review` in `balanced`: Checca (cognome e ipocoristico), Fregna (cognome), Patacca (cognome), Pezzente/Pezzenti (cognomi e voci del dizionario). Sono motivate una per una in `data/audit/accepted.jsonl`, con regressioni specifiche. Nessuna produce `block` automatico in `balanced`.
 
 Prima del merge, `pnpm check` e l'audit sul corpus devono essere verdi: eventuali collisioni vanno giustificate singolarmente e non accettate in blocco. Resta necessaria una prova su nickname reali in shadow mode.
+
+## Curazione M3 — quarta iterazione (2026-11-04)
+
+Confrontate le categorie italiane con le **liste già censite** in `data/sources.json` per trovare lacune, senza copiare automaticamente i loro contenuti. Aggiunte **28 regole** e ampliate **7 famiglie**; estese di **16 forme** le combinazioni delle bestemmie. Sono state preparate **209 fixture** in `data/fixtures/coverage.jsonl`, con positivi e negativi, profili di moderazione e controesempi lessicali.
+
+- **Insulti comuni e flessioni:** `incoglionito`, `cazzaro`, `palloso`, `farabutto`, `infame`, `schifoso`, `lurido`, `rompiminchia`, `cacasotto`.
+- **Lessico sessuale esplicito:** `bagascia`, `bocchinara`, `puttano`, `ciucciamelo`, `raspone`, `sburra`.
+- **Dialetti ed eufemismi:** `loffa` e `maremma maiala` non sono bestemmie; forme con più interpretazioni hanno confidenza `medium` e richiedono `review` in balanced.
+- **Bestemmie contestuali:** nuove forme B solo in combinazione con termine divino, e frase `mannaggia a Dio` con varianti. `Dio`, `Madonna` e `mannaggia` isolati restano neutrali per queste regole.
+- **Omografi delicati:** forme come `Negro` e `Negri` possono essere **cognomi reali**: il termine discriminatorio isolato è `medium`, quindi `review` in balanced, mai `block` automatico. Termini identitari neutri come `gay` e `disabile` restano fuori dalla blacklist.
+
+**Nota di qualità:** un confronto testuale con una wordlist sovrastima i falsi negativi, perché il motore rileva già parole eluse, composti, varianti e combinazioni; non conta solo la presenza di una stringa in `terms`. Non inserire automaticamente parole innocue come `sega`, `palle`, `fava` o `finocchio` senza segnali contestuali. L'audit sui nomi e cognomi rimane bloccante, e nessuna collisione nuova è automaticamente accettata. Servono ancora prove in shadow mode su input realistici prima di definire completa M3.

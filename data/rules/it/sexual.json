@@ -60,7 +60,9 @@
         "troiaccia",
         "troiacce",
         "troietta",
-        "troiette"
+        "troiette",
+        "troioncella",
+        "troioncelle"
       ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
@@ -336,6 +338,76 @@
       "terms": ["arrapato", "arrapata", "arrapati", "arrapate", "arrapare", "arraparsi"],
       "provenance": ["manual"],
       "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.sexual.bagascia",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["bagascia", "bagasce", "bagassa", "bagasse", "bagascione"],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+    },
+    {
+      "id": "it.sexual.bocchinara",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["bocchinara", "bocchinare", "bocchinaro", "bocchinari"],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+    },
+    {
+      "id": "it.sexual.puttano",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["puttano", "puttani"],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+    },
+    {
+      "id": "it.sexual.troio",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["troio"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.sexual.ciucciamelo",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["ciucciamelo", "succhiamelo", "succhiaminchia", "succhiapalle"],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+    },
+    {
+      "id": "it.sexual.raspone",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["raspone", "rasponi"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.sexual.sburra",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["sburra", "sburrare", "sburrato", "sburrata", "sburrati", "sburrate"],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
     }
   ]
 }

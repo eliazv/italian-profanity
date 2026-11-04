@@ -92,6 +92,36 @@
       "terms": ["checca", "checche"],
       "provenance": ["manual"],
       "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.discriminatory.froscio",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["froscio", "froscia", "frosci", "frosce"],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+    },
+    {
+      "id": "it.discriminatory.negro",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["negro", "negra", "negri", "negre"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.discriminatory.mongoloide",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["mongoloide", "mongoloidi"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
     }
   ]
 }
