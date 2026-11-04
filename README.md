@@ -87,4 +87,4 @@ Per contribuire, leggere [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Supporto e integrazioni
 
-Il progetto resta gratuito e MIT. Per sostenerne la manutenzione è previsto [GitHub Sponsors](https://github.com/sponsors/eliazv), disponibile dopo l'attivazione del profilo. Per integrazioni, consulenza e sviluppo software su misura: [eliazavatta.it](https://eliazavatta.it).
+Il progetto resta gratuito e MIT. Puoi sostenerne la manutenzione tramite [GitHub Sponsors](https://github.com/sponsors/eliazv). Per integrazioni, consulenza e sviluppo software su misura: [eliazavatta.it](https://eliazavatta.it).
