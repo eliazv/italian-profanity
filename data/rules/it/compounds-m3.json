@@ -1,0 +1,229 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.insult.figliodiputtana",
+      "kind": "word",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "terms": [
+        "figliodiputtana",
+        "figliadiputtana",
+        "figlidiputtana",
+        "figliediputtana",
+        "figlioditroia",
+        "figliaditroia",
+        "figliditroia",
+        "figlieditroia",
+        "figliodimignotta",
+        "figliadimignotta",
+        "figlidimignotta",
+        "figliedimignotta"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.insult.figliodicane",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["figliodicane", "figliadicane", "figlidicane", "figliedicane"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.insult.faccia-composta",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["facciadaculo", "facciadimerda", "facciadicazzo", "facciadiminchia"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.insult.testa-composta",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["testadimerda", "testadiculo", "testadiminchia"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.insult.merda-composta",
+      "kind": "word",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "terms": [
+        "pezzodimerda",
+        "pezzidimerda",
+        "saccodimerda",
+        "stronzodimerda",
+        "stronzadimerda",
+        "coglionidimerda"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.insult.vaffanculo-grafie",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["vaffankulo", "vafankulo", "vaffanculu", "vaffankulu", "vafanculu"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.insult.strunz",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["strunz", "strunzo", "strunzi", "strunza", "strunze", "strunzata", "strunzate"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.insult.koglione",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["koglione", "koglioni", "kogliona", "koglionata", "koglionate"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.sexual.succhiami-composto",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["succhiamilcazzo", "ciucciamilcazzo", "leccamiilculo", "leccamicazzo"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.sexual.pompino-composto",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["fammiunpompino", "fammiunbocchino"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.vulgar.imprecazioni-composte",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["porcogiuda", "porcavacca", "ziocantante", "chepalle", "cheduepalle"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.vulgar.imprecazioni-cazzo",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["checazzo", "machecazzo", "cheminchia", "macheminchia"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.blasphemy.mannaggia-composto",
+      "kind": "word",
+      "category": "blasphemy",
+      "severity": 3,
+      "confidence": "high",
+      "terms": [
+        "mannaggiadio",
+        "mannaggiacristo",
+        "mannaggialamadonna",
+        "mannaggiaisanti",
+        "mannaggialpadreterno"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.blasphemy.insulti-divini-composti",
+      "kind": "word",
+      "category": "blasphemy",
+      "severity": 3,
+      "confidence": "high",
+      "terms": [
+        "diodimerda",
+        "cristodimerda",
+        "madonnadimerda",
+        "diodelcazzo",
+        "cristodelcazzo",
+        "madonnadelcazzo",
+        "gesudelcazzo"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.blasphemy.cazzodidio",
+      "kind": "word",
+      "category": "blasphemy",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["cazzodidio"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.discriminatory.zingaro-offesa-composta",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["sporcozingaro", "sporcazingara"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.discriminatory.ebreo-offesa-composta",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["ebreodimerda", "ebreadimerda", "ebreidimerda"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.discriminatory.frocio-offesa-composta",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["frociodimerda", "frociadimerda"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    },
+    {
+      "id": "it.discriminatory.terrone-offesa-composta",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["terronedimerda", "terronadimerda"],
+      "provenance": ["manual"],
+      "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
+    }
+  ]
+}
