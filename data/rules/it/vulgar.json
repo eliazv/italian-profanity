@@ -60,7 +60,7 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["culo", "culi", "culone", "culoni"],
+      "terms": ["culo", "culi", "culone", "culoni", "culona"],
       "provenance": ["manual"],
       "note": "Omografo di un cognome presente nel corpus e di una forma accentata che fold riconduce alla stessa parola. Balanced richiede revisione; non promettiamo disambiguazione contestuale."
     },
@@ -78,7 +78,11 @@
         "pisciato",
         "pisciati",
         "pisciando",
-        "piscia"
+        "piscia",
+        "pisciatina",
+        "pisciatona",
+        "pisciona",
+        "piscioni"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -180,7 +184,9 @@
         "sputtanata",
         "sputtanati",
         "sputtanate",
-        "sputtanamento"
+        "sputtanamento",
+        "sputtanarsi",
+        "sputtanando"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -274,6 +280,46 @@
       "terms": ["checcazzo", "ecchecazzo", "mavaffanculo", "staminchia", "staminchie"],
       "provenance": ["manual"],
       "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.vulgar.loffa",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["loffa", "loffe", "loffare", "lofare"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.vulgar.cazzuto",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["cazzuto", "cazzuta", "cazzuti", "cazzute", "cazzutissimo", "cazzutissima"],
+      "provenance": ["manual"],
+      "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
+    },
+    {
+      "id": "it.vulgar.scatarrare",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "high",
+      "terms": ["scatarrare", "scatarrato", "scatarrata", "scatarro"],
+      "provenance": ["manual"],
+      "note": "Forma volgare o ingiuriosa sufficientemente esplicita, su parola intera."
+    },
+    {
+      "id": "it.vulgar.maremma-maiala",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["maremma", "maiala"]],
+      "provenance": ["manual"],
+      "note": "Eufemismo regionale: review in balanced, non è una bestemmia."
     }
   ]
 }

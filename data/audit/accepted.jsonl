@@ -42,3 +42,28 @@
 {"ruleId":"it.insult.pezzente","corpus":"surname","input":"pezzenti","action":"review","reason":"Pezzenti è un cognome del corpus: forma ambigua, medium e review in balanced."}
 {"ruleId":"it.insult.pezzente","corpus":"word","input":"pezzente","action":"review","reason":"La parola del dizionario indica anche una condizione economica e non è necessariamente un'ingiuria rivolta a qualcuno; review in balanced."}
 {"ruleId":"it.insult.pezzente","corpus":"word","input":"pezzenti","action":"review","reason":"Forma comune del dizionario e possibile insulto secondo il contesto: medium/review in balanced."}
+{"ruleId":"it.insult.cazzaro","corpus":"surname","input":"cazzaro","action":"review","reason":"Cognome omografo di insulto colloquiale: medium/review, non blocco."}
+{"ruleId":"it.insult.cazzaro","corpus":"surname","input":"cazzaro'","action":"review","reason":"Variante di cognome con apostrofo: review, non è possibile inferire offesa."}
+{"ruleId":"it.discriminatory.negro","corpus":"surname","input":"dal negro","action":"review","reason":"Cognome composto: significato anagrafico e non insulto, review."}
+{"ruleId":"it.discriminatory.negro","corpus":"surname","input":"de negri","action":"review","reason":"Cognome composto: significato anagrafico e non insulto, review."}
+{"ruleId":"it.discriminatory.negro","corpus":"surname","input":"del negro","action":"review","reason":"Cognome composto: significato anagrafico e non insulto, review."}
+{"ruleId":"it.discriminatory.negro","corpus":"surname","input":"della negra","action":"review","reason":"Cognome composto: significato anagrafico e non insulto, review."}
+{"ruleId":"it.discriminatory.negro","corpus":"surname","input":"negri","action":"review","reason":"Cognome comune: omografia del termine sensibile, review."}
+{"ruleId":"it.discriminatory.negro","corpus":"surname","input":"negro","action":"review","reason":"Cognome comune: omografia del termine sensibile, review."}
+{"ruleId":"it.sexual.raspone","corpus":"surname","input":"raspone","action":"review","reason":"Cognome: omografo di espressione volgare, review."}
+{"ruleId":"it.sexual.raspone","corpus":"surname","input":"rasponi","action":"review","reason":"Cognome: omografo di espressione volgare, review."}
+{"ruleId":"it.insult.cesso","corpus":"word","input":"cessa","action":"review","reason":"Forma del verbo cessare: collisione linguistica, solo review."}
+{"ruleId":"it.insult.cesso","corpus":"word","input":"cessi","action":"review","reason":"Forma del verbo cessare: collisione linguistica, solo review."}
+{"ruleId":"it.insult.cesso","corpus":"word","input":"cessò","action":"review","reason":"Il fold elimina l'accento trasformando cessò in cesso: solo review."}
+{"ruleId":"it.insult.infame","corpus":"word","input":"infame","action":"review","reason":"Aggettivo comune potenzialmente offensivo secondo il contesto: review."}
+{"ruleId":"it.insult.infame","corpus":"word","input":"infami","action":"review","reason":"Aggettivo comune potenzialmente offensivo secondo il contesto: review."}
+{"ruleId":"it.insult.lecchino","corpus":"word","input":"lecchino","action":"review","reason":"Voce comune con uso insultante contestuale: review."}
+{"ruleId":"it.discriminatory.negro","corpus":"word","input":"negra","action":"review","reason":"Termine storico e polisemico: review, non blocco automatico."}
+{"ruleId":"it.discriminatory.negro","corpus":"word","input":"negre","action":"review","reason":"Termine storico e polisemico: review, non blocco automatico."}
+{"ruleId":"it.discriminatory.negro","corpus":"word","input":"negrì","action":"review","reason":"Omografia indotta dalla rimozione dell'accento: review."}
+{"ruleId":"it.discriminatory.negro","corpus":"word","input":"negro","action":"review","reason":"Termine storico e cognome, intento non inferibile automaticamente: review."}
+{"ruleId":"it.insult.schifoso","corpus":"word","input":"schifosa","action":"review","reason":"Aggettivo comune per oggetti e situazioni, non necessariamente offesa: review."}
+{"ruleId":"it.insult.schifoso","corpus":"word","input":"schifose","action":"review","reason":"Aggettivo comune per oggetti e situazioni, non necessariamente offesa: review."}
+{"ruleId":"it.insult.schifoso","corpus":"word","input":"schifosi","action":"review","reason":"Aggettivo comune per oggetti e situazioni, non necessariamente offesa: review."}
+{"ruleId":"it.insult.schifoso","corpus":"word","input":"schifoso","action":"review","reason":"Aggettivo comune per oggetti e situazioni, non necessariamente offesa: review."}
+{"ruleId":"it.discriminatory.negro","corpus":"pair","input":"stena del negro","action":"review","reason":"Coppia nome-cognome sintetica: il cognome omografo richiede review."}

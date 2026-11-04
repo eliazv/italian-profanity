@@ -29,12 +29,46 @@
           "assassino",
           "assassina",
           "assassini",
-          "assassine"
+          "assassine",
+          "troia",
+          "troie",
+          "coglione",
+          "coglioni",
+          "vacca",
+          "vacche",
+          "maledetto",
+          "maledetta",
+          "maledetti",
+          "maledette",
+          "capra",
+          "verme",
+          "schifoso",
+          "schifosa",
+          "puttano",
+          "puttani"
         ],
         "prefixes": ["porc", "can", "ladr", "merd", "serpent"]
       },
       "provenance": ["manual"],
       "note": "Concetto divino esatto e insulto adiacente o composto ancorato. I prefissi di B ammettono flessioni e suffissi enfatici solo accanto al concetto divino; non sono regole di insulto isolate. Candio e Canidio hanno eccezioni specifiche emerse dall’audit."
+    },
+    {
+      "id": "it.blasphemy.mannaggia-al-divino",
+      "kind": "phrase",
+      "category": "blasphemy",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["mannaggia", "dio"],
+        ["mannaggia", "a", "dio"],
+        ["mannaggia", "cristo"],
+        ["mannaggia", "a", "cristo"],
+        ["mannaggia", "a", "gesu"],
+        ["mannaggia", "la", "madonna"],
+        ["mannaggia", "alla", "madonna"]
+      ],
+      "provenance": ["manual"],
+      "note": "Combinazione contestuale offensiva, termini isolati innocui non bloccati da questa regola."
     }
   ]
 }

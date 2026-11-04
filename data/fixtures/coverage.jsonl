@@ -1,0 +1,225 @@
+{"id":"coverage-001","input":"incoglionito","profile":"balanced","action":"block","rules":["it.insult.incoglionito"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-002","input":"incoglionita","profile":"balanced","action":"block","rules":["it.insult.incoglionito"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-003","input":"incoglioniti","profile":"balanced","action":"block","rules":["it.insult.incoglionito"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-004","input":"incoglionite","profile":"balanced","action":"block","rules":["it.insult.incoglionito"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-005","input":"incoglionire","profile":"balanced","action":"block","rules":["it.insult.incoglionito"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-006","input":"incoglionirsi","profile":"balanced","action":"block","rules":["it.insult.incoglionito"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-007","input":"superincoglionitoextra","profile":"balanced","mustNotMatch":["it.insult.incoglionito"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-008","input":"cazzaro","profile":"balanced","action":"review","rules":["it.insult.cazzaro"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-009","input":"cazzara","profile":"balanced","action":"review","rules":["it.insult.cazzaro"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-010","input":"cazzari","profile":"balanced","action":"review","rules":["it.insult.cazzaro"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-011","input":"cazzare","profile":"balanced","action":"review","rules":["it.insult.cazzaro"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-012","input":"supercazzaroextra","profile":"balanced","mustNotMatch":["it.insult.cazzaro"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-013","input":"cazzaro","profile":"strict","action":"block","rules":["it.insult.cazzaro"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-014","input":"cesso","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-015","input":"cessa","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-016","input":"cessi","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-017","input":"cesse","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-018","input":"supercessoextra","profile":"balanced","mustNotMatch":["it.insult.cesso"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-019","input":"cesso","profile":"strict","action":"block","rules":["it.insult.cesso"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-020","input":"palloso","profile":"balanced","action":"review","rules":["it.insult.palloso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-021","input":"pallosa","profile":"balanced","action":"review","rules":["it.insult.palloso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-022","input":"pallosi","profile":"balanced","action":"review","rules":["it.insult.palloso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-023","input":"pallose","profile":"balanced","action":"review","rules":["it.insult.palloso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-024","input":"superpallosoextra","profile":"balanced","mustNotMatch":["it.insult.palloso"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-025","input":"palloso","profile":"strict","action":"block","rules":["it.insult.palloso"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-026","input":"lecchino","profile":"balanced","action":"review","rules":["it.insult.lecchino"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-027","input":"lecchina","profile":"balanced","action":"review","rules":["it.insult.lecchino"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-028","input":"lecchini","profile":"balanced","action":"review","rules":["it.insult.lecchino"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-029","input":"lecchine","profile":"balanced","action":"review","rules":["it.insult.lecchino"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-030","input":"superlecchinoextra","profile":"balanced","mustNotMatch":["it.insult.lecchino"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-031","input":"lecchino","profile":"strict","action":"block","rules":["it.insult.lecchino"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-032","input":"ruffiano","profile":"balanced","action":"review","rules":["it.insult.ruffiano"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-033","input":"ruffiana","profile":"balanced","action":"review","rules":["it.insult.ruffiano"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-034","input":"ruffiani","profile":"balanced","action":"review","rules":["it.insult.ruffiano"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-035","input":"ruffiane","profile":"balanced","action":"review","rules":["it.insult.ruffiano"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-036","input":"superruffianoextra","profile":"balanced","mustNotMatch":["it.insult.ruffiano"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-037","input":"ruffiano","profile":"strict","action":"block","rules":["it.insult.ruffiano"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-038","input":"infame","profile":"balanced","action":"review","rules":["it.insult.infame"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-039","input":"infami","profile":"balanced","action":"review","rules":["it.insult.infame"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-040","input":"superinfameextra","profile":"balanced","mustNotMatch":["it.insult.infame"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-041","input":"infame","profile":"strict","action":"block","rules":["it.insult.infame"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-042","input":"farabutto","profile":"balanced","action":"review","rules":["it.insult.farabutto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-043","input":"farabutta","profile":"balanced","action":"review","rules":["it.insult.farabutto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-044","input":"farabutti","profile":"balanced","action":"review","rules":["it.insult.farabutto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-045","input":"farabutte","profile":"balanced","action":"review","rules":["it.insult.farabutto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-046","input":"superfarabuttoextra","profile":"balanced","mustNotMatch":["it.insult.farabutto"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-047","input":"farabutto","profile":"strict","action":"block","rules":["it.insult.farabutto"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-048","input":"schifoso","profile":"balanced","action":"review","rules":["it.insult.schifoso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-049","input":"schifosa","profile":"balanced","action":"review","rules":["it.insult.schifoso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-050","input":"schifosi","profile":"balanced","action":"review","rules":["it.insult.schifoso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-051","input":"schifose","profile":"balanced","action":"review","rules":["it.insult.schifoso"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-052","input":"superschifosoextra","profile":"balanced","mustNotMatch":["it.insult.schifoso"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-053","input":"schifoso","profile":"strict","action":"block","rules":["it.insult.schifoso"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-054","input":"lurido","profile":"balanced","action":"review","rules":["it.insult.lurido"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-055","input":"lurida","profile":"balanced","action":"review","rules":["it.insult.lurido"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-056","input":"luridi","profile":"balanced","action":"review","rules":["it.insult.lurido"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-057","input":"luride","profile":"balanced","action":"review","rules":["it.insult.lurido"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-058","input":"superluridoextra","profile":"balanced","mustNotMatch":["it.insult.lurido"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-059","input":"lurido","profile":"strict","action":"block","rules":["it.insult.lurido"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-060","input":"zozzone","profile":"balanced","action":"review","rules":["it.insult.zozzone"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-061","input":"zozzona","profile":"balanced","action":"review","rules":["it.insult.zozzone"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-062","input":"zozzoni","profile":"balanced","action":"review","rules":["it.insult.zozzone"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-063","input":"superzozzoneextra","profile":"balanced","mustNotMatch":["it.insult.zozzone"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-064","input":"zozzone","profile":"strict","action":"block","rules":["it.insult.zozzone"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-065","input":"rompiminchia","profile":"balanced","action":"block","rules":["it.insult.rompiminchia"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-066","input":"rompiminchie","profile":"balanced","action":"block","rules":["it.insult.rompiminchia"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-067","input":"superrompiminchiaextra","profile":"balanced","mustNotMatch":["it.insult.rompiminchia"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-068","input":"bagascia","profile":"balanced","action":"block","rules":["it.sexual.bagascia"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-069","input":"bagasce","profile":"balanced","action":"block","rules":["it.sexual.bagascia"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-070","input":"bagassa","profile":"balanced","action":"block","rules":["it.sexual.bagascia"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-071","input":"bagasse","profile":"balanced","action":"block","rules":["it.sexual.bagascia"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-072","input":"bagascione","profile":"balanced","action":"block","rules":["it.sexual.bagascia"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-073","input":"superbagasciaextra","profile":"balanced","mustNotMatch":["it.sexual.bagascia"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-074","input":"bocchinara","profile":"balanced","action":"block","rules":["it.sexual.bocchinara"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-075","input":"bocchinare","profile":"balanced","action":"block","rules":["it.sexual.bocchinara"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-076","input":"bocchinaro","profile":"balanced","action":"block","rules":["it.sexual.bocchinara"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-077","input":"bocchinari","profile":"balanced","action":"block","rules":["it.sexual.bocchinara"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-078","input":"superbocchinaraextra","profile":"balanced","mustNotMatch":["it.sexual.bocchinara"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-079","input":"puttano","profile":"balanced","action":"block","rules":["it.sexual.puttano"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-080","input":"puttani","profile":"balanced","action":"block","rules":["it.sexual.puttano"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-081","input":"superputtanoextra","profile":"balanced","mustNotMatch":["it.sexual.puttano"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-082","input":"troio","profile":"balanced","action":"review","rules":["it.sexual.troio"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-083","input":"supertroioextra","profile":"balanced","mustNotMatch":["it.sexual.troio"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-084","input":"troio","profile":"strict","action":"block","rules":["it.sexual.troio"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-085","input":"ciucciamelo","profile":"balanced","action":"block","rules":["it.sexual.ciucciamelo"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-086","input":"succhiamelo","profile":"balanced","action":"block","rules":["it.sexual.ciucciamelo"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-087","input":"succhiaminchia","profile":"balanced","action":"block","rules":["it.sexual.ciucciamelo"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-088","input":"succhiapalle","profile":"balanced","action":"block","rules":["it.sexual.ciucciamelo"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-089","input":"superciucciameloextra","profile":"balanced","mustNotMatch":["it.sexual.ciucciamelo"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-090","input":"raspone","profile":"balanced","action":"review","rules":["it.sexual.raspone"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-091","input":"rasponi","profile":"balanced","action":"review","rules":["it.sexual.raspone"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-092","input":"superrasponeextra","profile":"balanced","mustNotMatch":["it.sexual.raspone"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-093","input":"raspone","profile":"strict","action":"block","rules":["it.sexual.raspone"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-094","input":"sburra","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-095","input":"sburrare","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-096","input":"sburrato","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-097","input":"sburrata","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-098","input":"sburrati","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-099","input":"sburrate","profile":"balanced","action":"block","rules":["it.sexual.sburra"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-100","input":"supersburraextra","profile":"balanced","mustNotMatch":["it.sexual.sburra"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-101","input":"loffa","profile":"balanced","action":"review","rules":["it.vulgar.loffa"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-102","input":"loffe","profile":"balanced","action":"review","rules":["it.vulgar.loffa"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-103","input":"loffare","profile":"balanced","action":"review","rules":["it.vulgar.loffa"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-104","input":"lofare","profile":"balanced","action":"review","rules":["it.vulgar.loffa"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-105","input":"superloffaextra","profile":"balanced","mustNotMatch":["it.vulgar.loffa"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-106","input":"loffa","profile":"strict","action":"block","rules":["it.vulgar.loffa"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-107","input":"cazzuto","profile":"balanced","action":"review","rules":["it.vulgar.cazzuto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-108","input":"cazzuta","profile":"balanced","action":"review","rules":["it.vulgar.cazzuto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-109","input":"cazzuti","profile":"balanced","action":"review","rules":["it.vulgar.cazzuto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-110","input":"cazzute","profile":"balanced","action":"review","rules":["it.vulgar.cazzuto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-111","input":"cazzutissimo","profile":"balanced","action":"review","rules":["it.vulgar.cazzuto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-112","input":"cazzutissima","profile":"balanced","action":"review","rules":["it.vulgar.cazzuto"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-113","input":"supercazzutoextra","profile":"balanced","mustNotMatch":["it.vulgar.cazzuto"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-114","input":"cazzuto","profile":"strict","action":"block","rules":["it.vulgar.cazzuto"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-115","input":"scatarrare","profile":"balanced","action":"allow","rules":["it.vulgar.scatarrare"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-116","input":"scatarrato","profile":"balanced","action":"allow","rules":["it.vulgar.scatarrare"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-117","input":"scatarrata","profile":"balanced","action":"allow","rules":["it.vulgar.scatarrare"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-118","input":"scatarro","profile":"balanced","action":"allow","rules":["it.vulgar.scatarrare"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-119","input":"superscatarrareextra","profile":"balanced","mustNotMatch":["it.vulgar.scatarrare"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-120","input":"froscio","profile":"balanced","action":"block","rules":["it.discriminatory.froscio"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-121","input":"froscia","profile":"balanced","action":"block","rules":["it.discriminatory.froscio"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-122","input":"frosci","profile":"balanced","action":"block","rules":["it.discriminatory.froscio"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-123","input":"frosce","profile":"balanced","action":"block","rules":["it.discriminatory.froscio"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-124","input":"superfroscioextra","profile":"balanced","mustNotMatch":["it.discriminatory.froscio"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-125","input":"negro","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-126","input":"negra","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-127","input":"negri","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-128","input":"negre","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-129","input":"supernegroextra","profile":"balanced","mustNotMatch":["it.discriminatory.negro"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-130","input":"negro","profile":"strict","action":"block","rules":["it.discriminatory.negro"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-131","input":"mongoloide","profile":"balanced","action":"review","rules":["it.discriminatory.mongoloide"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-132","input":"mongoloidi","profile":"balanced","action":"review","rules":["it.discriminatory.mongoloide"],"note":"Curazione editoriale M3: termine isolato, no match per sottostringa."}
+{"id":"coverage-133","input":"supermongoloideextra","profile":"balanced","mustNotMatch":["it.discriminatory.mongoloide"],"note":"Confine: la radice non basta a segnalare una parola più lunga"}
+{"id":"coverage-134","input":"mongoloide","profile":"strict","action":"block","rules":["it.discriminatory.mongoloide"],"note":"Strict può bloccare anche una forma ambigua"}
+{"id":"coverage-135","input":"mannaggia dio","profile":"balanced","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-136","input":"mannaggia a dio","profile":"balanced","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-137","input":"mannaggia cristo","profile":"balanced","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-138","input":"mannaggia a cristo","profile":"balanced","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-139","input":"mannaggia a gesu","profile":"balanced","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-140","input":"mannaggia la madonna","profile":"balanced","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-141","input":"mannaggia alla madonna","profile":"balanced","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-142","input":"supermannaggia dio","profile":"balanced","mustNotMatch":["it.blasphemy.mannaggia-al-divino"],"note":"Primo token non corrispondente"}
+{"id":"coverage-143","input":"maremma maiala","profile":"balanced","action":"review","rules":["it.vulgar.maremma-maiala"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-144","input":"supermaremma maiala","profile":"balanced","mustNotMatch":["it.vulgar.maremma-maiala"],"note":"Primo token non corrispondente"}
+{"id":"coverage-145","input":"faccia di cazzo","profile":"balanced","action":"block","rules":["it.insult.faccia-di-cazzo"],"note":"Espressione contestuale: solo token interi adiacenti"}
+{"id":"coverage-146","input":"superfaccia di cazzo","profile":"balanced","mustNotMatch":["it.insult.faccia-di-cazzo"],"note":"Primo token non corrispondente"}
+{"id":"coverage-147","input":"cacasotto","profile":"balanced","rules":["it.insult.cagasotto"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-148","input":"cacasotti","profile":"balanced","rules":["it.insult.cagasotto"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-149","input":"supercacasottoextra","profile":"balanced","mustNotMatch":["it.insult.cagasotto"],"note":"Controesempio: radice in parola più lunga"}
+{"id":"coverage-150","input":"cretinaccio","profile":"balanced","rules":["it.insult.cretino"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-151","input":"cretinaccia","profile":"balanced","rules":["it.insult.cretino"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-152","input":"cretinacci","profile":"balanced","rules":["it.insult.cretino"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-153","input":"cretinacce","profile":"balanced","rules":["it.insult.cretino"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-154","input":"supercretinaccioextra","profile":"balanced","mustNotMatch":["it.insult.cretino"],"note":"Controesempio: radice in parola più lunga"}
+{"id":"coverage-155","input":"troioncella","profile":"balanced","rules":["it.sexual.troia"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-156","input":"troioncelle","profile":"balanced","rules":["it.sexual.troia"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-157","input":"supertroioncellaextra","profile":"balanced","mustNotMatch":["it.sexual.troia"],"note":"Controesempio: radice in parola più lunga"}
+{"id":"coverage-158","input":"superputtanonaextra","profile":"balanced","mustNotMatch":["it.sexual.puttana"],"note":"Controesempio: radice in parola più lunga"}
+{"id":"coverage-159","input":"culona","profile":"balanced","rules":["it.vulgar.culo"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-160","input":"superculonaextra","profile":"balanced","mustNotMatch":["it.vulgar.culo"],"note":"Controesempio: radice in parola più lunga"}
+{"id":"coverage-161","input":"pisciatina","profile":"balanced","rules":["it.vulgar.piscio"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-162","input":"pisciatona","profile":"balanced","rules":["it.vulgar.piscio"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-163","input":"pisciona","profile":"balanced","rules":["it.vulgar.piscio"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-164","input":"piscioni","profile":"balanced","rules":["it.vulgar.piscio"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-165","input":"superpisciatinaextra","profile":"balanced","mustNotMatch":["it.vulgar.piscio"],"note":"Controesempio: radice in parola più lunga"}
+{"id":"coverage-166","input":"sputtanarsi","profile":"balanced","rules":["it.vulgar.sputtanare"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-167","input":"sputtanando","profile":"balanced","rules":["it.vulgar.sputtanare"],"note":"Variante aggiunta a famiglia già esistente"}
+{"id":"coverage-168","input":"supersputtanarsiextra","profile":"balanced","mustNotMatch":["it.vulgar.sputtanare"],"note":"Controesempio: radice in parola più lunga"}
+{"id":"coverage-169","input":"dio troia","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-170","input":"dio troie","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-171","input":"dio coglione","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-172","input":"dio coglioni","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-173","input":"dio vacca","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-174","input":"dio vacche","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-175","input":"dio maledetto","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-176","input":"dio maledetta","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-177","input":"dio maledetti","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-178","input":"dio maledette","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-179","input":"dio capra","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-180","input":"dio verme","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-181","input":"dio schifoso","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-182","input":"dio schifosa","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-183","input":"dio puttano","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-184","input":"dio puttani","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Espansione delle combinazioni: l'insulto da solo non genera bestemmia"}
+{"id":"coverage-185","input":"mannaggia a te","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-186","input":"mannaggia la pioggia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-187","input":"mannaggia la miseria","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-188","input":"maremma toscana","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-189","input":"Dio santo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-190","input":"Madonna di Campiglio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-191","input":"Negroponte","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-192","input":"Negroni","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-193","input":"negozio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-194","input":"Cazzuola","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-195","input":"scazzottata","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-196","input":"cessione","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-197","input":"pallone","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-198","input":"schifosetto","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-199","input":"infamiglia","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-200","input":"cagnolino","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-201","input":"cane","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-202","input":"finocchio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-203","input":"gay","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-204","input":"disabile","profile":"balanced","action":"allow","expectedMatches":[],"note":"Controesempio o parola innocua: evitare il falso positivo"}
+{"id":"coverage-205","input":"Negri","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome italiano comune: review e non block in balanced"}
+{"id":"coverage-206","input":"Negro","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome italiano comune: review e non block in balanced"}
+{"id":"coverage-207","input":"schifoso","profile":"lenient","action":"allow","rules":["it.insult.schifoso"],"note":"Profilo lenient più permissivo per insulti non gravi"}
+{"id":"coverage-208","input":"mannaggia a Dio","profile":"strict","action":"block","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Bestemmia contestuale anche in strict"}
+{"id":"coverage-209","input":"Di0 maledett0","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"Elusione leetspeak di una combinazione curata"}
+{"id":"coverage-210","input":"Dal Negro","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-211","input":"De Negri","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-212","input":"Cazzaro","profile":"balanced","action":"review","rules":["it.insult.cazzaro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-213","input":"Raspone","profile":"balanced","action":"review","rules":["it.sexual.raspone"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-214","input":"Rasponi","profile":"balanced","action":"review","rules":["it.sexual.raspone"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-215","input":"Cessa","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-216","input":"Cessi","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-217","input":"Cessò","profile":"balanced","action":"review","rules":["it.insult.cesso"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-218","input":"Schifosa","profile":"balanced","action":"review","rules":["it.insult.schifoso"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-219","input":"Infame","profile":"balanced","action":"review","rules":["it.insult.infame"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-220","input":"Lecchino","profile":"balanced","action":"review","rules":["it.insult.lecchino"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-221","input":"Negra","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-222","input":"Negro","profile":"balanced","action":"review","rules":["it.discriminatory.negro"],"note":"Cognome o voce comune omografa: balanced richiede review"}
+{"id":"coverage-223","input":"Negroni","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: il termine innocuo deve passare"}
+{"id":"coverage-224","input":"Cessione","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: il termine innocuo deve passare"}
+{"id":"coverage-225","input":"Scazzottata","profile":"balanced","action":"allow","expectedMatches":[],"note":"Negativo vicino: il termine innocuo deve passare"}
