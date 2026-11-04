@@ -1,0 +1,125 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.discriminatory.fracicone",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["fracicone", "fraciconi", "fracicona"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.culattina",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["culattina", "culattine"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.busone",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["busone", "busoni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.bucaiolo",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["bucaiolo", "bucaiola", "bucaioli", "bucaiole"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.polentone",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["polentone", "polentona", "polentoni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.zingaraccio",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["zingaraccio", "zingaraccia", "zingaracci", "zingaracce"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.giudeaccio",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["giudeaccio", "giudeaccia", "giudeacci", "giudeacce"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.negrone",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["negrone", "negrona"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.negretto",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["negretto", "negretta", "negretti", "negrette"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.terronazzo",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["terronazzo", "terronazza", "terronazzi", "terronazze"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.finocchiaccio",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["finocchiaccio", "finocchiaccia", "finocchiacci"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.frociarola",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["frociarola", "frociarolo", "frociara", "frociaro", "frociaroli", "frociarole"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    }
+  ]
+}

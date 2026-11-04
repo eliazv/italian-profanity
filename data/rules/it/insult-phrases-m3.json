@@ -1,0 +1,225 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.insult.mortacci-tua",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "phrases": [
+        ["mortacci", "tua"],
+        ["mortacci", "tuoi"],
+        ["li", "mortacci", "tua"],
+        ["li", "mortacci", "tuoi"],
+        ["li", "mortacci", "vostra"],
+        ["li", "mortacci", "vostri"],
+        ["mortacci", "vostra"],
+        ["tacci", "tua"],
+        ["tacci", "vostri"],
+        ["mannaggia", "li", "mortacci", "tua"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.figlio-di-una-puttana",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["figlio", "di", "una", "puttana"],
+        ["figlia", "di", "una", "puttana"],
+        ["figli", "di", "una", "puttana"],
+        ["figlie", "di", "una", "puttana"],
+        ["figlio", "di", "una", "troia"],
+        ["figlia", "di", "una", "troia"],
+        ["figlio", "di", "una", "mignotta"],
+        ["figlia", "di", "una", "mignotta"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.testa-di-merda",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["testa", "di", "merda"], ["teste", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.testa-di-culo",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["testa", "di", "culo"], ["teste", "di", "culo"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.sacco-di-merda",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["sacco", "di", "merda"], ["un", "sacco", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.merda-umana",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["merda", "umana"], ["sei", "una", "merda", "umana"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.brutto-bastardo",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        ["brutto", "bastardo"],
+        ["brutta", "bastarda"],
+        ["brutti", "bastardi"],
+        ["brutte", "bastarde"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.sporco-bastardo",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["sporco", "bastardo"],
+        ["sporca", "bastarda"],
+        ["sporchi", "bastardi"],
+        ["sporche", "bastarde"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.fatti-fottere",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        ["fatti", "fottere"],
+        ["vai", "a", "farti", "fottere"],
+        ["andate", "a", "farvi", "fottere"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.fatti-i-cazzi-tuoi",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["fatti", "i", "cazzi", "tuoi"], ["fatevi", "i", "cazzi", "vostri"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.non-rompere-i-coglioni",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        ["non", "rompere", "i", "coglioni"],
+        ["non", "rompere", "il", "cazzo"],
+        ["non", "rompere", "le", "palle"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.rotto-i-coglioni",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        ["mi", "hai", "rotto", "i", "coglioni"],
+        ["mi", "hai", "rotto", "il", "cazzo"],
+        ["mi", "avete", "rotto", "i", "coglioni"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.stronzo-di-merda",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["stronzo", "di", "merda"],
+        ["stronza", "di", "merda"],
+        ["stronzi", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.coglione-di-merda",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["coglione", "di", "merda"],
+        ["cogliona", "di", "merda"],
+        ["coglioni", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.deficiente-di-merda",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["deficiente", "di", "merda"], ["deficienti", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.testa-di-rapa",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["testa", "di", "rapa"], ["teste", "di", "rapa"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    },
+    {
+      "id": "it.insult.brutto-coglione",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["brutto", "coglione"], ["brutta", "cogliona"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale rivolta a persona o imprecazione forte; evitare il rilevamento delle singole parole neutre."
+    }
+  ]
+}

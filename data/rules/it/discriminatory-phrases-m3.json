@@ -1,0 +1,182 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.discriminatory.zingara-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["zingara", "di", "merda"],
+        ["zingari", "di", "merda"],
+        ["zingare", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.ebreo-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["ebreo", "di", "merda"],
+        ["ebrea", "di", "merda"],
+        ["ebrei", "di", "merda"],
+        ["ebree", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.musulmano-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["musulmano", "di", "merda"],
+        ["musulmana", "di", "merda"],
+        ["musulmani", "di", "merda"],
+        ["musulmane", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.gay-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["gay", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.lesbica-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["lesbica", "di", "merda"], ["lesbiche", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.frocio-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["frocio", "di", "merda"], ["frocia", "di", "merda"], ["froci", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.terrone-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["terrone", "di", "merda"],
+        ["terrona", "di", "merda"],
+        ["terroni", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.handicappato-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["handicappato", "di", "merda"],
+        ["handicappata", "di", "merda"],
+        ["handicappati", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.sei-un-handicappato",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "phrases": [["sei", "un", "handicappato"], ["sei", "una", "handicappata"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.sei-ritardato",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "phrases": [
+        ["sei", "ritardato"],
+        ["sei", "ritardata"],
+        ["sei", "un", "ritardato"],
+        ["sei", "una", "ritardata"]
+      ],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.sei-un-finocchio",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "phrases": [["sei", "un", "finocchio"], ["finocchio", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.sei-una-balena",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 2,
+      "confidence": "medium",
+      "phrases": [["sei", "una", "balena"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.sporco-immigrato",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["sporco", "immigrato"], ["sporca", "immigrata"], ["sporchi", "immigrati"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.sporco-zingaro",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["sporco", "zingaro"], ["sporca", "zingara"], ["sporchi", "zingari"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.negra-di-merda",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["negra", "di", "merda"], ["negri", "di", "merda"], ["negre", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    }
+  ]
+}

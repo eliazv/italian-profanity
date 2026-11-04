@@ -1,0 +1,335 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.insult.fesso",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["fesso", "fessa", "fessi", "fesse"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.gonzo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["gonzo", "gonza", "gonzi", "gonze"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.citrullo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["citrullo", "citrulla", "citrulli", "citrulle"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.rincitrullito",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": [
+        "rincitrullito",
+        "rincitrullita",
+        "rincitrulliti",
+        "rincitrullite",
+        "rincitrullire"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.babbione",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["babbione", "babbiona", "babbioni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.cialtrone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["cialtrone", "cialtrona", "cialtroni", "cialtronata", "cialtronate"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.buffone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["buffone", "buffona", "buffoni", "buffonata", "buffonate"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.pagliaccio",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": [
+        "pagliaccio",
+        "pagliaccia",
+        "pagliacci",
+        "pagliacce",
+        "pagliacciata",
+        "pagliacciate"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.pagliaccione",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["pagliaccione", "pagliacciona", "pagliaccioni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.cafone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["cafone", "cafona", "cafoni", "cafonata", "cafonate"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.burino",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["burino", "burina", "burini", "burine", "burinata", "burinate"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.buzzurro",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["buzzurro", "buzzurra", "buzzurri", "buzzurre"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.moccioso",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["moccioso", "mocciosa", "mocciosi", "mocciose"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.rimbambito",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["rimbambito", "rimbambita", "rimbambiti", "rimbambite", "rimbambire"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.bamboccio",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["bamboccio", "bamboccia", "bambocci", "bambocce"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.vigliacco",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["vigliacco", "vigliacca", "vigliacchi", "vigliacche", "vigliaccata", "vigliaccate"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.miserabile",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["miserabile", "miserabili"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.straccione",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["straccione", "stracciona", "straccioni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.maledetto",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["maledetto", "maledetta", "maledetti", "maledette"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.sborone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["sborone", "sborona", "sboroni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.bimbominkia",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["bimbominkia", "bimbominkie", "bimbominchia", "bimbominchie"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.baciaculo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["baciaculo", "baciaculi"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.scassamaroni",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["scassamaroni", "scassapalle"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.rompimaroni",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["rompimaroni", "rompimarone"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.suca",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["suca", "sucate", "sucare", "sucami", "sucamela", "sucamelo"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.vafanculo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["vafanculo", "vaffancu", "vafancu"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.sbruffone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["sbruffone", "sbruffona", "sbruffoni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.cagone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["cagone", "cagona", "cagoni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.disgraziato",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": [
+        "disgraziato",
+        "disgraziata",
+        "disgraziati",
+        "disgraziate",
+        "disgraziataccio",
+        "disgraziataccia"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.ciccione",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["ciccione", "cicciona", "ciccioni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.femminuccia",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["femminuccia", "femminucce"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    }
+  ]
+}

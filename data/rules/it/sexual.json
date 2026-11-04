@@ -17,7 +17,10 @@
         "cazzaccio",
         "cazzacci",
         "cazzetto",
-        "cazzetti"
+        "cazzetti",
+        "cazzona",
+        "cazzonata",
+        "cazzonate"
       ],
       "provenance": ["manual"],
       "note": "Forme elencate e non prefisso: cazzotto, cazzuola e scazzottata devono passare."
@@ -91,7 +94,13 @@
         "sborrato",
         "sborrati",
         "sborrone",
-        "sborroni"
+        "sborroni",
+        "sborro",
+        "sborri",
+        "sborrano",
+        "sborratona",
+        "sborratina",
+        "sborratine"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -132,7 +141,17 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["figa", "fighe"],
+      "terms": [
+        "figa",
+        "fighe",
+        "figona",
+        "figone",
+        "figoni",
+        "fighetta",
+        "fighette",
+        "fighetto",
+        "fighetti"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -142,7 +161,16 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["fica", "fiche"],
+      "terms": [
+        "fica",
+        "fiche",
+        "ficona",
+        "ficone",
+        "fichette",
+        "fichetta",
+        "fichetti",
+        "fichetto"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -164,7 +192,10 @@
         "fottutissimo",
         "fottutissima",
         "fottutissimi",
-        "fottutissime"
+        "fottutissime",
+        "fottitene",
+        "fottiamocene",
+        "fottendosene"
       ],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
@@ -175,7 +206,16 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["chiavare", "chiavata", "chiavate", "chiavato", "chiavati"],
+      "terms": [
+        "chiavare",
+        "chiavata",
+        "chiavate",
+        "chiavato",
+        "chiavati",
+        "chiavatona",
+        "chiavatone",
+        "chiavando"
+      ],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },
@@ -205,7 +245,14 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": ["baldracca", "baldracche", "baldraccone"],
+      "terms": [
+        "baldracca",
+        "baldracche",
+        "baldraccone",
+        "baldraccaccia",
+        "baldraccacce",
+        "baldraccona"
+      ],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; nessun prefisso generalizzato."
     },
@@ -255,7 +302,17 @@
       "category": "sexual",
       "severity": 2,
       "confidence": "high",
-      "terms": ["inculare", "incularsi", "inculato", "inculata", "inculati", "inculate"],
+      "terms": [
+        "inculare",
+        "incularsi",
+        "inculato",
+        "inculata",
+        "inculati",
+        "inculate",
+        "inculando",
+        "inculandosi",
+        "inculamento"
+      ],
       "provenance": ["manual"],
       "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
     },

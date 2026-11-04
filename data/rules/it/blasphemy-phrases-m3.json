@@ -1,0 +1,39 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.blasphemy.divino-di-insulto",
+      "kind": "phrase",
+      "category": "blasphemy",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["dio", "del", "cazzo"],
+        ["cristo", "del", "cazzo"],
+        ["madonna", "del", "cazzo"],
+        ["gesu", "del", "cazzo"],
+        ["dio", "di", "merda"],
+        ["cristo", "di", "merda"],
+        ["madonna", "di", "merda"],
+        ["gesu", "di", "merda"]
+      ],
+      "provenance": ["manual"],
+      "note": "Combinazione esplicitamente blasfema; nomi e invocazioni religiose isolati restano consentiti."
+    },
+    {
+      "id": "it.blasphemy.invettive-esplicite",
+      "kind": "phrase",
+      "category": "blasphemy",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["cazzo", "di", "dio"],
+        ["cazzo", "della", "madonna"],
+        ["porco", "il", "signore"],
+        ["porco", "il", "padreterno"]
+      ],
+      "provenance": ["manual"],
+      "note": "Combinazione esplicitamente blasfema; nomi e invocazioni religiose isolati restano consentiti."
+    }
+  ]
+}

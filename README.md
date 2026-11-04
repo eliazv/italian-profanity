@@ -8,7 +8,7 @@ Italian-first profanity detection for short user-generated text — nicknames, u
 
 > Beta 0.1.0-beta.1 per integrazioni sperimentali.
 
-Current status: first integration beta, with detection and policy APIs in both engines. The first curated Italian core has 126 rules and 517 declared word/prefix/compound forms, plus phrases and blasphemy combinations.
+Current status: first integration beta, with detection and policy APIs in both engines. The first curated Italian core has 290 rules and 1,034 declared word/prefix/compound forms, plus phrases and blasphemy combinations.
 
 - Precision first: whole-word rules, explicit exceptions and an audit on Italian names, surnames and common words.
 - Catches common evasions: leetspeak, separators, accents, repeated letters, spaced letters and Unicode look-alikes.
@@ -28,9 +28,9 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 
 Pacchetti: npm [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) · pub.dev [`italian_profanity`](https://pub.dev/packages/italian_profanity).
 
-**Prima beta di integrazione.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 126 regole e 517 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti restano da curare. L'inglese opzionale contiene tre famiglie minime.
+**Prima beta di integrazione.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 290 regole e 1.034 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti sono coperti solo parzialmente. L'inglese opzionale contiene tre famiglie minime.
 
-Le attese sono condivise su 1583 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
+Le attese sono condivise su 2.618 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
 
 ```ts
 import { check, createChecker } from "italian-profanity"
@@ -49,6 +49,8 @@ final checker = ItalianProfanity.createChecker(contacts: true);
 final result = checker.check('D10 p0rc0');
 // result.action == Action.block
 ```
+
+**Nota sul rilascio:** questi conteggi descrivono il dataset del repository. La beta pubblicata su npm/pub.dev può contenere un nucleo precedente finché non viene distribuita una nuova versione.
 
 La beta consente di provare l'integrazione. Prima della v0.1 stabile restano curazione, consolidamento e prova in una delle applicazioni previste.
 

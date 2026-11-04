@@ -1,0 +1,389 @@
+{"id":"context-001","input":"dio del cazzo","profile":"balanced","rules":["it.blasphemy.divino-di-insulto"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-002","input":"cristo del cazzo","profile":"balanced","rules":["it.blasphemy.divino-di-insulto"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-003","input":"madonna del cazzo","profile":"balanced","rules":["it.blasphemy.divino-di-insulto"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-004","input":"gesu del cazzo","profile":"balanced","rules":["it.blasphemy.divino-di-insulto"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-005","input":"dio di merda","profile":"balanced","rules":["it.blasphemy.divino-di-insulto"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-006","input":"cristo di merda","profile":"balanced","rules":["it.blasphemy.divino-di-insulto"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-007","input":"madonna di merda","profile":"balanced","rules":["it.blasphemy.divino-di-insulto"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-008","input":"gesu di merda","profile":"balanced","rules":["it.blasphemy.divino-di-insulto"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-009","input":"extradio del cazzo","profile":"balanced","mustNotMatch":["it.blasphemy.divino-di-insulto"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-010","input":"cazzo di dio","profile":"balanced","rules":["it.blasphemy.invettive-esplicite"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-011","input":"cazzo della madonna","profile":"balanced","rules":["it.blasphemy.invettive-esplicite"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-012","input":"porco il signore","profile":"balanced","rules":["it.blasphemy.invettive-esplicite"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-013","input":"porco il padreterno","profile":"balanced","rules":["it.blasphemy.invettive-esplicite"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-014","input":"extracazzo di dio","profile":"balanced","mustNotMatch":["it.blasphemy.invettive-esplicite"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-015","input":"mortacci tua","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-016","input":"mortacci tuoi","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-017","input":"li mortacci tua","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-018","input":"li mortacci tuoi","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-019","input":"li mortacci vostra","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-020","input":"li mortacci vostri","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-021","input":"mortacci vostra","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-022","input":"tacci tua","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-023","input":"tacci vostri","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-024","input":"mannaggia li mortacci tua","profile":"balanced","rules":["it.insult.mortacci-tua"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-025","input":"extramortacci tua","profile":"balanced","mustNotMatch":["it.insult.mortacci-tua"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-026","input":"mortacci tua","profile":"strict","rules":["it.insult.mortacci-tua"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-027","input":"figlio di una puttana","profile":"balanced","rules":["it.insult.figlio-di-una-puttana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-028","input":"figlia di una puttana","profile":"balanced","rules":["it.insult.figlio-di-una-puttana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-029","input":"figli di una puttana","profile":"balanced","rules":["it.insult.figlio-di-una-puttana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-030","input":"figlie di una puttana","profile":"balanced","rules":["it.insult.figlio-di-una-puttana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-031","input":"figlio di una troia","profile":"balanced","rules":["it.insult.figlio-di-una-puttana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-032","input":"figlia di una troia","profile":"balanced","rules":["it.insult.figlio-di-una-puttana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-033","input":"figlio di una mignotta","profile":"balanced","rules":["it.insult.figlio-di-una-puttana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-034","input":"figlia di una mignotta","profile":"balanced","rules":["it.insult.figlio-di-una-puttana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-035","input":"extrafiglio di una puttana","profile":"balanced","mustNotMatch":["it.insult.figlio-di-una-puttana"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-036","input":"testa di merda","profile":"balanced","rules":["it.insult.testa-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-037","input":"teste di merda","profile":"balanced","rules":["it.insult.testa-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-038","input":"extratesta di merda","profile":"balanced","mustNotMatch":["it.insult.testa-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-039","input":"testa di culo","profile":"balanced","rules":["it.insult.testa-di-culo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-040","input":"teste di culo","profile":"balanced","rules":["it.insult.testa-di-culo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-041","input":"extratesta di culo","profile":"balanced","mustNotMatch":["it.insult.testa-di-culo"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-042","input":"sacco di merda","profile":"balanced","rules":["it.insult.sacco-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-043","input":"un sacco di merda","profile":"balanced","rules":["it.insult.sacco-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-044","input":"extrasacco di merda","profile":"balanced","mustNotMatch":["it.insult.sacco-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-045","input":"merda umana","profile":"balanced","rules":["it.insult.merda-umana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-046","input":"sei una merda umana","profile":"balanced","rules":["it.insult.merda-umana"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-047","input":"extramerda umana","profile":"balanced","mustNotMatch":["it.insult.merda-umana"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-048","input":"brutto bastardo","profile":"balanced","rules":["it.insult.brutto-bastardo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-049","input":"brutta bastarda","profile":"balanced","rules":["it.insult.brutto-bastardo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-050","input":"brutti bastardi","profile":"balanced","rules":["it.insult.brutto-bastardo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-051","input":"brutte bastarde","profile":"balanced","rules":["it.insult.brutto-bastardo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-052","input":"extrabrutto bastardo","profile":"balanced","mustNotMatch":["it.insult.brutto-bastardo"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-053","input":"sporco bastardo","profile":"balanced","rules":["it.insult.sporco-bastardo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-054","input":"sporca bastarda","profile":"balanced","rules":["it.insult.sporco-bastardo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-055","input":"sporchi bastardi","profile":"balanced","rules":["it.insult.sporco-bastardo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-056","input":"sporche bastarde","profile":"balanced","rules":["it.insult.sporco-bastardo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-057","input":"extrasporco bastardo","profile":"balanced","mustNotMatch":["it.insult.sporco-bastardo"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-058","input":"fatti fottere","profile":"balanced","rules":["it.insult.fatti-fottere"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-059","input":"vai a farti fottere","profile":"balanced","rules":["it.insult.fatti-fottere"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-060","input":"andate a farvi fottere","profile":"balanced","rules":["it.insult.fatti-fottere"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-061","input":"extrafatti fottere","profile":"balanced","mustNotMatch":["it.insult.fatti-fottere"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-062","input":"fatti i cazzi tuoi","profile":"balanced","rules":["it.insult.fatti-i-cazzi-tuoi"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-063","input":"fatevi i cazzi vostri","profile":"balanced","rules":["it.insult.fatti-i-cazzi-tuoi"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-064","input":"extrafatti i cazzi tuoi","profile":"balanced","mustNotMatch":["it.insult.fatti-i-cazzi-tuoi"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-065","input":"non rompere i coglioni","profile":"balanced","rules":["it.insult.non-rompere-i-coglioni"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-066","input":"non rompere il cazzo","profile":"balanced","rules":["it.insult.non-rompere-i-coglioni"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-067","input":"non rompere le palle","profile":"balanced","rules":["it.insult.non-rompere-i-coglioni"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-068","input":"extranon rompere i coglioni","profile":"balanced","mustNotMatch":["it.insult.non-rompere-i-coglioni"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-069","input":"mi hai rotto i coglioni","profile":"balanced","rules":["it.insult.rotto-i-coglioni"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-070","input":"mi hai rotto il cazzo","profile":"balanced","rules":["it.insult.rotto-i-coglioni"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-071","input":"mi avete rotto i coglioni","profile":"balanced","rules":["it.insult.rotto-i-coglioni"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-072","input":"extrami hai rotto i coglioni","profile":"balanced","mustNotMatch":["it.insult.rotto-i-coglioni"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-073","input":"stronzo di merda","profile":"balanced","rules":["it.insult.stronzo-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-074","input":"stronza di merda","profile":"balanced","rules":["it.insult.stronzo-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-075","input":"stronzi di merda","profile":"balanced","rules":["it.insult.stronzo-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-076","input":"extrastronzo di merda","profile":"balanced","mustNotMatch":["it.insult.stronzo-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-077","input":"coglione di merda","profile":"balanced","rules":["it.insult.coglione-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-078","input":"cogliona di merda","profile":"balanced","rules":["it.insult.coglione-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-079","input":"coglioni di merda","profile":"balanced","rules":["it.insult.coglione-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-080","input":"extracoglione di merda","profile":"balanced","mustNotMatch":["it.insult.coglione-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-081","input":"deficiente di merda","profile":"balanced","rules":["it.insult.deficiente-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-082","input":"deficienti di merda","profile":"balanced","rules":["it.insult.deficiente-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-083","input":"extradeficiente di merda","profile":"balanced","mustNotMatch":["it.insult.deficiente-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-084","input":"testa di rapa","profile":"balanced","rules":["it.insult.testa-di-rapa"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-085","input":"teste di rapa","profile":"balanced","rules":["it.insult.testa-di-rapa"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-086","input":"extratesta di rapa","profile":"balanced","mustNotMatch":["it.insult.testa-di-rapa"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-087","input":"testa di rapa","profile":"strict","rules":["it.insult.testa-di-rapa"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-088","input":"brutto coglione","profile":"balanced","rules":["it.insult.brutto-coglione"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-089","input":"brutta cogliona","profile":"balanced","rules":["it.insult.brutto-coglione"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-090","input":"extrabrutto coglione","profile":"balanced","mustNotMatch":["it.insult.brutto-coglione"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-091","input":"farsi una sega","profile":"balanced","rules":["it.sexual.farsi-una-sega"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-092","input":"fatti una sega","profile":"balanced","rules":["it.sexual.farsi-una-sega"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-093","input":"mi faccio una sega","profile":"balanced","rules":["it.sexual.farsi-una-sega"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-094","input":"farsi le seghe","profile":"balanced","rules":["it.sexual.farsi-una-sega"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-095","input":"extrafarsi una sega","profile":"balanced","mustNotMatch":["it.sexual.farsi-una-sega"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-096","input":"farsi una sega","profile":"strict","rules":["it.sexual.farsi-una-sega"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-097","input":"farsi una pippa","profile":"balanced","rules":["it.sexual.farsi-una-pippa"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-098","input":"fatti una pippa","profile":"balanced","rules":["it.sexual.farsi-una-pippa"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-099","input":"extrafarsi una pippa","profile":"balanced","mustNotMatch":["it.sexual.farsi-una-pippa"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-100","input":"farsi una pippa","profile":"strict","rules":["it.sexual.farsi-una-pippa"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-101","input":"succhiami il cazzo","profile":"balanced","rules":["it.sexual.succhiami-il-cazzo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-102","input":"ciucciami il cazzo","profile":"balanced","rules":["it.sexual.succhiami-il-cazzo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-103","input":"succhiatemi il cazzo","profile":"balanced","rules":["it.sexual.succhiami-il-cazzo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-104","input":"extrasucchiami il cazzo","profile":"balanced","mustNotMatch":["it.sexual.succhiami-il-cazzo"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-105","input":"fammi un pompino","profile":"balanced","rules":["it.sexual.fammi-un-pompino"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-106","input":"fammi un bocchino","profile":"balanced","rules":["it.sexual.fammi-un-pompino"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-107","input":"fatti fare un pompino","profile":"balanced","rules":["it.sexual.fammi-un-pompino"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-108","input":"extrafammi un pompino","profile":"balanced","mustNotMatch":["it.sexual.fammi-un-pompino"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-109","input":"leccami il culo","profile":"balanced","rules":["it.sexual.leccami-il-culo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-110","input":"leccatemi il culo","profile":"balanced","rules":["it.sexual.leccami-il-culo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-111","input":"extraleccami il culo","profile":"balanced","mustNotMatch":["it.sexual.leccami-il-culo"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-112","input":"scopati tua madre","profile":"balanced","rules":["it.sexual.scopati-tua-madre"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-113","input":"scopati tua sorella","profile":"balanced","rules":["it.sexual.scopati-tua-madre"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-114","input":"extrascopati tua madre","profile":"balanced","mustNotMatch":["it.sexual.scopati-tua-madre"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-115","input":"te lo metto in culo","profile":"balanced","rules":["it.sexual.te-lo-metto-in-culo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-116","input":"te lo infilo nel culo","profile":"balanced","rules":["it.sexual.te-lo-metto-in-culo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-117","input":"extrate lo metto in culo","profile":"balanced","mustNotMatch":["it.sexual.te-lo-metto-in-culo"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-118","input":"porca miseria","profile":"balanced","rules":["it.vulgar.porca-miseria"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-119","input":"extraporca miseria","profile":"balanced","mustNotMatch":["it.vulgar.porca-miseria"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-120","input":"porca miseria","profile":"strict","rules":["it.vulgar.porca-miseria"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-121","input":"porca vacca","profile":"balanced","rules":["it.vulgar.porca-vacca"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-122","input":"extraporca vacca","profile":"balanced","mustNotMatch":["it.vulgar.porca-vacca"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-123","input":"porca vacca","profile":"strict","rules":["it.vulgar.porca-vacca"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-124","input":"porco zio","profile":"balanced","rules":["it.vulgar.porco-zio"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-125","input":"porco zi","profile":"balanced","rules":["it.vulgar.porco-zio"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-126","input":"extraporco zio","profile":"balanced","mustNotMatch":["it.vulgar.porco-zio"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-127","input":"porco zio","profile":"strict","rules":["it.vulgar.porco-zio"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-128","input":"porco giuda","profile":"balanced","rules":["it.vulgar.porco-giuda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-129","input":"extraporco giuda","profile":"balanced","mustNotMatch":["it.vulgar.porco-giuda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-130","input":"porco giuda","profile":"strict","rules":["it.vulgar.porco-giuda"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-131","input":"zio cantante","profile":"balanced","rules":["it.vulgar.zio-cantante"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-132","input":"extrazio cantante","profile":"balanced","mustNotMatch":["it.vulgar.zio-cantante"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-133","input":"zio cantante","profile":"strict","rules":["it.vulgar.zio-cantante"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-134","input":"che palle","profile":"balanced","rules":["it.vulgar.che-palle"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-135","input":"che due palle","profile":"balanced","rules":["it.vulgar.che-palle"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-136","input":"extrache palle","profile":"balanced","mustNotMatch":["it.vulgar.che-palle"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-137","input":"che palle","profile":"strict","rules":["it.vulgar.che-palle"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-138","input":"rottura di palle","profile":"balanced","rules":["it.vulgar.rottura-di-palle"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-139","input":"mi hai rotto le palle","profile":"balanced","rules":["it.vulgar.rottura-di-palle"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-140","input":"extrarottura di palle","profile":"balanced","mustNotMatch":["it.vulgar.rottura-di-palle"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-141","input":"rottura di palle","profile":"strict","rules":["it.vulgar.rottura-di-palle"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-142","input":"che cazzo","profile":"balanced","rules":["it.vulgar.che-cazzo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-143","input":"ma che cazzo","profile":"balanced","rules":["it.vulgar.che-cazzo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-144","input":"che cazzi","profile":"balanced","rules":["it.vulgar.che-cazzo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-145","input":"extrache cazzo","profile":"balanced","mustNotMatch":["it.vulgar.che-cazzo"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-146","input":"che minchia","profile":"balanced","rules":["it.vulgar.che-minchia"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-147","input":"ma che minchia","profile":"balanced","rules":["it.vulgar.che-minchia"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-148","input":"extrache minchia","profile":"balanced","mustNotMatch":["it.vulgar.che-minchia"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-149","input":"porca troia","profile":"balanced","rules":["it.vulgar.porca-troia"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-150","input":"porca puttana","profile":"balanced","rules":["it.vulgar.porca-troia"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-151","input":"extraporca troia","profile":"balanced","mustNotMatch":["it.vulgar.porca-troia"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-152","input":"maremma bucaiola","profile":"balanced","rules":["it.vulgar.maremma-bucaiola"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-153","input":"extramaremma bucaiola","profile":"balanced","mustNotMatch":["it.vulgar.maremma-bucaiola"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-154","input":"maremma bucaiola","profile":"strict","rules":["it.vulgar.maremma-bucaiola"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-158","input":"porco mondo","profile":"balanced","rules":["it.vulgar.porco-mondo"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-159","input":"extraporco mondo","profile":"balanced","mustNotMatch":["it.vulgar.porco-mondo"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-160","input":"porco mondo","profile":"strict","rules":["it.vulgar.porco-mondo"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-161","input":"zingara di merda","profile":"balanced","rules":["it.discriminatory.zingara-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-162","input":"zingari di merda","profile":"balanced","rules":["it.discriminatory.zingara-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-163","input":"zingare di merda","profile":"balanced","rules":["it.discriminatory.zingara-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-164","input":"extrazingara di merda","profile":"balanced","mustNotMatch":["it.discriminatory.zingara-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-165","input":"ebreo di merda","profile":"balanced","rules":["it.discriminatory.ebreo-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-166","input":"ebrea di merda","profile":"balanced","rules":["it.discriminatory.ebreo-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-167","input":"ebrei di merda","profile":"balanced","rules":["it.discriminatory.ebreo-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-168","input":"ebree di merda","profile":"balanced","rules":["it.discriminatory.ebreo-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-169","input":"extraebreo di merda","profile":"balanced","mustNotMatch":["it.discriminatory.ebreo-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-170","input":"musulmano di merda","profile":"balanced","rules":["it.discriminatory.musulmano-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-171","input":"musulmana di merda","profile":"balanced","rules":["it.discriminatory.musulmano-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-172","input":"musulmani di merda","profile":"balanced","rules":["it.discriminatory.musulmano-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-173","input":"musulmane di merda","profile":"balanced","rules":["it.discriminatory.musulmano-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-174","input":"extramusulmano di merda","profile":"balanced","mustNotMatch":["it.discriminatory.musulmano-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-175","input":"gay di merda","profile":"balanced","rules":["it.discriminatory.gay-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-176","input":"extragay di merda","profile":"balanced","mustNotMatch":["it.discriminatory.gay-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-177","input":"lesbica di merda","profile":"balanced","rules":["it.discriminatory.lesbica-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-178","input":"lesbiche di merda","profile":"balanced","rules":["it.discriminatory.lesbica-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-179","input":"extralesbica di merda","profile":"balanced","mustNotMatch":["it.discriminatory.lesbica-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-180","input":"frocio di merda","profile":"balanced","rules":["it.discriminatory.frocio-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-181","input":"frocia di merda","profile":"balanced","rules":["it.discriminatory.frocio-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-182","input":"froci di merda","profile":"balanced","rules":["it.discriminatory.frocio-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-183","input":"extrafrocio di merda","profile":"balanced","mustNotMatch":["it.discriminatory.frocio-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-184","input":"terrone di merda","profile":"balanced","rules":["it.discriminatory.terrone-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-185","input":"terrona di merda","profile":"balanced","rules":["it.discriminatory.terrone-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-186","input":"terroni di merda","profile":"balanced","rules":["it.discriminatory.terrone-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-187","input":"extraterrone di merda","profile":"balanced","mustNotMatch":["it.discriminatory.terrone-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-188","input":"handicappato di merda","profile":"balanced","rules":["it.discriminatory.handicappato-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-189","input":"handicappata di merda","profile":"balanced","rules":["it.discriminatory.handicappato-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-190","input":"handicappati di merda","profile":"balanced","rules":["it.discriminatory.handicappato-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-191","input":"extrahandicappato di merda","profile":"balanced","mustNotMatch":["it.discriminatory.handicappato-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-192","input":"sei un handicappato","profile":"balanced","rules":["it.discriminatory.sei-un-handicappato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-193","input":"sei una handicappata","profile":"balanced","rules":["it.discriminatory.sei-un-handicappato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-194","input":"extrasei un handicappato","profile":"balanced","mustNotMatch":["it.discriminatory.sei-un-handicappato"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-195","input":"sei un handicappato","profile":"strict","rules":["it.discriminatory.sei-un-handicappato"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-196","input":"sei ritardato","profile":"balanced","rules":["it.discriminatory.sei-ritardato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-197","input":"sei ritardata","profile":"balanced","rules":["it.discriminatory.sei-ritardato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-198","input":"sei un ritardato","profile":"balanced","rules":["it.discriminatory.sei-ritardato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-199","input":"sei una ritardata","profile":"balanced","rules":["it.discriminatory.sei-ritardato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-200","input":"extrasei ritardato","profile":"balanced","mustNotMatch":["it.discriminatory.sei-ritardato"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-201","input":"sei ritardato","profile":"strict","rules":["it.discriminatory.sei-ritardato"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-202","input":"sei un finocchio","profile":"balanced","rules":["it.discriminatory.sei-un-finocchio"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-203","input":"finocchio di merda","profile":"balanced","rules":["it.discriminatory.sei-un-finocchio"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-204","input":"extrasei un finocchio","profile":"balanced","mustNotMatch":["it.discriminatory.sei-un-finocchio"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-205","input":"sei un finocchio","profile":"strict","rules":["it.discriminatory.sei-un-finocchio"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-206","input":"sei una balena","profile":"balanced","rules":["it.discriminatory.sei-una-balena"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-207","input":"extrasei una balena","profile":"balanced","mustNotMatch":["it.discriminatory.sei-una-balena"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-208","input":"sei una balena","profile":"strict","rules":["it.discriminatory.sei-una-balena"],"note":"Espressione ambigua rilevata anche in strict"}
+{"id":"context-209","input":"sporco immigrato","profile":"balanced","rules":["it.discriminatory.sporco-immigrato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-210","input":"sporca immigrata","profile":"balanced","rules":["it.discriminatory.sporco-immigrato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-211","input":"sporchi immigrati","profile":"balanced","rules":["it.discriminatory.sporco-immigrato"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-212","input":"extrasporco immigrato","profile":"balanced","mustNotMatch":["it.discriminatory.sporco-immigrato"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-213","input":"sporco zingaro","profile":"balanced","rules":["it.discriminatory.sporco-zingaro"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-214","input":"sporca zingara","profile":"balanced","rules":["it.discriminatory.sporco-zingaro"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-215","input":"sporchi zingari","profile":"balanced","rules":["it.discriminatory.sporco-zingaro"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-216","input":"extrasporco zingaro","profile":"balanced","mustNotMatch":["it.discriminatory.sporco-zingaro"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-217","input":"negra di merda","profile":"balanced","rules":["it.discriminatory.negra-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-218","input":"negri di merda","profile":"balanced","rules":["it.discriminatory.negra-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-219","input":"negre di merda","profile":"balanced","rules":["it.discriminatory.negra-di-merda"],"note":"Frase intenzionale e adiacente; contesto necessario"}
+{"id":"context-220","input":"extranegra di merda","profile":"balanced","mustNotMatch":["it.discriminatory.negra-di-merda"],"note":"Negativo vicino: il primo token è più lungo"}
+{"id":"context-221","input":"coglionaggine","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-222","input":"coglionaggini","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-223","input":"coglionare","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-224","input":"coglionatore","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-225","input":"coglionatori","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-226","input":"coglionatrice","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-227","input":"coglionatrici","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-228","input":"coglionatura","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-229","input":"coglionature","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-230","input":"coglioncino","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-231","input":"coglioncini","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-232","input":"coglioncina","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-233","input":"coglioncine","profile":"balanced","rules":["it.insult.coglione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-234","input":"extracoglionagginexyz","profile":"balanced","mustNotMatch":["it.insult.coglione"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-235","input":"stronzissimo","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-236","input":"stronzissima","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-237","input":"stronzissimi","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-238","input":"stronzissime","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-239","input":"stronzaggine","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-240","input":"stronzaggini","profile":"balanced","rules":["it.insult.stronzo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-241","input":"extrastronzissimoxyz","profile":"balanced","mustNotMatch":["it.insult.stronzo"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-242","input":"pirlone","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-243","input":"pirlona","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-244","input":"pirloni","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-245","input":"pirlata","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-246","input":"pirlate","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-247","input":"pirlotto","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-248","input":"pirlotta","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-249","input":"pirlotti","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-250","input":"pirlotte","profile":"balanced","rules":["it.insult.pirla"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-251","input":"extrapirlonexyz","profile":"balanced","mustNotMatch":["it.insult.pirla"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-252","input":"cornutaccio","profile":"balanced","rules":["it.insult.cornuto"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-253","input":"cornutaccia","profile":"balanced","rules":["it.insult.cornuto"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-254","input":"cornutacci","profile":"balanced","rules":["it.insult.cornuto"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-255","input":"cornutacce","profile":"balanced","rules":["it.insult.cornuto"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-256","input":"extracornutaccioxyz","profile":"balanced","mustNotMatch":["it.insult.cornuto"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-257","input":"imbecillone","profile":"balanced","rules":["it.insult.imbecille"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-258","input":"imbecillona","profile":"balanced","rules":["it.insult.imbecille"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-259","input":"imbecilloni","profile":"balanced","rules":["it.insult.imbecille"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-260","input":"extraimbecillonexyz","profile":"balanced","mustNotMatch":["it.insult.imbecille"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-261","input":"idiotissimo","profile":"balanced","rules":["it.insult.idiota"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-262","input":"idiotissima","profile":"balanced","rules":["it.insult.idiota"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-263","input":"idiotissimi","profile":"balanced","rules":["it.insult.idiota"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-264","input":"idiotissime","profile":"balanced","rules":["it.insult.idiota"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-265","input":"extraidiotissimoxyz","profile":"balanced","mustNotMatch":["it.insult.idiota"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-266","input":"scemotto","profile":"balanced","rules":["it.insult.scemo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-267","input":"scemotta","profile":"balanced","rules":["it.insult.scemo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-268","input":"scemotti","profile":"balanced","rules":["it.insult.scemo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-269","input":"scemotte","profile":"balanced","rules":["it.insult.scemo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-270","input":"scemone","profile":"balanced","rules":["it.insult.scemo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-271","input":"scemona","profile":"balanced","rules":["it.insult.scemo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-272","input":"scemoni","profile":"balanced","rules":["it.insult.scemo"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-273","input":"extrascemottoxyz","profile":"balanced","mustNotMatch":["it.insult.scemo"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-274","input":"stupidone","profile":"balanced","rules":["it.insult.stupido"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-275","input":"stupidona","profile":"balanced","rules":["it.insult.stupido"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-276","input":"stupidoni","profile":"balanced","rules":["it.insult.stupido"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-277","input":"stupidata","profile":"balanced","rules":["it.insult.stupido"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-278","input":"stupidate","profile":"balanced","rules":["it.insult.stupido"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-279","input":"extrastupidonexyz","profile":"balanced","mustNotMatch":["it.insult.stupido"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-280","input":"cretinone","profile":"balanced","rules":["it.insult.cretino"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-281","input":"cretinona","profile":"balanced","rules":["it.insult.cretino"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-282","input":"cretinoni","profile":"balanced","rules":["it.insult.cretino"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-283","input":"extracretinonexyz","profile":"balanced","mustNotMatch":["it.insult.cretino"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-284","input":"cazzarone","profile":"balanced","rules":["it.insult.cazzaro"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-285","input":"cazzarona","profile":"balanced","rules":["it.insult.cazzaro"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-286","input":"cazzaroni","profile":"balanced","rules":["it.insult.cazzaro"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-287","input":"extracazzaronexyz","profile":"balanced","mustNotMatch":["it.insult.cazzaro"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-288","input":"sfigatello","profile":"balanced","rules":["it.insult.sfigato"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-289","input":"sfigatella","profile":"balanced","rules":["it.insult.sfigato"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-290","input":"sfigatelli","profile":"balanced","rules":["it.insult.sfigato"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-291","input":"sfigatelle","profile":"balanced","rules":["it.insult.sfigato"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-292","input":"extrasfigatelloxyz","profile":"balanced","mustNotMatch":["it.insult.sfigato"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-293","input":"figona","profile":"balanced","rules":["it.sexual.figa"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-294","input":"figone","profile":"balanced","rules":["it.sexual.figa"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-295","input":"figoni","profile":"balanced","rules":["it.sexual.figa"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-296","input":"fighetta","profile":"balanced","rules":["it.sexual.figa"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-297","input":"fighette","profile":"balanced","rules":["it.sexual.figa"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-298","input":"fighetto","profile":"balanced","rules":["it.sexual.figa"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-299","input":"fighetti","profile":"balanced","rules":["it.sexual.figa"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-300","input":"extrafigonaxyz","profile":"balanced","mustNotMatch":["it.sexual.figa"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-301","input":"ficona","profile":"balanced","rules":["it.sexual.fica"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-302","input":"ficone","profile":"balanced","rules":["it.sexual.fica"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-303","input":"fichette","profile":"balanced","rules":["it.sexual.fica"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-304","input":"fichetta","profile":"balanced","rules":["it.sexual.fica"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-305","input":"fichetti","profile":"balanced","rules":["it.sexual.fica"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-306","input":"fichetto","profile":"balanced","rules":["it.sexual.fica"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-307","input":"extraficonaxyz","profile":"balanced","mustNotMatch":["it.sexual.fica"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-308","input":"baldraccaccia","profile":"balanced","rules":["it.sexual.baldracca"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-309","input":"baldraccacce","profile":"balanced","rules":["it.sexual.baldracca"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-310","input":"baldraccona","profile":"balanced","rules":["it.sexual.baldracca"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-311","input":"extrabaldraccacciaxyz","profile":"balanced","mustNotMatch":["it.sexual.baldracca"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-312","input":"fottitene","profile":"balanced","rules":["it.sexual.fottere"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-313","input":"fottiamocene","profile":"balanced","rules":["it.sexual.fottere"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-314","input":"fottendosene","profile":"balanced","rules":["it.sexual.fottere"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-315","input":"extrafottitenexyz","profile":"balanced","mustNotMatch":["it.sexual.fottere"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-316","input":"sborro","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-317","input":"sborri","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-318","input":"sborrano","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-319","input":"sborratona","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-320","input":"sborratina","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-321","input":"sborratine","profile":"balanced","rules":["it.sexual.sborra"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-322","input":"extrasborroxyz","profile":"balanced","mustNotMatch":["it.sexual.sborra"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-323","input":"inculando","profile":"balanced","rules":["it.sexual.inculare"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-324","input":"inculandosi","profile":"balanced","rules":["it.sexual.inculare"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-325","input":"inculamento","profile":"balanced","rules":["it.sexual.inculare"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-326","input":"extrainculandoxyz","profile":"balanced","mustNotMatch":["it.sexual.inculare"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-327","input":"minchiella","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-328","input":"minchionata","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-329","input":"minchionate","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-330","input":"minchiatona","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-331","input":"minchiatone","profile":"balanced","rules":["it.vulgar.minchia"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-332","input":"extraminchiellaxyz","profile":"balanced","mustNotMatch":["it.vulgar.minchia"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-333","input":"merdolina","profile":"balanced","rules":["it.vulgar.merda"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-334","input":"merdoline","profile":"balanced","rules":["it.vulgar.merda"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-335","input":"extramerdolinaxyz","profile":"balanced","mustNotMatch":["it.vulgar.merda"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-336","input":"cazzeggiando","profile":"balanced","rules":["it.vulgar.cazzeggio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-337","input":"cazzeggiate","profile":"balanced","rules":["it.vulgar.cazzeggio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-338","input":"cazzeggiati","profile":"balanced","rules":["it.vulgar.cazzeggio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-339","input":"cazzeggiava","profile":"balanced","rules":["it.vulgar.cazzeggio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-340","input":"extracazzeggiandoxyz","profile":"balanced","mustNotMatch":["it.vulgar.cazzeggio"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-341","input":"scorreggiando","profile":"balanced","rules":["it.vulgar.scorreggia"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-342","input":"scoreggiato","profile":"balanced","rules":["it.vulgar.scorreggia"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-343","input":"scoreggiata","profile":"balanced","rules":["it.vulgar.scorreggia"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-344","input":"extrascorreggiandoxyz","profile":"balanced","mustNotMatch":["it.vulgar.scorreggia"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-345","input":"incazzatone","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-346","input":"incazzatona","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-347","input":"incazzatoni","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-348","input":"extraincazzatonexyz","profile":"balanced","mustNotMatch":["it.vulgar.incazzato"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-349","input":"piscione","profile":"balanced","rules":["it.vulgar.piscio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-350","input":"pisciatone","profile":"balanced","rules":["it.vulgar.piscio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-351","input":"extrapiscionexyz","profile":"balanced","mustNotMatch":["it.vulgar.piscio"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-352","input":"frocissimo","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-353","input":"frocissima","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-354","input":"frocissimi","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-355","input":"frocissime","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-356","input":"extrafrocissimoxyz","profile":"balanced","mustNotMatch":["it.discriminatory.frocio"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-357","input":"recchiona","profile":"balanced","rules":["it.discriminatory.recchione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-358","input":"ricchiona","profile":"balanced","rules":["it.discriminatory.recchione"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-359","input":"extrarecchionaxyz","profile":"balanced","mustNotMatch":["it.discriminatory.recchione"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-360","input":"checchetta","profile":"balanced","rules":["it.discriminatory.checca"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-361","input":"checchette","profile":"balanced","rules":["it.discriminatory.checca"],"note":"Flessione o derivato di una regola preesistente"}
+{"id":"context-362","input":"extrachecchettaxyz","profile":"balanced","mustNotMatch":["it.discriminatory.checca"],"note":"Negativo vicino per derivato aggiunto"}
+{"id":"context-363","input":"allah porco","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Concetto divino esteso, insulto contestuale"}
+{"id":"context-364","input":"allah santo","profile":"balanced","mustNotMatch":["it.blasphemy.divine-insult"],"note":"Invocazione neutra: non aggiungere una bestemmia"}
+{"id":"context-365","input":"iddio porco","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Concetto divino esteso, insulto contestuale"}
+{"id":"context-366","input":"iddio santo","profile":"balanced","mustNotMatch":["it.blasphemy.divine-insult"],"note":"Invocazione neutra: non aggiungere una bestemmia"}
+{"id":"context-367","input":"padreterno porco","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Concetto divino esteso, insulto contestuale"}
+{"id":"context-368","input":"padreterno santo","profile":"balanced","mustNotMatch":["it.blasphemy.divine-insult"],"note":"Invocazione neutra: non aggiungere una bestemmia"}
+{"id":"context-369","input":"dio baldracca","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-370","input":"dio baldracche","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-371","input":"dio merdoso","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-372","input":"dio merdosa","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-373","input":"dio merdosi","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-374","input":"dio merdose","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-375","input":"dio puttanaccia","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-376","input":"dio puttanacce","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-377","input":"dio bestiaccia","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-378","input":"dio bestiacce","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-379","input":"dio cagna","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-380","input":"dio cagne","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-381","input":"dio cazzone","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-382","input":"dio cazzoni","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-383","input":"dio fetente","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-384","input":"dio fetenti","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-385","input":"dio fottuto","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-386","input":"dio fottuta","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-387","input":"dio fottuti","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-388","input":"dio fottute","profile":"balanced","rules":["it.blasphemy.divine-insult"],"note":"Nuovo insulto combinabile solo col termine divino"}
+{"id":"context-389","input":"mannaggia i santi","profile":"balanced","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Imprecazione religiosa esplicita, parole adiacenti"}
+{"id":"context-390","input":"mannaggia ai santi","profile":"balanced","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Imprecazione religiosa esplicita, parole adiacenti"}
+{"id":"context-391","input":"mannaggia al padreterno","profile":"balanced","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Imprecazione religiosa esplicita, parole adiacenti"}
+{"id":"context-392","input":"mannaggia iddio","profile":"balanced","rules":["it.blasphemy.mannaggia-al-divino"],"note":"Imprecazione religiosa esplicita, parole adiacenti"}

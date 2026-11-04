@@ -1,0 +1,88 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.sexual.farsi-una-sega",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "phrases": [
+        ["farsi", "una", "sega"],
+        ["fatti", "una", "sega"],
+        ["mi", "faccio", "una", "sega"],
+        ["farsi", "le", "seghe"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione sessuale contestuale esplicita; nessuna censura generalizzata di oggetti o attività comuni."
+    },
+    {
+      "id": "it.sexual.farsi-una-pippa",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["farsi", "una", "pippa"], ["fatti", "una", "pippa"]],
+      "provenance": ["manual"],
+      "note": "Espressione sessuale contestuale esplicita; nessuna censura generalizzata di oggetti o attività comuni."
+    },
+    {
+      "id": "it.sexual.succhiami-il-cazzo",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        ["succhiami", "il", "cazzo"],
+        ["ciucciami", "il", "cazzo"],
+        ["succhiatemi", "il", "cazzo"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione sessuale contestuale esplicita; nessuna censura generalizzata di oggetti o attività comuni."
+    },
+    {
+      "id": "it.sexual.fammi-un-pompino",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        ["fammi", "un", "pompino"],
+        ["fammi", "un", "bocchino"],
+        ["fatti", "fare", "un", "pompino"]
+      ],
+      "provenance": ["manual"],
+      "note": "Espressione sessuale contestuale esplicita; nessuna censura generalizzata di oggetti o attività comuni."
+    },
+    {
+      "id": "it.sexual.leccami-il-culo",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["leccami", "il", "culo"], ["leccatemi", "il", "culo"]],
+      "provenance": ["manual"],
+      "note": "Espressione sessuale contestuale esplicita; nessuna censura generalizzata di oggetti o attività comuni."
+    },
+    {
+      "id": "it.sexual.scopati-tua-madre",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["scopati", "tua", "madre"], ["scopati", "tua", "sorella"]],
+      "provenance": ["manual"],
+      "note": "Espressione sessuale contestuale esplicita; nessuna censura generalizzata di oggetti o attività comuni."
+    },
+    {
+      "id": "it.sexual.te-lo-metto-in-culo",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["te", "lo", "metto", "in", "culo"], ["te", "lo", "infilo", "nel", "culo"]],
+      "provenance": ["manual"],
+      "note": "Espressione sessuale contestuale esplicita; nessuna censura generalizzata di oggetti o attività comuni."
+    }
+  ]
+}

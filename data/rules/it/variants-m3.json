@@ -1,0 +1,115 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.vulgar.figata",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "high",
+      "terms": ["figata", "figate"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.vulgar.ficata",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["ficata", "ficate"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.vulgar.fregnaccia",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["fregnaccia", "fregnacce"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.vulgar.kazzo-grafie",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["kazzo", "kazzi", "kazzata", "kazzate", "caxxo", "caxxi", "caxxata", "caxxate"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.insult.truzzo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["truzzo", "truzza", "truzzi", "truzze"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.insult.tamarro",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["tamarro", "tamarra", "tamarri", "tamarre", "tamarrata", "tamarrate"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.insult.grullo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["grullo", "grulla", "grulli", "grulle"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.insult.scimunito",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["scimunito", "scimunita", "scimuniti", "scimunite"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.insult.zoticone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["zoticone", "zoticona", "zoticoni"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.insult.caccolone",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["caccolone", "caccolona", "caccoloni"],
+      "provenance": ["manual"],
+      "note": "Manuale M3: variante colloquiale, regionalismo o grafia alternativa. Le forme ambigue non devono causare blocchi automatici in balanced."
+    },
+    {
+      "id": "it.vulgar.vacca-boia",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["vacca", "boia"]],
+      "provenance": ["manual"],
+      "note": "Intercalare regionale/eufemistico, non bestemmia; vacca da sola non è un insulto."
+    }
+  ]
+}

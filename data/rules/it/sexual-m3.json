@@ -1,0 +1,211 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.sexual.tetta",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 1,
+      "confidence": "high",
+      "terms": ["tetta", "tette", "tettina", "tettine", "tettone", "tettona", "tettoni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.zinne",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["zinne", "zinna"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.potta",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["potta", "potte"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.sticchio",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["sticchio", "sticchi"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.picio",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["picio", "picia", "picie"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.mussa",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["mussa", "musse"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.goldone",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["goldone", "goldoni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.slinguare",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["slinguare", "slinguato", "slinguata", "slinguati", "slinguate", "slinguando"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.allupato",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["allupato", "allupata", "allupati", "allupate"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.sveltina",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["sveltina", "sveltine"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.scopamico",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["scopamico", "scopamica", "scopamici", "scopamiche"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.scopatore",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["scopatore", "scopatrice", "scopatori", "scopatrici"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.smandrappata",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["smandrappata", "smandrappato", "smandrappate", "smandrappati"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.puttaneggiare",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": [
+        "puttaneggiare",
+        "puttaneggiando",
+        "puttaneggiato",
+        "puttaneggiata",
+        "puttaneggiano"
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.porcella",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["porcella", "porcelle", "porcellone", "porcellona"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.vaccona",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["vaccona", "vaccone", "vacconi"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.sverginare",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["sverginare", "sverginato", "sverginata", "sverginati", "sverginando"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.arrapone",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["arrapone", "arrapona", "arraponi"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.ciucciapalle",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["ciucciapalle"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.pigliacazzi",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["pigliacazzi"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    }
+  ]
+}

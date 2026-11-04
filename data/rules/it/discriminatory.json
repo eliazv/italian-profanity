@@ -15,7 +15,11 @@
         "frocetto",
         "frocetti",
         "frocione",
-        "frocioni"
+        "frocioni",
+        "frocissimo",
+        "frocissima",
+        "frocissimi",
+        "frocissime"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -64,7 +68,7 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "medium",
-      "terms": ["recchione", "recchioni", "ricchione", "ricchioni"],
+      "terms": ["recchione", "recchioni", "ricchione", "ricchioni", "recchiona", "ricchiona"],
       "provenance": ["manual"],
       "note": "Omografi di cognomi nel corpus di audit: balanced richiede revisione; strict blocca. Curazione manuale, parola intera. Insulto esplicito, ma esistono i cognomi Recchione/Recchioni: review in balanced; non blocco automatico del solo cognome."
     },
@@ -89,7 +93,7 @@
       "category": "discriminatory",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["checca", "checche"],
+      "terms": ["checca", "checche", "checchetta", "checchette"],
       "provenance": ["manual"],
       "note": "Termine regionale o polisemico: review in balanced, parola intera."
     },

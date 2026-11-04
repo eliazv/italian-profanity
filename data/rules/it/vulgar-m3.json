@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.vulgar.cacchio",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["cacchio", "cacchi", "cacchiata", "cacchiate"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.minkia",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["minkia", "minkie", "minkiata", "minkiate", "minkione", "minkioni"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.merdume",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["merdume"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.cazzimma",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["cazzimma"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.sfaccimma",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["sfaccimma", "sfaccimm"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.soccia",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["soccia"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.ostrega",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["ostrega"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.belandi",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["belandi"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.tarzanello",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["tarzanello", "tarzanelli"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.scorreggione",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "high",
+      "terms": ["scorreggione", "scorreggiona", "scoreggione", "scoreggiona"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.minchiadura",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["minchiadura", "minchiaduro", "minchiadure"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.porcozio",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["porcozio", "porcozzio"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.porcamiseria",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["porcamiseria"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.porcheria",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["porcheria", "porcherie"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.porcata",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["porcata", "porcate"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.culaccio",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["culaccio", "culacci"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    },
+    {
+      "id": "it.vulgar.cacarella",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["cacarella", "cacarelle"],
+      "provenance": ["manual"],
+      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+    }
+  ]
+}
