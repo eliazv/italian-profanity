@@ -1,18 +1,18 @@
 # Integrazione client e server
 
-La prima versione è una beta: prima del passaggio in produzione confrontare i risultati con i filtri attuali. Usare la stessa versione esatta, le stesse lingue, lo stesso profilo, le stesse soglie e le stesse personalizzazioni sul client e sul server. Il server resta autorevole e ricontrolla sempre il testo ricevuto.
+La 0.1.0 è il primo rilascio senza suffisso prerelease. Prima del passaggio in produzione confrontare i risultati con i filtri attuali; la prova nelle due applicazioni del manutentore è pianificata e resta da completare. Usare la stessa versione esatta, le stesse lingue, lo stesso profilo, le stesse soglie e le stesse personalizzazioni sul client e sul server. Il server resta autorevole e ricontrolla sempre il testo ricevuto.
 
 ## Installazione
 
-Le istruzioni seguenti si riferiscono alla beta preparata nel repository; funzionano dopo la sua pubblicazione sui rispettivi registri.
+Le istruzioni seguenti si riferiscono alla versione 0.1.0 su npm e pub.dev.
 
 ```sh
-npm install --save-exact italian-profanity@0.1.0-beta.1
+npm install --save-exact italian-profanity@0.1.0
 ```
 
 ```yaml
 dependencies:
-  italian_profanity: 0.1.0-beta.1
+  italian_profanity: 0.1.0
 ```
 
 ## Policy senza coda di moderazione
@@ -66,7 +66,7 @@ L'italiano è attivo per default. L'inglese deve essere richiesto con `languages
 
 Prima di rimuovere i filtri precedenti:
 
-1. Inventariare le loro regole e confrontarle con il dataset e i risultati della beta. Non importare liste esterne nel repository senza inventario e licenza.
+1. Inventariare le loro regole e confrontarle con il dataset e i risultati della libreria. Non importare liste esterne nel repository senza inventario e licenza.
 2. Aggiungere le regole mancanti deliberate dall'app tramite `extraRules`, condividendo i dati fra client e server. Le regole locali sono parole intere letterali; non accettano regex o frasi.
 3. Verificare in entrambi gli ambienti le fixture di adozione in `data/fixtures/adoption.jsonl`, insieme a `english.jsonl` e `consolidation.jsonl`, oltre ai test dell’app. Contengono nomi convenzionali, confini di parola, elusioni e attivazione dell'inglese.
 4. Fare una prova comparativa senza cambiare inizialmente il comportamento e senza registrare nickname reali o intervalli riconducibili al testo nei log.

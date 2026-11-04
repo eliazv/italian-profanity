@@ -15,6 +15,7 @@
     "test:dart": "cd packages/dart && dart test",
     "parity": "node tools/parity.ts",
     "audit:benign": "node tools/audit-benign.ts",
+    "behavior:diff": "node tools/behavior-diff.ts",
     "typecheck": "tsc -p tsconfig.json && pnpm --filter italian-profanity typecheck",
     "lint": "biome check . && node tools/format-dart.ts && cd packages/dart && dart analyze --fatal-infos",
     "format": "biome check --write . && node tools/format-dart.ts --write",

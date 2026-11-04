@@ -1,15 +1,15 @@
 # italian-profanity
 
-[![npm beta](https://img.shields.io/npm/v/italian-profanity/beta?label=npm)](https://www.npmjs.com/package/italian-profanity) [![pub.dev](https://img.shields.io/pub/v/italian_profanity?include_prereleases&label=Dart%2FFlutter)](https://pub.dev/packages/italian_profanity)
+[![npm](https://img.shields.io/npm/v/italian-profanity?label=npm)](https://www.npmjs.com/package/italian-profanity) [![pub.dev](https://img.shields.io/pub/v/italian_profanity?label=Dart%2FFlutter)](https://pub.dev/packages/italian_profanity)
 
 [Repository](https://github.com/eliazv/italian-profanity) · [Guida d'integrazione](https://github.com/eliazv/italian-profanity/blob/master/docs/integrazione.md) · [Segnalazioni](https://github.com/eliazv/italian-profanity/issues/new/choose) · [Changelog](https://github.com/eliazv/italian-profanity/blob/master/packages/js/CHANGELOG.md)
 
 Italian-first profanity detection for nicknames and short text, for JavaScript and TypeScript. The Dart package [`italian_profanity`](https://pub.dev/packages/italian_profanity) gives the same verdicts.
 
-> Beta 0.1.0-beta.1 per integrazioni sperimentali.
+> Versione 0.1.0, primo rilascio senza suffisso prerelease.
 
 ```sh
-npm install --save-exact italian-profanity@0.1.0-beta.1
+npm install --save-exact italian-profanity@0.1.0
 ```
 
 Libreria per riconoscere bestemmie, insulti e volgarità in italiano in nickname e testi brevi.
@@ -24,7 +24,7 @@ checker.check("Claudio").action // "allow"
 
 290 regole italiane curate, 1.034 forme dichiarate più frasi e combinazioni. `findMatches()` separa il rilevamento dalla policy di `check()`. Profili: `balanced`, `strict`, `lenient`; opzioni: `maxLength`, `contacts`, `extraRules`, `exceptions`, `thresholds`.
 
-I numeri descrivono il dataset del repository, che verrà distribuito nel prossimo rilascio; la beta già pubblicata può contenere meno forme.
+Questi dati sono inclusi nella versione 0.1.0. Il changelog descrive i progressi rispetto alla beta; la prova comparativa nelle due applicazioni del manutentore è pianificata e resta da completare.
 
 È un controllo lessicale: la copertura è limitata e alcuni omografi richiedono revisione. `isClean()` è vero solo per `allow`. I contatti sono disattivati per default; se attivati, bloccano con tutti i profili predefiniti. `range` usa offset UTF-16 sul testo originale e non va registrato nei log.
 

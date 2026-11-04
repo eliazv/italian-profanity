@@ -1,5 +1,40 @@
 # italian-profanity
 
+## 0.1.0 — 2026-11-04
+
+Primo rilascio senza suffisso prerelease, con versioni allineate per npm e pub.dev e nessuna dipendenza a runtime.
+
+### Copertura e comportamento
+
+- Italiano: da 65 regole e 244 forme nella beta pubblicata a 290 regole e 1.034 forme, oltre a frasi e combinazioni. Aggiunti composti, flessioni, grafie alternative, regionalismi selezionati e offese contestuali.
+- Inglese opzionale: da 3 a 51 regole, con 110 forme e 20 varianti di frase; italiano ancora predefinito. Candidati dal preset MIT di Obscenity, confronto con leo-profanity e @2toad/profanity, fonti fissate e attribuzioni incluse. Nessuna dipendenza da queste librerie.
+- Corrette in TS e Dart le origini UTF-16 quando due surrogati isolati si ricongiungono dopo la rimozione di invisibili o separatori.
+- Le forme ambigue mantengono policy prudenti; le nuove regole possono rendere più restrittivo il filtro rispetto alla beta.
+
+### Consolidamento e verifiche
+
+- 3.459 fixture condivise, 7.030 test per motore e parità con attese complete.
+- Audit su 127.842 input per ciascuna configurazione it e it+en, senza nuove collisioni non giustificate.
+- 307 fixture di consolidamento Unicode, di cui 256 casi fuzz fissati; smoke su 870 fixture ESM, CommonJS e Chrome reale. Compatibilità Node 20 e Dart SDK 3.4 verificata in CI.
+- Bundle ESM completo misurato: circa 16,7 KB gzip. Aggiunti benchmark riproducibile e confronto di comportamento con la beta.
+
+### Differenze dalla 0.1.0-beta.1
+
+Confrontate 3.445 fixture valide: 1.372 hanno match o azioni diversi e 1.190 cambiano azione. Sono casi di regressione, non frequenze misurate sugli utenti.
+
+| Transizione                     | Casi |
+| ------------------------------- | ---: |
+| allow → block                   |  633 |
+| allow → review                  |  532 |
+| review → block                  |   25 |
+| Azione invariata, match diversi |  182 |
+
+Tabella completa e risultati riproducibili: [confronto di comportamento](https://github.com/eliazv/italian-profanity/blob/v0.1.0/data/releases/0.1.0/behavior-diff.md).
+
+### Prova nelle applicazioni
+
+Consolidamento tecnico completato. Il manutentore ha pianificato l’integrazione in due proprie app; prova comparativa sul campo e valutazione dei falsi positivi restano da completare. Questo rilascio non dichiara una copertura esaustiva o validazione su utenti reali.
+
 ## 0.1.0-beta.1
 
 ### Patch Changes
