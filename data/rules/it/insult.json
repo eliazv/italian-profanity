@@ -7,7 +7,20 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["stronzo", "stronza", "stronzi", "stronze", "stronzata", "stronzate"],
+      "terms": [
+        "stronzo",
+        "stronza",
+        "stronzi",
+        "stronze",
+        "stronzata",
+        "stronzate",
+        "stronzino",
+        "stronzina",
+        "stronzini",
+        "stronzine",
+        "stronzolo",
+        "stronzoli"
+      ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -17,7 +30,19 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["coglione", "coglioni", "coglionata", "coglionate"],
+      "terms": [
+        "coglione",
+        "coglioni",
+        "coglionata",
+        "coglionate",
+        "cogliona",
+        "coglioncello",
+        "coglioncella",
+        "coglioncelli",
+        "coglioncelle",
+        "coglioneria",
+        "coglionerie"
+      ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -27,7 +52,19 @@
       "category": "insult",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["bastardo", "bastarda", "bastardi", "bastarde"],
+      "terms": [
+        "bastardo",
+        "bastarda",
+        "bastardi",
+        "bastarde",
+        "bastardaccio",
+        "bastardaccia",
+        "bastardacci",
+        "bastardacce",
+        "bastardone",
+        "bastardona",
+        "bastardoni"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -57,7 +94,18 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["cretino", "cretina", "cretini", "cretine"],
+      "terms": [
+        "cretino",
+        "cretina",
+        "cretini",
+        "cretine",
+        "cretinetto",
+        "cretinetta",
+        "cretinetti",
+        "cretinette",
+        "cretinata",
+        "cretinate"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -192,7 +240,12 @@
       "category": "insult",
       "severity": 3,
       "confidence": "high",
-      "phrases": [["figlio", "di", "puttana"], ["figli", "di", "puttana"]],
+      "phrases": [
+        ["figlio", "di", "puttana"],
+        ["figli", "di", "puttana"],
+        ["figlia", "di", "puttana"],
+        ["figlie", "di", "puttana"]
+      ],
       "provenance": ["manual"],
       "note": "Solo le sequenze dichiarate, non figlio o figli da soli."
     },
@@ -273,7 +326,12 @@
       "category": "insult",
       "severity": 3,
       "confidence": "high",
-      "phrases": [["figlio", "di", "troia"], ["figli", "di", "troia"]],
+      "phrases": [
+        ["figlio", "di", "troia"],
+        ["figli", "di", "troia"],
+        ["figlia", "di", "troia"],
+        ["figlie", "di", "troia"]
+      ],
       "provenance": ["manual"],
       "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
     },
@@ -286,6 +344,161 @@
       "phrases": [["vai", "a", "cagare"], ["andate", "a", "cagare"]],
       "provenance": ["manual"],
       "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
+    },
+    {
+      "id": "it.insult.mezzasega",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["mezzasega", "mezzeseghe"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.insult.scassacazzo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["scassacazzo", "scassacazzi", "scassacoglioni", "scassaminchia"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.insult.sfigato",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["sfigato", "sfigata", "sfigati", "sfigate"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.insult.babbeo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["babbeo", "babbea", "babbei", "babbee"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.insult.bischero",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["bischero", "bischera", "bischeri", "bischere"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.insult.balengo",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["balengo", "balenga", "balenghi", "balenghe"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.insult.mona",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["mona", "mone"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.insult.fetente",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["fetente", "fetenti"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.insult.patacca",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["patacca", "patacche"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.insult.pezzente",
+      "kind": "word",
+      "category": "insult",
+      "severity": 1,
+      "confidence": "medium",
+      "terms": ["pezzente", "pezzenti"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
+    },
+    {
+      "id": "it.insult.leccapalle",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["leccapalle", "leccacazzi", "leccafiga", "leccafighe"],
+      "provenance": ["manual"],
+      "note": "Forma offensiva specifica: parola intera, non prefisso generalizzato."
+    },
+    {
+      "id": "it.insult.figlio-di-mignotta",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [
+        ["figlio", "di", "mignotta"],
+        ["figlia", "di", "mignotta"],
+        ["figli", "di", "mignotta"],
+        ["figlie", "di", "mignotta"]
+      ],
+      "provenance": ["manual"],
+      "note": "Frase ingiuriosa esplicita, senza blocco delle parole neutre isolate."
+    },
+    {
+      "id": "it.insult.faccia-da-culo",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["faccia", "da", "culo"]],
+      "provenance": ["manual"],
+      "note": "Frase ingiuriosa esplicita, senza blocco delle parole neutre isolate."
+    },
+    {
+      "id": "it.insult.faccia-di-merda",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["faccia", "di", "merda"]],
+      "provenance": ["manual"],
+      "note": "Frase ingiuriosa esplicita, senza blocco delle parole neutre isolate."
+    },
+    {
+      "id": "it.insult.testa-di-minchia",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["testa", "di", "minchia"]],
+      "provenance": ["manual"],
+      "note": "Frase ingiuriosa esplicita, senza blocco delle parole neutre isolate."
     }
   ]
 }

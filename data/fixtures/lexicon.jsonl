@@ -1,0 +1,259 @@
+{"id":"lexicon-001","input":"mezzasega","profile":"balanced","rules":["it.insult.mezzasega"],"note":"Forma nuova curata"}
+{"id":"lexicon-002","input":"mezzeseghe","profile":"balanced","rules":["it.insult.mezzasega"],"note":"Forma nuova curata"}
+{"id":"lexicon-003","input":"extramezzasegatest","profile":"balanced","mustNotMatch":["it.insult.mezzasega"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-004","input":"scassacazzo","profile":"balanced","rules":["it.insult.scassacazzo"],"note":"Forma nuova curata"}
+{"id":"lexicon-005","input":"scassacazzi","profile":"balanced","rules":["it.insult.scassacazzo"],"note":"Forma nuova curata"}
+{"id":"lexicon-006","input":"scassacoglioni","profile":"balanced","rules":["it.insult.scassacazzo"],"note":"Forma nuova curata"}
+{"id":"lexicon-007","input":"scassaminchia","profile":"balanced","rules":["it.insult.scassacazzo"],"note":"Forma nuova curata"}
+{"id":"lexicon-008","input":"extrascassacazzotest","profile":"balanced","mustNotMatch":["it.insult.scassacazzo"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-009","input":"sfigato","profile":"balanced","rules":["it.insult.sfigato"],"note":"Forma nuova curata"}
+{"id":"lexicon-010","input":"sfigata","profile":"balanced","rules":["it.insult.sfigato"],"note":"Forma nuova curata"}
+{"id":"lexicon-011","input":"sfigati","profile":"balanced","rules":["it.insult.sfigato"],"note":"Forma nuova curata"}
+{"id":"lexicon-012","input":"sfigate","profile":"balanced","rules":["it.insult.sfigato"],"note":"Forma nuova curata"}
+{"id":"lexicon-013","input":"extrasfigatotest","profile":"balanced","mustNotMatch":["it.insult.sfigato"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-014","input":"sfigato","profile":"strict","action":"block","rules":["it.insult.sfigato"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-015","input":"babbeo","profile":"balanced","rules":["it.insult.babbeo"],"note":"Forma nuova curata"}
+{"id":"lexicon-016","input":"babbea","profile":"balanced","rules":["it.insult.babbeo"],"note":"Forma nuova curata"}
+{"id":"lexicon-017","input":"babbei","profile":"balanced","rules":["it.insult.babbeo"],"note":"Forma nuova curata"}
+{"id":"lexicon-018","input":"babbee","profile":"balanced","rules":["it.insult.babbeo"],"note":"Forma nuova curata"}
+{"id":"lexicon-019","input":"extrababbeotest","profile":"balanced","mustNotMatch":["it.insult.babbeo"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-020","input":"babbeo","profile":"strict","action":"block","rules":["it.insult.babbeo"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-021","input":"bischero","profile":"balanced","rules":["it.insult.bischero"],"note":"Forma nuova curata"}
+{"id":"lexicon-022","input":"bischera","profile":"balanced","rules":["it.insult.bischero"],"note":"Forma nuova curata"}
+{"id":"lexicon-023","input":"bischeri","profile":"balanced","rules":["it.insult.bischero"],"note":"Forma nuova curata"}
+{"id":"lexicon-024","input":"bischere","profile":"balanced","rules":["it.insult.bischero"],"note":"Forma nuova curata"}
+{"id":"lexicon-025","input":"extrabischerotest","profile":"balanced","mustNotMatch":["it.insult.bischero"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-026","input":"bischero","profile":"strict","action":"block","rules":["it.insult.bischero"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-027","input":"balengo","profile":"balanced","rules":["it.insult.balengo"],"note":"Forma nuova curata"}
+{"id":"lexicon-028","input":"balenga","profile":"balanced","rules":["it.insult.balengo"],"note":"Forma nuova curata"}
+{"id":"lexicon-029","input":"balenghi","profile":"balanced","rules":["it.insult.balengo"],"note":"Forma nuova curata"}
+{"id":"lexicon-030","input":"balenghe","profile":"balanced","rules":["it.insult.balengo"],"note":"Forma nuova curata"}
+{"id":"lexicon-031","input":"extrabalengotest","profile":"balanced","mustNotMatch":["it.insult.balengo"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-032","input":"balengo","profile":"strict","action":"block","rules":["it.insult.balengo"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-033","input":"mona","profile":"balanced","rules":["it.insult.mona"],"note":"Forma nuova curata"}
+{"id":"lexicon-034","input":"mone","profile":"balanced","rules":["it.insult.mona"],"note":"Forma nuova curata"}
+{"id":"lexicon-035","input":"extramonatest","profile":"balanced","mustNotMatch":["it.insult.mona"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-036","input":"mona","profile":"strict","action":"block","rules":["it.insult.mona"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-037","input":"fetente","profile":"balanced","rules":["it.insult.fetente"],"note":"Forma nuova curata"}
+{"id":"lexicon-038","input":"fetenti","profile":"balanced","rules":["it.insult.fetente"],"note":"Forma nuova curata"}
+{"id":"lexicon-039","input":"extrafetentetest","profile":"balanced","mustNotMatch":["it.insult.fetente"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-040","input":"fetente","profile":"strict","action":"block","rules":["it.insult.fetente"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-041","input":"patacca","profile":"balanced","rules":["it.insult.patacca"],"note":"Forma nuova curata"}
+{"id":"lexicon-042","input":"patacche","profile":"balanced","rules":["it.insult.patacca"],"note":"Forma nuova curata"}
+{"id":"lexicon-043","input":"extrapataccatest","profile":"balanced","mustNotMatch":["it.insult.patacca"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-044","input":"patacca","profile":"strict","action":"block","rules":["it.insult.patacca"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-045","input":"pezzente","profile":"balanced","rules":["it.insult.pezzente"],"note":"Forma nuova curata"}
+{"id":"lexicon-046","input":"pezzenti","profile":"balanced","rules":["it.insult.pezzente"],"note":"Forma nuova curata"}
+{"id":"lexicon-047","input":"extrapezzentetest","profile":"balanced","mustNotMatch":["it.insult.pezzente"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-048","input":"pezzente","profile":"strict","action":"block","rules":["it.insult.pezzente"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-049","input":"leccapalle","profile":"balanced","rules":["it.insult.leccapalle"],"note":"Forma nuova curata"}
+{"id":"lexicon-050","input":"leccacazzi","profile":"balanced","rules":["it.insult.leccapalle"],"note":"Forma nuova curata"}
+{"id":"lexicon-051","input":"leccafiga","profile":"balanced","rules":["it.insult.leccapalle"],"note":"Forma nuova curata"}
+{"id":"lexicon-052","input":"leccafighe","profile":"balanced","rules":["it.insult.leccapalle"],"note":"Forma nuova curata"}
+{"id":"lexicon-053","input":"extraleccapalletest","profile":"balanced","mustNotMatch":["it.insult.leccapalle"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-054","input":"inculare","profile":"balanced","rules":["it.sexual.inculare"],"note":"Forma nuova curata"}
+{"id":"lexicon-055","input":"incularsi","profile":"balanced","rules":["it.sexual.inculare"],"note":"Forma nuova curata"}
+{"id":"lexicon-056","input":"inculato","profile":"balanced","rules":["it.sexual.inculare"],"note":"Forma nuova curata"}
+{"id":"lexicon-057","input":"inculata","profile":"balanced","rules":["it.sexual.inculare"],"note":"Forma nuova curata"}
+{"id":"lexicon-058","input":"inculati","profile":"balanced","rules":["it.sexual.inculare"],"note":"Forma nuova curata"}
+{"id":"lexicon-059","input":"inculate","profile":"balanced","rules":["it.sexual.inculare"],"note":"Forma nuova curata"}
+{"id":"lexicon-060","input":"extraincularetest","profile":"balanced","mustNotMatch":["it.sexual.inculare"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-061","input":"pugnetta","profile":"balanced","rules":["it.sexual.pugnetta"],"note":"Forma nuova curata"}
+{"id":"lexicon-062","input":"pugnette","profile":"balanced","rules":["it.sexual.pugnetta"],"note":"Forma nuova curata"}
+{"id":"lexicon-063","input":"extrapugnettatest","profile":"balanced","mustNotMatch":["it.sexual.pugnetta"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-064","input":"pugnetta","profile":"strict","action":"block","rules":["it.sexual.pugnetta"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-065","input":"fregna","profile":"balanced","rules":["it.sexual.fregna"],"note":"Forma nuova curata"}
+{"id":"lexicon-066","input":"fregne","profile":"balanced","rules":["it.sexual.fregna"],"note":"Forma nuova curata"}
+{"id":"lexicon-067","input":"extrafregnatest","profile":"balanced","mustNotMatch":["it.sexual.fregna"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-068","input":"fregna","profile":"strict","action":"block","rules":["it.sexual.fregna"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-069","input":"patonza","profile":"balanced","rules":["it.sexual.patonza"],"note":"Forma nuova curata"}
+{"id":"lexicon-070","input":"patonze","profile":"balanced","rules":["it.sexual.patonza"],"note":"Forma nuova curata"}
+{"id":"lexicon-071","input":"extrapatonzatest","profile":"balanced","mustNotMatch":["it.sexual.patonza"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-072","input":"patonza","profile":"strict","action":"block","rules":["it.sexual.patonza"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-073","input":"nerchia","profile":"balanced","rules":["it.sexual.nerchia"],"note":"Forma nuova curata"}
+{"id":"lexicon-074","input":"nerchie","profile":"balanced","rules":["it.sexual.nerchia"],"note":"Forma nuova curata"}
+{"id":"lexicon-075","input":"extranerchiatest","profile":"balanced","mustNotMatch":["it.sexual.nerchia"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-076","input":"nerchia","profile":"strict","action":"block","rules":["it.sexual.nerchia"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-077","input":"sorca","profile":"balanced","rules":["it.sexual.sorca"],"note":"Forma nuova curata"}
+{"id":"lexicon-078","input":"sorche","profile":"balanced","rules":["it.sexual.sorca"],"note":"Forma nuova curata"}
+{"id":"lexicon-079","input":"extrasorcatest","profile":"balanced","mustNotMatch":["it.sexual.sorca"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-080","input":"sorca","profile":"strict","action":"block","rules":["it.sexual.sorca"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-081","input":"sbocchinare","profile":"balanced","rules":["it.sexual.sbocchinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-082","input":"sbocchinato","profile":"balanced","rules":["it.sexual.sbocchinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-083","input":"sbocchinata","profile":"balanced","rules":["it.sexual.sbocchinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-084","input":"sbocchinati","profile":"balanced","rules":["it.sexual.sbocchinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-085","input":"sbocchinate","profile":"balanced","rules":["it.sexual.sbocchinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-086","input":"extrasbocchinaretest","profile":"balanced","mustNotMatch":["it.sexual.sbocchinare"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-087","input":"spompinare","profile":"balanced","rules":["it.sexual.spompinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-088","input":"spompinato","profile":"balanced","rules":["it.sexual.spompinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-089","input":"spompinata","profile":"balanced","rules":["it.sexual.spompinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-090","input":"spompinati","profile":"balanced","rules":["it.sexual.spompinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-091","input":"spompinate","profile":"balanced","rules":["it.sexual.spompinare"],"note":"Forma nuova curata"}
+{"id":"lexicon-092","input":"extraspompinaretest","profile":"balanced","mustNotMatch":["it.sexual.spompinare"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-093","input":"arrapato","profile":"balanced","rules":["it.sexual.arrapato"],"note":"Forma nuova curata"}
+{"id":"lexicon-094","input":"arrapata","profile":"balanced","rules":["it.sexual.arrapato"],"note":"Forma nuova curata"}
+{"id":"lexicon-095","input":"arrapati","profile":"balanced","rules":["it.sexual.arrapato"],"note":"Forma nuova curata"}
+{"id":"lexicon-096","input":"arrapate","profile":"balanced","rules":["it.sexual.arrapato"],"note":"Forma nuova curata"}
+{"id":"lexicon-097","input":"arrapare","profile":"balanced","rules":["it.sexual.arrapato"],"note":"Forma nuova curata"}
+{"id":"lexicon-098","input":"arraparsi","profile":"balanced","rules":["it.sexual.arrapato"],"note":"Forma nuova curata"}
+{"id":"lexicon-099","input":"extraarrapatotest","profile":"balanced","mustNotMatch":["it.sexual.arrapato"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-100","input":"arrapato","profile":"strict","action":"block","rules":["it.sexual.arrapato"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-101","input":"cagacazzo","profile":"balanced","rules":["it.vulgar.cagacazzo"],"note":"Forma nuova curata"}
+{"id":"lexicon-102","input":"cagacazzi","profile":"balanced","rules":["it.vulgar.cagacazzo"],"note":"Forma nuova curata"}
+{"id":"lexicon-103","input":"cagaminchia","profile":"balanced","rules":["it.vulgar.cagacazzo"],"note":"Forma nuova curata"}
+{"id":"lexicon-104","input":"cacaminchia","profile":"balanced","rules":["it.vulgar.cagacazzo"],"note":"Forma nuova curata"}
+{"id":"lexicon-105","input":"extracagacazzotest","profile":"balanced","mustNotMatch":["it.vulgar.cagacazzo"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-106","input":"smerdare","profile":"balanced","rules":["it.vulgar.smerdare"],"note":"Forma nuova curata"}
+{"id":"lexicon-107","input":"smerdarsi","profile":"balanced","rules":["it.vulgar.smerdare"],"note":"Forma nuova curata"}
+{"id":"lexicon-108","input":"smerdato","profile":"balanced","rules":["it.vulgar.smerdare"],"note":"Forma nuova curata"}
+{"id":"lexicon-109","input":"smerdata","profile":"balanced","rules":["it.vulgar.smerdare"],"note":"Forma nuova curata"}
+{"id":"lexicon-110","input":"smerdati","profile":"balanced","rules":["it.vulgar.smerdare"],"note":"Forma nuova curata"}
+{"id":"lexicon-111","input":"smerdate","profile":"balanced","rules":["it.vulgar.smerdare"],"note":"Forma nuova curata"}
+{"id":"lexicon-112","input":"extrasmerdaretest","profile":"balanced","mustNotMatch":["it.vulgar.smerdare"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-113","input":"pisciasotto","profile":"balanced","rules":["it.vulgar.pisciasotto"],"note":"Forma nuova curata"}
+{"id":"lexicon-114","input":"pisciasotti","profile":"balanced","rules":["it.vulgar.pisciasotto"],"note":"Forma nuova curata"}
+{"id":"lexicon-115","input":"extrapisciasottotest","profile":"balanced","mustNotMatch":["it.vulgar.pisciasotto"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-116","input":"boiata","profile":"balanced","rules":["it.vulgar.boiata"],"note":"Forma nuova curata"}
+{"id":"lexicon-117","input":"boiate","profile":"balanced","rules":["it.vulgar.boiata"],"note":"Forma nuova curata"}
+{"id":"lexicon-118","input":"extraboiatatest","profile":"balanced","mustNotMatch":["it.vulgar.boiata"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-119","input":"boiata","profile":"strict","action":"block","rules":["it.vulgar.boiata"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-120","input":"socmel","profile":"balanced","rules":["it.vulgar.socmel"],"note":"Forma nuova curata"}
+{"id":"lexicon-121","input":"extrasocmeltest","profile":"balanced","mustNotMatch":["it.vulgar.socmel"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-122","input":"socmel","profile":"strict","action":"block","rules":["it.vulgar.socmel"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-123","input":"belin","profile":"balanced","rules":["it.vulgar.belin"],"note":"Forma nuova curata"}
+{"id":"lexicon-124","input":"belino","profile":"balanced","rules":["it.vulgar.belin"],"note":"Forma nuova curata"}
+{"id":"lexicon-125","input":"extrabelintest","profile":"balanced","mustNotMatch":["it.vulgar.belin"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-126","input":"belin","profile":"strict","action":"block","rules":["it.vulgar.belin"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-127","input":"scazzare","profile":"balanced","rules":["it.vulgar.scazzato"],"note":"Forma nuova curata"}
+{"id":"lexicon-128","input":"scazzato","profile":"balanced","rules":["it.vulgar.scazzato"],"note":"Forma nuova curata"}
+{"id":"lexicon-129","input":"scazzata","profile":"balanced","rules":["it.vulgar.scazzato"],"note":"Forma nuova curata"}
+{"id":"lexicon-130","input":"scazzati","profile":"balanced","rules":["it.vulgar.scazzato"],"note":"Forma nuova curata"}
+{"id":"lexicon-131","input":"scazzate","profile":"balanced","rules":["it.vulgar.scazzato"],"note":"Forma nuova curata"}
+{"id":"lexicon-132","input":"extrascazzaretest","profile":"balanced","mustNotMatch":["it.vulgar.scazzato"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-133","input":"scazzare","profile":"strict","action":"block","rules":["it.vulgar.scazzato"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-134","input":"checcazzo","profile":"balanced","rules":["it.vulgar.esclamazioni-composte"],"note":"Forma nuova curata"}
+{"id":"lexicon-135","input":"ecchecazzo","profile":"balanced","rules":["it.vulgar.esclamazioni-composte"],"note":"Forma nuova curata"}
+{"id":"lexicon-136","input":"mavaffanculo","profile":"balanced","rules":["it.vulgar.esclamazioni-composte"],"note":"Forma nuova curata"}
+{"id":"lexicon-137","input":"staminchia","profile":"balanced","rules":["it.vulgar.esclamazioni-composte"],"note":"Forma nuova curata"}
+{"id":"lexicon-138","input":"staminchie","profile":"balanced","rules":["it.vulgar.esclamazioni-composte"],"note":"Forma nuova curata"}
+{"id":"lexicon-139","input":"extracheccazzotest","profile":"balanced","mustNotMatch":["it.vulgar.esclamazioni-composte"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-140","input":"checca","profile":"balanced","rules":["it.discriminatory.checca"],"note":"Forma nuova curata"}
+{"id":"lexicon-141","input":"checche","profile":"balanced","rules":["it.discriminatory.checca"],"note":"Forma nuova curata"}
+{"id":"lexicon-142","input":"extracheccatest","profile":"balanced","mustNotMatch":["it.discriminatory.checca"],"note":"Negativo: nessuna corrispondenza su sottostringa"}
+{"id":"lexicon-143","input":"checca","profile":"strict","action":"block","rules":["it.discriminatory.checca"],"note":"Strict blocca anche il termine ambiguo"}
+{"id":"lexicon-144","input":"figlio di mignotta","profile":"balanced","action":"block","rules":["it.insult.figlio-di-mignotta"],"note":"Frase esatta"}
+{"id":"lexicon-145","input":"figlia di mignotta","profile":"balanced","action":"block","rules":["it.insult.figlio-di-mignotta"],"note":"Frase esatta"}
+{"id":"lexicon-146","input":"figli di mignotta","profile":"balanced","action":"block","rules":["it.insult.figlio-di-mignotta"],"note":"Frase esatta"}
+{"id":"lexicon-147","input":"figlie di mignotta","profile":"balanced","action":"block","rules":["it.insult.figlio-di-mignotta"],"note":"Frase esatta"}
+{"id":"lexicon-148","input":"extrafiglio di mignotta","profile":"balanced","mustNotMatch":["it.insult.figlio-di-mignotta"],"note":"Negativo: prima parola non coincidente"}
+{"id":"lexicon-149","input":"faccia da culo","profile":"balanced","action":"block","rules":["it.insult.faccia-da-culo"],"note":"Frase esatta"}
+{"id":"lexicon-150","input":"extrafaccia da culo","profile":"balanced","mustNotMatch":["it.insult.faccia-da-culo"],"note":"Negativo: prima parola non coincidente"}
+{"id":"lexicon-151","input":"faccia di merda","profile":"balanced","action":"block","rules":["it.insult.faccia-di-merda"],"note":"Frase esatta"}
+{"id":"lexicon-152","input":"extrafaccia di merda","profile":"balanced","mustNotMatch":["it.insult.faccia-di-merda"],"note":"Negativo: prima parola non coincidente"}
+{"id":"lexicon-153","input":"testa di minchia","profile":"balanced","action":"block","rules":["it.insult.testa-di-minchia"],"note":"Frase esatta"}
+{"id":"lexicon-154","input":"extratesta di minchia","profile":"balanced","mustNotMatch":["it.insult.testa-di-minchia"],"note":"Negativo: prima parola non coincidente"}
+{"id":"lexicon-155","input":"cogliona","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-156","input":"coglioncello","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-157","input":"coglioncella","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-158","input":"coglioncelli","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-159","input":"coglioncelle","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-160","input":"coglioneria","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-161","input":"coglionerie","profile":"balanced","rules":["it.insult.coglione"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-162","input":"extracoglionatest","profile":"balanced","mustNotMatch":["it.insult.coglione"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-163","input":"cretinetto","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-164","input":"cretinetta","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-165","input":"cretinetti","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-166","input":"cretinette","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-167","input":"cretinata","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-168","input":"cretinate","profile":"balanced","rules":["it.insult.cretino"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-169","input":"extracretinettotest","profile":"balanced","mustNotMatch":["it.insult.cretino"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-170","input":"stronzino","profile":"balanced","rules":["it.insult.stronzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-171","input":"stronzina","profile":"balanced","rules":["it.insult.stronzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-172","input":"stronzini","profile":"balanced","rules":["it.insult.stronzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-173","input":"stronzine","profile":"balanced","rules":["it.insult.stronzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-174","input":"stronzolo","profile":"balanced","rules":["it.insult.stronzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-175","input":"stronzoli","profile":"balanced","rules":["it.insult.stronzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-176","input":"extrastronzinotest","profile":"balanced","mustNotMatch":["it.insult.stronzo"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-177","input":"bastardaccio","profile":"balanced","rules":["it.insult.bastardo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-178","input":"bastardaccia","profile":"balanced","rules":["it.insult.bastardo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-179","input":"bastardacci","profile":"balanced","rules":["it.insult.bastardo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-180","input":"bastardacce","profile":"balanced","rules":["it.insult.bastardo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-181","input":"bastardone","profile":"balanced","rules":["it.insult.bastardo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-182","input":"bastardona","profile":"balanced","rules":["it.insult.bastardo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-183","input":"bastardoni","profile":"balanced","rules":["it.insult.bastardo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-184","input":"extrabastardacciotest","profile":"balanced","mustNotMatch":["it.insult.bastardo"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-185","input":"cazzaccio","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-186","input":"cazzacci","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-187","input":"cazzetto","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-188","input":"cazzetti","profile":"balanced","rules":["it.sexual.cazzo"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-189","input":"extracazzacciotest","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-190","input":"puttanaccia","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-191","input":"puttanacce","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-192","input":"puttanona","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-193","input":"puttanone","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-194","input":"puttanella","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-195","input":"puttanelle","profile":"balanced","rules":["it.sexual.puttana"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-196","input":"extraputtanacciatest","profile":"balanced","mustNotMatch":["it.sexual.puttana"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-197","input":"troiaccia","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-198","input":"troiacce","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-199","input":"troietta","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-200","input":"troiette","profile":"balanced","rules":["it.sexual.troia"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-201","input":"extratroiacciatest","profile":"balanced","mustNotMatch":["it.sexual.troia"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-202","input":"mignottona","profile":"balanced","rules":["it.sexual.mignotta"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-203","input":"mignottone","profile":"balanced","rules":["it.sexual.mignotta"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-204","input":"mignottoni","profile":"balanced","rules":["it.sexual.mignotta"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-205","input":"extramignottonatest","profile":"balanced","mustNotMatch":["it.sexual.mignotta"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-206","input":"fottutissimo","profile":"balanced","rules":["it.sexual.fottere"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-207","input":"fottutissima","profile":"balanced","rules":["it.sexual.fottere"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-208","input":"fottutissimi","profile":"balanced","rules":["it.sexual.fottere"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-209","input":"fottutissime","profile":"balanced","rules":["it.sexual.fottere"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-210","input":"extrafottutissimotest","profile":"balanced","mustNotMatch":["it.sexual.fottere"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-211","input":"zoccolona","profile":"balanced","rules":["it.sexual.zoccola"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-212","input":"zoccolone","profile":"balanced","rules":["it.sexual.zoccola"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-213","input":"zoccoloni","profile":"balanced","rules":["it.sexual.zoccola"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-214","input":"extrazoccolonatest","profile":"balanced","mustNotMatch":["it.sexual.zoccola"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-215","input":"merdina","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-216","input":"merdine","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-217","input":"merdone","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-218","input":"merdona","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-219","input":"merdoni","profile":"balanced","rules":["it.vulgar.merda"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-220","input":"extramerdinatest","profile":"balanced","mustNotMatch":["it.vulgar.merda"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-221","input":"incazzatura","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-222","input":"incazzature","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-223","input":"incazzatissimo","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-224","input":"incazzatissima","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-225","input":"incazzatissimi","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-226","input":"incazzatissime","profile":"balanced","rules":["it.vulgar.incazzato"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-227","input":"extraincazzaturatest","profile":"balanced","mustNotMatch":["it.vulgar.incazzato"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-228","input":"frocetto","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-229","input":"frocetti","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-230","input":"frocione","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-231","input":"frocioni","profile":"balanced","rules":["it.discriminatory.frocio"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-232","input":"extrafrocettotest","profile":"balanced","mustNotMatch":["it.discriminatory.frocio"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-233","input":"terronaccio","profile":"balanced","rules":["it.discriminatory.terrone"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-234","input":"terronaccia","profile":"balanced","rules":["it.discriminatory.terrone"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-235","input":"terronacci","profile":"balanced","rules":["it.discriminatory.terrone"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-236","input":"terronacce","profile":"balanced","rules":["it.discriminatory.terrone"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-237","input":"extraterronacciotest","profile":"balanced","mustNotMatch":["it.discriminatory.terrone"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-238","input":"culattona","profile":"balanced","rules":["it.discriminatory.culattone"],"note":"Nuova flessione esplicita"}
+{"id":"lexicon-239","input":"extraculattonatest","profile":"balanced","mustNotMatch":["it.discriminatory.culattone"],"note":"Negativo su sottostringa"}
+{"id":"lexicon-240","input":"figlia di puttana","profile":"balanced","action":"block","rules":["it.insult.figlio-di-puttana"],"note":"Variante femminile"}
+{"id":"lexicon-241","input":"figlie di puttana","profile":"balanced","action":"block","rules":["it.insult.figlio-di-puttana"],"note":"Variante femminile"}
+{"id":"lexicon-242","input":"extrafiglia di puttana","profile":"balanced","mustNotMatch":["it.insult.figlio-di-puttana"],"note":"Negativo sul confine"}
+{"id":"lexicon-243","input":"figlia di troia","profile":"balanced","action":"block","rules":["it.insult.figlio-di-troia"],"note":"Variante femminile"}
+{"id":"lexicon-244","input":"figlie di troia","profile":"balanced","action":"block","rules":["it.insult.figlio-di-troia"],"note":"Variante femminile"}
+{"id":"lexicon-245","input":"extrafiglia di troia","profile":"balanced","mustNotMatch":["it.insult.figlio-di-troia"],"note":"Negativo sul confine"}
+{"id":"lexicon-246","input":"Claudio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-247","input":"Cazzuola","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-248","input":"Scazzottata","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-249","input":"Sega","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-250","input":"Palle","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-251","input":"Finocchio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-252","input":"Gay","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-253","input":"Disabile","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-254","input":"Tromba","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-255","input":"Pataccone","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome o parola innocua"}
+{"id":"lexicon-256","input":"Mona","profile":"balanced","action":"review","rules":["it.insult.mona"],"note":"Omografo o regionalismo: review"}
+{"id":"lexicon-257","input":"Checca","profile":"balanced","action":"review","rules":["it.discriminatory.checca"],"note":"Omografo o regionalismo: review"}
+{"id":"lexicon-258","input":"Patacca","profile":"balanced","action":"review","rules":["it.insult.patacca"],"note":"Omografo o regionalismo: review"}
+{"id":"lexicon-259","input":"Bischero","profile":"balanced","action":"review","rules":["it.insult.bischero"],"note":"Omografo o regionalismo: review"}

@@ -7,7 +7,16 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": ["frocio", "frocia", "froci", "frocie"],
+      "terms": [
+        "frocio",
+        "frocia",
+        "froci",
+        "frocie",
+        "frocetto",
+        "frocetti",
+        "frocione",
+        "frocioni"
+      ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -17,7 +26,7 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": ["culattone", "culattoni"],
+      "terms": ["culattone", "culattoni", "culattona"],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -37,7 +46,15 @@
       "category": "discriminatory",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["terrone", "terrona", "terroni"],
+      "terms": [
+        "terrone",
+        "terrona",
+        "terroni",
+        "terronaccio",
+        "terronaccia",
+        "terronacci",
+        "terronacce"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -65,6 +82,16 @@
       ],
       "provenance": ["manual"],
       "note": "Espressione offensiva contestuale: nessuna parola neutra è vietata in isolamento solo per questa regola."
+    },
+    {
+      "id": "it.discriminatory.checca",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["checca", "checche"],
+      "provenance": ["manual"],
+      "note": "Termine regionale o polisemico: review in balanced, parola intera."
     }
   ]
 }
