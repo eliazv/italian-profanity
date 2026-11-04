@@ -125,8 +125,9 @@ Segment _makeSegment(List<OriginChar> units, String kind) {
   }
   flush();
   final hasLetter = units.any((unit) => _isLetter(unit.char));
-  final base = units.where((unit) => !_isSeparator(unit.char)).toList();
-  final deleet = <OriginChar>[];
+  final base = mergeSurrogatePairs(
+      units.where((unit) => !_isSeparator(unit.char)).toList());
+  var deleet = <OriginChar>[];
   for (final unit in units) {
     final value = (hasLetter ? leetTable[unit.char] : null) ?? unit.char;
     for (final code in value.runes) {
@@ -134,6 +135,7 @@ Segment _makeSegment(List<OriginChar> units, String kind) {
       if (!_isSeparator(char)) deleet.add(OriginChar(char, unit.range.copy()));
     }
   }
+  deleet = mergeSurrogatePairs(deleet);
   return Segment(
       kind: kind,
       range: _span(units),

@@ -9,13 +9,16 @@ const fixture = JSON.parse(
 )
 const esm = await import("../packages/js/dist/index.js")
 const cjs = createRequire(import.meta.url)("../packages/js/dist/index.cjs")
-const adoptionFixtures = readFileSync(
-  new URL("../data/fixtures/adoption.jsonl", import.meta.url),
-  "utf8",
+const adoptionFixtures = ["adoption", "english", "consolidation"].flatMap((name) =>
+  readFileSync(new URL(`../data/fixtures/${name}.jsonl`, import.meta.url), "utf8")
+    .trim()
+    .split("\n")
+    .map((line) => JSON.parse(line)),
 )
-  .trim()
-  .split("\n")
-  .map((line) => JSON.parse(line))
+const packageMetadata = JSON.parse(
+  readFileSync(new URL("../packages/js/package.json", import.meta.url), "utf8"),
+)
+assert.deepEqual(packageMetadata.dependencies ?? {}, {}, "Il runtime deve restare senza dipendenze")
 for (const api of [esm, cjs]) {
   assert.ok(api.VERSION)
   assert.equal(api.check(fixture.input).action, fixture.action)
@@ -23,7 +26,7 @@ for (const api of [esm, cjs]) {
   assert.equal(api.isClean(fixture.input), false)
   for (const example of adoptionFixtures) {
     const result = api.check(example.input, example)
-    assert.equal(result.action, example.action, example.id)
+    if (example.action) assert.equal(result.action, example.action, example.id)
     if (example.expectedMatches)
       assert.deepEqual(result.matches, example.expectedMatches, example.id)
     for (const ruleId of example.rules ?? [])

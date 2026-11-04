@@ -50,8 +50,15 @@ if (typeof engine.findMatches !== "function" || typeof engine.check !== "functio
     "Audit impossibile: findMatches non è disponibile. Il controllo non può essere saltato.",
   )
 }
-const findMatches = engine.findMatches
-const check = engine.check
+// Verifica anche il dataset opzionale sul corpus italiano: attivare l'inglese
+// non deve introdurre collisioni silenziose su nomi o parole comuni.
+const { createChecker } = (await import(
+  pathToFileURL(join(JS_PKG, "src", "index.ts")).href
+)) as typeof import("../packages/js/src/index.ts")
+const configurations = [
+  { label: "it", checker: createChecker({ languages: ["it"] }) },
+  { label: "it+en", checker: createChecker({ languages: ["it", "en"] }) },
+]
 
 // Campionamento deterministico delle coppie nome + cognome (LCG con seme fisso).
 let seed = 42
@@ -82,13 +89,16 @@ const accepted = new Map(
 )
 
 const collisions: string[] = []
-for (const { input, corpus } of inputs) {
-  for (const match of findMatches(input)) {
-    const justification =
-      accepted.get(`${match.ruleId}\u0000${corpus}\u0000${input}`) ??
-      accepted.get(`${match.ruleId}\u0000*\u0000${input}`)
-    if (!justification || (justification.action && check(input).action !== justification.action)) {
-      collisions.push(`${match.ruleId} [${corpus}] ${input}`)
+for (const { label, checker } of configurations) {
+  for (const { input, corpus } of inputs) {
+    const result = checker.check(input)
+    for (const match of result.matches) {
+      const justification =
+        accepted.get(`${match.ruleId}\u0000${corpus}\u0000${input}`) ??
+        accepted.get(`${match.ruleId}\u0000*\u0000${input}`)
+      if (!justification || (justification.action && result.action !== justification.action)) {
+        collisions.push(`${match.ruleId} [${label}/${corpus}] ${input}`)
+      }
     }
   }
 }
@@ -102,4 +112,6 @@ if (collisions.length > 0) {
   process.exit(1)
 }
 
-console.log(`✓ audit completato su ${inputs.length} input: nessuna collisione non giustificata`)
+console.log(
+  `✓ audit completato su ${inputs.length} input per ${configurations.length} configurazioni (it, it+en): nessuna collisione non giustificata`,
+)

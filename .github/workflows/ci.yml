@@ -54,6 +54,7 @@ jobs:
         run: |
           pnpm --filter italian-profanity build
           node tools/smoke.mjs
+          node tools/smoke-browser.mjs
 
       - name: Verifica del pacchetto pub
         run: dart pub publish --dry-run

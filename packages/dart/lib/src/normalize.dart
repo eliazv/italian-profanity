@@ -17,6 +17,29 @@ class OriginChar {
   final TextRange range;
 }
 
+/// Riallinea le origini se una rimozione avvicina due surrogati isolati.
+List<OriginChar> mergeSurrogatePairs(List<OriginChar> units) {
+  final output = <OriginChar>[];
+  for (final unit in units) {
+    final previous = output.isEmpty ? null : output.last;
+    final high = previous?.char.codeUnitAt(0) ?? 0;
+    final low = unit.char.codeUnitAt(0);
+    if (previous != null &&
+        previous.char.length == 1 &&
+        unit.char.length == 1 &&
+        high >= 0xd800 &&
+        high <= 0xdbff &&
+        low >= 0xdc00 &&
+        low <= 0xdfff) {
+      output[output.length - 1] = OriginChar(previous.char + unit.char,
+          TextRange(previous.range.start, unit.range.end));
+    } else {
+      output.add(unit);
+    }
+  }
+  return output;
+}
+
 /// Normalizza solo il prefisso ammesso, senza spezzare coppie surrogate.
 List<OriginChar> foldWithOrigins(String input, [num maxLength = 64]) {
   if (!maxLength.isFinite ||
@@ -51,7 +74,7 @@ List<OriginChar> foldWithOrigins(String input, [num maxLength = 64]) {
           String.fromCharCode(normalized), TextRange(start, offset)));
     }
   }
-  return output;
+  return mergeSurrogatePairs(output);
 }
 
 /// Vista `base` a livello di carattere (SPECIFICHE.md §4.3): minuscole, accenti

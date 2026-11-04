@@ -7,6 +7,30 @@ export interface OriginChar {
   range: Range
 }
 
+/** Riallinea le origini se una rimozione rende adiacenti due surrogati isolati. */
+export function mergeSurrogatePairs(units: OriginChar[]): OriginChar[] {
+  const output: OriginChar[] = []
+  for (const unit of units) {
+    const previous = output.at(-1)
+    const high = previous?.char.charCodeAt(0) ?? 0
+    const low = unit.char.charCodeAt(0)
+    if (
+      previous?.char.length === 1 &&
+      unit.char.length === 1 &&
+      high >= 0xd800 &&
+      high <= 0xdbff &&
+      low >= 0xdc00 &&
+      low <= 0xdfff
+    ) {
+      output[output.length - 1] = {
+        char: previous.char + unit.char,
+        range: { start: previous.range.start, end: unit.range.end },
+      }
+    } else output.push(unit)
+  }
+  return output
+}
+
 /** Normalizza solo il prefisso ammesso, senza spezzare coppie surrogate. */
 export function foldWithOrigins(input: string, maxLength = 64): OriginChar[] {
   if (typeof input !== "string") throw new TypeError("Il testo deve essere una stringa")
@@ -39,7 +63,7 @@ export function foldWithOrigins(input: string, maxLength = 64): OriginChar[] {
       output.push({ char: normalized, range: { start, end: offset } })
     }
   }
-  return output
+  return mergeSurrogatePairs(output)
 }
 
 /**

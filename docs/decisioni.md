@@ -105,3 +105,11 @@ Precisa D11: quando l'app attiva `contacts`, URL, email e telefoni riconosciuti 
 Su richiesta del manutentore si prepara `0.1.0-beta.0` per npm e pub.dev, con versioni allineate e tag npm `beta`. La beta serve alla prova di integrazione prevista dalla roadmap e non dichiara completate M3–M6 o la validazione sul campo. La v0.1 stabile resta subordinata ai criteri già definiti. L'inglese resta disattivato per default (D9): il primo nucleo opzionale comprende tre famiglie curate manualmente, con fixture e audit, senza promettere equivalenza con liste esterne. I dialetti restano rinviati.
 
 La migrazione rimuove i filtri precedenti solo dopo confronto di copertura e prova comparativa. `review` può essere consentito dall'app, ma questa scelta non coincide con `isClean()`.
+
+## D22 · Inglese curato opzionale e consolidamento — 2026-11-04
+
+Su richiesta del manutentore si supera il limite del nucleo inglese minimo di D21. Restano italiano predefinito e specializzazione italiana (D9), due motori allineati e zero dipendenze a runtime (D7, D17). Il dataset inglese è selezionato e adattato manualmente: 51 regole, 110 forme e 20 varianti di frase. Non vengono importate intere liste, regex o trasformazioni di librerie esterne.
+
+Obscenity fornisce candidati dal preset MIT derivato da cuss; commit, provenienza e notice sono registrati e distribuiti. leo-profanity e @2toad/profanity restano confronti di copertura e API; la licenza del codice non autorizza a trattare automaticamente i dizionari come MIT.
+
+L’audit deve passare sia in italiano sia con italiano e inglese attivi. Termini identitari o anatomici neutri isolati non vengono aggiunti come ingiurie; le forme ambigue richiedono review e le offese contestuali usano frasi esplicite. Le nuove regole comportano un changeset minor, senza dichiarare copertura esaustiva o pubblicare automaticamente una versione. Il consolidamento tecnico M4 non sostituisce la prova reale M5.
