@@ -1,0 +1,40 @@
+{"id":"guardrails-001","input":"Claudio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome proprio: dio non è una sottostringa vietata"}
+{"id":"guardrails-002","input":"Diodato","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nome proprio con frammento religioso"}
+{"id":"guardrails-003","input":"Dio santo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Invocazione neutra"}
+{"id":"guardrails-004","input":"Madonna di Campiglio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Località, non ingiuria"}
+{"id":"guardrails-005","input":"Madonna santa","profile":"balanced","action":"allow","expectedMatches":[],"note":"Invocazione neutra"}
+{"id":"guardrails-006","input":"Cristo risorto","profile":"balanced","action":"allow","expectedMatches":[],"note":"Frase religiosa neutra"}
+{"id":"guardrails-007","input":"Allah","profile":"balanced","action":"allow","expectedMatches":[],"note":"Divinità isolata, non insulto"}
+{"id":"guardrails-008","input":"Padreterno","profile":"balanced","action":"allow","expectedMatches":[],"note":"Denominazione religiosa isolata"}
+{"id":"guardrails-009","input":"Viva Dio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Invocazione religiosa neutra"}
+{"id":"guardrails-010","input":"Finocchio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Ortaggio o termine non contestualizzato"}
+{"id":"guardrails-011","input":"Finocchi freschi","profile":"balanced","action":"allow","expectedMatches":[],"note":"Termine botanico, non insulto contestuale"}
+{"id":"guardrails-012","input":"Fava fresca","profile":"balanced","action":"allow","expectedMatches":[],"note":"Ortaggio"}
+{"id":"guardrails-013","input":"Sega circolare","profile":"balanced","action":"allow","expectedMatches":[],"note":"Attrezzo, non allusione sessuale"}
+{"id":"guardrails-014","input":"Palle da tennis","profile":"balanced","action":"allow","expectedMatches":[],"note":"Oggetti sportivi"}
+{"id":"guardrails-015","input":"Scopa nuova","profile":"balanced","action":"allow","expectedMatches":[],"note":"Oggetto domestico"}
+{"id":"guardrails-016","input":"Tromba elettrica","profile":"balanced","action":"allow","expectedMatches":[],"note":"Strumento/oggetto neutro"}
+{"id":"guardrails-017","input":"Pici al ragù","profile":"balanced","action":"allow","expectedMatches":[],"note":"Pasta, non forma sessuale"}
+{"id":"guardrails-018","input":"Cazzotto","profile":"balanced","action":"allow","expectedMatches":[],"note":"Parola intera innocua rispetto a cazzo"}
+{"id":"guardrails-019","input":"Cazzuola","profile":"balanced","action":"allow","expectedMatches":[],"note":"Attrezzo, non radice volgare"}
+{"id":"guardrails-020","input":"Scazzottata","profile":"balanced","action":"allow","expectedMatches":[],"note":"Parola innocua rispetto a cazzo"}
+{"id":"guardrails-021","input":"Cazzola","profile":"balanced","action":"allow","expectedMatches":[],"note":"Cognome, non parolaccia per prefisso"}
+{"id":"guardrails-022","input":"Troiani","profile":"balanced","action":"allow","expectedMatches":[],"note":"Cognome, non il termine isolato"}
+{"id":"guardrails-023","input":"Negroni","profile":"balanced","action":"allow","expectedMatches":[],"note":"Cognome, non il termine omografo isolato"}
+{"id":"guardrails-024","input":"Diocesi","profile":"balanced","action":"allow","expectedMatches":[],"note":"Termine religioso, non dio come parola intera"}
+{"id":"guardrails-025","input":"Porco in fattoria","profile":"balanced","action":"allow","expectedMatches":[],"note":"Animale in contesto neutro"}
+{"id":"guardrails-026","input":"Vacca da latte","profile":"balanced","action":"allow","expectedMatches":[],"note":"Animale in contesto neutro"}
+{"id":"guardrails-027","input":"Maremma toscana","profile":"balanced","action":"allow","expectedMatches":[],"note":"Luogo, non imprecazione regionale"}
+{"id":"guardrails-028","input":"Un uomo ebreo","profile":"balanced","action":"allow","expectedMatches":[],"note":"Identità religiosa non denigrata"}
+{"id":"guardrails-029","input":"Una donna musulmana","profile":"balanced","action":"allow","expectedMatches":[],"note":"Identità religiosa non denigrata"}
+{"id":"guardrails-030","input":"Una persona lesbica","profile":"balanced","action":"allow","expectedMatches":[],"note":"Orientamento neutro"}
+{"id":"guardrails-031","input":"Sono gay","profile":"balanced","action":"allow","expectedMatches":[],"note":"Orientamento neutro"}
+{"id":"guardrails-032","input":"Persona disabile","profile":"balanced","action":"allow","expectedMatches":[],"note":"Condizione non insultante"}
+{"id":"guardrails-033","input":"Persona handicappata","profile":"balanced","action":"allow","expectedMatches":[],"note":"Termine descrittivo, non ingiuria rivolta a qualcuno"}
+{"id":"guardrails-034","input":"Un immigrato regolare","profile":"balanced","action":"allow","expectedMatches":[],"note":"Identità migratoria non denigrata"}
+{"id":"guardrails-035","input":"Una ragazza straniera","profile":"balanced","action":"allow","expectedMatches":[],"note":"Nazionalità non denigrata"}
+{"id":"guardrails-036","input":"Io sono italiano","profile":"balanced","action":"allow","expectedMatches":[],"note":"Identità nazionale neutra"}
+{"id":"guardrails-037","input":"Vedo un bel piatto di fave","profile":"balanced","action":"allow","expectedMatches":[],"note":"Contesto culinario innocuo"}
+{"id":"guardrails-038","input":"Palestra di Roma","profile":"balanced","action":"allow","expectedMatches":[],"note":"Espressione generica"}
+{"id":"guardrails-039","input":"La miseria è un problema","profile":"balanced","action":"allow","expectedMatches":[],"note":"Termine isolato non è l'esclamazione"}
+{"id":"guardrails-040","input":"Chi è tuo zio","profile":"balanced","action":"allow","expectedMatches":[],"note":"Parentela, non espressione volgare"}
