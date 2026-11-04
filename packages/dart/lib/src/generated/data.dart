@@ -2,7 +2,7 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 const String version = '0.1.0';
-const String dataVersion = 'e2cb3c7c22cc';
+const String dataVersion = '8c7e75a521cd';
 
 /// Tabella di normalizzazione condivisa con il pacchetto TypeScript (SPECIFICHE.md §4.4).
 const Map<String, String> foldTable = {
@@ -939,7 +939,7 @@ const List<Map<String, Object>> rulesData = [
     'category': 'discriminatory',
     'severity': 3,
     'confidence': 'high',
-    'terms': ['nigger', 'niggers'],
+    'terms': ['nigger', 'niggers', 'nigga', 'niggas'],
     'language': 'en',
   },
   {

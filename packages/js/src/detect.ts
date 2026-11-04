@@ -10,6 +10,8 @@ interface View {
   chars: string[]
   origins: Range[]
   flexible: boolean
+  /** Vista senza le cifre esterne: usata solo se le viste complete non trovano la regola. */
+  trimmed?: boolean
 }
 interface PreparedRule {
   rule: CompiledRule
@@ -72,11 +74,76 @@ function suffix(view: View, term: Pattern): number | undefined {
   return undefined
 }
 
-function views(part: Segment): View[] {
-  return [
-    { chars: [...part.base], origins: part.baseOrigins, flexible: false },
-    { chars: [...part.deleet], origins: part.deleetOrigins, flexible: true },
-  ]
+const isDigit = (char: string | undefined): boolean => char !== undefined && /^[0-9]$/.test(char)
+
+const isDigitText = (text: string): boolean => /^[0-9]+$/.test(text)
+
+// Restringe una vista all'intervallo UTF-16 [from, to).
+function within(view: View, from: number, to: number): View {
+  const inside = view.origins.flatMap((origin, index) =>
+    origin.start >= from && origin.end <= to ? [index] : [],
+  )
+  return {
+    chars: inside.map((index) => view.chars[index] ?? ""),
+    origins: inside.map((index) => view.origins[index] ?? { start: 0, end: 0 }),
+    flexible: view.flexible,
+    trimmed: true,
+  }
+}
+
+// Le cifre attaccate a inizio o fine parola (`stronzo_99`, `88puttana`) sono
+// spesso un suffisso del nickname, non leet: il deleet le trasforma in lettere
+// e la forma non corrisponde più. Si aggiungono le viste della parte centrale,
+// senza sostituire quelle complete: prima senza i frammenti di sole cifre
+// (`c4zz0_99` → `c4zz0`), poi senza le cifre esterne (`puttana88` → `puttana`).
+// Le parole unite in CamelCase (`StronzoRutto`, `FuckYou`) danno una vista per
+// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII.
+function trimmedViews(part: Segment, base: View, deleet: View, input: string): View[] {
+  const spans: Range[] = []
+  const cuts = [0]
+  for (let index = 1; index < base.origins.length; index++) {
+    const previous = input[base.origins[index - 1]?.start ?? -1] ?? ""
+    const current = input[base.origins[index]?.start ?? -1] ?? ""
+    if (/^[a-z]$/.test(previous) && /^[A-Z]$/.test(current)) cuts.push(index)
+  }
+  if (cuts.length > 1) {
+    cuts.push(base.origins.length)
+    for (let index = 0; index + 1 < cuts.length; index++) {
+      const from = base.origins[cuts[index] ?? 0]
+      const to = base.origins[(cuts[index + 1] ?? 0) - 1]
+      if (from && to) spans.push({ start: from.start, end: to.end })
+    }
+  }
+  const lettered = part.fragments.filter((fragment) => !isDigitText(fragment.text))
+  const first = lettered[0]
+  const last = lettered.at(-1)
+  if (first && last && lettered.length < part.fragments.length)
+    spans.push({ start: first.range.start, end: last.range.end })
+  let start = 0
+  let end = base.chars.length
+  while (start < end && isDigit(base.chars[start])) start++
+  while (end > start && isDigit(base.chars[end - 1])) end--
+  const from = base.origins[start]
+  const to = base.origins[end - 1]
+  if ((start > 0 || end < base.chars.length) && from && to)
+    spans.push({ start: from.start, end: to.end })
+  const result: View[] = []
+  const seen = new Set<string>()
+  for (const span of spans) {
+    const key = `${span.start}:${span.end}`
+    if (seen.has(key)) continue
+    seen.add(key)
+    const trimmedBase = within(base, span.start, span.end)
+    if (!trimmedBase.chars.some((char) => /^[a-z]$/.test(char))) continue
+    result.push(trimmedBase, within(deleet, span.start, span.end))
+  }
+  return result
+}
+
+function views(part: Segment, input: string): View[] {
+  const base: View = { chars: [...part.base], origins: part.baseOrigins, flexible: false }
+  const deleet: View = { chars: [...part.deleet], origins: part.deleetOrigins, flexible: true }
+  return [base, deleet, ...trimmedViews(part, base, deleet, input)]
 }
 
 function interval(view: View, start = 0, end = view.chars.length): Range | undefined {
@@ -187,19 +254,23 @@ export function createChecker(options: CheckerOptions = {}): Checker {
   const find = (input: string): Match[] => {
     const parts = segment(input, settings.maxLength)
     const wordParts = parts.filter((part) => part.kind === "word")
-    const viewMap = new Map(parts.map((part) => [part, views(part)]))
+    const viewMap = new Map(parts.map((part) => [part, views(part, input)]))
+    // Le eccezioni valgono per ogni vista della parola, comprese quelle senza
+    // cifre: `cazzola99` resta coperto dall'eccezione su `cazzola`.
+    const wordMap = new Map(
+      parts.map((part) => [part, (viewMap.get(part) ?? []).map((view) => view.chars.join(""))]),
+    )
     const found = new Map<string, Match>()
-    const add = (rule: CompiledRule, range: Range | undefined, owner?: Segment): void => {
+    const add = (rule: CompiledRule, range: Range | undefined, owner?: Segment): boolean => {
       if (
         !range ||
         (owner &&
           exceptions.some(
             (exception) =>
-              exception.ruleId === rule.id &&
-              (exception.word === owner.base || exception.word === owner.deleet),
+              exception.ruleId === rule.id && wordMap.get(owner)?.includes(exception.word),
           ))
       )
-        return
+        return false
       found.set(`${rule.id}:${range.start}:${range.end}`, {
         ruleId: rule.id,
         category: rule.category,
@@ -208,6 +279,7 @@ export function createChecker(options: CheckerOptions = {}): Checker {
         confidence: rule.confidence,
         range,
       })
+      return true
     }
     const matchesWord = (part: Segment, patterns: Pattern[], prefix = false): View | undefined =>
       viewMap
@@ -236,24 +308,25 @@ export function createChecker(options: CheckerOptions = {}): Checker {
         continue
       }
       for (const part of parts) {
+        let hit = false
         for (const view of viewMap.get(part) ?? []) {
-          if (!view.chars.length) continue
+          if (!view.chars.length || (view.trimmed && hit)) continue
           if (rule.kind === "word" || rule.kind === "prefix") {
             if (
               prepared.terms.some((term) =>
                 rule.kind === "prefix" ? consume(view, term) !== undefined : full(view, term),
               )
             )
-              add(rule, interval(view), part)
+              hit = add(rule, interval(view), part) || hit
           } else if (rule.kind === "compound") {
             for (const term of prepared.terms) {
               if (rule.anchor !== "end") {
                 const end = consume(view, term)
-                if (end !== undefined) add(rule, interval(view, 0, end), part)
+                if (end !== undefined) hit = add(rule, interval(view, 0, end), part) || hit
               }
               if (rule.anchor !== "start") {
                 const start = suffix(view, term)
-                if (start !== undefined) add(rule, interval(view, start), part)
+                if (start !== undefined) hit = add(rule, interval(view, start), part) || hit
               }
             }
           } else if (rule.kind === "combo") {
@@ -265,7 +338,7 @@ export function createChecker(options: CheckerOptions = {}): Checker {
                   (term) => consume(view, term, split) !== undefined,
                 )
               )
-                add(rule, interval(view), part)
+                hit = add(rule, interval(view), part) || hit
               const endStart = suffix(view, divine)
               if (endStart !== undefined && endStart > 0) {
                 const before: View = {
@@ -279,7 +352,7 @@ export function createChecker(options: CheckerOptions = {}): Checker {
                     before.chars.some((_, start) => consume(before, term, start) !== undefined),
                   )
                 )
-                  add(rule, interval(view), part)
+                  hit = add(rule, interval(view), part) || hit
               }
             }
           }

@@ -2,7 +2,7 @@
 import type { CompiledException, CompiledRule } from "../types.ts"
 
 export const VERSION = "0.1.0"
-export const DATA_VERSION = "e2cb3c7c22cc"
+export const DATA_VERSION = "8c7e75a521cd"
 
 /** Tabella di normalizzazione condivisa con il pacchetto Dart (SPECIFICHE.md §4.4). */
 export const FOLD: Readonly<Record<string, string>> = {
@@ -939,7 +939,7 @@ export const RULES: readonly CompiledRule[] = [
     "category": "discriminatory",
     "severity": 3,
     "confidence": "high",
-    "terms": ["nigger", "niggers"],
+    "terms": ["nigger", "niggers", "nigga", "niggas"],
     "language": "en",
   },
   {

@@ -25,10 +25,14 @@ class _Pattern {
 }
 
 class _View {
-  _View(this.chars, this.origins, this.flexible);
+  _View(this.chars, this.origins, this.flexible, [this.trimmed = false]);
   final List<String> chars;
   final List<TextRange> origins;
   final bool flexible;
+
+  /// Vista senza le cifre esterne: usata solo se le viste complete non trovano
+  /// la regola.
+  final bool trimmed;
 }
 
 List<String> _strings(Object? value) =>
@@ -101,12 +105,80 @@ int? _suffix(_View view, _Pattern term) {
   return null;
 }
 
-List<_View> _views(Segment part) => [
-      _View(part.base.runes.map(String.fromCharCode).toList(), part.baseOrigins,
-          false),
-      _View(part.deleet.runes.map(String.fromCharCode).toList(),
-          part.deleetOrigins, true),
-    ];
+final _digit = RegExp(r'^[0-9]$');
+final _digitText = RegExp(r'^[0-9]+$');
+final _letter = RegExp(r'^[a-z]$');
+final _upper = RegExp(r'^[A-Z]$');
+
+// Restringe una vista all'intervallo UTF-16 [from, to).
+_View _within(_View view, int from, int to) {
+  final inside = [
+    for (var index = 0; index < view.origins.length; index++)
+      if (view.origins[index].start >= from && view.origins[index].end <= to)
+        index
+  ];
+  return _View([for (final index in inside) view.chars[index]],
+      [for (final index in inside) view.origins[index]], view.flexible, true);
+}
+
+// Le cifre attaccate a inizio o fine parola (`stronzo_99`, `88puttana`) sono
+// spesso un suffisso del nickname, non leet: il deleet le trasforma in lettere
+// e la forma non corrisponde più. Si aggiungono le viste della parte centrale,
+// senza sostituire quelle complete: prima senza i frammenti di sole cifre
+// (`c4zz0_99` → `c4zz0`), poi senza le cifre esterne (`puttana88` → `puttana`).
+// Le parole unite in CamelCase (`StronzoRutto`, `FuckYou`) danno una vista per
+// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII.
+List<_View> _trimmedViews(
+    Segment part, _View base, _View deleet, String input) {
+  final spans = <TextRange>[];
+  final cuts = [0];
+  for (var index = 1; index < base.origins.length; index++) {
+    final previous = input[base.origins[index - 1].start];
+    final current = input[base.origins[index].start];
+    if (_letter.hasMatch(previous) && _upper.hasMatch(current)) cuts.add(index);
+  }
+  if (cuts.length > 1) {
+    cuts.add(base.origins.length);
+    for (var index = 0; index + 1 < cuts.length; index++) {
+      spans.add(TextRange(base.origins[cuts[index]].start,
+          base.origins[cuts[index + 1] - 1].end));
+    }
+  }
+  final lettered = part.fragments
+      .where((fragment) => !_digitText.hasMatch(fragment.text))
+      .toList();
+  if (lettered.isNotEmpty && lettered.length < part.fragments.length) {
+    spans.add(TextRange(lettered.first.range.start, lettered.last.range.end));
+  }
+  var start = 0;
+  var end = base.chars.length;
+  while (start < end && _digit.hasMatch(base.chars[start])) {
+    start++;
+  }
+  while (end > start && _digit.hasMatch(base.chars[end - 1])) {
+    end--;
+  }
+  if ((start > 0 || end < base.chars.length) && start < end) {
+    spans.add(TextRange(base.origins[start].start, base.origins[end - 1].end));
+  }
+  final result = <_View>[];
+  final seen = <String>{};
+  for (final span in spans) {
+    if (!seen.add('${span.start}:${span.end}')) continue;
+    final trimmedBase = _within(base, span.start, span.end);
+    if (!trimmedBase.chars.any(_letter.hasMatch)) continue;
+    result.addAll([trimmedBase, _within(deleet, span.start, span.end)]);
+  }
+  return result;
+}
+
+List<_View> _views(Segment part, String input) {
+  final base = _View(part.base.runes.map(String.fromCharCode).toList(),
+      part.baseOrigins, false);
+  final deleet = _View(part.deleet.runes.map(String.fromCharCode).toList(),
+      part.deleetOrigins, true);
+  return [base, deleet, ..._trimmedViews(part, base, deleet, input)];
+}
 
 MatchRange? _interval(_View view, [int start = 0, int? end]) {
   final stop = end ?? view.chars.length;
@@ -230,16 +302,21 @@ class ProfanityChecker {
   List<ProfanityMatch> findMatches(String input) {
     final parts = segment(input, _settings.maxLength);
     final words = parts.where((part) => part.kind == 'word').toList();
-    final viewMap = {for (final part in parts) part: _views(part)};
+    final viewMap = {for (final part in parts) part: _views(part, input)};
+    // Le eccezioni valgono per ogni vista della parola, comprese quelle senza
+    // cifre: `cazzola99` resta coperto dall'eccezione su `cazzola`.
+    final wordMap = {
+      for (final part in parts)
+        part: [for (final view in viewMap[part]!) view.chars.join()]
+    };
     final found = <String, ProfanityMatch>{};
-    void add(_PreparedRule rule, MatchRange? range, [Segment? owner]) {
+    bool add(_PreparedRule rule, MatchRange? range, [Segment? owner]) {
       if (range == null ||
           (owner != null &&
               _exceptions.any((exception) =>
                   exception.ruleId == rule.id &&
-                  (exception.word == owner.base ||
-                      exception.word == owner.deleet)))) {
-        return;
+                  wordMap[owner]!.contains(exception.word)))) {
+        return false;
       }
       found['${rule.id}:${range.start}:${range.end}'] = ProfanityMatch(
           ruleId: rule.id,
@@ -248,6 +325,7 @@ class ProfanityChecker {
           severity: rule.severity,
           confidence: rule.confidence,
           range: range);
+      return true;
     }
 
     _View? matchesWord(Segment part, List<_Pattern> patterns,
@@ -281,23 +359,28 @@ class ProfanityChecker {
         continue;
       }
       for (final part in parts) {
+        var hit = false;
         for (final view in viewMap[part]!) {
-          if (view.chars.isEmpty) continue;
+          if (view.chars.isEmpty || (view.trimmed && hit)) continue;
           if (rule.kind == RuleKind.word || rule.kind == RuleKind.prefix) {
             if (rule.terms.any((term) => rule.kind == RuleKind.prefix
                 ? _consume(view, term) != null
                 : _full(view, term))) {
-              add(rule, _interval(view), part);
+              hit = add(rule, _interval(view), part) || hit;
             }
           } else if (rule.kind == RuleKind.compound) {
             for (final term in rule.terms) {
               if (rule.anchor != 'end') {
                 final end = _consume(view, term);
-                if (end != null) add(rule, _interval(view, 0, end), part);
+                if (end != null) {
+                  hit = add(rule, _interval(view, 0, end), part) || hit;
+                }
               }
               if (rule.anchor != 'start') {
                 final start = _suffix(view, term);
-                if (start != null) add(rule, _interval(view, start), part);
+                if (start != null) {
+                  hit = add(rule, _interval(view, start), part) || hit;
+                }
               }
             }
           } else if (rule.kind == RuleKind.combo) {
@@ -306,7 +389,7 @@ class ProfanityChecker {
               if (split != null &&
                   [...rule.forms, ...rule.prefixes]
                       .any((term) => _consume(view, term, split) != null)) {
-                add(rule, _interval(view), part);
+                hit = add(rule, _interval(view), part) || hit;
               }
               final endStart = _suffix(view, divine);
               if (endStart != null && endStart > 0) {
@@ -319,7 +402,7 @@ class ProfanityChecker {
                     if (_consume(before, term, start) != null) insult = true;
                   }
                 }
-                if (insult) add(rule, _interval(view), part);
+                if (insult) hit = add(rule, _interval(view), part) || hit;
               }
             }
           }

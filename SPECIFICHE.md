@@ -93,6 +93,8 @@ Il testo viene scomposto in due livelli, conservando per ciascuno l'intervallo d
 
 Le regole che lavorano sulle parole vedono ogni parola con i frammenti **riuniti**: `p0r-cò_Dio` è un'unica parola, `porcodio`. La punteggiatura dentro una parola viene trattata come un tentativo di elusione, mentre lo spazio è un vero confine.
 
+**Cifre esterne.** Le cifre a inizio o fine parola sono spesso un suffisso del nickname (`stronzo_99`, `puttana88`), non leet. Il rilevatore aggiunge quindi viste ridotte della parola, senza sostituire quelle complete: prima senza i frammenti composti solo da cifre (`c4zz0_99` → `c4zz0`), poi senza le cifre iniziali e finali (`88puttana` → `puttana`). Le cifre interne non vengono mai tolte. Allo stesso modo, una parola scritta in CamelCase (`StronzoRutto`, `FuckYou`) aggiunge una vista per ogni pezzo che inizia con una maiuscola ASCII subito dopo una minuscola ASCII; tutto minuscolo o tutto maiuscolo non viene spezzato, quindi non si cercano sottostringhe. Le viste ridotte valgono solo se le viste complete della stessa parola non hanno già riconosciuto la regola, e l'intervallo del match copre la parte riconosciuta (D24).
+
 **Lettere spaziate.** Se ci sono almeno tre parole consecutive di una sola lettera, vengono riunite in un **segmento** candidato: `c a z z o` → `cazzo`. Le lettere singole non vengono mai unite a parole più lunghe, e le iniziali sparse nel testo non vengono mai unite tra loro.
 
 Il candidato si aggiunge alle parole originali, senza sostituirle. Si considera ogni sequenza massimale di parole che dopo `fold` contengono esattamente una lettera ASCII e nessun altro carattere: cifre, punteggiatura e parole più lunghe interrompono la sequenza. Le iniziali seguite da un punto non vengono quindi concatenate. L'ordine dei segmenti è per inizio, poi fine dell'intervallo UTF-16.
@@ -186,7 +188,7 @@ Le eccezioni hanno un file separato e **sopprimono solo un match specifico**:
 
 Un'eccezione **non toglie testo e non disattiva la regola altrove**. Se la stessa parola è coperta da un'altra regola, quella resta attiva.
 
-Le eccezioni si applicano ai match contenuti in un singolo segmento, confrontando l'intera parola nelle viste `base` o `deleet`. Un'eccezione su una parola non sopprime una regola `phrase` o `combo` che copre più parole: il testo e l'adiacenza restano disponibili a tutte le altre regole. I match duplicati fra viste vengono eliminati per `ruleId` e intervallo.
+Le eccezioni si applicano ai match contenuti in un singolo segmento, confrontando l'intera parola nelle viste `base` o `deleet`, comprese le viste senza cifre esterne (`candio99` resta coperto dall'eccezione su `candio`). Un'eccezione su una parola non sopprime una regola `phrase` o `combo` che copre più parole: il testo e l'adiacenza restano disponibili a tutte le altre regole. I match duplicati fra viste vengono eliminati per `ruleId` e intervallo.
 
 Per `word`, `prefix` e `combo` l'intervallo copre il segmento o la coppia riconosciuta, esclusa la punteggiatura esterna senza contributo lessicale. Per `compound` copre la porzione ancorata effettivamente riconosciuta. Le frasi usano solo le parole originali adiacenti, mai i candidati aggiuntivi delle lettere spaziate. Dopo offset iniziale, gravità e `ruleId`, la fine dell'intervallo risolve eventuali ulteriori parità d'ordine.
 

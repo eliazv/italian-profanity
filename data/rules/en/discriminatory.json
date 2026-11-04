@@ -7,7 +7,7 @@
       "category": "discriminatory",
       "severity": 3,
       "confidence": "high",
-      "terms": ["nigger", "niggers"],
+      "terms": ["nigger", "niggers", "nigga", "niggas"],
       "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
       "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
     },
