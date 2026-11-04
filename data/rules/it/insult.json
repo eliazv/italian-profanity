@@ -19,7 +19,13 @@
         "stronzini",
         "stronzine",
         "stronzolo",
-        "stronzoli"
+        "stronzoli",
+        "stronzissimo",
+        "stronzissima",
+        "stronzissimi",
+        "stronzissime",
+        "stronzaggine",
+        "stronzaggini"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -41,7 +47,20 @@
         "coglioncelli",
         "coglioncelle",
         "coglioneria",
-        "coglionerie"
+        "coglionerie",
+        "coglionaggine",
+        "coglionaggini",
+        "coglionare",
+        "coglionatore",
+        "coglionatori",
+        "coglionatrice",
+        "coglionatrici",
+        "coglionatura",
+        "coglionature",
+        "coglioncino",
+        "coglioncini",
+        "coglioncina",
+        "coglioncine"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -74,7 +93,7 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["idiota", "idioti"],
+      "terms": ["idiota", "idioti", "idiotissimo", "idiotissima", "idiotissimi", "idiotissime"],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -84,7 +103,7 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["imbecille", "imbecilli"],
+      "terms": ["imbecille", "imbecilli", "imbecillone", "imbecillona", "imbecilloni"],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -108,7 +127,10 @@
         "cretinaccio",
         "cretinaccia",
         "cretinacci",
-        "cretinacce"
+        "cretinacce",
+        "cretinone",
+        "cretinona",
+        "cretinoni"
       ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
@@ -129,7 +151,17 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["stupido", "stupida", "stupidi", "stupide"],
+      "terms": [
+        "stupido",
+        "stupida",
+        "stupidi",
+        "stupide",
+        "stupidone",
+        "stupidona",
+        "stupidoni",
+        "stupidata",
+        "stupidate"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -139,7 +171,19 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["scemo", "scema", "scemi", "sceme"],
+      "terms": [
+        "scemo",
+        "scema",
+        "scemi",
+        "sceme",
+        "scemotto",
+        "scemotta",
+        "scemotti",
+        "scemotte",
+        "scemone",
+        "scemona",
+        "scemoni"
+      ],
       "provenance": ["manual"],
       "note": "Forma polisemica o con uso non ingiurioso: il profilo balanced richiede revisione, non blocco automatico. Curazione manuale; nessuna identità neutra viene dedotta."
     },
@@ -290,7 +334,20 @@
       "category": "insult",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["pirla", "pirli", "pirle"],
+      "terms": [
+        "pirla",
+        "pirli",
+        "pirle",
+        "pirlone",
+        "pirlona",
+        "pirloni",
+        "pirlata",
+        "pirlate",
+        "pirlotto",
+        "pirlotta",
+        "pirlotti",
+        "pirlotte"
+      ],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },
@@ -300,7 +357,16 @@
       "category": "insult",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["cornuto", "cornuta", "cornuti", "cornute"],
+      "terms": [
+        "cornuto",
+        "cornuta",
+        "cornuti",
+        "cornute",
+        "cornutaccio",
+        "cornutaccia",
+        "cornutacci",
+        "cornutacce"
+      ],
       "provenance": ["manual"],
       "note": "Curazione M3: forme esplicite, parola intera; significati alternativi e omografi possibili → review in balanced."
     },
@@ -375,7 +441,16 @@
       "category": "insult",
       "severity": 1,
       "confidence": "medium",
-      "terms": ["sfigato", "sfigata", "sfigati", "sfigate"],
+      "terms": [
+        "sfigato",
+        "sfigata",
+        "sfigati",
+        "sfigate",
+        "sfigatello",
+        "sfigatella",
+        "sfigatelli",
+        "sfigatelle"
+      ],
       "provenance": ["manual"],
       "note": "Termine regionale o polisemico: review in balanced, parola intera."
     },
@@ -527,7 +602,7 @@
       "category": "insult",
       "severity": 2,
       "confidence": "medium",
-      "terms": ["cazzaro", "cazzara", "cazzari", "cazzare"],
+      "terms": ["cazzaro", "cazzara", "cazzari", "cazzare", "cazzarone", "cazzarona", "cazzaroni"],
       "provenance": ["manual"],
       "note": "Termine polisemico, regionale o omografo nominale: review in balanced, non blocco automatico."
     },

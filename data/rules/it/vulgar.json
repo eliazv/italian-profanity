@@ -22,7 +22,9 @@
         "merdine",
         "merdone",
         "merdona",
-        "merdoni"
+        "merdoni",
+        "merdolina",
+        "merdoline"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -82,7 +84,9 @@
         "pisciatina",
         "pisciatona",
         "pisciona",
-        "piscioni"
+        "piscioni",
+        "piscione",
+        "pisciatone"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -93,7 +97,19 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["minchia", "minchie", "minchiata", "minchiate", "minchione", "minchioni"],
+      "terms": [
+        "minchia",
+        "minchie",
+        "minchiata",
+        "minchiate",
+        "minchione",
+        "minchioni",
+        "minchiella",
+        "minchionata",
+        "minchionate",
+        "minchiatona",
+        "minchiatone"
+      ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -119,7 +135,10 @@
         "incazzatissimo",
         "incazzatissima",
         "incazzatissimi",
-        "incazzatissime"
+        "incazzatissime",
+        "incazzatone",
+        "incazzatona",
+        "incazzatoni"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
@@ -150,7 +169,17 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["cazzeggio", "cazzeggiare", "cazzeggiato", "cazzeggiata", "cazzeggiano"],
+      "terms": [
+        "cazzeggio",
+        "cazzeggiare",
+        "cazzeggiato",
+        "cazzeggiata",
+        "cazzeggiano",
+        "cazzeggiando",
+        "cazzeggiate",
+        "cazzeggiati",
+        "cazzeggiava"
+      ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."
     },
@@ -167,7 +196,10 @@
         "scorreggiato",
         "scoreggia",
         "scoregge",
-        "scoreggiare"
+        "scoreggiare",
+        "scorreggiando",
+        "scoreggiato",
+        "scoreggiata"
       ],
       "provenance": ["manual"],
       "note": "Forme comuni curate manualmente; confronto sulla parola intera, senza ricerca in mezzo ad altre parole."

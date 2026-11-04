@@ -1,0 +1,135 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "it.vulgar.porca-miseria",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["porca", "miseria"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.porca-vacca",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["porca", "vacca"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.porco-zio",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["porco", "zio"], ["porco", "zi"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.porco-giuda",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["porco", "giuda"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.zio-cantante",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["zio", "cantante"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.che-palle",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["che", "palle"], ["che", "due", "palle"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.rottura-di-palle",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["rottura", "di", "palle"], ["mi", "hai", "rotto", "le", "palle"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.che-cazzo",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["che", "cazzo"], ["ma", "che", "cazzo"], ["che", "cazzi"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.che-minchia",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["che", "minchia"], ["ma", "che", "minchia"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.porca-troia",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["porca", "troia"], ["porca", "puttana"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.maremma-bucaiola",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["maremma", "bucaiola"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.mannaggia-la-miseria",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["mannaggia", "la", "miseria"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    },
+    {
+      "id": "it.vulgar.porco-mondo",
+      "kind": "phrase",
+      "category": "vulgar",
+      "severity": 1,
+      "confidence": "medium",
+      "phrases": [["porco", "mondo"]],
+      "provenance": ["manual"],
+      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+    }
+  ]
+}
