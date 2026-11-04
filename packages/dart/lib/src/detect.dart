@@ -127,7 +127,8 @@ _View _within(_View view, int from, int to) {
 // senza sostituire quelle complete: prima senza i frammenti di sole cifre
 // (`c4zz0_99` → `c4zz0`), poi senza le cifre esterne (`puttana88` → `puttana`).
 // Le parole unite in CamelCase (`StronzoRutto`, `FuckYou`) danno una vista per
-// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII.
+// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII, e
+// le parole con più frammenti di lettere una vista per frammento (D25).
 List<_View> _trimmedViews(
     Segment part, _View base, _View deleet, String input) {
   final spans = <TextRange>[];
@@ -149,6 +150,34 @@ List<_View> _trimmedViews(
       .toList();
   if (lettered.isNotEmpty && lettered.length < part.fragments.length) {
     spans.add(TextRange(lettered.first.range.start, lettered.last.range.end));
+  }
+  // I frammenti uniti dalla punteggiatura (`sborra_verde`, `adolf-nigger`) danno
+  // anche una vista ciascuno, senza le cifre esterne del frammento: nei nickname
+  // `_` e `-` separano parole vere più spesso di quanto mascherino una parola.
+  if (lettered.length > 1) {
+    for (final fragment in lettered) {
+      final inside = [
+        for (var index = 0; index < base.origins.length; index++)
+          if (base.origins[index].start >= fragment.range.start &&
+              base.origins[index].end <= fragment.range.end)
+            index,
+      ];
+      var low = 0;
+      var high = inside.length;
+      while (low < high && _digit.hasMatch(base.chars[inside[low]])) {
+        low++;
+      }
+      while (high > low && _digit.hasMatch(base.chars[inside[high - 1]])) {
+        high--;
+      }
+      // Prima il frammento intero (`n3gr4` resta leet), poi senza cifre esterne.
+      for (final (left, right) in [(0, inside.length), (low, high)]) {
+        if (left < right) {
+          spans.add(TextRange(base.origins[inside[left]].start,
+              base.origins[inside[right - 1]].end));
+        }
+      }
+    }
   }
   var start = 0;
   var end = base.chars.length;

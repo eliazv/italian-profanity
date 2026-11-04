@@ -97,7 +97,8 @@ function within(view: View, from: number, to: number): View {
 // senza sostituire quelle complete: prima senza i frammenti di sole cifre
 // (`c4zz0_99` → `c4zz0`), poi senza le cifre esterne (`puttana88` → `puttana`).
 // Le parole unite in CamelCase (`StronzoRutto`, `FuckYou`) danno una vista per
-// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII.
+// ogni pezzo che inizia con una maiuscola ASCII dopo una minuscola ASCII, e
+// le parole con più frammenti di lettere una vista per frammento (D25).
 function trimmedViews(part: Segment, base: View, deleet: View, input: string): View[] {
   const spans: Range[] = []
   const cuts = [0]
@@ -119,6 +120,29 @@ function trimmedViews(part: Segment, base: View, deleet: View, input: string): V
   const last = lettered.at(-1)
   if (first && last && lettered.length < part.fragments.length)
     spans.push({ start: first.range.start, end: last.range.end })
+  // I frammenti uniti dalla punteggiatura (`sborra_verde`, `adolf-nigger`) danno
+  // anche una vista ciascuno, senza le cifre esterne del frammento: nei nickname
+  // `_` e `-` separano parole vere più spesso di quanto mascherino una parola.
+  if (lettered.length > 1) {
+    for (const fragment of lettered) {
+      const inside = base.origins.flatMap((origin, index) =>
+        origin.start >= fragment.range.start && origin.end <= fragment.range.end ? [index] : [],
+      )
+      let low = 0
+      let high = inside.length
+      while (low < high && isDigit(base.chars[inside[low] ?? -1])) low++
+      while (high > low && isDigit(base.chars[inside[high - 1] ?? -1])) high--
+      // Prima il frammento intero (`n3gr4` resta leet), poi senza cifre esterne.
+      for (const [left, right] of [
+        [0, inside.length],
+        [low, high],
+      ] as const) {
+        const from = base.origins[inside[left] ?? -1]
+        const to = base.origins[inside[right - 1] ?? -1]
+        if (left < right && from && to) spans.push({ start: from.start, end: to.end })
+      }
+    }
+  }
   let start = 0
   let end = base.chars.length
   while (start < end && isDigit(base.chars[start])) start++
