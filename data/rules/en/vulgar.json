@@ -1,0 +1,65 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "en.vulgar.bollocks",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["bollock", "bollocks"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.vulgar.piss",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["piss", "pisses", "pissed", "pissing"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Forma polisemica: review in balanced. Nessuna disambiguazione del contesto; confini di parola intera."
+    },
+    {
+      "id": "en.vulgar.turd",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["turd", "turds"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.vulgar.wank",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["wank", "wanks", "wanked", "wanking"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.vulgar.clusterfuck",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["clusterfuck", "clusterfucks"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.vulgar.apeshit",
+      "kind": "word",
+      "category": "vulgar",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["apeshit"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    }
+  ]
+}

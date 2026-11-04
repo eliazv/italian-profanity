@@ -1,5 +1,5 @@
 import { LEET } from "./generated/data.ts"
-import { foldWithOrigins, type OriginChar } from "./normalize.ts"
+import { foldWithOrigins, mergeSurrogatePairs, type OriginChar } from "./normalize.ts"
 import type { Range } from "./types.ts"
 
 export interface Fragment {
@@ -95,14 +95,15 @@ function makeSegment(units: OriginChar[], kind: Segment["kind"]): Segment {
   }
   flush()
   const hasLetter = units.some((unit) => isLetter(unit.char))
-  const base = units.filter((unit) => !isSeparator(unit.char))
-  const deleet: OriginChar[] = []
+  const base = mergeSurrogatePairs(units.filter((unit) => !isSeparator(unit.char)))
+  let deleet: OriginChar[] = []
   for (const unit of units) {
     const value = (hasLetter ? LEET[unit.char] : undefined) ?? unit.char
     for (const char of value) {
       if (!isSeparator(char)) deleet.push({ char, range: { ...unit.range } })
     }
   }
+  deleet = mergeSurrogatePairs(deleet)
   return {
     kind,
     range: span(units),

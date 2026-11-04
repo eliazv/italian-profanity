@@ -1,0 +1,35 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "en.discriminatory.nigger",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["nigger", "niggers"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.discriminatory.faggot",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["faggot", "faggots"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica: review in balanced. Nessuna disambiguazione del contesto; confini di parola intera."
+    },
+    {
+      "id": "en.discriminatory.retard",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["retard", "retards", "retarded"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Forma polisemica: review in balanced. Nessuna disambiguazione del contesto; confini di parola intera."
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{"id":"english-001","profile":"balanced","input":"fuck","languages":["en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-002","profile":"balanced","input":"fuck","languages":["it"],"mustNotMatch":["en.vulgar.fuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-003","profile":"balanced","input":"fucks","languages":["en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-004","profile":"balanced","input":"fucks","languages":["it"],"mustNotMatch":["en.vulgar.fuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-005","profile":"balanced","input":"fucked","languages":["en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-006","profile":"balanced","input":"fucked","languages":["it"],"mustNotMatch":["en.vulgar.fuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-007","profile":"balanced","input":"fucking","languages":["en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-008","profile":"balanced","input":"fucking","languages":["it"],"mustNotMatch":["en.vulgar.fuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-009","profile":"balanced","input":"fucker","languages":["en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-010","profile":"balanced","input":"fucker","languages":["it"],"mustNotMatch":["en.vulgar.fuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-011","profile":"balanced","input":"fuckers","languages":["en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-012","profile":"balanced","input":"fuckers","languages":["it"],"mustNotMatch":["en.vulgar.fuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-013","profile":"balanced","input":"fuckup","languages":["en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-014","profile":"balanced","input":"fuckup","languages":["it"],"mustNotMatch":["en.vulgar.fuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-015","profile":"balanced","input":"fuckups","languages":["en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-016","profile":"balanced","input":"fuckups","languages":["it"],"mustNotMatch":["en.vulgar.fuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-017","profile":"balanced","input":"fuchsia","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.fuck"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-018","profile":"strict","input":"fuck","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"]}
+{"id":"english-019","profile":"lenient","input":"fuck","languages":["en"],"action":"allow","rules":["en.vulgar.fuck"]}
+{"id":"english-020","profile":"balanced","input":"antefuckpost","languages":["it","en"],"mustNotMatch":["en.vulgar.fuck"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-021","profile":"balanced","input":"shit","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-022","profile":"balanced","input":"shit","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-023","profile":"balanced","input":"shits","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-024","profile":"balanced","input":"shits","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-025","profile":"balanced","input":"shitty","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-026","profile":"balanced","input":"shitty","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-027","profile":"balanced","input":"bullshit","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-028","profile":"balanced","input":"bullshit","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-029","profile":"balanced","input":"shitting","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-030","profile":"balanced","input":"shitting","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-031","profile":"balanced","input":"shithead","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-032","profile":"balanced","input":"shithead","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-033","profile":"balanced","input":"shitheads","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-034","profile":"balanced","input":"shitheads","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-035","profile":"balanced","input":"shitshow","languages":["en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-036","profile":"balanced","input":"shitshow","languages":["it"],"mustNotMatch":["en.vulgar.shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-037","profile":"balanced","input":"shiitake","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.shit"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-038","profile":"strict","input":"shit","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"]}
+{"id":"english-039","profile":"lenient","input":"shit","languages":["en"],"action":"allow","rules":["en.vulgar.shit"]}
+{"id":"english-040","profile":"balanced","input":"anteshitpost","languages":["it","en"],"mustNotMatch":["en.vulgar.shit"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-041","profile":"balanced","input":"bitch","languages":["en"],"action":"block","rules":["en.insult.bitch"]}
+{"id":"english-042","profile":"balanced","input":"bitch","languages":["it"],"mustNotMatch":["en.insult.bitch"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-043","profile":"balanced","input":"bitches","languages":["en"],"action":"block","rules":["en.insult.bitch"]}
+{"id":"english-044","profile":"balanced","input":"bitches","languages":["it"],"mustNotMatch":["en.insult.bitch"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-045","profile":"balanced","input":"bitching","languages":["en"],"action":"block","rules":["en.insult.bitch"]}
+{"id":"english-046","profile":"balanced","input":"bitching","languages":["it"],"mustNotMatch":["en.insult.bitch"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-047","profile":"balanced","input":"bitchy","languages":["en"],"action":"block","rules":["en.insult.bitch"]}
+{"id":"english-048","profile":"balanced","input":"bitchy","languages":["it"],"mustNotMatch":["en.insult.bitch"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-049","profile":"balanced","input":"pitch","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.bitch"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-050","profile":"strict","input":"bitch","languages":["it","en"],"action":"block","rules":["en.insult.bitch"]}
+{"id":"english-051","profile":"lenient","input":"bitch","languages":["en"],"action":"allow","rules":["en.insult.bitch"]}
+{"id":"english-052","profile":"balanced","input":"antebitchpost","languages":["it","en"],"mustNotMatch":["en.insult.bitch"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-053","profile":"balanced","input":"asshole","languages":["en"],"action":"block","rules":["en.insult.asshole"]}
+{"id":"english-054","profile":"balanced","input":"asshole","languages":["it"],"mustNotMatch":["en.insult.asshole"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-055","profile":"balanced","input":"assholes","languages":["en"],"action":"block","rules":["en.insult.asshole"]}
+{"id":"english-056","profile":"balanced","input":"assholes","languages":["it"],"mustNotMatch":["en.insult.asshole"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-057","profile":"balanced","input":"arsehole","languages":["en"],"action":"block","rules":["en.insult.asshole"]}
+{"id":"english-058","profile":"balanced","input":"arsehole","languages":["it"],"mustNotMatch":["en.insult.asshole"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-059","profile":"balanced","input":"arseholes","languages":["en"],"action":"block","rules":["en.insult.asshole"]}
+{"id":"english-060","profile":"balanced","input":"arseholes","languages":["it"],"mustNotMatch":["en.insult.asshole"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-061","profile":"balanced","input":"assoluto","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.asshole"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-062","profile":"strict","input":"asshole","languages":["it","en"],"action":"block","rules":["en.insult.asshole"]}
+{"id":"english-063","profile":"lenient","input":"asshole","languages":["en"],"action":"allow","rules":["en.insult.asshole"]}
+{"id":"english-064","profile":"balanced","input":"anteassholepost","languages":["it","en"],"mustNotMatch":["en.insult.asshole"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-065","profile":"balanced","input":"bastard","languages":["en"],"action":"review","rules":["en.insult.bastard"]}
+{"id":"english-066","profile":"balanced","input":"bastard","languages":["it"],"mustNotMatch":["en.insult.bastard"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-067","profile":"balanced","input":"bastards","languages":["en"],"action":"review","rules":["en.insult.bastard"]}
+{"id":"english-068","profile":"balanced","input":"bastards","languages":["it"],"mustNotMatch":["en.insult.bastard"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-069","profile":"balanced","input":"bastardina","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.bastard"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-070","profile":"strict","input":"bastard","languages":["it","en"],"action":"block","rules":["en.insult.bastard"]}
+{"id":"english-071","profile":"lenient","input":"bastard","languages":["en"],"action":"allow","rules":["en.insult.bastard"]}
+{"id":"english-072","profile":"balanced","input":"antebastardpost","languages":["it","en"],"mustNotMatch":["en.insult.bastard"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-073","profile":"balanced","input":"dickhead","languages":["en"],"action":"block","rules":["en.insult.dickhead"]}
+{"id":"english-074","profile":"balanced","input":"dickhead","languages":["it"],"mustNotMatch":["en.insult.dickhead"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-075","profile":"balanced","input":"dickheads","languages":["en"],"action":"block","rules":["en.insult.dickhead"]}
+{"id":"english-076","profile":"balanced","input":"dickheads","languages":["it"],"mustNotMatch":["en.insult.dickhead"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-077","profile":"balanced","input":"Dickens","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.dickhead"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-078","profile":"strict","input":"dickhead","languages":["it","en"],"action":"block","rules":["en.insult.dickhead"]}
+{"id":"english-079","profile":"lenient","input":"dickhead","languages":["en"],"action":"allow","rules":["en.insult.dickhead"]}
+{"id":"english-080","profile":"balanced","input":"antedickheadpost","languages":["it","en"],"mustNotMatch":["en.insult.dickhead"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-081","profile":"balanced","input":"dumbass","languages":["en"],"action":"block","rules":["en.insult.dumbass"]}
+{"id":"english-082","profile":"balanced","input":"dumbass","languages":["it"],"mustNotMatch":["en.insult.dumbass"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-083","profile":"balanced","input":"dumbasses","languages":["en"],"action":"block","rules":["en.insult.dumbass"]}
+{"id":"english-084","profile":"balanced","input":"dumbasses","languages":["it"],"mustNotMatch":["en.insult.dumbass"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-085","profile":"balanced","input":"dumbbell","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.dumbass"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-086","profile":"strict","input":"dumbass","languages":["it","en"],"action":"block","rules":["en.insult.dumbass"]}
+{"id":"english-087","profile":"lenient","input":"dumbass","languages":["en"],"action":"allow","rules":["en.insult.dumbass"]}
+{"id":"english-088","profile":"balanced","input":"antedumbasspost","languages":["it","en"],"mustNotMatch":["en.insult.dumbass"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-089","profile":"balanced","input":"jackass","languages":["en"],"action":"review","rules":["en.insult.jackass"]}
+{"id":"english-090","profile":"balanced","input":"jackass","languages":["it"],"mustNotMatch":["en.insult.jackass"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-091","profile":"balanced","input":"jackasses","languages":["en"],"action":"review","rules":["en.insult.jackass"]}
+{"id":"english-092","profile":"balanced","input":"jackasses","languages":["it"],"mustNotMatch":["en.insult.jackass"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-093","profile":"balanced","input":"jackdaw","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.jackass"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-094","profile":"strict","input":"jackass","languages":["it","en"],"action":"block","rules":["en.insult.jackass"]}
+{"id":"english-095","profile":"lenient","input":"jackass","languages":["en"],"action":"allow","rules":["en.insult.jackass"]}
+{"id":"english-096","profile":"balanced","input":"antejackasspost","languages":["it","en"],"mustNotMatch":["en.insult.jackass"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-097","profile":"balanced","input":"motherfucker","languages":["en"],"action":"block","rules":["en.insult.motherfucker"]}
+{"id":"english-098","profile":"balanced","input":"motherfucker","languages":["it"],"mustNotMatch":["en.insult.motherfucker"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-099","profile":"balanced","input":"motherfuckers","languages":["en"],"action":"block","rules":["en.insult.motherfucker"]}
+{"id":"english-100","profile":"balanced","input":"motherfuckers","languages":["it"],"mustNotMatch":["en.insult.motherfucker"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-101","profile":"balanced","input":"motherfucking","languages":["en"],"action":"block","rules":["en.insult.motherfucker"]}
+{"id":"english-102","profile":"balanced","input":"motherfucking","languages":["it"],"mustNotMatch":["en.insult.motherfucker"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-103","profile":"balanced","input":"motherhood","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.motherfucker"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-104","profile":"strict","input":"motherfucker","languages":["it","en"],"action":"block","rules":["en.insult.motherfucker"]}
+{"id":"english-105","profile":"lenient","input":"motherfucker","languages":["en"],"action":"allow","rules":["en.insult.motherfucker"]}
+{"id":"english-106","profile":"balanced","input":"antemotherfuckerpost","languages":["it","en"],"mustNotMatch":["en.insult.motherfucker"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-107","profile":"balanced","input":"cocksucker","languages":["en"],"action":"block","rules":["en.insult.cocksucker"]}
+{"id":"english-108","profile":"balanced","input":"cocksucker","languages":["it"],"mustNotMatch":["en.insult.cocksucker"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-109","profile":"balanced","input":"cocksuckers","languages":["en"],"action":"block","rules":["en.insult.cocksucker"]}
+{"id":"english-110","profile":"balanced","input":"cocksuckers","languages":["it"],"mustNotMatch":["en.insult.cocksucker"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-111","profile":"balanced","input":"cockerel","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.cocksucker"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-112","profile":"strict","input":"cocksucker","languages":["it","en"],"action":"block","rules":["en.insult.cocksucker"]}
+{"id":"english-113","profile":"lenient","input":"cocksucker","languages":["en"],"action":"allow","rules":["en.insult.cocksucker"]}
+{"id":"english-114","profile":"balanced","input":"antecocksuckerpost","languages":["it","en"],"mustNotMatch":["en.insult.cocksucker"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-115","profile":"balanced","input":"cunt","languages":["en"],"action":"block","rules":["en.insult.cunt"]}
+{"id":"english-116","profile":"balanced","input":"cunt","languages":["it"],"mustNotMatch":["en.insult.cunt"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-117","profile":"balanced","input":"cunts","languages":["en"],"action":"block","rules":["en.insult.cunt"]}
+{"id":"english-118","profile":"balanced","input":"cunts","languages":["it"],"mustNotMatch":["en.insult.cunt"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-119","profile":"balanced","input":"Scunthorpe","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.cunt"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-120","profile":"strict","input":"cunt","languages":["it","en"],"action":"block","rules":["en.insult.cunt"]}
+{"id":"english-121","profile":"lenient","input":"cunt","languages":["en"],"action":"allow","rules":["en.insult.cunt"]}
+{"id":"english-122","profile":"balanced","input":"antecuntpost","languages":["it","en"],"mustNotMatch":["en.insult.cunt"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-123","profile":"balanced","input":"twat","languages":["en"],"action":"block","rules":["en.insult.twat"]}
+{"id":"english-124","profile":"balanced","input":"twat","languages":["it"],"mustNotMatch":["en.insult.twat"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-125","profile":"balanced","input":"twats","languages":["en"],"action":"block","rules":["en.insult.twat"]}
+{"id":"english-126","profile":"balanced","input":"twats","languages":["it"],"mustNotMatch":["en.insult.twat"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-127","profile":"balanced","input":"twattle","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.twat"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-128","profile":"strict","input":"twat","languages":["it","en"],"action":"block","rules":["en.insult.twat"]}
+{"id":"english-129","profile":"lenient","input":"twat","languages":["en"],"action":"allow","rules":["en.insult.twat"]}
+{"id":"english-130","profile":"balanced","input":"antetwatpost","languages":["it","en"],"mustNotMatch":["en.insult.twat"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-131","profile":"balanced","input":"prick","languages":["en"],"action":"review","rules":["en.insult.prick"]}
+{"id":"english-132","profile":"balanced","input":"prick","languages":["it"],"mustNotMatch":["en.insult.prick"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-133","profile":"balanced","input":"pricks","languages":["en"],"action":"review","rules":["en.insult.prick"]}
+{"id":"english-134","profile":"balanced","input":"pricks","languages":["it"],"mustNotMatch":["en.insult.prick"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-135","profile":"balanced","input":"prickle","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.prick"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-136","profile":"strict","input":"prick","languages":["it","en"],"action":"block","rules":["en.insult.prick"]}
+{"id":"english-137","profile":"lenient","input":"prick","languages":["en"],"action":"allow","rules":["en.insult.prick"]}
+{"id":"english-138","profile":"balanced","input":"anteprickpost","languages":["it","en"],"mustNotMatch":["en.insult.prick"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-139","profile":"balanced","input":"slut","languages":["en"],"action":"block","rules":["en.insult.slut"]}
+{"id":"english-140","profile":"balanced","input":"slut","languages":["it"],"mustNotMatch":["en.insult.slut"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-141","profile":"balanced","input":"sluts","languages":["en"],"action":"block","rules":["en.insult.slut"]}
+{"id":"english-142","profile":"balanced","input":"sluts","languages":["it"],"mustNotMatch":["en.insult.slut"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-143","profile":"balanced","input":"slutty","languages":["en"],"action":"block","rules":["en.insult.slut"]}
+{"id":"english-144","profile":"balanced","input":"slutty","languages":["it"],"mustNotMatch":["en.insult.slut"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-145","profile":"balanced","input":"slurp","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.slut"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-146","profile":"strict","input":"slut","languages":["it","en"],"action":"block","rules":["en.insult.slut"]}
+{"id":"english-147","profile":"lenient","input":"slut","languages":["en"],"action":"allow","rules":["en.insult.slut"]}
+{"id":"english-148","profile":"balanced","input":"anteslutpost","languages":["it","en"],"mustNotMatch":["en.insult.slut"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-149","profile":"balanced","input":"whore","languages":["en"],"action":"block","rules":["en.insult.whore"]}
+{"id":"english-150","profile":"balanced","input":"whore","languages":["it"],"mustNotMatch":["en.insult.whore"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-151","profile":"balanced","input":"whores","languages":["en"],"action":"block","rules":["en.insult.whore"]}
+{"id":"english-152","profile":"balanced","input":"whores","languages":["it"],"mustNotMatch":["en.insult.whore"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-153","profile":"balanced","input":"whoring","languages":["en"],"action":"block","rules":["en.insult.whore"]}
+{"id":"english-154","profile":"balanced","input":"whoring","languages":["it"],"mustNotMatch":["en.insult.whore"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-155","profile":"balanced","input":"whole","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.whore"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-156","profile":"strict","input":"whore","languages":["it","en"],"action":"block","rules":["en.insult.whore"]}
+{"id":"english-157","profile":"lenient","input":"whore","languages":["en"],"action":"allow","rules":["en.insult.whore"]}
+{"id":"english-158","profile":"balanced","input":"antewhorepost","languages":["it","en"],"mustNotMatch":["en.insult.whore"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-159","profile":"balanced","input":"wanker","languages":["en"],"action":"block","rules":["en.insult.wanker"]}
+{"id":"english-160","profile":"balanced","input":"wanker","languages":["it"],"mustNotMatch":["en.insult.wanker"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-161","profile":"balanced","input":"wankers","languages":["en"],"action":"block","rules":["en.insult.wanker"]}
+{"id":"english-162","profile":"balanced","input":"wankers","languages":["it"],"mustNotMatch":["en.insult.wanker"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-163","profile":"balanced","input":"wanderer","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.wanker"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-164","profile":"strict","input":"wanker","languages":["it","en"],"action":"block","rules":["en.insult.wanker"]}
+{"id":"english-165","profile":"lenient","input":"wanker","languages":["en"],"action":"allow","rules":["en.insult.wanker"]}
+{"id":"english-166","profile":"balanced","input":"antewankerpost","languages":["it","en"],"mustNotMatch":["en.insult.wanker"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-167","profile":"balanced","input":"tosser","languages":["en"],"action":"review","rules":["en.insult.tosser"]}
+{"id":"english-168","profile":"balanced","input":"tosser","languages":["it"],"mustNotMatch":["en.insult.tosser"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-169","profile":"balanced","input":"tossers","languages":["en"],"action":"review","rules":["en.insult.tosser"]}
+{"id":"english-170","profile":"balanced","input":"tossers","languages":["it"],"mustNotMatch":["en.insult.tosser"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-171","profile":"balanced","input":"tossup","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.tosser"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-172","profile":"strict","input":"tosser","languages":["it","en"],"action":"block","rules":["en.insult.tosser"]}
+{"id":"english-173","profile":"lenient","input":"tosser","languages":["en"],"action":"allow","rules":["en.insult.tosser"]}
+{"id":"english-174","profile":"balanced","input":"antetosserpost","languages":["it","en"],"mustNotMatch":["en.insult.tosser"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-175","profile":"balanced","input":"bellend","languages":["en"],"action":"block","rules":["en.insult.bellend"]}
+{"id":"english-176","profile":"balanced","input":"bellend","languages":["it"],"mustNotMatch":["en.insult.bellend"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-177","profile":"balanced","input":"bellends","languages":["en"],"action":"block","rules":["en.insult.bellend"]}
+{"id":"english-178","profile":"balanced","input":"bellends","languages":["it"],"mustNotMatch":["en.insult.bellend"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-179","profile":"balanced","input":"bellflower","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.bellend"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-180","profile":"strict","input":"bellend","languages":["it","en"],"action":"block","rules":["en.insult.bellend"]}
+{"id":"english-181","profile":"lenient","input":"bellend","languages":["en"],"action":"allow","rules":["en.insult.bellend"]}
+{"id":"english-182","profile":"balanced","input":"antebellendpost","languages":["it","en"],"mustNotMatch":["en.insult.bellend"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-183","profile":"balanced","input":"dipshit","languages":["en"],"action":"block","rules":["en.insult.dipshit"]}
+{"id":"english-184","profile":"balanced","input":"dipshit","languages":["it"],"mustNotMatch":["en.insult.dipshit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-185","profile":"balanced","input":"dipshits","languages":["en"],"action":"block","rules":["en.insult.dipshit"]}
+{"id":"english-186","profile":"balanced","input":"dipshits","languages":["it"],"mustNotMatch":["en.insult.dipshit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-187","profile":"balanced","input":"dipstick","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.dipshit"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-188","profile":"strict","input":"dipshit","languages":["it","en"],"action":"block","rules":["en.insult.dipshit"]}
+{"id":"english-189","profile":"lenient","input":"dipshit","languages":["en"],"action":"allow","rules":["en.insult.dipshit"]}
+{"id":"english-190","profile":"balanced","input":"antedipshitpost","languages":["it","en"],"mustNotMatch":["en.insult.dipshit"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-191","profile":"balanced","input":"douchebag","languages":["en"],"action":"block","rules":["en.insult.douchebag"]}
+{"id":"english-192","profile":"balanced","input":"douchebag","languages":["it"],"mustNotMatch":["en.insult.douchebag"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-193","profile":"balanced","input":"douchebags","languages":["en"],"action":"block","rules":["en.insult.douchebag"]}
+{"id":"english-194","profile":"balanced","input":"douchebags","languages":["it"],"mustNotMatch":["en.insult.douchebag"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-195","profile":"balanced","input":"doughnut","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.douchebag"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-196","profile":"strict","input":"douchebag","languages":["it","en"],"action":"block","rules":["en.insult.douchebag"]}
+{"id":"english-197","profile":"lenient","input":"douchebag","languages":["en"],"action":"allow","rules":["en.insult.douchebag"]}
+{"id":"english-198","profile":"balanced","input":"antedouchebagpost","languages":["it","en"],"mustNotMatch":["en.insult.douchebag"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-199","profile":"balanced","input":"scumbag","languages":["en"],"action":"block","rules":["en.insult.scumbag"]}
+{"id":"english-200","profile":"balanced","input":"scumbag","languages":["it"],"mustNotMatch":["en.insult.scumbag"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-201","profile":"balanced","input":"scumbags","languages":["en"],"action":"block","rules":["en.insult.scumbag"]}
+{"id":"english-202","profile":"balanced","input":"scumbags","languages":["it"],"mustNotMatch":["en.insult.scumbag"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-203","profile":"balanced","input":"scumble","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.scumbag"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-204","profile":"strict","input":"scumbag","languages":["it","en"],"action":"block","rules":["en.insult.scumbag"]}
+{"id":"english-205","profile":"lenient","input":"scumbag","languages":["en"],"action":"allow","rules":["en.insult.scumbag"]}
+{"id":"english-206","profile":"balanced","input":"antescumbagpost","languages":["it","en"],"mustNotMatch":["en.insult.scumbag"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-207","profile":"balanced","input":"dumbfuck","languages":["en"],"action":"block","rules":["en.insult.dumbfuck"]}
+{"id":"english-208","profile":"balanced","input":"dumbfuck","languages":["it"],"mustNotMatch":["en.insult.dumbfuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-209","profile":"balanced","input":"dumbfucks","languages":["en"],"action":"block","rules":["en.insult.dumbfuck"]}
+{"id":"english-210","profile":"balanced","input":"dumbfucks","languages":["it"],"mustNotMatch":["en.insult.dumbfuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-211","profile":"balanced","input":"dumbfound","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.dumbfuck"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-212","profile":"strict","input":"dumbfuck","languages":["it","en"],"action":"block","rules":["en.insult.dumbfuck"]}
+{"id":"english-213","profile":"lenient","input":"dumbfuck","languages":["en"],"action":"allow","rules":["en.insult.dumbfuck"]}
+{"id":"english-214","profile":"balanced","input":"antedumbfuckpost","languages":["it","en"],"mustNotMatch":["en.insult.dumbfuck"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-215","profile":"balanced","input":"bollock","languages":["en"],"action":"block","rules":["en.vulgar.bollocks"]}
+{"id":"english-216","profile":"balanced","input":"bollock","languages":["it"],"mustNotMatch":["en.vulgar.bollocks"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-217","profile":"balanced","input":"bollocks","languages":["en"],"action":"block","rules":["en.vulgar.bollocks"]}
+{"id":"english-218","profile":"balanced","input":"bollocks","languages":["it"],"mustNotMatch":["en.vulgar.bollocks"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-219","profile":"balanced","input":"bollard","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.bollocks"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-220","profile":"strict","input":"bollock","languages":["it","en"],"action":"block","rules":["en.vulgar.bollocks"]}
+{"id":"english-221","profile":"lenient","input":"bollock","languages":["en"],"action":"allow","rules":["en.vulgar.bollocks"]}
+{"id":"english-222","profile":"balanced","input":"antebollockpost","languages":["it","en"],"mustNotMatch":["en.vulgar.bollocks"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-223","profile":"balanced","input":"piss","languages":["en"],"action":"review","rules":["en.vulgar.piss"]}
+{"id":"english-224","profile":"balanced","input":"piss","languages":["it"],"mustNotMatch":["en.vulgar.piss"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-225","profile":"balanced","input":"pisses","languages":["en"],"action":"review","rules":["en.vulgar.piss"]}
+{"id":"english-226","profile":"balanced","input":"pisses","languages":["it"],"mustNotMatch":["en.vulgar.piss"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-227","profile":"balanced","input":"pissed","languages":["en"],"action":"review","rules":["en.vulgar.piss"]}
+{"id":"english-228","profile":"balanced","input":"pissed","languages":["it"],"mustNotMatch":["en.vulgar.piss"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-229","profile":"balanced","input":"pissing","languages":["en"],"action":"review","rules":["en.vulgar.piss"]}
+{"id":"english-230","profile":"balanced","input":"pissing","languages":["it"],"mustNotMatch":["en.vulgar.piss"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-231","profile":"balanced","input":"pistachio","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.piss"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-232","profile":"strict","input":"piss","languages":["it","en"],"action":"block","rules":["en.vulgar.piss"]}
+{"id":"english-233","profile":"lenient","input":"piss","languages":["en"],"action":"allow","rules":["en.vulgar.piss"]}
+{"id":"english-234","profile":"balanced","input":"antepisspost","languages":["it","en"],"mustNotMatch":["en.vulgar.piss"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-235","profile":"balanced","input":"turd","languages":["en"],"action":"block","rules":["en.vulgar.turd"]}
+{"id":"english-236","profile":"balanced","input":"turd","languages":["it"],"mustNotMatch":["en.vulgar.turd"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-237","profile":"balanced","input":"turds","languages":["en"],"action":"block","rules":["en.vulgar.turd"]}
+{"id":"english-238","profile":"balanced","input":"turds","languages":["it"],"mustNotMatch":["en.vulgar.turd"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-239","profile":"balanced","input":"turducken","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.turd"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-240","profile":"strict","input":"turd","languages":["it","en"],"action":"block","rules":["en.vulgar.turd"]}
+{"id":"english-241","profile":"lenient","input":"turd","languages":["en"],"action":"allow","rules":["en.vulgar.turd"]}
+{"id":"english-242","profile":"balanced","input":"anteturdpost","languages":["it","en"],"mustNotMatch":["en.vulgar.turd"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-243","profile":"balanced","input":"wank","languages":["en"],"action":"block","rules":["en.vulgar.wank"]}
+{"id":"english-244","profile":"balanced","input":"wank","languages":["it"],"mustNotMatch":["en.vulgar.wank"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-245","profile":"balanced","input":"wanks","languages":["en"],"action":"block","rules":["en.vulgar.wank"]}
+{"id":"english-246","profile":"balanced","input":"wanks","languages":["it"],"mustNotMatch":["en.vulgar.wank"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-247","profile":"balanced","input":"wanked","languages":["en"],"action":"block","rules":["en.vulgar.wank"]}
+{"id":"english-248","profile":"balanced","input":"wanked","languages":["it"],"mustNotMatch":["en.vulgar.wank"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-249","profile":"balanced","input":"wanking","languages":["en"],"action":"block","rules":["en.vulgar.wank"]}
+{"id":"english-250","profile":"balanced","input":"wanking","languages":["it"],"mustNotMatch":["en.vulgar.wank"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-251","profile":"balanced","input":"swanky","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.wank"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-252","profile":"strict","input":"wank","languages":["it","en"],"action":"block","rules":["en.vulgar.wank"]}
+{"id":"english-253","profile":"lenient","input":"wank","languages":["en"],"action":"allow","rules":["en.vulgar.wank"]}
+{"id":"english-254","profile":"balanced","input":"antewankpost","languages":["it","en"],"mustNotMatch":["en.vulgar.wank"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-255","profile":"balanced","input":"clusterfuck","languages":["en"],"action":"block","rules":["en.vulgar.clusterfuck"]}
+{"id":"english-256","profile":"balanced","input":"clusterfuck","languages":["it"],"mustNotMatch":["en.vulgar.clusterfuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-257","profile":"balanced","input":"clusterfucks","languages":["en"],"action":"block","rules":["en.vulgar.clusterfuck"]}
+{"id":"english-258","profile":"balanced","input":"clusterfucks","languages":["it"],"mustNotMatch":["en.vulgar.clusterfuck"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-259","profile":"balanced","input":"clustered","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.clusterfuck"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-260","profile":"strict","input":"clusterfuck","languages":["it","en"],"action":"block","rules":["en.vulgar.clusterfuck"]}
+{"id":"english-261","profile":"lenient","input":"clusterfuck","languages":["en"],"action":"allow","rules":["en.vulgar.clusterfuck"]}
+{"id":"english-262","profile":"balanced","input":"anteclusterfuckpost","languages":["it","en"],"mustNotMatch":["en.vulgar.clusterfuck"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-263","profile":"balanced","input":"apeshit","languages":["en"],"action":"block","rules":["en.vulgar.apeshit"]}
+{"id":"english-264","profile":"balanced","input":"apeshit","languages":["it"],"mustNotMatch":["en.vulgar.apeshit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-265","profile":"balanced","input":"apeshift","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.vulgar.apeshit"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-266","profile":"strict","input":"apeshit","languages":["it","en"],"action":"block","rules":["en.vulgar.apeshit"]}
+{"id":"english-267","profile":"lenient","input":"apeshit","languages":["en"],"action":"allow","rules":["en.vulgar.apeshit"]}
+{"id":"english-268","profile":"balanced","input":"anteapeshitpost","languages":["it","en"],"mustNotMatch":["en.vulgar.apeshit"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-269","profile":"balanced","input":"blowjob","languages":["en"],"action":"block","rules":["en.sexual.blowjob"]}
+{"id":"english-270","profile":"balanced","input":"blowjob","languages":["it"],"mustNotMatch":["en.sexual.blowjob"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-271","profile":"balanced","input":"blowjobs","languages":["en"],"action":"block","rules":["en.sexual.blowjob"]}
+{"id":"english-272","profile":"balanced","input":"blowjobs","languages":["it"],"mustNotMatch":["en.sexual.blowjob"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-273","profile":"balanced","input":"blowfish","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.blowjob"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-274","profile":"strict","input":"blowjob","languages":["it","en"],"action":"block","rules":["en.sexual.blowjob"]}
+{"id":"english-275","profile":"lenient","input":"blowjob","languages":["en"],"action":"allow","rules":["en.sexual.blowjob"]}
+{"id":"english-276","profile":"balanced","input":"anteblowjobpost","languages":["it","en"],"mustNotMatch":["en.sexual.blowjob"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-277","profile":"balanced","input":"handjob","languages":["en"],"action":"block","rules":["en.sexual.handjob"]}
+{"id":"english-278","profile":"balanced","input":"handjob","languages":["it"],"mustNotMatch":["en.sexual.handjob"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-279","profile":"balanced","input":"handjobs","languages":["en"],"action":"block","rules":["en.sexual.handjob"]}
+{"id":"english-280","profile":"balanced","input":"handjobs","languages":["it"],"mustNotMatch":["en.sexual.handjob"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-281","profile":"balanced","input":"handbook","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.handjob"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-282","profile":"strict","input":"handjob","languages":["it","en"],"action":"block","rules":["en.sexual.handjob"]}
+{"id":"english-283","profile":"lenient","input":"handjob","languages":["en"],"action":"allow","rules":["en.sexual.handjob"]}
+{"id":"english-284","profile":"balanced","input":"antehandjobpost","languages":["it","en"],"mustNotMatch":["en.sexual.handjob"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-285","profile":"balanced","input":"buttplug","languages":["en"],"action":"block","rules":["en.sexual.buttplug"]}
+{"id":"english-286","profile":"balanced","input":"buttplug","languages":["it"],"mustNotMatch":["en.sexual.buttplug"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-287","profile":"balanced","input":"buttplugs","languages":["en"],"action":"block","rules":["en.sexual.buttplug"]}
+{"id":"english-288","profile":"balanced","input":"buttplugs","languages":["it"],"mustNotMatch":["en.sexual.buttplug"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-289","profile":"balanced","input":"butterfly","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.buttplug"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-290","profile":"strict","input":"buttplug","languages":["it","en"],"action":"block","rules":["en.sexual.buttplug"]}
+{"id":"english-291","profile":"lenient","input":"buttplug","languages":["en"],"action":"allow","rules":["en.sexual.buttplug"]}
+{"id":"english-292","profile":"balanced","input":"antebuttplugpost","languages":["it","en"],"mustNotMatch":["en.sexual.buttplug"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-293","profile":"balanced","input":"dildo","languages":["en"],"action":"block","rules":["en.sexual.dildo"]}
+{"id":"english-294","profile":"balanced","input":"dildo","languages":["it"],"mustNotMatch":["en.sexual.dildo"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-295","profile":"balanced","input":"dildos","languages":["en"],"action":"block","rules":["en.sexual.dildo"]}
+{"id":"english-296","profile":"balanced","input":"dildos","languages":["it"],"mustNotMatch":["en.sexual.dildo"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-297","profile":"balanced","input":"Dildora","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.dildo"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-298","profile":"strict","input":"dildo","languages":["it","en"],"action":"block","rules":["en.sexual.dildo"]}
+{"id":"english-299","profile":"lenient","input":"dildo","languages":["en"],"action":"allow","rules":["en.sexual.dildo"]}
+{"id":"english-300","profile":"balanced","input":"antedildopost","languages":["it","en"],"mustNotMatch":["en.sexual.dildo"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-301","profile":"balanced","input":"jizz","languages":["en"],"action":"block","rules":["en.sexual.jizz"]}
+{"id":"english-302","profile":"balanced","input":"jizz","languages":["it"],"mustNotMatch":["en.sexual.jizz"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-303","profile":"balanced","input":"jizzed","languages":["en"],"action":"block","rules":["en.sexual.jizz"]}
+{"id":"english-304","profile":"balanced","input":"jizzed","languages":["it"],"mustNotMatch":["en.sexual.jizz"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-305","profile":"balanced","input":"jizzing","languages":["en"],"action":"block","rules":["en.sexual.jizz"]}
+{"id":"english-306","profile":"balanced","input":"jizzing","languages":["it"],"mustNotMatch":["en.sexual.jizz"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-307","profile":"balanced","input":"jigsaw","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.jizz"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-308","profile":"strict","input":"jizz","languages":["it","en"],"action":"block","rules":["en.sexual.jizz"]}
+{"id":"english-309","profile":"lenient","input":"jizz","languages":["en"],"action":"allow","rules":["en.sexual.jizz"]}
+{"id":"english-310","profile":"balanced","input":"antejizzpost","languages":["it","en"],"mustNotMatch":["en.sexual.jizz"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-311","profile":"balanced","input":"gangbang","languages":["en"],"action":"block","rules":["en.sexual.gangbang"]}
+{"id":"english-312","profile":"balanced","input":"gangbang","languages":["it"],"mustNotMatch":["en.sexual.gangbang"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-313","profile":"balanced","input":"gangbangs","languages":["en"],"action":"block","rules":["en.sexual.gangbang"]}
+{"id":"english-314","profile":"balanced","input":"gangbangs","languages":["it"],"mustNotMatch":["en.sexual.gangbang"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-315","profile":"balanced","input":"gangbanged","languages":["en"],"action":"block","rules":["en.sexual.gangbang"]}
+{"id":"english-316","profile":"balanced","input":"gangbanged","languages":["it"],"mustNotMatch":["en.sexual.gangbang"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-317","profile":"balanced","input":"gangbanging","languages":["en"],"action":"block","rules":["en.sexual.gangbang"]}
+{"id":"english-318","profile":"balanced","input":"gangbanging","languages":["it"],"mustNotMatch":["en.sexual.gangbang"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-319","profile":"balanced","input":"gangway","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.gangbang"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-320","profile":"strict","input":"gangbang","languages":["it","en"],"action":"block","rules":["en.sexual.gangbang"]}
+{"id":"english-321","profile":"lenient","input":"gangbang","languages":["en"],"action":"allow","rules":["en.sexual.gangbang"]}
+{"id":"english-322","profile":"balanced","input":"antegangbangpost","languages":["it","en"],"mustNotMatch":["en.sexual.gangbang"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-323","profile":"balanced","input":"porn","languages":["en"],"action":"block","rules":["en.sexual.porn"]}
+{"id":"english-324","profile":"balanced","input":"porn","languages":["it"],"mustNotMatch":["en.sexual.porn"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-325","profile":"balanced","input":"porno","languages":["en"],"action":"block","rules":["en.sexual.porn"]}
+{"id":"english-326","profile":"balanced","input":"porno","languages":["it"],"mustNotMatch":["en.sexual.porn"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-327","profile":"balanced","input":"pornos","languages":["en"],"action":"block","rules":["en.sexual.porn"]}
+{"id":"english-328","profile":"balanced","input":"pornos","languages":["it"],"mustNotMatch":["en.sexual.porn"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-329","profile":"balanced","input":"pornography","languages":["en"],"action":"block","rules":["en.sexual.porn"]}
+{"id":"english-330","profile":"balanced","input":"pornography","languages":["it"],"mustNotMatch":["en.sexual.porn"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-331","profile":"balanced","input":"pornographic","languages":["en"],"action":"block","rules":["en.sexual.porn"]}
+{"id":"english-332","profile":"balanced","input":"pornographic","languages":["it"],"mustNotMatch":["en.sexual.porn"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-333","profile":"balanced","input":"Porcia","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.porn"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-334","profile":"strict","input":"porn","languages":["it","en"],"action":"block","rules":["en.sexual.porn"]}
+{"id":"english-335","profile":"lenient","input":"porn","languages":["en"],"action":"allow","rules":["en.sexual.porn"]}
+{"id":"english-336","profile":"balanced","input":"antepornpost","languages":["it","en"],"mustNotMatch":["en.sexual.porn"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-337","profile":"balanced","input":"hentai","languages":["en"],"action":"block","rules":["en.sexual.hentai"]}
+{"id":"english-338","profile":"balanced","input":"hentai","languages":["it"],"mustNotMatch":["en.sexual.hentai"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-339","profile":"balanced","input":"hentail","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.hentai"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-340","profile":"strict","input":"hentai","languages":["it","en"],"action":"block","rules":["en.sexual.hentai"]}
+{"id":"english-341","profile":"lenient","input":"hentai","languages":["en"],"action":"allow","rules":["en.sexual.hentai"]}
+{"id":"english-342","profile":"balanced","input":"antehentaipost","languages":["it","en"],"mustNotMatch":["en.sexual.hentai"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-343","profile":"balanced","input":"jerkoff","languages":["en"],"action":"block","rules":["en.sexual.jerkoff"]}
+{"id":"english-344","profile":"balanced","input":"jerkoff","languages":["it"],"mustNotMatch":["en.sexual.jerkoff"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-345","profile":"balanced","input":"jerkoffs","languages":["en"],"action":"block","rules":["en.sexual.jerkoff"]}
+{"id":"english-346","profile":"balanced","input":"jerkoffs","languages":["it"],"mustNotMatch":["en.sexual.jerkoff"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-347","profile":"balanced","input":"jerkin","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.jerkoff"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-348","profile":"strict","input":"jerkoff","languages":["it","en"],"action":"block","rules":["en.sexual.jerkoff"]}
+{"id":"english-349","profile":"lenient","input":"jerkoff","languages":["en"],"action":"allow","rules":["en.sexual.jerkoff"]}
+{"id":"english-350","profile":"balanced","input":"antejerkoffpost","languages":["it","en"],"mustNotMatch":["en.sexual.jerkoff"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-351","profile":"balanced","input":"cumshot","languages":["en"],"action":"block","rules":["en.sexual.cumshot"]}
+{"id":"english-352","profile":"balanced","input":"cumshot","languages":["it"],"mustNotMatch":["en.sexual.cumshot"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-353","profile":"balanced","input":"cumshots","languages":["en"],"action":"block","rules":["en.sexual.cumshot"]}
+{"id":"english-354","profile":"balanced","input":"cumshots","languages":["it"],"mustNotMatch":["en.sexual.cumshot"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-355","profile":"balanced","input":"cumulus","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.cumshot"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-356","profile":"strict","input":"cumshot","languages":["it","en"],"action":"block","rules":["en.sexual.cumshot"]}
+{"id":"english-357","profile":"lenient","input":"cumshot","languages":["en"],"action":"allow","rules":["en.sexual.cumshot"]}
+{"id":"english-358","profile":"balanced","input":"antecumshotpost","languages":["it","en"],"mustNotMatch":["en.sexual.cumshot"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-359","profile":"balanced","input":"nigger","languages":["en"],"action":"block","rules":["en.discriminatory.nigger"]}
+{"id":"english-360","profile":"balanced","input":"nigger","languages":["it"],"mustNotMatch":["en.discriminatory.nigger"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-361","profile":"balanced","input":"niggers","languages":["en"],"action":"block","rules":["en.discriminatory.nigger"]}
+{"id":"english-362","profile":"balanced","input":"niggers","languages":["it"],"mustNotMatch":["en.discriminatory.nigger"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-363","profile":"balanced","input":"Nigella","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.nigger"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-364","profile":"strict","input":"nigger","languages":["it","en"],"action":"block","rules":["en.discriminatory.nigger"]}
+{"id":"english-365","profile":"lenient","input":"nigger","languages":["en"],"action":"block","rules":["en.discriminatory.nigger"]}
+{"id":"english-366","profile":"balanced","input":"anteniggerpost","languages":["it","en"],"mustNotMatch":["en.discriminatory.nigger"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-367","profile":"balanced","input":"faggot","languages":["en"],"action":"review","rules":["en.discriminatory.faggot"]}
+{"id":"english-368","profile":"balanced","input":"faggot","languages":["it"],"mustNotMatch":["en.discriminatory.faggot"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-369","profile":"balanced","input":"faggots","languages":["en"],"action":"review","rules":["en.discriminatory.faggot"]}
+{"id":"english-370","profile":"balanced","input":"faggots","languages":["it"],"mustNotMatch":["en.discriminatory.faggot"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-371","profile":"balanced","input":"faggoting","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.faggot"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-372","profile":"strict","input":"faggot","languages":["it","en"],"action":"block","rules":["en.discriminatory.faggot"]}
+{"id":"english-373","profile":"lenient","input":"faggot","languages":["en"],"action":"review","rules":["en.discriminatory.faggot"]}
+{"id":"english-374","profile":"balanced","input":"antefaggotpost","languages":["it","en"],"mustNotMatch":["en.discriminatory.faggot"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-375","profile":"balanced","input":"retard","languages":["en"],"action":"review","rules":["en.discriminatory.retard"]}
+{"id":"english-376","profile":"balanced","input":"retard","languages":["it"],"mustNotMatch":["en.discriminatory.retard"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-377","profile":"balanced","input":"retards","languages":["en"],"action":"review","rules":["en.discriminatory.retard"]}
+{"id":"english-378","profile":"balanced","input":"retards","languages":["it"],"mustNotMatch":["en.discriminatory.retard"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-379","profile":"balanced","input":"retarded","languages":["en"],"action":"review","rules":["en.discriminatory.retard"]}
+{"id":"english-380","profile":"balanced","input":"retarded","languages":["it"],"mustNotMatch":["en.discriminatory.retard"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-381","profile":"balanced","input":"retardant","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.retard"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-382","profile":"strict","input":"retard","languages":["it","en"],"action":"block","rules":["en.discriminatory.retard"]}
+{"id":"english-383","profile":"lenient","input":"retard","languages":["en"],"action":"review","rules":["en.discriminatory.retard"]}
+{"id":"english-384","profile":"balanced","input":"anteretardpost","languages":["it","en"],"mustNotMatch":["en.discriminatory.retard"],"note":"Non si cercano sottostringhe inglesi in parole concatenate."}
+{"id":"english-385","profile":"balanced","input":"son of a bitch","languages":["en"],"action":"block","rules":["en.insult.son-of-a-bitch"]}
+{"id":"english-386","profile":"balanced","input":"son of a bitch","languages":["it"],"mustNotMatch":["en.insult.son-of-a-bitch"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-387","profile":"balanced","input":"sons of bitches","languages":["en"],"action":"block","rules":["en.insult.son-of-a-bitch"]}
+{"id":"english-388","profile":"balanced","input":"sons of bitches","languages":["it"],"mustNotMatch":["en.insult.son-of-a-bitch"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-389","profile":"balanced","input":"son of a sailor","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.son-of-a-bitch"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-390","profile":"strict","input":"son of a bitch","languages":["it","en"],"action":"block","rules":["en.insult.son-of-a-bitch"]}
+{"id":"english-391","profile":"lenient","input":"son of a bitch","languages":["en"],"action":"allow","rules":["en.insult.son-of-a-bitch"]}
+{"id":"english-392","profile":"balanced","input":"piece of shit","languages":["en"],"action":"block","rules":["en.insult.piece-of-shit"]}
+{"id":"english-393","profile":"balanced","input":"piece of shit","languages":["it"],"mustNotMatch":["en.insult.piece-of-shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-394","profile":"balanced","input":"pieces of shit","languages":["en"],"action":"block","rules":["en.insult.piece-of-shit"]}
+{"id":"english-395","profile":"balanced","input":"pieces of shit","languages":["it"],"mustNotMatch":["en.insult.piece-of-shit"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-396","profile":"balanced","input":"piece of cake","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.insult.piece-of-shit"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-397","profile":"strict","input":"piece of shit","languages":["it","en"],"action":"block","rules":["en.insult.piece-of-shit"]}
+{"id":"english-398","profile":"lenient","input":"piece of shit","languages":["en"],"action":"allow","rules":["en.insult.piece-of-shit"]}
+{"id":"english-399","profile":"balanced","input":"blow job","languages":["en"],"action":"block","rules":["en.sexual.blow-job"]}
+{"id":"english-400","profile":"balanced","input":"blow job","languages":["it"],"mustNotMatch":["en.sexual.blow-job"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-401","profile":"balanced","input":"blow jobs","languages":["en"],"action":"block","rules":["en.sexual.blow-job"]}
+{"id":"english-402","profile":"balanced","input":"blow jobs","languages":["it"],"mustNotMatch":["en.sexual.blow-job"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-403","profile":"balanced","input":"blow bubbles","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.blow-job"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-404","profile":"strict","input":"blow job","languages":["it","en"],"action":"block","rules":["en.sexual.blow-job"]}
+{"id":"english-405","profile":"lenient","input":"blow job","languages":["en"],"action":"allow","rules":["en.sexual.blow-job"]}
+{"id":"english-406","profile":"balanced","input":"hand job","languages":["en"],"action":"block","rules":["en.sexual.hand-job"]}
+{"id":"english-407","profile":"balanced","input":"hand job","languages":["it"],"mustNotMatch":["en.sexual.hand-job"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-408","profile":"balanced","input":"hand jobs","languages":["en"],"action":"block","rules":["en.sexual.hand-job"]}
+{"id":"english-409","profile":"balanced","input":"hand jobs","languages":["it"],"mustNotMatch":["en.sexual.hand-job"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-410","profile":"balanced","input":"hand luggage","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.hand-job"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-411","profile":"strict","input":"hand job","languages":["it","en"],"action":"block","rules":["en.sexual.hand-job"]}
+{"id":"english-412","profile":"lenient","input":"hand job","languages":["en"],"action":"allow","rules":["en.sexual.hand-job"]}
+{"id":"english-413","profile":"balanced","input":"jerk off","languages":["en"],"action":"block","rules":["en.sexual.jerk-off"]}
+{"id":"english-414","profile":"balanced","input":"jerk off","languages":["it"],"mustNotMatch":["en.sexual.jerk-off"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-415","profile":"balanced","input":"jerking off","languages":["en"],"action":"block","rules":["en.sexual.jerk-off"]}
+{"id":"english-416","profile":"balanced","input":"jerking off","languages":["it"],"mustNotMatch":["en.sexual.jerk-off"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-417","profile":"balanced","input":"jerk chicken","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.sexual.jerk-off"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-418","profile":"strict","input":"jerk off","languages":["it","en"],"action":"block","rules":["en.sexual.jerk-off"]}
+{"id":"english-419","profile":"lenient","input":"jerk off","languages":["en"],"action":"allow","rules":["en.sexual.jerk-off"]}
+{"id":"english-420","profile":"balanced","input":"dirty jew","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-jew"]}
+{"id":"english-421","profile":"balanced","input":"dirty jew","languages":["it"],"mustNotMatch":["en.discriminatory.dirty-jew"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-422","profile":"balanced","input":"dirty jews","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-jew"]}
+{"id":"english-423","profile":"balanced","input":"dirty jews","languages":["it"],"mustNotMatch":["en.discriminatory.dirty-jew"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-424","profile":"balanced","input":"Jewish history","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.dirty-jew"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-425","profile":"strict","input":"dirty jew","languages":["it","en"],"action":"block","rules":["en.discriminatory.dirty-jew"]}
+{"id":"english-426","profile":"lenient","input":"dirty jew","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-jew"]}
+{"id":"english-427","profile":"balanced","input":"dirty muslim","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-muslim"]}
+{"id":"english-428","profile":"balanced","input":"dirty muslim","languages":["it"],"mustNotMatch":["en.discriminatory.dirty-muslim"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-429","profile":"balanced","input":"dirty muslims","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-muslim"]}
+{"id":"english-430","profile":"balanced","input":"dirty muslims","languages":["it"],"mustNotMatch":["en.discriminatory.dirty-muslim"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-431","profile":"balanced","input":"Muslim community","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.dirty-muslim"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-432","profile":"strict","input":"dirty muslim","languages":["it","en"],"action":"block","rules":["en.discriminatory.dirty-muslim"]}
+{"id":"english-433","profile":"lenient","input":"dirty muslim","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-muslim"]}
+{"id":"english-434","profile":"balanced","input":"dirty gay","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-gay"]}
+{"id":"english-435","profile":"balanced","input":"dirty gay","languages":["it"],"mustNotMatch":["en.discriminatory.dirty-gay"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-436","profile":"balanced","input":"dirty gays","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-gay"]}
+{"id":"english-437","profile":"balanced","input":"dirty gays","languages":["it"],"mustNotMatch":["en.discriminatory.dirty-gay"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-438","profile":"balanced","input":"gay pride","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.dirty-gay"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-439","profile":"strict","input":"dirty gay","languages":["it","en"],"action":"block","rules":["en.discriminatory.dirty-gay"]}
+{"id":"english-440","profile":"lenient","input":"dirty gay","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-gay"]}
+{"id":"english-441","profile":"balanced","input":"dirty chink","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-chink"]}
+{"id":"english-442","profile":"balanced","input":"dirty chink","languages":["it"],"mustNotMatch":["en.discriminatory.dirty-chink"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-443","profile":"balanced","input":"dirty chinks","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-chink"]}
+{"id":"english-444","profile":"balanced","input":"dirty chinks","languages":["it"],"mustNotMatch":["en.discriminatory.dirty-chink"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-445","profile":"balanced","input":"chink in the armor","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.dirty-chink"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-446","profile":"strict","input":"dirty chink","languages":["it","en"],"action":"block","rules":["en.discriminatory.dirty-chink"]}
+{"id":"english-447","profile":"lenient","input":"dirty chink","languages":["en"],"action":"block","rules":["en.discriminatory.dirty-chink"]}
+{"id":"english-448","profile":"balanced","input":"fucking tranny","languages":["en"],"action":"block","rules":["en.discriminatory.fucking-tranny"]}
+{"id":"english-449","profile":"balanced","input":"fucking tranny","languages":["it"],"mustNotMatch":["en.discriminatory.fucking-tranny"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-450","profile":"balanced","input":"fucking trannies","languages":["en"],"action":"block","rules":["en.discriminatory.fucking-tranny"]}
+{"id":"english-451","profile":"balanced","input":"fucking trannies","languages":["it"],"mustNotMatch":["en.discriminatory.fucking-tranny"],"note":"Il dataset inglese non si attiva senza en."}
+{"id":"english-452","profile":"balanced","input":"transgender rights","languages":["en"],"action":"allow","expectedMatches":[],"mustNotMatch":["en.discriminatory.fucking-tranny"],"note":"Negativo vicino con confine o significato neutro."}
+{"id":"english-453","profile":"strict","input":"fucking tranny","languages":["it","en"],"action":"block","rules":["en.discriminatory.fucking-tranny"]}
+{"id":"english-454","profile":"lenient","input":"fucking tranny","languages":["en"],"action":"block","rules":["en.discriminatory.fucking-tranny"]}
+{"id":"english-455","profile":"balanced","input":"ass","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-456","profile":"balanced","input":"asses","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-457","profile":"balanced","input":"cock","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-458","profile":"balanced","input":"cocks","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-459","profile":"balanced","input":"Dick","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-460","profile":"balanced","input":"Dickens","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-461","profile":"balanced","input":"Titus","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-462","profile":"balanced","input":"Hancock","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-463","profile":"balanced","input":"Scunthorpe","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-464","profile":"balanced","input":"Essex","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-465","profile":"balanced","input":"Sussex","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-466","profile":"balanced","input":"Penistone","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-467","profile":"balanced","input":"assistant","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-468","profile":"balanced","input":"assassin","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-469","profile":"balanced","input":"assessment","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-470","profile":"balanced","input":"classical","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-471","profile":"balanced","input":"cocktail","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-472","profile":"balanced","input":"cockpit","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-473","profile":"balanced","input":"grape","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-474","profile":"balanced","input":"grapes","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-475","profile":"balanced","input":"scrape","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-476","profile":"balanced","input":"therapist","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-477","profile":"balanced","input":"analysis","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-478","profile":"balanced","input":"analisi","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-479","profile":"balanced","input":"canale","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-480","profile":"balanced","input":"canali","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-481","profile":"balanced","input":"pen is","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-482","profile":"balanced","input":"bananas so","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-483","profile":"balanced","input":"gay","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-484","profile":"balanced","input":"lesbian","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-485","profile":"balanced","input":"queer","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-486","profile":"balanced","input":"Jew","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-487","profile":"balanced","input":"Muslim","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-488","profile":"balanced","input":"transgender","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-489","profile":"balanced","input":"black","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-490","profile":"balanced","input":"white","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-491","profile":"balanced","input":"disabled","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-492","profile":"balanced","input":"autistic","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-493","profile":"balanced","input":"spastic","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-494","profile":"balanced","input":"fag","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-495","profile":"balanced","input":"fags","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-496","profile":"balanced","input":"dyke","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-497","profile":"balanced","input":"chink","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-498","profile":"balanced","input":"tranny","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-499","profile":"balanced","input":"sex","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-500","profile":"balanced","input":"penis","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-501","profile":"balanced","input":"vagina","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-502","profile":"balanced","input":"anus","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-503","profile":"balanced","input":"orgasm","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-504","profile":"balanced","input":"breast","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-505","profile":"balanced","input":"rape","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-506","profile":"balanced","input":"cum","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-507","profile":"balanced","input":"cum laude","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-508","profile":"balanced","input":"bloody","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-509","profile":"balanced","input":"damn","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-510","profile":"balanced","input":"hell","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-511","profile":"balanced","input":"god","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-512","profile":"balanced","input":"Jesus","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-513","profile":"balanced","input":"Christian","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-514","profile":"balanced","input":"Claudio","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-515","profile":"balanced","input":"Diodato","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-516","profile":"balanced","input":"Madonna di Campiglio","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-517","profile":"balanced","input":"Porcedda","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-518","profile":"balanced","input":"sega circolare","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-519","profile":"balanced","input":"finocchio","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-520","profile":"balanced","input":"palle da tennis","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-521","profile":"balanced","input":"scazzottata","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-522","profile":"balanced","input":"cazzotto","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-523","profile":"balanced","input":"cazzuola","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-524","profile":"balanced","input":"Negroni","languages":["it","en"],"action":"allow","expectedMatches":[],"note":"Guardrail bilingue: identità, anatomia neutra, nomi convenzionali e confini innocui."}
+{"id":"english-525","profile":"balanced","input":"a$$hole","languages":["it","en"],"action":"block","rules":["en.insult.asshole"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-526","profile":"balanced","input":"sh1thead","languages":["it","en"],"action":"block","rules":["en.vulgar.shit"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-527","profile":"balanced","input":"d1ckhead","languages":["it","en"],"action":"block","rules":["en.insult.dickhead"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-528","profile":"balanced","input":"f.u.c.k","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-529","profile":"balanced","input":"b1tch","languages":["it","en"],"action":"block","rules":["en.insult.bitch"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-530","profile":"balanced","input":"fuuuuuck","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-531","profile":"balanced","input":"ｆｕｃｋ","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-532","profile":"balanced","input":"f​uck","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-533","profile":"balanced","input":"f u c k","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}
+{"id":"english-534","profile":"balanced","input":"fúck","languages":["it","en"],"action":"block","rules":["en.vulgar.fuck"],"note":"Elusione riconosciuta con le trasformazioni esistenti, identiche nei due motori."}

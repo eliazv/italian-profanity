@@ -1,0 +1,105 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "en.sexual.blowjob",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["blowjob", "blowjobs"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.handjob",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["handjob", "handjobs"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.buttplug",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["buttplug", "buttplugs"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.dildo",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["dildo", "dildos"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.jizz",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["jizz", "jizzed", "jizzing"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.gangbang",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["gangbang", "gangbangs", "gangbanged", "gangbanging"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.porn",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["porn", "porno", "pornos", "pornography", "pornographic"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.hentai",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["hentai"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.jerkoff",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["jerkoff", "jerkoffs"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.sexual.cumshot",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["cumshot", "cumshots"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    }
+  ]
+}

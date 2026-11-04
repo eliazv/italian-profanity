@@ -7,9 +7,9 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["fuck", "fucks", "fucked", "fucking", "fucker", "fuckers"],
-      "provenance": ["manual"],
-      "note": "Nucleo inglese minimo opzionale: forme esplicite, parola intera. Non equivale a una wordlist inglese completa."
+      "terms": ["fuck", "fucks", "fucked", "fucking", "fucker", "fuckers", "fuckup", "fuckups"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
     },
     {
       "id": "en.vulgar.shit",
@@ -17,9 +17,18 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["shit", "shits", "shitty", "bullshit"],
-      "provenance": ["manual"],
-      "note": "Forme volgari esplicite, senza prefissi o sottostringhe."
+      "terms": [
+        "shit",
+        "shits",
+        "shitty",
+        "bullshit",
+        "shitting",
+        "shithead",
+        "shitheads",
+        "shitshow"
+      ],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
     },
     {
       "id": "en.insult.bitch",
@@ -27,9 +36,9 @@
       "category": "insult",
       "severity": 2,
       "confidence": "high",
-      "terms": ["bitch", "bitches"],
-      "provenance": ["manual"],
-      "note": "Forma ingiuriosa comune selezionata per nickname. Il significato zoologico non viene disambiguato; eventuali eccezioni spettano alla configurazione dell'app."
+      "terms": ["bitch", "bitches", "bitching", "bitchy"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
     }
   ]
 }

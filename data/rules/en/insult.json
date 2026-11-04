@@ -1,0 +1,195 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "en.insult.asshole",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["asshole", "assholes", "arsehole", "arseholes"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.bastard",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["bastard", "bastards"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Forma polisemica: review in balanced. Nessuna disambiguazione del contesto; confini di parola intera."
+    },
+    {
+      "id": "en.insult.dickhead",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["dickhead", "dickheads"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.dumbass",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["dumbass", "dumbasses"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.jackass",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["jackass", "jackasses"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica: review in balanced. Nessuna disambiguazione del contesto; confini di parola intera."
+    },
+    {
+      "id": "en.insult.motherfucker",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["motherfucker", "motherfuckers", "motherfucking"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.cocksucker",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["cocksucker", "cocksuckers"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.cunt",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["cunt", "cunts"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.twat",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["twat", "twats"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.prick",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["prick", "pricks"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Forma polisemica: review in balanced. Nessuna disambiguazione del contesto; confini di parola intera."
+    },
+    {
+      "id": "en.insult.slut",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["slut", "sluts", "slutty"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.whore",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["whore", "whores", "whoring"],
+      "provenance": ["manual", "obscenity@32c9061c1ad18de43432e4e59084189628f2a2a4"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.wanker",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["wanker", "wankers"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.tosser",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["tosser", "tossers"],
+      "provenance": ["manual"],
+      "note": "Forma polisemica: review in balanced. Nessuna disambiguazione del contesto; confini di parola intera."
+    },
+    {
+      "id": "en.insult.bellend",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["bellend", "bellends"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.dipshit",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["dipshit", "dipshits"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.douchebag",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["douchebag", "douchebags"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.scumbag",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["scumbag", "scumbags"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    },
+    {
+      "id": "en.insult.dumbfuck",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["dumbfuck", "dumbfucks"],
+      "provenance": ["manual"],
+      "note": "Selezione editoriale per testi brevi: flessioni esplicite, parola intera, nessun prefisso o match interno. Le grafie camuffate usano le trasformazioni condivise."
+    }
+  ]
+}

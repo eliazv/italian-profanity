@@ -48,6 +48,36 @@
       "checked": "2026-11-03",
       "use": "candidates",
       "note": "Sottoinsieme in data/normalization/confusables-subset.json."
+    },
+    {
+      "id": "leo-profanity",
+      "url": "https://github.com/jojoee/leo-profanity",
+      "commit": "fd3c68e5f0415cdb103210109a775f4a2dd9bd90",
+      "license": "MIT (codice); dizionario derivato da LDNOOBW/Shutterstock, CC-BY-4.0",
+      "checked": "2026-11-04",
+      "use": "coverage",
+      "files": ["README.md", "LICENSE", "dictionary/default.json"],
+      "note": "Solo confronto di copertura; dizionario non incorporato. La licenza del codice non sostituisce quella della fonte del dizionario."
+    },
+    {
+      "id": "obscenity",
+      "url": "https://github.com/jo3-l/obscenity",
+      "commit": "32c9061c1ad18de43432e4e59084189628f2a2a4",
+      "license": "MIT; il preset inglese include il notice MIT di cuss (Titus Wormer)",
+      "checked": "2026-11-04",
+      "use": "candidates",
+      "files": ["LICENSE.md", "src/preset/english.ts"],
+      "note": "Selezione manuale di famiglie dal preset, con flessioni e policy proprie. Nessuna regex, whitelist o trasformazione copiata; notice MIT di Obscenity e cuss nei due pacchetti."
+    },
+    {
+      "id": "2toad-profanity",
+      "url": "https://github.com/2Toad/Profanity",
+      "commit": "19d6da192d61bd14544b7e417ea2613a2ba8357f",
+      "license": "MIT (repository)",
+      "checked": "2026-11-04",
+      "use": "coverage",
+      "files": ["LICENSE", "README.md", "src/data/profane-words.ts"],
+      "note": "Solo confronto di copertura e API; nessun dato o codice importato. Varianti leet gestite dalla tabella condivisa del progetto."
     }
   ]
 }

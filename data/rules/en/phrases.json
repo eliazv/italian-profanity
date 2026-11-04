@@ -1,0 +1,105 @@
+{
+  "$schema": "../../schema/rules.schema.json",
+  "rules": [
+    {
+      "id": "en.insult.son-of-a-bitch",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["son", "of", "a", "bitch"], ["sons", "of", "bitches"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.insult.piece-of-shit",
+      "kind": "phrase",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["piece", "of", "shit"], ["pieces", "of", "shit"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.sexual.blow-job",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["blow", "job"], ["blow", "jobs"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.sexual.hand-job",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["hand", "job"], ["hand", "jobs"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.sexual.jerk-off",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [["jerk", "off"], ["jerking", "off"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.discriminatory.dirty-jew",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["dirty", "jew"], ["dirty", "jews"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.discriminatory.dirty-muslim",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["dirty", "muslim"], ["dirty", "muslims"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.discriminatory.dirty-gay",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["dirty", "gay"], ["dirty", "gays"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.discriminatory.dirty-chink",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["dirty", "chink"], ["dirty", "chinks"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    },
+    {
+      "id": "en.discriminatory.fucking-tranny",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["fucking", "tranny"], ["fucking", "trannies"]],
+      "provenance": ["manual"],
+      "note": "Espressione contestuale scelta manualmente dopo confronto di copertura. Parole adiacenti in ordine; identità e termini neutri isolati non bastano."
+    }
+  ]
+}

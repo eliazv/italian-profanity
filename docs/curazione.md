@@ -102,3 +102,11 @@ La copertura non è un dizionario esaustivo della lingua: è un insieme curato p
 ### Controllo finale del corpus: esclusioni prima delle accettazioni
 
 Le revisioni hanno rimosso la forma isolata `negroni` (cognome e cocktail) e la regola `mannaggia la miseria` (esclamazione non necessariamente offensiva), mantenendo i controlli di assenza di match. Ulteriori collisioni effettive con cognomi o voci di dizionario sono state annotate individualmente con azione attesa `review` nel profilo balanced; per `tetta`/`tette` (gravità 1) l'azione attesa è `allow`. Questo controllo non garantisce una comprensione del contesto né un recall esaustivo: le nuove regole richiedono comunque osservazione in produzione senza blocco iniziale.
+
+## Consolidamento e inglese opzionale — 4 novembre 2026
+
+Il consolidamento mantiene le 290 regole italiane e aggiunge 307 fixture Unicode e di offset, di cui 256 casi fuzz riproducibili. Ha individuato e corretto in entrambi i motori il disallineamento delle origini quando surrogati isolati si ricongiungono dopo rimozioni.
+
+Il dataset inglese passa da 3 a 51 regole (110 forme e 20 varianti di frase), con 534 fixture aggiuntive. Le famiglie sono scelte manualmente dal preset MIT di Obscenity, che attribuisce cuss; entrambi i notice sono distribuiti. leo-profanity e @2toad/profanity sono confronti di copertura, senza importare le loro liste. Nessuna dipendenza aggiunta. Identità, anatomia e altre parole neutre isolate restano fuori dai nuovi blocchi; i termini ambigui richiedono review in balanced.
+
+Il totale è 341 regole e 3.459 fixture. L’audit viene eseguito su 127.842 input per ognuna delle configurazioni it e it+en, senza nuove accettazioni. [Rapporto e verifiche](consolidamento-2026-11-04.md). Il consolidamento tecnico non sostituisce una prova comparativa su applicazioni reali; nessun nickname reale è incluso nei test o nei report.

@@ -28,9 +28,9 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 
 Pacchetti: npm [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) · pub.dev [`italian_profanity`](https://pub.dev/packages/italian_profanity).
 
-**Prima beta di integrazione.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 290 regole e 1.034 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti sono coperti solo parzialmente. L'inglese opzionale contiene tre famiglie minime.
+**Prima beta di integrazione.** Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 290 regole e 1.034 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti sono coperti solo parzialmente. L’inglese opzionale contiene 51 regole curate, con 110 forme e 20 varianti di frase, senza dipendenze aggiuntive.
 
-Le attese sono condivise su 2.618 fixture. L'audit esegue il rilevatore su 127.842 input e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
+Le attese sono condivise su 3.459 fixture. L’audit esegue il rilevatore su 127.842 input per ciascuna configurazione (`it` e `it+en`) e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
 
 ```ts
 import { check, createChecker } from "italian-profanity"
@@ -67,7 +67,7 @@ dependencies:
   italian_profanity: 0.1.0-beta.1
 ```
 
-La [guida d'integrazione](docs/integrazione.md) descrive configurazione condivisa client/server, gestione di `review`, limiti e migrazione dei vecchi filtri. Il nucleo inglese minimo va attivato con `languages: ["it", "en"]`; non sostituisce una wordlist inglese completa.
+La [guida d'integrazione](docs/integrazione.md) descrive configurazione condivisa client/server, gestione di `review`, limiti e migrazione dei vecchi filtri. Il dataset inglese curato va attivato con `languages: ["it", "en"]`; `languages: ["en"]` seleziona solo l’inglese. Le librerie esterne sono riferimenti di curazione, senza dipendenze a runtime. Non viene promessa copertura equivalente alle loro liste. Il [rapporto di consolidamento](docs/consolidamento-2026-11-04.md) documenta fonti, controlli e limiti.
 
 ## Sviluppo
 

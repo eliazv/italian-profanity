@@ -39,7 +39,7 @@ Ho svolto la ricerca il 2026-11-03: le fonti dettagliate sono al §10 e nella re
 
 **Rimandato a dopo la v0.1**: `mask()`, CLI di scansione, dialetti (il primo sarà il romagnolo), demo online.
 
-**Fuori ambito**: testi lunghi o chat con analisi del contesto, machine learning, API remote, lingue diverse dall'italiano (l'inglese resta solo come pacchetto minimo da attivare).
+**Fuori ambito**: testi lunghi o chat con analisi del contesto, machine learning, API remote, altre lingue oltre a italiano e inglese. L’italiano resta la specializzazione principale; l’inglese è un dataset curato opzionale, mai attivato automaticamente (D22).
 
 **Promessa esplicita nel README**: "nessun match" non significa "testo appropriato". È un controllo lessicale con copertura limitata, e la moderazione umana resta necessaria.
 
@@ -103,7 +103,7 @@ Il candidato si aggiunge alle parole originali, senza sostituirle. Si considera 
 
 La classificazione è esplicita e identica nei due motori. Gli spazi comprendono U+0009–U+000D, U+0020, U+0085, U+00A0, U+1680, U+2000–U+200A, U+2028, U+2029, U+202F, U+205F e U+3000. I separatori comprendono la punteggiatura e i simboli ASCII, U+2010–U+2015, U+2018–U+201F, U+00AB, U+00BB, U+2026 e U+20AC. Emoji, simboli e lettere fuori da questi insiemi e dalle mappe restano nelle viste: non vengono cancellati per avvicinare lettere prima separate. Una parola di sola punteggiatura resta come segmento con viste vuote, così non si altera l'adiacenza delle parole originali.
 
-Ogni segmento conserva `kind` (`word` o `spaced`), `range`, `fragments`, le stringhe `base` e `deleet`, gli array `baseOrigins` e `deleetOrigins` e le sequenze `squeeze`. Gli array delle origini contengono un intervallo per **punto di codice prodotto**, non per unità UTF-16; un'emoji ne occupa uno, una legatura espansa può occuparne più di uno. `range` comprende la punteggiatura esterna della parola, mentre le origini delle viste permettono al futuro rilevatore di escluderla dal match. Queste strutture sono interne: non vengono esportate dall'entrypoint pubblico.
+Ogni segmento conserva `kind` (`word` o `spaced`), `range`, `fragments`, le stringhe `base` e `deleet`, gli array `baseOrigins` e `deleetOrigins` e le sequenze `squeeze`. Gli array delle origini contengono un intervallo per **punto di codice prodotto**, non per unità UTF-16; un'emoji ne occupa uno, una legatura espansa può occuparne più di uno. `range` comprende la punteggiatura esterna della parola, mentre le origini delle viste permettono al futuro rilevatore di escluderla dal match. Se la rimozione di invisibili o separatori rende adiacenti un surrogato alto e uno basso prima isolati, la vista risultante contiene un solo punto di codice con un’origine che copre entrambi e il testo intermedio; due surrogati dello stesso tipo rimangono distinti. Questo riallineamento vale per `foldWithOrigins`, `base`, `deleet` e `squeeze`. Queste strutture sono interne: non vengono esportate dall’entrypoint pubblico.
 
 ### 4.3 Viste
 
@@ -243,7 +243,7 @@ checker.check("…")
 
 `extraRules` accetta solo regole `word` letterali; `id` è facoltativo e, se omesso, diventa `app.word.<indice>`. Un id duplicato o nel namespace `contact.` è rifiutato. Le forme e le eccezioni locali vengono normalizzate come parole alfabetiche singole, senza eseguire regex; termini vuoti, simboli senza lettere o frasi richiedono un errore di configurazione. Le regole locali restano attive anche con `languages: []`. `createChecker()` compila una copia delle opzioni e non legge le successive mutazioni degli array dell'app.
 
-Il nucleo inglese è ancora vuoto: `languages: ["en"]` disattiva le regole italiane e non aggiunge una copertura inglese inesistente. Le lingue diverse da `it` ed `en` vengono rifiutate. Nessuna lingua aggiuntiva viene attivata per default.
+Il dataset inglese opzionale contiene 51 regole curate, 110 forme nei campi `terms` e 20 varianti di frase. `languages: ["en"]` attiva soltanto queste regole; `["it", "en"]` attiva entrambe le lingue. Non equivale alle liste complete delle librerie di confronto. Le lingue diverse da `it` ed `en` vengono rifiutate. Nessuna lingua aggiuntiva viene attivata per default.
 
 - `range` si riferisce al testo originale, in **unità UTF-16** (native sia in JS sia in Dart, quindi identiche). **Non va scritto nei log**, perché permetterebbe di risalire al nickname.
 - Pubblicato come ESM con i tipi `.d.ts`, per Node 20 o superiore e i browser moderni. Nessuna dipendenza a runtime.
@@ -300,13 +300,13 @@ Ogni motore ha un piccolo eseguibile di test (`fixtures-runner`) che legge le fi
 
 ### 7.3 Controllo sul corpus di parole innocue
 
-Lo script `tools/audit-benign` esegue il rilevatore TS su:
+Lo script `tools/audit-benign` esegue il rilevatore TS sia con `languages: ["it"]` sia con `["it", "en"]`, su:
 - i nomi propri (8.912), i cognomi (38.486) e le parole comuni (60.444) di `napolux/paroleitaliane`, scaricati da un **commit fissato** e conservati nella cache della CI, ma **mai inclusi nel repository né nei pacchetti** (il README di napolux dichiara che alcune liste hanno provenienza ignota);
 - combinazioni nome + cognome campionate, unite da spazio, `.`, `_` e senza separatore (`Claudio Porcu`, `amadio.cane`, `Mario_Rossi`). Nei nickname la punteggiatura unisce le parole (§4.2), quindi un `compound` ancorato alla fine può scattare su un nome seguito da un cognome: è esattamente il caso che l'audit deve intercettare.
 
 Ogni collisione va **valutata da un curatore**, non corretta in automatico. La soluzione può essere un'eccezione, una regola più stretta o un `prefix` trasformato in `word`. Una regola nuova o modificata **non entra** finché l'audit non è pulito o ogni collisione non è stata giustificata in `data/audit/accepted.jsonl`.
 
-Il report distingue `name`, `surname`, `word` e `pair`: il dizionario contiene anche termini realmente offensivi e non è interamente innocuo. Le collisioni accettate specificano provenienza, motivo e azione attesa in `balanced`; un passaggio inatteso da `review` a `block` fa fallire l'audit. Il nucleo corrente ha due eccezioni nominali e 34 collisioni distinte motivate, non un tasso misurato di falsi positivi su utenti reali.
+Il report distingue `name`, `surname`, `word` e `pair`: il dizionario contiene anche termini realmente offensivi e non è interamente innocuo. Le collisioni accettate specificano provenienza, motivo e azione attesa in `balanced`; un passaggio inatteso da `review` a `block` fa fallire l'audit. Il nucleo corrente ha due eccezioni nominali e 103 input distinti con collisioni motivate, non un tasso misurato di falsi positivi su utenti reali.
 
 ### 7.4 Altre verifiche
 
@@ -323,6 +323,7 @@ Il report distingue `name`, `surname`, `word` e `pair`: il dizionario contiene a
 - **Le regole sono scritte a mano.** La forma `word`/`combo`/eccezioni è nostra, e le liste esterne servono come **elenco di candidati** da valutare uno per uno.
 - **napolux** (MIT): la `lista_badwords` si può usare come fonte di candidati, con `provenance` e attribuzione in `NOTICE`. Nomi, cognomi e parole comuni si usano solo per l'audit (§7.3).
 - **LDNOOBW** (CC-BY 4.0): **solo per verificare la copertura**, nessuna voce viene copiata. Se in futuro serviranno voci derivate, andranno in un file dati separato sotto CC-BY con attribuzione, secondo le regole della revisione (§3).
+- **Obscenity** (MIT, preset derivato da cuss/MIT): famiglie candidate selezionate manualmente, con provenienza al commit fissato e i due notice MIT distribuiti. Non vengono importate le regex o le trasformazioni del motore. `leo-profanity` e `@2toad/profanity` sono riferimenti di copertura e API, senza importare dati o aggiungere dipendenze. Il dizionario di leo-profanity ha una fonte LDNOOBW distinta dalla licenza MIT del codice.
 - **HurtLex**: **escluso**. La licenza è CC BY-NC-SA 4.0 (verificata nel README del repository il 2026-11-03), quindi non commerciale e share-alike: non è compatibile con un pacchetto MIT.
 - **EVALITA / HaSpeeDe**: solo per ricerca, mai nel repository.
 
@@ -418,20 +419,20 @@ Gli strumenti principali:
 
 ## 11. Roadmap
 
-| Fase                                                           | Contenuto                                                                                                       | Ore stimate |
-| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------: |
-| ✅ **M0** Struttura                                            | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE                               |         3-4 |
-| ✅ **M1** Normalizzazione e segmentazione, **in TS e in Dart** | Viste, segmenti, ripetizioni, origini UTF-16, 107 nuove fixture con attese; 138 fixture totali                  |         6-8 |
-| ✅ **M2** Rilevatore e policy in TS e Dart                     | Tutti i tipi di regola, contatti, eccezioni, profili, API; attese e audit obbligatori                           |       11-15 |
-| **M3** Curazione, avviata                                      | Primo nucleo: 45 regole, 173 forme dichiarate, 938 fixture; restano revisione e ampliamento verso 60-100 regole |       10-14 |
-| **M4** Consolidamento dei due motori                           | Fuzz Unicode, verifica offset, compatibilità e smoke test dei pacchetti; correzioni in parità                   |         3-5 |
-| **M5** Prova reale (shadow)                                    | Report sui nickname salvati in RuttoFacile e maraffa, senza bloccare; valutazione dei falsi positivi            |         2-3 |
-| **M6** Pubblicazione 0.1.0                                     | Workflow di release, README completo, smoke test, pubblicazione                                                 |         2-3 |
-|                                                                | **Totale v0.1**                                                                                                 |   **37-52** |
+| Fase                                                           | Contenuto                                                                                                              | Ore stimate |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------: |
+| ✅ **M0** Struttura                                            | Monorepo, schema, `validate` e `build` di base, CI con job vuoti, README, LICENSE                                      |         3-4 |
+| ✅ **M1** Normalizzazione e segmentazione, **in TS e in Dart** | Viste, segmenti, ripetizioni, origini UTF-16, 107 nuove fixture con attese; 138 fixture totali                         |         6-8 |
+| ✅ **M2** Rilevatore e policy in TS e Dart                     | Tutti i tipi di regola, contatti, eccezioni, profili, API; attese e audit obbligatori                                  |       11-15 |
+| **M3** Curazione continua                                      | 290 regole italiane, 1.034 forme e inglese opzionale curato; revisione editoriale e segnalazioni restano aperte        |       10-14 |
+| ✅ **M4** Consolidamento dei due motori                        | 307 fixture aggiuntive, fuzz Unicode, correzione origini, smoke ESM/CJS/browser e benchmark; verifica SDK minimi in CI |         3-5 |
+| **M5** Prova reale (shadow)                                    | Report sui nickname salvati in RuttoFacile e maraffa, senza bloccare; valutazione dei falsi positivi                   |         2-3 |
+| **M6** Pubblicazione 0.1.0                                     | Workflow di release, README completo, smoke test, pubblicazione                                                        |         2-3 |
+|                                                                | **Totale v0.1**                                                                                                        |   **37-52** |
 
 La normalizzazione va fatta in entrambi i linguaggi già in **M1**, perché le divergenze Unicode emergono lì. Anche rilevatore e policy vanno sviluppati insieme in **M2**, nella stessa PR per ogni comportamento: M4 non è più una fase di port (D14). Le stime sono indicative e vanno rivalutate dopo M1.
 
-M0, M1 e M2 sono completate: la parità riguarda segmenti, viste, policy e match con origini UTF-16, e l'audit esegue il rilevatore. Il primo nucleo lessicale copre tutte le categorie italiane; inglese e dialetti restano da curare. Il prodotto non è ancora pubblicato: M3-M6 richiedono ulteriore revisione, consolidamento e prova reale. L'analisi storica e i criteri per aggiungere altri linguaggi sono in [docs/analisi-post-m0.md](docs/analisi-post-m0.md).
+M0, M1 e M2 sono completate: la parità riguarda segmenti, viste, policy e match con origini UTF-16, e l'audit esegue il rilevatore. Il dataset copre tutte le categorie italiane e include l’inglese opzionale; i dialetti richiedono ancora curazione dedicata. La beta è pubblicata; il consolidamento tecnico M4 è verificato nel [rapporto del 4 novembre](docs/consolidamento-2026-11-04.md). Restano la revisione editoriale continua M3, la prova reale M5 e il rilascio stabile M6. L'analisi storica e i criteri per aggiungere altri linguaggi sono in [docs/analisi-post-m0.md](docs/analisi-post-m0.md).
 
 Dopo la v0.1, in ordine: romagnolo → `mask()` → CLI `scan` → demo web → altri dialetti.
 
