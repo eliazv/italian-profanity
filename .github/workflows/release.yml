@@ -43,6 +43,16 @@ jobs:
       - run: pnpm check
       - run: pnpm parity --expectations
 
+      - name: Build e smoke test dei pacchetti
+        run: |
+          pnpm --filter italian-profanity build
+          node tools/smoke.mjs
+          node tools/smoke-browser.mjs
+
+      - name: Verifica del pacchetto Dart
+        run: dart pub publish --dry-run
+        working-directory: packages/dart
+
       - name: Verifica le versioni già pubblicate
         id: registries
         run: |

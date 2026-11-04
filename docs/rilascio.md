@@ -7,9 +7,33 @@
 3. Commit, poi tag `vX.Y.Z` e push del tag.
 4. Il workflow `release.yml` verifica che il tag coincida con la versione, esegue `pnpm check` e la parità con le attese, poi pubblica su npm e pub.dev.
 
-## Prima beta
+## Primo rilascio senza prerelease
 
-La prima versione di integrazione è `0.1.0-beta.0` su entrambi i registri (D21). Changesets è in modalità prerelease `beta`: per una beta successiva aggiungere changeset ed eseguire `pnpm release:version`; per uscire dalla beta usare `pnpm exec changeset pre exit`, poi il normale flusso di versione. Non modificare le versioni a mano.
+La versione `0.1.0` esce dalla beta su richiesta del manutentore (D23).
+Il consolidamento tecnico è completato; l'integrazione nelle due applicazioni
+del manutentore e la relativa prova comparativa restano pianificate.
+Il changelog deve distinguere questi progressi dai controlli già eseguiti.
+
+Il confronto con l'artefatto npm `0.1.0-beta.1`, verificato tramite l'integrità
+pubblicata dal registro, è in
+[data/releases/0.1.0](../data/releases/0.1.0/behavior-diff.md).
+Per rigenerarlo dal modulo ESM estratto in cache:
+
+```sh
+pnpm behavior:diff --baseline .cache/releases/0.1.0-beta.1/package/dist/index.js
+```
+
+Lo strumento confronta azioni e match completi sulle fixture pubbliche attuali,
+escludendo i casi di configurazione non valida. Conserva input, opzioni e
+risultati in `data/releases/<versione>/`, insieme alla tabella Markdown.
+Il confronto non misura precisione o frequenza delle regressioni su utenti reali.
+
+Il tag `v0.1.0` attiva il workflow di pubblicazione. Il pacchetto npm va su
+`latest`, mentre le vecchie prerelease restano consultabili nella cronologia.
+
+## Cronologia della prima beta
+
+La prima versione di integrazione era `0.1.0-beta.0` su entrambi i registri (D21), seguita da `0.1.0-beta.1`. Per preparare `0.1.0` sono stati eseguiti `pnpm exec changeset pre exit` e `pnpm release:version`: Changesets non è più in modalità prerelease. Non modificare le versioni a mano.
 
 Prima della prima pubblicazione eseguire `pnpm check`, build e smoke test npm, `npm pack --dry-run` e `dart pub publish --dry-run`. La prima pubblicazione npm usa `npm publish --access public --tag beta`, senza `--provenance` locale: l'attestazione viene generata dalle pubblicazioni successive su GitHub Actions. Il workflow seleziona il tag npm dalla versione, mantenendo le prerelease fuori da `latest`.
 
@@ -35,5 +59,5 @@ Le pubblicazioni automatiche si possono configurare solo su pacchetti già esist
 
 ## Prima di ogni rilascio
 
-- Leggere la tabella delle differenze di comportamento (da `behavior-diff`, fase M6) e riportare nel changeset i casi il cui esito cambia.
+- Generare e leggere la tabella delle differenze con `pnpm behavior:diff --baseline <modulo ESM della versione precedente>`, e riportare nel changelog i casi il cui esito cambia.
 - Controllare che `NOTICE` elenchi tutte le fonti con `provenance` esterna presenti nei dati.

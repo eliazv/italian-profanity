@@ -113,3 +113,9 @@ Su richiesta del manutentore si supera il limite del nucleo inglese minimo di D2
 Obscenity fornisce candidati dal preset MIT derivato da cuss; commit, provenienza e notice sono registrati e distribuiti. leo-profanity e @2toad/profanity restano confronti di copertura e API; la licenza del codice non autorizza a trattare automaticamente i dizionari come MIT.
 
 L’audit deve passare sia in italiano sia con italiano e inglese attivi. Termini identitari o anatomici neutri isolati non vengono aggiunti come ingiurie; le forme ambigue richiedono review e le offese contestuali usano frasi esplicite. Le nuove regole comportano un changeset minor, senza dichiarare copertura esaustiva o pubblicare automaticamente una versione. Il consolidamento tecnico M4 non sostituisce la prova reale M5.
+
+## D23 · Primo rilascio senza suffisso prerelease — 2026-11-04
+
+Il manutentore richiede la pubblicazione di 0.1.0 su npm e pub.dev, senza beta, e ne pianifica l’integrazione in due proprie applicazioni. Si supera quindi il vincolo di D21 che subordinava l’uscita dalla beta alla prova reale M5: la prova comparativa resta aperta, viene tracciata esplicitamente e non è dichiarata completata nel changelog. La stabilità del numero di versione non dimostra precisione su utenti reali né assenza di falsi positivi.
+
+Il rilascio richiede CI verde, versioni allineate, smoke test ESM/CJS/browser, dry-run dei pacchetti e confronto degli esiti con l’artefatto 0.1.0-beta.1 pubblicato. Pubblicazione via tag v0.1.0 e workflow esistente; tag npm latest per la versione senza prerelease. Nomi, API, italiano predefinito, inglese opzionale e zero dipendenze a runtime restano invariati.
