@@ -6,9 +6,10 @@
 
 Italian-first profanity detection for nicknames and short text, for Dart and Flutter. The npm package [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) gives the same verdicts.
 
-```yaml
-dependencies:
-  italian_profanity: 0.1.0
+```sh
+dart pub add italian_profanity
+# oppure, in un progetto Flutter:
+flutter pub add italian_profanity
 ```
 
 Libreria per riconoscere bestemmie, insulti e volgarità in italiano in nickname e testi brevi.
