@@ -1,5 +1,23 @@
 # italian-profanity
 
+## 0.4.0
+
+### Minor Changes
+
+- 4f56a56: Lessico italiano ampliato e calibrato:
+  - Bestemmie: `madonna maiala` e `dio lupo` (anche `diolupo`, `lupo dio`).
+  - Insulti e volgarità: `vaffa` e `mortacci` da soli (review in balanced), `eccheccazzo`/`checcazzo`, `ciucciacazzi`, `segone` (review), `ti scopo`/`ti sfondo`, nickname concatenati che finiscono con `delcazzo` (`kingdelcazzo`).
+  - Discriminatori: `lesbicona`, `muso giallo`; con confidenza media (review in balanced, mai blocco automatico) `travone`, `giudeo`, `zingaro`, `spastico`.
+  - Eufemismi lievi: `cacchio`, `porca miseria` e `porca vacca` restano segnalati tra i match, ma balanced e lenient ora li consentono; strict continua a bloccarli.
+  - Eccezione per il cognome `Minchilli`.
+- 680c53d: Riconosce fino a due lettere oscurate con `*` all'interno di una parola, `k` al posto di `c` e fino a due `$` usati come `z` in viste alternative, senza perdere `$` come `s` in TS e Dart. Fixture e guardrail per `c*zzo`, `c**zo`, `p*rco d*o`, `porkodio`, `fankulo`, `kaxxo` e nomi innocui, senza modificare l'API pubblica.
+
+### Differenze dalla 0.3.0
+
+Sulle 3.650 fixture valide cambiano 110 risultati: 64 cambiano azione (43 da `allow` a `block`, 10 da `allow` a `review`, 9 da `review` ad `allow` e 2 da `block` ad `allow`). Gli altri 46 conservano l'azione e cambiano match o metadati. I nuovi rilevamenti riguardano il lessico ampliato e le viste anti-elusione con asterischi, k e dollari. I casi meno restrittivi sono gli eufemismi lievi in `balanced` e l'eccezione per il cognome Minchilli, presente in due fixture. I match degli eufemismi restano visibili e `strict` continua a bloccarli.
+
+Tabella completa e risultati riproducibili: [confronto di comportamento](https://github.com/eliazv/italian-profanity/blob/v0.4.0/data/releases/0.4.0/behavior-diff.md). Le fixture pubbliche non misurano la frequenza dei cambiamenti su utenti reali.
+
 ## 0.3.0
 
 ### Minor Changes

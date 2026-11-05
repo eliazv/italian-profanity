@@ -1,7 +1,7 @@
 // File generato da tools/build.ts a partire da data/: non modificare a mano.
 import type { CompiledException, CompiledRule } from "../types.ts"
 
-export const VERSION = "0.3.0"
+export const VERSION = "0.4.0"
 export const DATA_VERSION = "a1c1c8f33aae"
 
 /** Tabella di normalizzazione condivisa con il pacchetto Dart (SPECIFICHE.md §4.4). */
