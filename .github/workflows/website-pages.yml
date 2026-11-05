@@ -1,0 +1,61 @@
+name: Website (Astro + GitHub Pages)
+
+on:
+  pull_request:
+    paths:
+      - "website/**"
+      - ".github/workflows/website-pages.yml"
+  push:
+    branches: [master]
+    paths:
+      - "website/**"
+      - ".github/workflows/website-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build static site
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install isolated website dependencies
+        working-directory: website
+        run: npm install --no-audit --no-fund
+      - name: Astro production build
+        working-directory: website
+        env:
+          # Override both GitHub repository variables when enabling a custom
+          # Pages domain; SITE_BASE must be "/" on a custom subdomain.
+          SITE_URL: ${{ vars.WEBSITE_SITE_URL || 'https://eliazv.github.io' }}
+          SITE_BASE: ${{ vars.WEBSITE_SITE_BASE || '/italian-profanity' }}
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request'
+        with:
+          path: website/dist
+
+  deploy:
+    name: Deploy GitHub Pages
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
