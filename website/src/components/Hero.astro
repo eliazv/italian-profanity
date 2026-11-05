@@ -7,7 +7,7 @@ const t = ui[lang];
 ---
 <section class="hero shell" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="eyebrow-dot"></span> <Fragment set:html={t.hero.eyebrow} /></p>
+    <p class="eyebrow"><span class="eyebrow-tag">{t.hero.eyebrowTag}</span><span class="eyebrow-text">{t.hero.eyebrow}<span class="eyebrow-extra"> {t.hero.eyebrowExtra}</span></span></p>
     <h1 id="hero-title"><span>{t.hero.line1}</span><br /><span class="hero-outlined">{t.hero.line2}</span><br /><span class="hero-stamp">{t.hero.line3}</span></h1>
     <p class="hero-intro" set:html={t.hero.intro} />
     <div class="hero-actions">

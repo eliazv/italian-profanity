@@ -4,6 +4,7 @@ import "@fontsource-variable/jetbrains-mono";
 import "../styles/global.css";
 import Icon from "../components/Icon.astro";
 import Logo from "../components/Logo.astro";
+import LangSwitch from "../components/LangSwitch.astro";
 
 import { absoluteUrl, AUTHOR, NPM_URL, PUB_URL, REPOSITORY, root, SITE_NAME, pageUrl } from "../data/site";
 import { LANGS, pageHref, ui, type Lang } from "../i18n/ui";
@@ -72,7 +73,7 @@ const structuredData = { "@context": "https://schema.org", "@graph": jsonLd };
             <a href={`${home}#playground`}>{t.nav.playground}</a>
             <a href={docs}>{t.nav.docs}</a>
             <a href={`${home}#faq`}>{t.nav.faq}</a>
-            <a class="lang-switch" href={pageHref(other, pagePath)} hreflang={other} lang={other} title={t.switchLang.title}>{t.switchLang.label}</a>
+            <LangSwitch lang={lang} pagePath={pagePath} class="header-lang" />
             <a class="nav-github" href={REPOSITORY} target="_blank" rel="noreferrer"><Icon name="github" /> GitHub</a>
           </nav>
         </div>
@@ -91,10 +92,29 @@ const structuredData = { "@context": "https://schema.org", "@graph": jsonLd };
           </nav>
         </div>
         <div class="shell footer-bottom">
-          <span>{t.footer.license}</span>
+          <span class="footer-meta"><LangSwitch lang={lang} pagePath={pagePath} /> {t.footer.license}</span>
           <span>{t.footer.madeBy} <a href="https://eliazavatta.it" target="_blank" rel="noreferrer">Elia Zavatta</a></span>
         </div>
       </footer>
     </div>
+    <script>
+      // Mobile: hide the header while scrolling down, show it again when scrolling up.
+      const header = document.querySelector<HTMLElement>(".site-header");
+      const mobile = window.matchMedia("(max-width: 830px)");
+      let lastY = window.scrollY;
+      let ticking = false;
+      const update = () => {
+        const y = window.scrollY;
+        const hide = mobile.matches && y > lastY && y > 80;
+        header?.classList.toggle("is-hidden", hide);
+        if (Math.abs(y - lastY) > 4 || y <= 0) lastY = y;
+        ticking = false;
+      };
+      window.addEventListener("scroll", () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+      // Keep the header visible when keyboard focus moves into it.
+      header?.addEventListener("focusin", () => header.classList.remove("is-hidden"));
+    </script>
   </body>
 </html>

@@ -49,8 +49,9 @@
 .footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; font-size: 14px; font-weight: 650; }
 .footer-links a { display: inline-flex; align-items: center; gap: 7px; }
 .footer-links a:hover { color: #677a26; }
-.footer-bottom { padding: 20px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 15px; font: 600 12px var(--mono); color: #6e786a; }
-.footer-bottom a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.footer-bottom { padding: 20px 0; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 15px; font: 600 12px var(--mono); color: #6e786a; }
+.footer-bottom > span > a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.footer-meta { display: inline-flex; align-items: center; gap: 14px; }
 @media (max-width: 900px) {
  .section { padding-block: 76px; }
  .split-heading { grid-template-columns: 1fr; gap: 23px; }

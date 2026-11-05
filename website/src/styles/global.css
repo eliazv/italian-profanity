@@ -38,14 +38,14 @@ img, svg { max-width: 100%; }
 .header-links { display: flex; gap: 30px; align-items: center; }
 .header-links > a { font-size: 14px; font-weight: 650; transition: color .2s, background .2s; }
 .header-links > a:hover { color: #677a26; }
-.header-links > .lang-switch { padding: 7px 10px; border: 1.5px solid var(--line); border-radius: 8px; font: 700 12px var(--mono); }
-.header-links > .lang-switch:hover { border-color: var(--ink); color: var(--ink); }
 .header-links > .nav-github { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--ink); padding: 9px 16px; border-radius: 50px; background: var(--ink); color: white; }
 .header-links > .nav-github:hover { background: var(--lime); color: var(--ink); }
 .hero { padding-block: 64px 72px; display: grid; align-items: center; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 70px; }
 .hero-copy { min-width: 0; }
 .eyebrow, .playground-header { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .065em; }
-.eyebrow { margin: 0; display: inline-flex; align-items: center; gap: 10px; padding: 7px 13px 7px 11px; border: 1.5px solid var(--ink); border-radius: 50px; background: white; text-transform: uppercase; }
+.eyebrow { margin: 0; display: inline-flex; align-items: center; gap: 10px; max-width: 100%; padding: 4px 16px 4px 4px; border: 1.5px solid var(--ink); border-radius: 50px; background: white; box-shadow: 3px 3px 0 var(--ink); }
+.eyebrow-tag { flex: 0 0 auto; padding: 5px 10px; border-radius: 50px; background: var(--lime); font: 700 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+.eyebrow-text { font: 600 14px var(--display); letter-spacing: -.01em; white-space: nowrap; }
 .eyebrow-dot, .live-led { width: 9px; height: 9px; display: inline-block; flex: 0 0 auto; border-radius: 50%; background: #b0e845; box-shadow: 0 0 0 4px rgba(176,232,69,.17); }
 h1,h2,h3,p { margin-top: 0; }
 h1,h2,h3 { text-wrap: balance; }
@@ -109,7 +109,9 @@ h1,h2,h3 { text-wrap: balance; }
 @media (max-width: 830px) {
  .shell { width: min(100% - 40px, 620px); }
  .header-inner { min-height: 74px; }
- .header-links > a:not(.nav-github):not(.lang-switch) { display: none; }
+ .header-links > a:not(.nav-github), .header-links > .header-lang { display: none; }
+ .site-header { transition: transform .3s ease; }
+ .site-header.is-hidden { transform: translateY(-100%); }
  .hero { grid-template-columns: 1fr; padding-block: 48px 72px; gap: 44px; }
  .hero-install { max-width: none; }
  .hero-actions .button { flex: 1 1 100%; }
@@ -121,12 +123,11 @@ h1,h2,h3 { text-wrap: balance; }
  .shell { width: calc(100% - 32px); }
  .wordmark { font-size: 16px; gap: 9px; }
  .wordmark-icon { width: 35px; height: 35px; }
- .header-links > .lang-switch { padding: 7px 10px; border: 1.5px solid var(--line); border-radius: 8px; font: 700 12px var(--mono); }
-.header-links > .lang-switch:hover { border-color: var(--ink); color: var(--ink); }
 .header-links > .nav-github { padding: 9px 12px; font-size: 12px; }
  .hero h1 { font-size: clamp(44px, 12vw, 62px); }
  .hero-outlined { -webkit-text-stroke: 3.4px var(--ink); }
  .hero-intro { font-size: 16px; }
+ .eyebrow-extra { display: none; }
  .install-line code { font-size: 10px; }
  .playground-body { padding: 20px 16px 18px; }
  .playground-controls { gap: 8px; }
@@ -138,3 +139,10 @@ h1,h2,h3 { text-wrap: balance; }
 }
 
 .icon { flex: 0 0 auto; display: block; }
+
+.lang-switch { position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; padding: 3px; border: 1.5px solid var(--ink); border-radius: 50px; background: white; font: 700 11px var(--mono); letter-spacing: .04em; }
+.lang-switch::before { content: ""; position: absolute; top: 3px; bottom: 3px; left: 3px; width: calc(50% - 3px); border-radius: 50px; background: var(--ink); transition: transform .25s ease; }
+.lang-switch[data-active="it"]::before { transform: translateX(100%); }
+.lang-switch a { position: relative; z-index: 1; padding: 5px 11px; text-align: center; color: #6e786a; transition: color .2s; }
+.lang-switch a[aria-current="page"] { color: white; }
+.lang-switch a:not([aria-current]):hover { color: var(--ink); }
