@@ -249,15 +249,16 @@ function views(part: Segment, input: string): View[] {
   // k → c è una vista aggiuntiva, non sovrascrive il deleet originale.
   const kViews = [deleet, ...trimmed.filter((view) => view.flexible)]
     .filter((view) => view.chars.includes("k"))
-    .map((view): View => ({
-      ...view,
-      chars: view.chars.map((char) => (char === "k" ? "c" : char)),
-    }))
+    .map(
+      (view): View => ({
+        ...view,
+        chars: view.chars.map((char) => (char === "k" ? "c" : char)),
+      }),
+    )
   const masked = maskedView(part, input)
-  const maskedK: View | undefined =
-    masked?.chars.includes("k")
-      ? { ...masked, chars: masked.chars.map((char) => (char === "k" ? "c" : char)) }
-      : undefined
+  const maskedK: View | undefined = masked?.chars.includes("k")
+    ? { ...masked, chars: masked.chars.map((char) => (char === "k" ? "c" : char)) }
+    : undefined
   const all = [
     base,
     deleet,
