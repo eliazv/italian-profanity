@@ -1,6 +1,6 @@
 ---
 import Faq from "./Faq.astro";
-import GitHubIcon from "./GitHubIcon.astro";
+import Icon from "./Icon.astro";
 const base = import.meta.env.BASE_URL;
 const docs = (base.endsWith("/") ? base : base + "/") + "docs/";
 const jsExample = [
@@ -24,12 +24,12 @@ const dartExample = [
   </div>
   <div class="code-grid">
     <article class="code-card">
-      <div class="code-card-header"><div><span class="code-dot dot-lime"></span><strong>JAVASCRIPT / TYPESCRIPT</strong></div><a href="https://www.npmjs.com/package/italian-profanity" target="_blank" rel="noreferrer">npm ↗</a></div>
+      <div class="code-card-header"><div><span class="code-dot dot-lime"></span><strong>JAVASCRIPT / TYPESCRIPT</strong></div><a class="registry-link" href="https://www.npmjs.com/package/italian-profanity" target="_blank" rel="noreferrer"><Icon name="npm" size={14} /> npm</a></div>
       <div class="code-command"><span>$</span><code>npm install italian-profanity</code><button type="button" data-copy="npm install italian-profanity" aria-label="Copy npm command">COPY</button></div>
       <pre><code>{jsExample}</code></pre>
     </article>
     <article class="code-card">
-      <div class="code-card-header"><div><span class="code-dot dot-pink"></span><strong>DART / FLUTTER</strong></div><a href="https://pub.dev/packages/italian_profanity" target="_blank" rel="noreferrer">pub.dev ↗</a></div>
+      <div class="code-card-header"><div><span class="code-dot dot-pink"></span><strong>DART / FLUTTER</strong></div><a class="registry-link" href="https://pub.dev/packages/italian_profanity" target="_blank" rel="noreferrer"><Icon name="dart" size={14} /> pub.dev</a></div>
       <div class="code-command"><span>$</span><code>flutter pub add italian_profanity</code><button type="button" data-copy="flutter pub add italian_profanity" aria-label="Copy Flutter command">COPY</button></div>
       <pre><code>{dartExample}</code></pre>
     </article>
@@ -41,7 +41,7 @@ const dartExample = [
     <h2>LET'S KEEP THE<br /><span>GOOD NAMES.</span></h2>
     <p>Free, MIT licensed and open to contributions.</p>
     <div class="final-actions">
-      <a href="https://github.com/eliazv/italian-profanity" target="_blank" rel="noreferrer" class="button button-lime"><GitHubIcon /> Star on GitHub</a>
+      <a href="https://github.com/eliazv/italian-profanity" target="_blank" rel="noreferrer" class="button button-lime"><Icon name="github" /> Star on GitHub</a>
       <a href={docs} class="button button-outline-light">Read the docs</a>
     </div>
   </div>

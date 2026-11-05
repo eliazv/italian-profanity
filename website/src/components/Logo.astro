@@ -1,0 +1,20 @@
+---
+// Brand mark redrawn from logo.png: lime tile with "i*" and three sparks,
+// followed by the "italian-profanity" wordmark with a lime hyphen.
+interface Props { href: string; class?: string }
+const { href, class: className = "" } = Astro.props;
+---
+<a class:list={["wordmark", className]} href={href} aria-label="italian-profanity home">
+  <svg class="wordmark-icon" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true" focusable="false">
+    <rect width="64" height="64" rx="16" fill="var(--lime)" />
+    <ellipse cx="21" cy="23" rx="5" ry="4.2" fill="var(--ink)" />
+    <rect x="17.4" y="30" width="7.4" height="25" fill="var(--ink)" />
+    <g stroke="var(--ink)" stroke-width="3.6" stroke-linecap="butt">
+      <path d="M39.5 21v16M32.6 25l13.8 8M32.6 33l13.8-8" />
+    </g>
+    <g stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round">
+      <path d="M40.6 8.4v4M45.8 15.6l3-4.2M49.4 18.4l4.4-1.2" />
+    </g>
+  </svg>
+  <span class="wordmark-text">italian<span class="wordmark-dash">-</span>profanity</span>
+</a>

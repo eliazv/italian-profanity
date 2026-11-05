@@ -1,4 +1,6 @@
 ---
+import Icon from "./Icon.astro";
+import { NPM_URL, PUB_URL } from "../data/site";
 const base = import.meta.env.BASE_URL;
 const root = base.endsWith("/") ? base : base + "/";
 ---
@@ -8,7 +10,7 @@ const root = base.endsWith("/") ? base : base + "/";
     <h1 id="hero-title">GOOD NAMES.<br /><span class="hero-outlined">BAD WORDS.</span><br /><span class="hero-stamp">FILTERED.</span></h1>
     <p class="hero-intro">Catches bestemmie, insults and clever misspellings in usernames and nicknames — without flagging Claudio or Diodato.</p>
     <div class="hero-buttons">
-      <a class="button button-dark" href="#playground">Try it live</a>
+      <a class="button button-dark" href="#install">Get started</a>
       <a class="button button-outline" href={root + "docs/"}>Read the docs</a>
     </div>
     <div class="hero-install">
@@ -16,9 +18,15 @@ const root = base.endsWith("/") ? base : base + "/";
       <code>npm install italian-profanity</code>
       <button class="copy-button" type="button" data-copy="npm install italian-profanity" aria-label="Copy npm install command">COPY</button>
     </div>
-    <ul class="hero-note">
-      <li>Offline</li><li>Zero dependencies</li><li>MIT</li>
-    </ul>
+    <div class="hero-meta">
+      <ul class="hero-note">
+        <li>Offline</li><li>Zero dependencies</li><li>MIT</li>
+      </ul>
+      <div class="hero-registries">
+        <a class="registry-link" href={NPM_URL} target="_blank" rel="noreferrer"><Icon name="npm" size={14} /> npm</a>
+        <a class="registry-link" href={PUB_URL} target="_blank" rel="noreferrer"><Icon name="dart" size={14} /> pub.dev</a>
+      </div>
+    </div>
   </div>
 
   <section class="playground-card" id="playground" aria-labelledby="playground-title">
