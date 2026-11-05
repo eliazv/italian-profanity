@@ -74,7 +74,7 @@ const structuredData = { "@context": "https://schema.org", "@graph": jsonLd };
             <a href={docs}>{t.nav.docs}</a>
             <a href={`${home}#faq`}>{t.nav.faq}</a>
             <LangSwitch lang={lang} pagePath={pagePath} class="header-lang" />
-            <a class="nav-github" href={REPOSITORY} target="_blank" rel="noreferrer"><Icon name="github" /> GitHub</a>
+            <a class="nav-github" href={REPOSITORY} target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github" /><span class="nav-github-label">GitHub</span></a>
           </nav>
         </div>
       </header>

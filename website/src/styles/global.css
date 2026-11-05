@@ -146,3 +146,7 @@ h1,h2,h3 { text-wrap: balance; }
 .lang-switch a { position: relative; z-index: 1; padding: 5px 11px; text-align: center; color: #6e786a; transition: color .2s; }
 .lang-switch a[aria-current="page"] { color: white; }
 .lang-switch a:not([aria-current]):hover { color: var(--ink); }
+@media (max-width: 380px) {
+ .header-links > .nav-github { width: 40px; height: 40px; padding: 0; justify-content: center; }
+ .nav-github-label { display: none; }
+}
