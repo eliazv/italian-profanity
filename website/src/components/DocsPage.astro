@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "./Icon.astro";
+import { absoluteUrl, AUTHOR, INTEGRATION_GUIDE, ISSUES_URL, pageUrl } from "../data/site";
+import { docs } from "../i18n/docs";
+import { pageHref, ui, type Lang } from "../i18n/ui";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const d = docs[lang];
+const jsExample = [
+  'import { createChecker } from "italian-profanity";',
+  "",
+  "const checker = createChecker({",
+  '  profile: "balanced",',
+  '  languages: ["it"],',
+  "  contacts: false,",
+  "  maxLength: 64,",
+  "});",
+  "",
+  'const result = checker.check("D10 p0rc0");',
+  'if (result.action === "block") {',
+  `  // ${d.quickstart.comment}`,
+  "}",
+].join("\n");
+const dartExample = [
+  "import 'package:italian_profanity/italian_profanity.dart';",
+  "",
+  "final checker = ItalianProfanity.createChecker(",
+  "  profile: Profile.balanced,",
+  "  languages: ['it'],",
+  "  contacts: false,",
+  "  maxLength: 64,",
+  ");",
+  "",
+  "final result = checker.check('Claudio');",
+  "if (result.action == Action.block) {",
+  `  // ${d.quickstart.comment}`,
+  "}",
+].join("\n");
+const docsUrl = pageUrl(lang, "docs/");
+const jsonLd = [
+  {
+    "@type": "TechArticle",
+    headline: d.headline,
+    description: t.meta.docsDescription,
+    url: docsUrl,
+    inLanguage: lang,
+    author: AUTHOR,
+    about: { "@id": `${absoluteUrl()}#software` },
+    proficiencyLevel: "Beginner",
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: d.breadcrumbHome, item: pageUrl(lang) },
+      { "@type": "ListItem", position: 2, name: t.nav.docs, item: docsUrl },
+    ],
+  },
+];
+const sections = [
+  ["quickstart", d.nav.quickstart],
+  ["api", d.nav.api],
+  ["policy", d.nav.policy],
+  ["customization", d.nav.customization],
+  ["production", d.nav.production],
+  ["limits", d.nav.limits],
+] as const;
+---
+<BaseLayout lang={lang} title={t.meta.docsTitle} description={t.meta.docsDescription} pagePath="docs/" jsonLd={jsonLd}>
+  <main id="main">
+    <section class="docs-hero">
+      <div class="shell"><a class="docs-back" href={pageHref(lang)}>{d.back}</a>
+        <h1 set:html={d.title} />
+        <p>{d.intro}</p>
+      </div>
+    </section>
+    <div class="docs-layout shell">
+      <aside class="docs-sidebar">
+        <nav aria-label={d.sectionsLabel}>
+          <strong>{d.onThisPage}</strong>
+          {sections.map(([id, label], i) => <a href={`#${id}`}>{`0${i + 1} / ${label}`}</a>)}
+        </nav>
+        <a class="docs-sidebar-external" href={INTEGRATION_GUIDE} target="_blank" rel="noreferrer">{d.fullGuide}</a>
+      </aside>
+      <article class="docs-content">
+        <section id="quickstart" class="docs-section">
+          <span class="docs-n">01</span><h2>{d.nav.quickstart}</h2>
+          <p>{d.quickstart.text}</p>
+          <div class="docs-code-title">JAVASCRIPT / TYPESCRIPT <button type="button" data-copy="npm install italian-profanity">{d.copyCommand}</button></div>
+          <pre><code>npm install italian-profanity</code></pre>
+          <pre><code>{jsExample}</code></pre>
+          <div class="docs-code-title">DART / FLUTTER <button type="button" data-copy="flutter pub add italian_profanity">{d.copyCommand}</button></div>
+          <pre><code>flutter pub add italian_profanity</code></pre>
+          <pre><code>{dartExample}</code></pre>
+          <p set:html={d.quickstart.dart} />
+        </section>
+        <section id="api" class="docs-section">
+          <span class="docs-n">02</span><h2>{d.nav.api}</h2>
+          <p>{d.api.text}</p>
+          <div class="docs-table-wrap"><table class="docs-table"><thead><tr><th>{d.api.fn}</th><th>{d.api.use}</th></tr></thead><tbody>
+            {d.api.rows.map(([fn, use]) => <tr><td><code>{fn}</code></td><td set:html={use} /></tr>)}
+          </tbody></table></div>
+          <p>{d.api.matches}</p>
+        </section>
+        <section id="policy" class="docs-section">
+          <span class="docs-n">03</span><h2>{d.nav.policy}</h2>
+          <div class="policy-grid">
+            {d.policy.items.map(([name, text]) => <div><strong>{name}</strong><p>{text}</p></div>)}
+          </div>
+          <p set:html={d.policy.text} />
+        </section>
+        <section id="customization" class="docs-section">
+          <span class="docs-n">04</span><h2>{d.nav.customization}</h2>
+          <ul>{d.customization.items.map((item) => <li set:html={item} />)}</ul>
+          <p>{d.customization.text}</p>
+          <a class="docs-inline-link" href={INTEGRATION_GUIDE} target="_blank" rel="noreferrer">{d.customization.link}</a>
+        </section>
+        <section id="production" class="docs-section">
+          <span class="docs-n">05</span><h2>{d.nav.production}</h2>
+          <ul>{d.production.items.map((item) => <li set:html={item} />)}</ul>
+        </section>
+        <section id="limits" class="docs-section">
+          <span class="docs-n">06</span><h2>{d.nav.limits}</h2>
+          <div class="docs-warning"><strong>{d.limits.warningTitle}</strong><p set:html={d.limits.warning} /></div>
+          <p>{d.limits.text}</p>
+          <div class="docs-final">
+            <h3>{d.limits.missingTitle}</h3><p>{d.limits.missing}</p>
+            <a class="button button-dark" href={ISSUES_URL} target="_blank" rel="noreferrer"><Icon name="github" /> {d.limits.issue}</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <script>import "../scripts/playground.ts";</script>
+</BaseLayout>

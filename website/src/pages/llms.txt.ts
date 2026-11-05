@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 import { faq } from "../data/faq";
-import { absoluteUrl, HOME_DESCRIPTION, INTEGRATION_GUIDE, NPM_URL, PUB_URL, REPOSITORY } from "../data/site";
+import { absoluteUrl, HOME_DESCRIPTION, INTEGRATION_GUIDE, NPM_URL, PUB_URL, REPOSITORY, pageUrl } from "../data/site";
 
 // llms.txt (https://llmstxt.org): a plain-text summary for AI assistants.
 export const GET: APIRoute = () => {
@@ -30,6 +30,7 @@ API: \`check(text)\`, \`findMatches(text)\`, \`isClean(text)\`, \`createChecker(
 
 - [Website and live playground](${absoluteUrl()})
 - [Developer documentation](${absoluteUrl("docs/")})
+- [Sito in italiano](${pageUrl("it")}) · [Documentazione in italiano](${pageUrl("it", "docs/")})
 - [Integration guide (Italian)](${INTEGRATION_GUIDE})
 - [Source code](${REPOSITORY})
 - [npm package](${NPM_URL})
@@ -37,7 +38,7 @@ API: \`check(text)\`, \`findMatches(text)\`, \`isClean(text)\`, \`createChecker(
 
 ## FAQ
 
-${faq.map((item) => `### ${item.question}\n\n${item.answer}`).join("\n\n")}
+${faq.en.map((item) => `### ${item.question}\n\n${item.answer}`).join("\n\n")}
 `;
   return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 };

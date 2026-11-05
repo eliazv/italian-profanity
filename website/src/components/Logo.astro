@@ -2,10 +2,10 @@
 // Brand mark traced from logo.png (measured on the 1254px original):
 // lime tile with "i" + asterisk + three sparks, and the "italian-profanity"
 // wordmark with a lime hyphen and the same lime asterisk with sparks.
-interface Props { href: string; class?: string; icon?: boolean }
-const { href, class: className = "", icon = true } = Astro.props;
+interface Props { href: string; label?: string; class?: string; icon?: boolean }
+const { href, label = "italian-profanity home", class: className = "", icon = true } = Astro.props;
 ---
-<a class:list={["wordmark", className]} href={href} aria-label="italian-profanity home">
+<a class:list={["wordmark", className]} href={href} aria-label={label}>
   {icon && (
     <svg class="wordmark-icon" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true" focusable="false">
       <rect width="64" height="64" rx="15" fill="var(--lime)" />

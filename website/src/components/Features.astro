@@ -1,25 +1,31 @@
+---
+import { ui, type Lang } from "../i18n/ui";
+interface Props { lang: Lang }
+const t = ui[Astro.props.lang].features;
+const [evasions, names, parity] = t.cards;
+---
 <section class="section shell" id="why" aria-labelledby="why-title">
   <div class="section-heading">
-    <div><h2 id="why-title">NOT ALL FILTERS<br />SPEAK <em>ITALIAN.</em></h2></div>
+    <h2 id="why-title" set:html={t.title} />
   </div>
   <div class="feature-grid">
     <article class="feature-card feature-yellow">
       <div class="feature-top"><span>01</span><span class="feature-glyph" aria-hidden="true">↗</span></div>
       <div class="feature-example">p0rc0</div>
-      <h3>Catch evasions.</h3>
-      <p>Leetspeak, repeated letters, punctuation, accents and lookalike Unicode are handled by the matcher.</p>
+      <h3>{evasions.title}</h3>
+      <p>{evasions.text}</p>
     </article>
     <article class="feature-card feature-pink">
       <div class="feature-top"><span>02</span><span class="feature-glyph" aria-hidden="true">◎</span></div>
       <div class="feature-example feature-name">Claudio <span class="feature-allowed">✓</span></div>
-      <h3>Respect real names.</h3>
-      <p>Whole-word rules and explicit exceptions reduce collisions with ordinary Italian names and surnames.</p>
+      <h3>{names.title}</h3>
+      <p>{names.text}</p>
     </article>
     <article class="feature-card feature-lilac">
       <div class="feature-top"><span>03</span><span class="feature-glyph" aria-hidden="true">✳</span></div>
       <div class="feature-example feature-pair">JS <span aria-hidden="true">↔</span> DART</div>
-      <h3>Same answer. Anywhere.</h3>
-      <p>Shared rules and regression fixtures keep the TypeScript and Dart/Flutter engines aligned.</p>
+      <h3>{parity.title}</h3>
+      <p>{parity.text}</p>
     </article>
   </div>
 </section>

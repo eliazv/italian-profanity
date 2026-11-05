@@ -25,6 +25,8 @@ Italian-first profanity detection for short user-generated text — nicknames, u
 
 ## In italiano
 
+[🌐 Sito e playground in italiano](https://eliazv.github.io/italian-profanity/it/) · [Documentazione](https://eliazv.github.io/italian-profanity/it/docs/)
+
 Libreria per riconoscere bestemmie, insulti e volgarità **in italiano** in testi brevi, come nickname e nomi di stanze o team. Ha le stesse regole e gli stessi esiti in JavaScript/TypeScript e in Dart/Flutter.
 
 Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni più comuni (`D10 p0rc0`, `c a z z o`, `porcooo`).

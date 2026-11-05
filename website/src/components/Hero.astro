@@ -1,36 +1,38 @@
 ---
 import Icon from "./Icon.astro";
-const base = import.meta.env.BASE_URL;
-const root = base.endsWith("/") ? base : base + "/";
+import { pageHref, ui, type Lang } from "../i18n/ui";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
 ---
 <section class="hero shell" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="eyebrow-dot"></span> Open-source Italian profanity filter · JS &amp; Flutter</p>
-    <h1 id="hero-title"><span class="hero-line">GOOD NAMES.</span><br /><span class="hero-outlined">BAD WORDS.</span><br /><span class="hero-stamp">FILTERED.</span></h1>
-    <p class="hero-intro">Spots bestemmie, insults and tricks like “D10&nbsp;p0rc0” in usernames — and leaves Claudio and Diodato alone.</p>
+    <p class="eyebrow"><span class="eyebrow-dot"></span> <Fragment set:html={t.hero.eyebrow} /></p>
+    <h1 id="hero-title"><span>{t.hero.line1}</span><br /><span class="hero-outlined">{t.hero.line2}</span><br /><span class="hero-stamp">{t.hero.line3}</span></h1>
+    <p class="hero-intro" set:html={t.hero.intro} />
     <div class="hero-actions">
       <div class="hero-install" data-install>
-        <div class="install-tabs" role="tablist" aria-label="Package manager">
+        <div class="install-tabs" role="tablist" aria-label={t.hero.tabs}>
           <button type="button" role="tab" aria-selected="true" data-command="npm install italian-profanity"><Icon name="npm" size={14} /> JavaScript</button>
           <button type="button" role="tab" aria-selected="false" data-command="flutter pub add italian_profanity"><Icon name="dart" size={14} /> Flutter</button>
         </div>
         <div class="install-line">
           <span class="terminal-symbol" aria-hidden="true">$</span>
           <code data-install-code>npm install italian-profanity</code>
-          <button class="copy-button" type="button" data-copy="npm install italian-profanity" aria-label="Copy install command">COPY</button>
+          <button class="copy-button" type="button" data-copy="npm install italian-profanity" aria-label={t.copy.copyInstall}>{t.copy.copy}</button>
         </div>
       </div>
-      <a class="button button-dark" href={root + "docs/"}>Read the docs</a>
+      <a class="button button-dark" href={pageHref(lang, "docs/")}>{t.hero.docs}</a>
     </div>
   </div>
 
   <section class="playground-card" id="playground" aria-labelledby="playground-title">
     <div class="playground-header">
-      <h2 class="playground-header-title" id="playground-title"><span class="live-led" aria-hidden="true"></span> Try it</h2>
-      <span class="playground-header-meta">Runs in your browser · <span id="demo-version">…</span></span>
+      <h2 class="playground-header-title" id="playground-title"><span class="live-led" aria-hidden="true"></span> {t.playground.title}</h2>
+      <span class="playground-header-meta">{t.playground.meta} · <span id="demo-version">…</span></span>
     </div>
     <div class="playground-body">
-      <textarea id="demo-input" class="demo-input" rows="1" maxlength="120" spellcheck="false" autocomplete="off" aria-label="Nickname or short text" placeholder="Type a nickname…">Claudio</textarea>
+      <textarea id="demo-input" class="demo-input" rows="1" maxlength="120" spellcheck="false" autocomplete="off" aria-label={t.playground.input} placeholder={t.playground.placeholder}>Claudio</textarea>
       <div class="demo-examples">
         <button type="button" class="example-chip" data-example="Claudio">Claudio</button>
         <button type="button" class="example-chip" data-example="D10 p0rc0">D10 p0rc0</button>
@@ -38,17 +40,17 @@ const root = base.endsWith("/") ? base : base + "/";
         <button type="button" class="example-chip" data-example="c a z z o">c a z z o</button>
       </div>
       <div class="playground-controls">
-        <select id="demo-profile" class="profile-select" aria-label="Policy">
-          <option value="balanced">Balanced policy</option><option value="strict">Strict policy</option><option value="lenient">Lenient policy</option>
+        <select id="demo-profile" class="profile-select" aria-label={t.playground.policy}>
+          <option value="balanced">{t.playground.balanced}</option><option value="strict">{t.playground.strict}</option><option value="lenient">{t.playground.lenient}</option>
         </select>
-        <select id="demo-language" class="profile-select" aria-label="Languages">
-          <option value="it">Italian</option><option value="it-en">Italian + English</option>
+        <select id="demo-language" class="profile-select" aria-label={t.playground.languages}>
+          <option value="it">{t.playground.it}</option><option value="it-en">{t.playground.itEn}</option>
         </select>
       </div>
       <div class="demo-output" aria-live="polite" aria-atomic="true" data-state="loading">
         <div class="output-status">
           <span class="output-icon" id="demo-status-icon" aria-hidden="true">…</span>
-          <div class="output-text"><strong id="demo-action">LOADING</strong><p id="demo-explanation">Loading the detector…</p></div>
+          <div class="output-text"><strong id="demo-action">{t.playground.loading}</strong><p id="demo-explanation">{t.playground.loadingText}</p></div>
           <span class="output-count" id="demo-match-count">—</span>
         </div>
         <div class="output-matches" id="demo-matches" hidden></div>

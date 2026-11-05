@@ -1,12 +1,14 @@
 // Visible FAQ on the home page, also emitted as FAQPage structured data.
 // Keep answers factual and self-contained: search engines and AI assistants
 // quote them verbatim.
+import type { Lang } from "../i18n/ui";
+
 export interface FaqItem {
   question: string;
   answer: string;
 }
 
-export const faq: FaqItem[] = [
+const en: FaqItem[] = [
   {
     question: "What is italian-profanity?",
     answer:
@@ -52,3 +54,52 @@ export const faq: FaqItem[] = [
       "No. It is a lexical filter: it does not understand intent or context, and an allowed input is not guaranteed to be appropriate. Combine it with server-side checks, reporting and human review.",
   },
 ];
+
+const it: FaqItem[] = [
+  {
+    question: "Cos'è italian-profanity?",
+    answer:
+      "italian-profanity è una libreria gratuita e open source che riconosce le volgarità in italiano — bestemmie, insulti e parolacce — in testi brevi scritti dagli utenti, come nickname, username e nomi di stanze o squadre. È disponibile per JavaScript/TypeScript su npm e per Dart/Flutter su pub.dev, con le stesse regole e gli stessi esiti in entrambi.",
+  },
+  {
+    question: "Come aggiungo un filtro per parolacce a un'app JavaScript o Flutter?",
+    answer:
+      `Installalo con "npm install italian-profanity" oppure "flutter pub add italian_profanity", poi chiama check(testo). Il risultato contiene un'azione — allow, review o block — e l'elenco delle corrispondenze con categoria, gravità e posizione.`,
+  },
+  {
+    question: "Blocca nomi innocui come Claudio o Diodato?",
+    answer:
+      "No. Le regole lavorano su parole intere, eccezioni esplicite coprono le collisioni più comuni e ogni versione viene verificata su un ampio corpus di nomi, cognomi e parole italiane. Con la policy predefinita balanced, alcuni omografi ambigui restituiscono review invece di block.",
+  },
+  {
+    question: "Riconosce le bestemmie?",
+    answer:
+      'Sì. I termini religiosi vengono segnalati solo se combinati con un insulto: "dio" da solo è consentito, mentre varianti come "D10 p0rc0" vengono bloccate.',
+  },
+  {
+    question: "Quali trucchi per aggirare il filtro riconosce?",
+    answer:
+      "Leetspeak (0 al posto di o, 1 al posto di i), separatori e punteggiatura tra le lettere, lettere spaziate o ripetute, accenti e caratteri Unicode somiglianti.",
+  },
+  {
+    question: "Invia il testo degli utenti a un server?",
+    answer:
+      "No. Il filtro funziona interamente nella tua app o nel browser, offline e senza dipendenze a runtime. Anche il playground di questo sito gira in locale e non invia ciò che scrivi.",
+  },
+  {
+    question: "Supporta l'inglese?",
+    answer:
+      `Sì, in modo facoltativo. L'italiano è attivo di default; un dataset inglese curato si attiva con languages: ["it", "en"]. Non sostituisce un servizio completo di moderazione in inglese.`,
+  },
+  {
+    question: "Si può usare gratis in prodotti commerciali?",
+    answer: "Sì. italian-profanity è distribuito con licenza MIT.",
+  },
+  {
+    question: "Un filtro per parolacce basta per moderare una community?",
+    answer:
+      "No. È un filtro lessicale: non comprende intenzioni o contesto, e un testo consentito non è garantito come appropriato. Va affiancato da controlli lato server, segnalazioni e revisione umana.",
+  },
+];
+
+export const faq: Record<Lang, FaqItem[]> = { en, it };
