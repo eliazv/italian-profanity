@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import Workflows from "../components/Workflows.astro";
+import Installation from "../components/Installation.astro";
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  name: "italian-profanity",
+  codeRepository: "https://github.com/eliazv/italian-profanity",
+  programmingLanguage: ["TypeScript", "JavaScript", "Dart"],
+  license: "https://opensource.org/licenses/MIT",
+};
+---
+<BaseLayout title="italian-profanity — Italian-first profanity detection for JS & Flutter" description="Catch offensive nicknames, not innocent names. Offline Italian profanity detection for JavaScript, TypeScript and Flutter. Free and MIT licensed.">
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <main id="main">
+    <Hero />
+    <div class="ticker" aria-hidden="true"><div class="ticker-inner"><span>USERNAMES</span><b>✳</b><span>ROOM NAMES</span><b>✳</b><span>TEAM NAMES</span><b>✳</b><span>COMMUNITY INPUT</span><b>✳</b><span>ITALIAN FIRST</span><b>✳</b><span>USERNAMES</span></div></div>
+    <Features />
+    <Workflows />
+    <Installation />
+  </main>
+  <script>import "../scripts/playground.ts";</script>
+</BaseLayout>
