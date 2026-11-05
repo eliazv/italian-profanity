@@ -22,7 +22,7 @@ const en: FaqItem[] = [
   {
     question: "Does it block innocent names like Claudio or Diodato?",
     answer:
-      "No. Rules match whole words, explicit exceptions cover common collisions, and every release is audited against a large corpus of Italian names, surnames and common words. A few ambiguous homographs return review instead of block under the default balanced profile.",
+      "Claudio and Diodato are allowed. Whole-word rules, curated infix roots and explicit exceptions reduce collisions. Every release is audited against a corpus of Italian names, surnames and common words. Some ambiguous homographs return review under the default balanced profile; false positives remain possible.",
   },
   {
     question: "Does it detect Italian blasphemy (bestemmie)?",
@@ -32,7 +32,7 @@ const en: FaqItem[] = [
   {
     question: "Which evasion tricks does it catch?",
     answer:
-      "Leetspeak (0 for o, 1 for i), separators and punctuation between letters, spaced letters, repeated letters, accents and Unicode look-alike characters.",
+      "Leetspeak (0 for o, 1 for i), separators, spaced or repeated letters, accents and Unicode look-alikes. Version 0.4.0 also handles up to two internal asterisks as masked letters, k for c and up to two internal dollar signs as z, while preserving English spellings. Numeric affixes, CamelCase and curated infix roots are supported too.",
   },
   {
     question: "Does it send user text to a server?",
@@ -69,7 +69,7 @@ const it: FaqItem[] = [
   {
     question: "Blocca nomi innocui come Claudio o Diodato?",
     answer:
-      "No. Le regole lavorano su parole intere, eccezioni esplicite coprono le collisioni più comuni e ogni versione viene verificata su un ampio corpus di nomi, cognomi e parole italiane. Con la policy predefinita balanced, alcuni omografi ambigui restituiscono review invece di block.",
+      "Claudio e Diodato sono consentiti. Regole a parola intera, radici infix curate ed eccezioni esplicite riducono le collisioni. Ogni versione viene verificata su un corpus di nomi, cognomi e parole italiane. Alcuni omografi ambigui restituiscono review con il profilo balanced; restano possibili falsi positivi.",
   },
   {
     question: "Riconosce le bestemmie?",
@@ -79,7 +79,7 @@ const it: FaqItem[] = [
   {
     question: "Quali trucchi per aggirare il filtro riconosce?",
     answer:
-      "Leetspeak (0 al posto di o, 1 al posto di i), separatori e punteggiatura tra le lettere, lettere spaziate o ripetute, accenti e caratteri Unicode somiglianti.",
+      "Leetspeak (0 al posto di o, 1 al posto di i), separatori, lettere spaziate o ripetute, accenti e caratteri Unicode somiglianti. La 0.4.0 riconosce anche fino a due asterischi interni come lettere mascherate, k al posto di c e fino a due dollari interni come z, conservando le grafie inglesi. Sono supportati anche cifre esterne, CamelCase e radici infix curate.",
   },
   {
     question: "Invia il testo degli utenti a un server?",

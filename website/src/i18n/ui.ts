@@ -57,7 +57,7 @@ export const ui = {
     features: {
       title: "NOT ALL FILTERS<br />SPEAK <em>ITALIAN.</em>",
       cards: [
-        { title: "Catch evasions.", text: "Leetspeak, repeated letters, punctuation, accents and lookalike Unicode are handled by the matcher." },
+        { title: "Catch evasions.", text: "Leetspeak, internal asterisk masking, k/$ variants, repeated letters, punctuation and lookalike Unicode are handled by the matcher." },
         { title: "Respect real names.", text: "Whole-word rules and explicit exceptions reduce collisions with ordinary Italian names and surnames." },
         { title: "Same answer. Anywhere.", text: "Shared rules and regression fixtures keep the TypeScript and Dart/Flutter engines aligned." },
       ],
@@ -118,8 +118,8 @@ export const ui = {
     features: {
       title: "NON TUTTI I FILTRI<br />PARLANO <em>ITALIANO.</em>",
       cards: [
-        { title: "Scova i trucchi.", text: "Leetspeak, lettere ripetute, punteggiatura, accenti e caratteri Unicode somiglianti vengono riconosciuti." },
-        { title: "Rispetta i nomi veri.", text: "Regole a parola intera ed eccezioni esplicite evitano falsi positivi su nomi e cognomi italiani." },
+        { title: "Scova i trucchi.", text: "Leetspeak, asterischi interni, varianti k/$, lettere ripetute, punteggiatura e caratteri Unicode somiglianti vengono riconosciuti." },
+        { title: "Rispetta i nomi veri.", text: "Regole a parola intera, radici curate ed eccezioni esplicite riducono i falsi positivi su nomi e cognomi italiani." },
         { title: "Stessa risposta, ovunque.", text: "Regole e test condivisi tengono allineati i motori TypeScript e Dart/Flutter." },
       ],
     },
