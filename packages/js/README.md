@@ -7,7 +7,13 @@
 Italian-first profanity detection for nicknames and short text, for JavaScript and TypeScript. The Dart package [`italian_profanity`](https://pub.dev/packages/italian_profanity) gives the same verdicts.
 
 ```sh
-npm install --save-exact italian-profanity@0.1.0
+npm install italian-profanity
+```
+
+Per salvare una versione esatta nel progetto:
+
+```sh
+npm install --save-exact italian-profanity@latest
 ```
 
 Libreria per riconoscere bestemmie, insulti e volgarità in italiano in nickname e testi brevi.
