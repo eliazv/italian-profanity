@@ -1,4 +1,11 @@
-# italian-profanity
+<p align="center">
+  <a href="https://eliazv.github.io/italian-profanity/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo-dark.png">
+      <img src=".github/assets/logo-light.png" alt="italian-profanity" width="460">
+    </picture>
+  </a>
+</p>
 
 [![CI](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml/badge.svg)](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml) · [Licenza MIT](LICENSE)
 

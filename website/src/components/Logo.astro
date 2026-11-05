@@ -1,20 +1,23 @@
 ---
-// Brand mark redrawn from logo.png: lime tile with "i*" and three sparks,
-// followed by the "italian-profanity" wordmark with a lime hyphen.
-interface Props { href: string; class?: string }
-const { href, class: className = "" } = Astro.props;
+// Brand mark traced from logo.png (measured on the 1254px original):
+// lime tile with "i" + asterisk + three sparks, and the "italian-profanity"
+// wordmark with a lime hyphen and the same lime asterisk with sparks.
+interface Props { href: string; class?: string; icon?: boolean }
+const { href, class: className = "", icon = true } = Astro.props;
 ---
 <a class:list={["wordmark", className]} href={href} aria-label="italian-profanity home">
-  <svg class="wordmark-icon" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true" focusable="false">
-    <rect width="64" height="64" rx="16" fill="var(--lime)" />
-    <ellipse cx="21" cy="23" rx="5" ry="4.2" fill="var(--ink)" />
-    <rect x="17.4" y="30" width="7.4" height="25" fill="var(--ink)" />
-    <g stroke="var(--ink)" stroke-width="3.6" stroke-linecap="butt">
-      <path d="M39.5 21v16M32.6 25l13.8 8M32.6 33l13.8-8" />
-    </g>
-    <g stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round">
-      <path d="M40.6 8.4v4M45.8 15.6l3-4.2M49.4 18.4l4.4-1.2" />
-    </g>
-  </svg>
-  <span class="wordmark-text">italian<span class="wordmark-dash">-</span>profanity</span>
+  {icon && (
+    <svg class="wordmark-icon" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true" focusable="false">
+      <rect width="64" height="64" rx="15" fill="var(--lime)" />
+      <g fill="var(--ink)">
+        <ellipse cx="22.5" cy="22.6" rx="5.9" ry="5.1" />
+        <rect x="17.3" y="30.6" width="10.1" height="24.7" />
+      </g>
+      <g stroke="var(--ink)" fill="none">
+        <path stroke-width="3.5" d="M39.8 18.3v18.3M31.9 22.9l15.8 9.1M31.9 32l15.8-9.1" />
+        <path stroke-width="2.1" stroke-linecap="round" d="M41 8.5v4.3M46.8 14.5l2.4-3.6M50 18.7l3.9-1" />
+      </g>
+    </svg>
+  )}
+  <span class="wordmark-text">italian<span class="wordmark-dash">-</span>profanity<svg class="wordmark-star" viewBox="30.4 6.9 25 30.2" aria-hidden="true" focusable="false"><g stroke="currentColor" fill="none"><path stroke-width="3.5" d="M39.8 18.3v18.3M31.9 22.9l15.8 9.1M31.9 32l15.8-9.1" /><path stroke-width="2.1" stroke-linecap="round" d="M41 8.5v4.3M46.8 14.5l2.4-3.6M50 18.7l3.9-1" /></g></svg></span>
 </a>

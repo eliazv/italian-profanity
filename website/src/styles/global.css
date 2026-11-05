@@ -6,6 +6,7 @@
   --ink: #191e1b;
   --muted: #575d56;
   --lime: #d9f66e;
+  --lime-mark: #bdeb3f;
   --pink: #ffd5ce;
   --lilac: #e5dffe;
   --line: #d1d3c8;
@@ -31,7 +32,9 @@ img, svg { max-width: 100%; }
 .wordmark { display: inline-flex; align-items: center; gap: 11px; font-size: 19px; font-weight: 800; letter-spacing: -.035em; white-space: nowrap; }
 .wordmark-icon { flex: 0 0 auto; width: 40px; height: 40px; display: block; transition: transform .25s; }
 .wordmark:hover .wordmark-icon { transform: rotate(-6deg); }
-.wordmark-dash { color: #a6cf2e; margin-inline: .02em; }
+.wordmark-text { display: inline-block; line-height: 1; padding-top: .3em; }
+.wordmark-dash { color: var(--lime-mark); }
+.wordmark-star { display: inline-block; width: .7em; height: .85em; margin-left: -.04em; vertical-align: .24em; color: var(--lime-mark); }
 .header-links { display: flex; gap: 30px; align-items: center; }
 .header-links > a { font-size: 14px; font-weight: 650; transition: color .2s, background .2s; }
 .header-links > a:hover { color: #677a26; }
