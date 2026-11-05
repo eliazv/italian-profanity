@@ -34,10 +34,10 @@ jobs:
       - name: Astro production build
         working-directory: website
         env:
-          # Override both GitHub repository variables when enabling a custom
-          # Pages domain; SITE_BASE must be "/" on a custom subdomain.
-          SITE_URL: ${{ vars.WEBSITE_SITE_URL || 'https://eliazv.github.io' }}
-          SITE_BASE: ${{ vars.WEBSITE_SITE_BASE || '/italian-profanity' }}
+          # Custom domain at the root by default; the repository variables
+          # WEBSITE_SITE_URL and WEBSITE_SITE_BASE can override both.
+          SITE_URL: ${{ vars.WEBSITE_SITE_URL || 'https://italian-profanity.eliazavatta.it' }}
+          SITE_BASE: ${{ vars.WEBSITE_SITE_BASE || '/' }}
         run: npm run build
       - uses: actions/upload-pages-artifact@v4
         if: github.event_name != 'pull_request'

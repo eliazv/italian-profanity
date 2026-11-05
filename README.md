@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://eliazv.github.io/italian-profanity/">
+  <a href="https://italian-profanity.eliazavatta.it/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo-dark.png">
       <img src=".github/assets/logo-light.png" alt="italian-profanity" width="460">
@@ -11,7 +11,7 @@
 
 [![npm](https://img.shields.io/npm/v/italian-profanity?label=npm)](https://www.npmjs.com/package/italian-profanity) [![pub.dev](https://img.shields.io/pub/v/italian_profanity?label=pub.dev)](https://pub.dev/packages/italian_profanity)
 
-[🌐 Website & live playground](https://eliazv.github.io/italian-profanity/) · [Developer docs](https://eliazv.github.io/italian-profanity/docs/)
+[🌐 Website & live playground](https://italian-profanity.eliazavatta.it/) · [Developer docs](https://italian-profanity.eliazavatta.it/docs/)
 
 Italian-first profanity detection for short user-generated text — nicknames, usernames, room and team names. Same rules and same verdicts in **TypeScript** and **Dart/Flutter**.
 
@@ -25,7 +25,7 @@ Italian-first profanity detection for short user-generated text — nicknames, u
 
 ## In italiano
 
-[🌐 Sito e playground in italiano](https://eliazv.github.io/italian-profanity/it/) · [Documentazione](https://eliazv.github.io/italian-profanity/it/docs/)
+[🌐 Sito e playground in italiano](https://italian-profanity.eliazavatta.it/it/) · [Documentazione](https://italian-profanity.eliazavatta.it/it/docs/)
 
 Libreria per riconoscere bestemmie, insulti e volgarità **in italiano** in testi brevi, come nickname e nomi di stanze o team. Ha le stesse regole e gli stessi esiti in JavaScript/TypeScript e in Dart/Flutter.
 
