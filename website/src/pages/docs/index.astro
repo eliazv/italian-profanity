@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { absoluteUrl, AUTHOR, DOCS_DESCRIPTION } from "../../data/site";
 const rootBase = import.meta.env.BASE_URL;
 const root = rootBase.endsWith("/") ? rootBase : rootBase + "/";
 const jsExample = [
@@ -32,8 +33,28 @@ const dartExample = [
   "  // Reject the submitted nickname.",
   "}",
 ].join("\n");
+const docsUrl = absoluteUrl("docs/");
+const jsonLd = [
+  {
+    "@type": "TechArticle",
+    headline: "italian-profanity developer documentation",
+    description: DOCS_DESCRIPTION,
+    url: docsUrl,
+    inLanguage: "en",
+    author: AUTHOR,
+    about: { "@id": `${absoluteUrl()}#software` },
+    proficiencyLevel: "Beginner",
+  },
+  {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl() },
+      { "@type": "ListItem", position: 2, name: "Documentation", item: docsUrl },
+    ],
+  },
+];
 ---
-<BaseLayout title="Documentation — italian-profanity" description="Install and configure Italian profanity detection in JavaScript, TypeScript or Flutter. Learn API methods, moderation profiles, limitations and best practices." canonicalPath="docs/">
+<BaseLayout title="Docs: Italian Profanity Filter for JS, TypeScript & Flutter — italian-profanity" description={DOCS_DESCRIPTION} canonicalPath="docs/" jsonLd={jsonLd}>
   <main id="main">
     <section class="docs-hero">
       <div class="shell"><a class="docs-back" href={root}>← Back to home</a><span class="section-index">THE DEVELOPER GUIDE / 01</span>

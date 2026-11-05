@@ -1,18 +1,22 @@
 ---
 import "../styles/global.css";
 
+import { absoluteUrl, AUTHOR, REPOSITORY, root, SITE_NAME } from "../data/site";
+
 interface Props {
   title: string;
   description: string;
   canonicalPath?: string;
+  /** schema.org nodes for this page, emitted as a single JSON-LD @graph. */
+  jsonLd?: Record<string, unknown>[];
 }
 
-const { title, description, canonicalPath = "" } = Astro.props;
-const siteBase = import.meta.env.BASE_URL;
-const root = siteBase.endsWith("/") ? siteBase : `${siteBase}/`;
+const { title, description, canonicalPath = "", jsonLd = [] } = Astro.props;
 const docs = `${root}docs/`;
-const canonical = new URL(canonicalPath.replace(/^\//, ""), Astro.site ?? Astro.url).toString();
-const repository = "https://github.com/eliazv/italian-profanity";
+// Canonical must include the base path (e.g. /italian-profanity/) on GitHub Pages.
+const canonical = absoluteUrl(canonicalPath);
+const repository = REPOSITORY;
+const structuredData = { "@context": "https://schema.org", "@graph": jsonLd };
 ---
 
 <!doctype html>
@@ -25,11 +29,19 @@ const repository = "https://github.com/eliazv/italian-profanity";
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={`${root}favicon.svg`} type="image/svg+xml" />
+    <meta name="author" content={AUTHOR.name} />
+    <link rel="sitemap" href={`${root}sitemap.xml`} />
+    <link rel="alternate" type="text/plain" title="LLM summary" href={`${root}llms.txt`} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {jsonLd.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
     <title>{title}</title>
   </head>
   <body>
