@@ -122,4 +122,4 @@ Una batteria di circa 380 input inventati (lacune probabili, elusioni, nomi e co
 - **Eufemismi lievi:** `cacchio`, `porca miseria` e `porca vacca` passano a confidenza `high` con gravità 1. Il match resta nei risultati, balanced e lenient consentono il testo, strict lo blocca.
 - **Eccezioni:** `minchilli` (cognome) per la radice infix `minchi`.
 
-L'audit ha trovato solo le collisioni attese di `zingaro` con i cognomi Zingaro e Zingari, accettate individualmente come `review`. Elusioni con `k` al posto di `c` e con asterischi richiedono un cambio di normalizzazione e sono trattate separatamente.
+L'audit ha trovato solo le collisioni attese di `zingaro` con i cognomi Zingaro e Zingari, accettate individualmente come `review`. Le elusioni con `k` e con uno o due asterischi interni sono ora coperte dal motore (D27), con fixture dedicate in `data/fixtures/masking.jsonl`. Il riconoscimento resta deliberatamente conservativo: tre o più asterischi e separatori arbitrari non vengono trattati come maschere.

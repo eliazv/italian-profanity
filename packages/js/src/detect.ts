@@ -1,4 +1,5 @@
-import { EXCEPTIONS, RULES } from "./generated/data.ts"
+import { EXCEPTIONS, LEET, RULES } from "./generated/data.ts"
+import { foldWithOrigins } from "./normalize.ts"
 import { applyPolicy } from "./policy.ts"
 import { type Segment, segment } from "./segment.ts"
 import type { Checker, CheckerOptions, CheckResult, CompiledRule, Match, Range } from "./types.ts"
@@ -10,6 +11,8 @@ interface View {
   chars: string[]
   origins: Range[]
   flexible: boolean
+  /** Vista con 1–2 caratteri mascherati da asterischi, solo dentro una parola. */
+  masked?: boolean
   /** Vista senza le cifre esterne: usata solo se le viste complete non trovano la regola. */
   trimmed?: boolean
   /** Riunisce due o più parole vere separate da punteggiatura: niente ricerca `infix`. */
@@ -50,6 +53,19 @@ function prepare(rule: CompiledRule): PreparedRule {
 // Restituisce l'indice dopo la forma riconosciuta. Le doppie originali non
 // vengono ridotte; solo le sequenze di almeno tre lettere ammettono squeeze.
 function consume(view: View, term: Pattern, start = 0): number | undefined {
+  // In una vista mascherata ogni * sostituisce esattamente un carattere.
+  // Nessuno squeeze: lunghezza e posizione devono corrispondere.
+  if (view.masked) {
+    let cursor = start
+    for (const run of term.runs) {
+      for (let index = 0; index < run.count; index++) {
+        const char = view.chars[cursor]
+        if (char !== run.char && char !== "*") return undefined
+        cursor++
+      }
+    }
+    return cursor
+  }
   let cursor = start
   for (const [index, run] of term.runs.entries()) {
     if (view.chars[cursor] !== run.char) return undefined
@@ -194,10 +210,42 @@ function isJoined(view: View, part: Segment): boolean {
   return words > 1
 }
 
+// Vista aggiuntiva per parole con massimo due asterischi interni.
+// Non modifica base, deleet né il risultato pubblico di segment().
+function maskedView(part: Segment, input: string): View | undefined {
+  if (part.kind !== "word") return undefined
+  const source = input.slice(part.range.start, part.range.end)
+  if (!source.includes("*")) return undefined
+  const chars: string[] = []
+  const origins: Range[] = []
+  for (const unit of foldWithOrigins(source, Math.max(1, [...source].length))) {
+    const value = LEET[unit.char] ?? unit.char
+    for (const char of value) {
+      chars.push(char)
+      origins.push({
+        start: part.range.start + unit.range.start,
+        end: part.range.start + unit.range.end,
+      })
+    }
+  }
+  const masks = chars.filter((char) => char === "*").length
+  if (
+    masks < 1 ||
+    masks > 2 ||
+    chars.length < 3 ||
+    !/^[a-z0-9]$/.test(chars[0] ?? "") ||
+    !/^[a-z0-9]$/.test(chars.at(-1) ?? "") ||
+    chars.some((char) => !/^[a-z0-9*]$/.test(char))
+  )
+    return undefined
+  return { chars, origins, flexible: false, masked: true }
+}
+
 function views(part: Segment, input: string): View[] {
   const base: View = { chars: [...part.base], origins: part.baseOrigins, flexible: false }
   const deleet: View = { chars: [...part.deleet], origins: part.deleetOrigins, flexible: true }
-  const all = [base, deleet, ...trimmedViews(part, base, deleet, input)]
+  const masked = maskedView(part, input)
+  const all = [base, deleet, ...trimmedViews(part, base, deleet, input), ...(masked ? [masked] : [])]
   for (const view of all) view.joined = isJoined(view, part)
   return all
 }

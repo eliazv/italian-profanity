@@ -2,7 +2,7 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 const String version = '0.3.0';
-const String dataVersion = 'a1c1c8f33aae';
+const String dataVersion = '86638b781bcb';
 
 /// Tabella di normalizzazione condivisa con il pacchetto TypeScript (SPECIFICHE.md §4.4).
 const Map<String, String> foldTable = {
@@ -1731,6 +1731,7 @@ const Map<String, String> leetTable = {
   '\$': 's',
   '\u20ac': 'e',
   '!': 'i',
+  'k': 'c',
 };
 
 const List<Map<String, Object>> rulesData = [
