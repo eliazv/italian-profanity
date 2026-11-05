@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import GitHubIcon from "../../components/GitHubIcon.astro";
 import { absoluteUrl, AUTHOR, DOCS_DESCRIPTION } from "../../data/site";
 const rootBase = import.meta.env.BASE_URL;
 const root = rootBase.endsWith("/") ? rootBase : rootBase + "/";
@@ -134,7 +135,7 @@ const jsonLd = [
           <p>Regional dialects are only partially covered. The optional English dataset is curated, but is not equivalent to a complete English-language moderation service. Evaluate the library on real use cases before enforcing strict blocking.</p>
           <div class="docs-final">
             <h3>See something missing?</h3><p>Reproducible examples and carefully reviewed exceptions help the project improve.</p>
-            <a class="button button-dark" href="https://github.com/eliazv/italian-profanity/issues" target="_blank" rel="noreferrer">Open an issue ↗</a>
+            <a class="button button-dark" href="https://github.com/eliazv/italian-profanity/issues" target="_blank" rel="noreferrer"><GitHubIcon /> Open an issue</a>
           </div>
         </section>
       </article>

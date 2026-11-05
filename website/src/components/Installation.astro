@@ -1,5 +1,6 @@
 ---
 import Faq from "./Faq.astro";
+import GitHubIcon from "./GitHubIcon.astro";
 const base = import.meta.env.BASE_URL;
 const docs = (base.endsWith("/") ? base : base + "/") + "docs/";
 const jsExample = [
@@ -19,40 +20,29 @@ const dartExample = [
 <section class="section shell" id="install" aria-labelledby="install-title">
   <div class="section-heading split-heading">
     <div><span class="section-index">03 / GET STARTED</span><h2 id="install-title">READY IN<br /><em>A FEW LINES.</em></h2></div>
-    <p>Run the filter entirely inside your app. No API key, no network calls, no separate service to maintain.</p>
+    <p>No API key, no network calls, no service to maintain.</p>
   </div>
   <div class="code-grid">
     <article class="code-card">
       <div class="code-card-header"><div><span class="code-dot dot-lime"></span><strong>JAVASCRIPT / TYPESCRIPT</strong></div><a href="https://www.npmjs.com/package/italian-profanity" target="_blank" rel="noreferrer">npm ↗</a></div>
-      <div class="code-command"><span>$</span><code>npm install italian-profanity</code><button type="button" data-copy="npm install italian-profanity" aria-label="Copy npm command">COPY ↗</button></div>
+      <div class="code-command"><span>$</span><code>npm install italian-profanity</code><button type="button" data-copy="npm install italian-profanity" aria-label="Copy npm command">COPY</button></div>
       <pre><code>{jsExample}</code></pre>
     </article>
     <article class="code-card">
       <div class="code-card-header"><div><span class="code-dot dot-pink"></span><strong>DART / FLUTTER</strong></div><a href="https://pub.dev/packages/italian_profanity" target="_blank" rel="noreferrer">pub.dev ↗</a></div>
-      <div class="code-command"><span>$</span><code>flutter pub add italian_profanity</code><button type="button" data-copy="flutter pub add italian_profanity" aria-label="Copy Flutter command">COPY ↗</button></div>
+      <div class="code-command"><span>$</span><code>flutter pub add italian_profanity</code><button type="button" data-copy="flutter pub add italian_profanity" aria-label="Copy Flutter command">COPY</button></div>
       <pre><code>{dartExample}</code></pre>
     </article>
-  </div>
-  <div class="docs-bridge">
-    <div><span class="docs-bridge-symbol" aria-hidden="true">↗</span><div><strong>Want the whole picture?</strong><p>API reference, profiles, custom rules and integration patterns.</p></div></div>
-    <a class="button button-outline" href={docs}>Explore documentation <span aria-hidden="true">→</span></a>
-  </div>
-</section>
-<section class="section caution-section" aria-labelledby="caution-title">
-  <div class="shell caution-inner">
-    <div><span class="section-index">A NOTE ON MODERATION</span><h2 id="caution-title">A FILTER ISN'T<br /><em>A MIND READER.</em></h2></div>
-    <div><p>This is lexical detection, not contextual understanding. A clean verdict does not guarantee that text is harmless; ambiguous inputs may need human review.</p><p>For consequential moderation, add product-specific policy, reporting and human judgment.</p></div>
   </div>
 </section>
 <Faq />
 <section class="final-cta shell">
   <div class="final-cta-inner">
-    <div class="final-cta-label">SHIPPING SOMETHING IN ITALIAN?</div>
     <h2>LET'S KEEP THE<br /><span>GOOD NAMES.</span></h2>
-    <p>Free to use. Open to contributions. Built for products that care about language.</p>
+    <p>Free, MIT licensed and open to contributions.</p>
     <div class="final-actions">
-      <a href="https://github.com/eliazv/italian-profanity" target="_blank" rel="noreferrer" class="button button-lime">Explore on GitHub ↗</a>
-      <a href={docs} class="button button-outline-light">Read the docs →</a>
+      <a href="https://github.com/eliazv/italian-profanity" target="_blank" rel="noreferrer" class="button button-lime"><GitHubIcon /> Star on GitHub</a>
+      <a href={docs} class="button button-outline-light">Read the docs</a>
     </div>
   </div>
 </section>

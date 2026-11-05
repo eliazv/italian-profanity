@@ -1,5 +1,8 @@
 ---
+import "@fontsource-variable/bricolage-grotesque";
+import "@fontsource-variable/jetbrains-mono";
 import "../styles/global.css";
+import GitHubIcon from "../components/GitHubIcon.astro";
 
 import { absoluteUrl, AUTHOR, REPOSITORY, root, SITE_NAME } from "../data/site";
 
@@ -51,13 +54,13 @@ const structuredData = { "@context": "https://schema.org", "@graph": jsonLd };
         <div class="shell header-inner">
           <a class="wordmark" href={root} aria-label="italian-profanity home">
             <span class="wordmark-icon" aria-hidden="true">i<span>*</span></span>
-            <span>italian<span class="wordmark-divider">/</span>profanity</span>
+            <span>italian-profanity</span>
           </a>
           <nav class="header-links" aria-label="Main navigation">
-            <a href={`${root}#why`}>Why it exists</a>
             <a href={`${root}#playground`}>Playground</a>
-            <a href={docs}>Documentation</a>
-            <a class="nav-github" href={repository} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href={docs}>Docs</a>
+            <a href={`${root}#faq`}>FAQ</a>
+            <a class="nav-github" href={repository} target="_blank" rel="noreferrer"><GitHubIcon /> GitHub</a>
           </nav>
         </div>
       </header>
@@ -65,25 +68,21 @@ const structuredData = { "@context": "https://schema.org", "@graph": jsonLd };
       <slot />
 
       <footer class="site-footer">
-        <div class="shell footer-top">
-          <div>
-            <a class="wordmark footer-mark" href={root}>
-              <span class="wordmark-icon" aria-hidden="true">i<span>*</span></span>
-              <span>italian<span class="wordmark-divider">/</span>profanity</span>
-            </a>
-            <p>An open-source filter for Italian-first products.<br />Built with care, not a blacklist of everything.</p>
-          </div>
-          <div class="footer-links">
+        <div class="shell footer-inner">
+          <a class="wordmark footer-mark" href={root}>
+            <span class="wordmark-icon" aria-hidden="true">i<span>*</span></span>
+            <span>italian-profanity</span>
+          </a>
+          <nav class="footer-links" aria-label="Footer">
             <a href={docs}>Docs</a>
-            <a href="https://www.npmjs.com/package/italian-profanity" target="_blank" rel="noreferrer">npm ↗</a>
-            <a href="https://pub.dev/packages/italian_profanity" target="_blank" rel="noreferrer">pub.dev ↗</a>
-            <a href={repository} target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="https://eliazavatta.it" target="_blank" rel="noreferrer">Made by Elia Zavatta ↗</a>
-          </div>
+            <a href="https://www.npmjs.com/package/italian-profanity" target="_blank" rel="noreferrer">npm</a>
+            <a href="https://pub.dev/packages/italian_profanity" target="_blank" rel="noreferrer">pub.dev</a>
+            <a class="footer-github" href={repository} target="_blank" rel="noreferrer" aria-label="GitHub"><GitHubIcon size={20} /></a>
+          </nav>
         </div>
         <div class="shell footer-bottom">
-          <span>MIT LICENSE · FREE & OPEN SOURCE</span>
-          <span>No tracking. No text sent to a server.</span>
+          <span>MIT License</span>
+          <span>Made by <a href="https://eliazavatta.it" target="_blank" rel="noreferrer">Elia Zavatta</a></span>
         </div>
       </footer>
     </div>
