@@ -1,6 +1,5 @@
 .docs-hero { background: var(--lime); padding-block: 72px 82px; border-bottom: 2px solid var(--ink); }
 .docs-back { display: inline-block; margin-bottom: 52px; font-size: 13px; font-weight: 800; border-bottom: 1.5px solid var(--ink); padding-bottom: 5px; }
-.docs-hero .section-index { color: #5b733d; margin-bottom: 18px; }
 .docs-hero h1 { margin: 0 0 22px; font: 800 clamp(47px, 7.4vw, 95px)/.96 var(--display); letter-spacing: -.055em; }
 .docs-hero h1 em { font-style: normal; -webkit-text-stroke: 4px var(--ink); paint-order: stroke fill; color: var(--lime); }
 .docs-hero p { margin: 0; max-width: 600px; font-size: 19px; line-height: 1.65; color: #36432c; }

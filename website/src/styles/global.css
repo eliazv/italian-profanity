@@ -42,7 +42,7 @@ img, svg { max-width: 100%; }
 .header-links > .nav-github:hover { background: var(--lime); color: var(--ink); }
 .hero { padding-block: 64px 72px; display: grid; align-items: center; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 70px; }
 .hero-copy { min-width: 0; }
-.eyebrow, .section-index, .playground-header { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .065em; }
+.eyebrow, .playground-header { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .065em; }
 .eyebrow { margin: 0; display: inline-flex; align-items: center; gap: 10px; padding: 7px 13px 7px 11px; border: 1.5px solid var(--ink); border-radius: 50px; background: white; text-transform: uppercase; }
 .eyebrow-dot, .live-led { width: 9px; height: 9px; display: inline-block; flex: 0 0 auto; border-radius: 50%; background: #b0e845; box-shadow: 0 0 0 4px rgba(176,232,69,.17); }
 h1,h2,h3,p { margin-top: 0; }
@@ -58,10 +58,16 @@ h1,h2,h3 { text-wrap: balance; }
 .button-dark:hover { color: var(--ink); background: var(--lime); }
 .button-outline { background: transparent; }
 .button-outline:hover { background: white; }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: stretch; }
-.hero-install { flex: 1 1 320px; max-width: 420px; display: flex; align-items: center; min-height: 53px; background: white; border: 1.5px solid var(--ink); border-radius: 10px; padding: 9px 12px 9px 16px; gap: 11px; box-shadow: 5px 5px 0 #e4e4d8; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+.hero-install { flex: 1 1 340px; max-width: 440px; background: white; border: 1.5px solid var(--ink); border-radius: 12px; overflow: hidden; box-shadow: 5px 5px 0 #e4e4d8; }
+.install-tabs { display: flex; border-bottom: 1.5px solid var(--line); background: #f3f4ea; }
+.install-tabs button { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border: 0; border-right: 1px solid var(--line); background: transparent; color: #5f675b; font: 700 11px var(--mono); }
+.install-tabs button[aria-selected="true"] { background: white; color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
+.install-tabs .icon-npm { color: #cb3837; }
+.install-tabs .icon-dart { color: #0175c2; }
+.install-line { display: flex; align-items: center; gap: 11px; padding: 9px 10px 9px 16px; min-height: 50px; }
 .terminal-symbol { font-family: var(--mono); font-weight: 900; color: #6e9736; }
-.hero-install code { flex: 1; min-width: 0; overflow-wrap: anywhere; font: 12px/1.5 var(--mono); font-weight: 700; }
+.install-line code { flex: 1; min-width: 0; overflow-wrap: anywhere; font: 12px/1.5 var(--mono); font-weight: 700; }
 .copy-button { border: 0; background: var(--lime); border-radius: 6px; font: 700 10px var(--mono); padding: 9px 10px; white-space: nowrap; }
 .copy-button:hover { background: #c1e451; }
 .registry-link { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border: 1.5px solid currentColor; border-radius: 50px; font: 700 12px var(--mono); transition: background .2s, color .2s; }
@@ -117,7 +123,7 @@ h1,h2,h3 { text-wrap: balance; }
  .hero h1 { font-size: clamp(44px, 12vw, 62px); }
  .hero-outlined { -webkit-text-stroke: 3.4px var(--ink); }
  .hero-intro { font-size: 16px; }
- .hero-install code { font-size: 10px; }
+ .install-line code { font-size: 10px; }
  .playground-body { padding: 20px 16px 18px; }
  .playground-controls { gap: 8px; }
  .profile-select { padding: 10px 8px; }

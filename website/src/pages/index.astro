@@ -2,7 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import Features from "../components/Features.astro";
-import Workflows from "../components/Workflows.astro";
 import Installation from "../components/Installation.astro";
 import { faq } from "../data/faq";
 import { absoluteUrl, AUTHOR, HOME_DESCRIPTION, NPM_URL, PUB_URL, REPOSITORY, SITE_NAME } from "../data/site";
@@ -53,7 +52,6 @@ const jsonLd = [
   <main id="main">
     <Hero />
     <Features />
-    <Workflows />
     <Installation />
   </main>
   <script>import "../scripts/playground.ts";</script>

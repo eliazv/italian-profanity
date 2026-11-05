@@ -1,17 +1,24 @@
 ---
+import Icon from "./Icon.astro";
 const base = import.meta.env.BASE_URL;
 const root = base.endsWith("/") ? base : base + "/";
 ---
 <section class="hero shell" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="eyebrow-dot"></span> Italian profanity filter · JS &amp; Flutter</p>
+    <p class="eyebrow"><span class="eyebrow-dot"></span> Open-source Italian profanity filter · JS &amp; Flutter</p>
     <h1 id="hero-title"><span class="hero-line">GOOD NAMES.</span><br /><span class="hero-outlined">BAD WORDS.</span><br /><span class="hero-stamp">FILTERED.</span></h1>
-    <p class="hero-intro">Catches bestemmie, insults and clever misspellings in usernames — without flagging Claudio or Diodato.</p>
+    <p class="hero-intro">Spots bestemmie, insults and tricks like “D10&nbsp;p0rc0” in usernames — and leaves Claudio and Diodato alone.</p>
     <div class="hero-actions">
-      <div class="hero-install">
-        <span class="terminal-symbol" aria-hidden="true">$</span>
-        <code>npm install italian-profanity</code>
-        <button class="copy-button" type="button" data-copy="npm install italian-profanity" aria-label="Copy npm install command">COPY</button>
+      <div class="hero-install" data-install>
+        <div class="install-tabs" role="tablist" aria-label="Package manager">
+          <button type="button" role="tab" aria-selected="true" data-command="npm install italian-profanity"><Icon name="npm" size={14} /> JavaScript</button>
+          <button type="button" role="tab" aria-selected="false" data-command="flutter pub add italian_profanity"><Icon name="dart" size={14} /> Flutter</button>
+        </div>
+        <div class="install-line">
+          <span class="terminal-symbol" aria-hidden="true">$</span>
+          <code data-install-code>npm install italian-profanity</code>
+          <button class="copy-button" type="button" data-copy="npm install italian-profanity" aria-label="Copy install command">COPY</button>
+        </div>
       </div>
       <a class="button button-dark" href={root + "docs/"}>Read the docs</a>
     </div>
@@ -49,3 +56,20 @@ const root = base.endsWith("/") ? base : base + "/";
     </div>
   </section>
 </section>
+
+<script>
+  // Install tabs: swap the command shown and copied.
+  document.querySelectorAll<HTMLElement>("[data-install]").forEach((box) => {
+    const code = box.querySelector<HTMLElement>("[data-install-code]");
+    const copy = box.querySelector<HTMLButtonElement>("[data-copy]");
+    const tabs = box.querySelectorAll<HTMLButtonElement>("[role=tab]");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const command = tab.dataset.command ?? "";
+        tabs.forEach((other) => other.setAttribute("aria-selected", String(other === tab)));
+        if (code) code.textContent = command;
+        if (copy) copy.dataset.copy = command;
+      });
+    });
+  });
+</script>
