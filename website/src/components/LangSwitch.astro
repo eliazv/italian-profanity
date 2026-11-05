@@ -1,0 +1,11 @@
+---
+// Segmented EN | IT control linking to the same page in each language.
+import { LANGS, pageHref, ui, type Lang } from "../i18n/ui";
+interface Props { lang: Lang; pagePath: string; class?: string }
+const { lang, pagePath, class: className = "" } = Astro.props;
+---
+<nav class:list={["lang-switch", className]} aria-label={ui[lang].switchLang.label} data-active={lang}>
+  {LANGS.map((l) => (
+    <a href={pageHref(l, pagePath)} hreflang={l} lang={l} aria-current={l === lang ? "page" : undefined}>{l.toUpperCase()}</a>
+  ))}
+</nav>

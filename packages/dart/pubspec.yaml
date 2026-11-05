@@ -4,7 +4,7 @@ description: >-
   offline, zero runtime dependencies. Matching Dart/Flutter and TypeScript engines.
 version: 0.3.0
 repository: https://github.com/eliazv/italian-profanity/tree/master/packages/dart
-homepage: https://github.com/eliazv/italian-profanity#readme
+homepage: https://eliazv.github.io/italian-profanity/
 documentation: https://github.com/eliazv/italian-profanity/blob/master/docs/integrazione.md
 issue_tracker: https://github.com/eliazv/italian-profanity/issues
 topics:

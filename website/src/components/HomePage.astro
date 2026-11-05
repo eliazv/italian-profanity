@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "./Hero.astro";
+import Features from "./Features.astro";
+import Installation from "./Installation.astro";
+import { faq } from "../data/faq";
+import { absoluteUrl, AUTHOR, NPM_URL, PUB_URL, REPOSITORY, SITE_NAME, pageUrl } from "../data/site";
+import { ui, type Lang } from "../i18n/ui";
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const home = pageUrl(lang);
+// The software entity is shared by both languages and anchored on the English home.
+const softwareId = `${absoluteUrl()}#software`;
+const license = "https://opensource.org/licenses/MIT";
+const jsonLd = [
+  { "@type": "WebSite", "@id": `${home}#website`, url: home, name: SITE_NAME, inLanguage: lang, publisher: AUTHOR },
+  {
+    "@type": "SoftwareApplication",
+    "@id": softwareId,
+    name: SITE_NAME,
+    alternateName: ["italian_profanity", lang === "it" ? "Filtro parolacce italiano" : "Italian profanity filter"],
+    description: t.meta.homeDescription,
+    url: home,
+    inLanguage: lang,
+    applicationCategory: "DeveloperApplication",
+    applicationSubCategory: "Content moderation library",
+    operatingSystem: "Cross-platform (Node.js, browsers, Dart, Flutter)",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    license,
+    isAccessibleForFree: true,
+    author: AUTHOR,
+    downloadUrl: NPM_URL,
+    sameAs: [REPOSITORY, NPM_URL, PUB_URL],
+    keywords:
+      lang === "it"
+        ? "filtro parolacce, bestemmie, insulti, volgarità, moderazione nickname, username, flutter, typescript"
+        : "italian profanity filter, bestemmie, parolacce, insulti, username moderation, nickname filter, flutter, typescript",
+  },
+  {
+    "@type": "SoftwareSourceCode",
+    name: SITE_NAME,
+    codeRepository: REPOSITORY,
+    programmingLanguage: ["TypeScript", "JavaScript", "Dart"],
+    runtimePlatform: ["Node.js", "Browser", "Flutter"],
+    license,
+    author: AUTHOR,
+    targetProduct: { "@id": softwareId },
+  },
+  {
+    "@type": "FAQPage",
+    inLanguage: lang,
+    mainEntity: faq[lang].map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  },
+];
+---
+<BaseLayout lang={lang} title={t.meta.homeTitle} description={t.meta.homeDescription} pagePath="" jsonLd={jsonLd}>
+  <main id="main">
+    <Hero lang={lang} />
+    <Features lang={lang} />
+    <Installation lang={lang} />
+  </main>
+  <script>import "../scripts/playground.ts";</script>
+</BaseLayout>

@@ -1,8 +1,17 @@
-# italian-profanity
+<p align="center">
+  <a href="https://eliazv.github.io/italian-profanity/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo-dark.png">
+      <img src=".github/assets/logo-light.png" alt="italian-profanity" width="460">
+    </picture>
+  </a>
+</p>
 
 [![CI](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml/badge.svg)](https://github.com/eliazv/italian-profanity/actions/workflows/ci.yml) · [Licenza MIT](LICENSE)
 
 [![npm](https://img.shields.io/npm/v/italian-profanity?label=npm)](https://www.npmjs.com/package/italian-profanity) [![pub.dev](https://img.shields.io/pub/v/italian_profanity?label=pub.dev)](https://pub.dev/packages/italian_profanity)
+
+[🌐 Website & live playground](https://eliazv.github.io/italian-profanity/) · [Developer docs](https://eliazv.github.io/italian-profanity/docs/)
 
 Italian-first profanity detection for short user-generated text — nicknames, usernames, room and team names. Same rules and same verdicts in **TypeScript** and **Dart/Flutter**.
 
@@ -15,6 +24,8 @@ Italian-first profanity detection for short user-generated text — nicknames, u
 ---
 
 ## In italiano
+
+[🌐 Sito e playground in italiano](https://eliazv.github.io/italian-profanity/it/) · [Documentazione](https://eliazv.github.io/italian-profanity/it/docs/)
 
 Libreria per riconoscere bestemmie, insulti e volgarità **in italiano** in testi brevi, come nickname e nomi di stanze o team. Ha le stesse regole e gli stessi esiti in JavaScript/TypeScript e in Dart/Flutter.
 
@@ -46,19 +57,28 @@ final result = checker.check('D10 p0rc0');
 // result.action == Action.block
 ```
 
-**Aggiornamento dalla beta:** la 0.1.0 amplia il lessico e può cambiare gli esiti. Consultare il changelog e il [confronto di comportamento](data/releases/0.1.0/behavior-diff.md) prima dell’aggiornamento.
+**Aggiornamenti e compatibilità:** le nuove versioni possono cambiare gli esiti del filtro. Consultare il [changelog](packages/js/CHANGELOG.md) e i [confronti di comportamento](data/releases/) prima di aggiornare applicazioni in produzione.
 
 Keywords: profanity, italian, parolacce, bestemmie, insulti, moderation, nickname, username, validation, flutter, dart.
 
 ## Installazione
 
 ```sh
-npm install --save-exact italian-profanity@0.1.0
+npm install italian-profanity
 ```
 
-```yaml
-dependencies:
-  italian_profanity: 0.1.0
+Per salvare esattamente la versione `latest` disponibile al momento dell'installazione:
+
+```sh
+npm install --save-exact italian-profanity@latest
+```
+
+Per Dart o Flutter:
+
+```sh
+dart pub add italian_profanity
+# oppure, in un progetto Flutter:
+flutter pub add italian_profanity
 ```
 
 La [guida d'integrazione](docs/integrazione.md) descrive configurazione condivisa client/server, gestione di `review`, limiti e migrazione dei vecchi filtri. Il dataset inglese curato va attivato con `languages: ["it", "en"]`; `languages: ["en"]` seleziona solo l’inglese. Le librerie esterne sono riferimenti di curazione, senza dipendenze a runtime. Non viene promessa copertura equivalente alle loro liste. Il [rapporto di consolidamento](docs/consolidamento-2026-11-04.md) documenta fonti, controlli e limiti.

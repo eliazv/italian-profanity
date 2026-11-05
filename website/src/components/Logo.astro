@@ -1,0 +1,23 @@
+---
+// Brand mark traced from logo.png (measured on the 1254px original):
+// lime tile with "i" + asterisk + three sparks, and the "italian-profanity"
+// wordmark with a lime hyphen and the same lime asterisk with sparks.
+interface Props { href: string; label?: string; class?: string; icon?: boolean }
+const { href, label = "italian-profanity home", class: className = "", icon = true } = Astro.props;
+---
+<a class:list={["wordmark", className]} href={href} aria-label={label}>
+  {icon && (
+    <svg class="wordmark-icon" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true" focusable="false">
+      <rect width="64" height="64" rx="15" fill="var(--lime)" />
+      <g fill="var(--ink)">
+        <ellipse cx="22.5" cy="22.6" rx="5.9" ry="5.1" />
+        <rect x="17.3" y="30.6" width="10.1" height="24.7" />
+      </g>
+      <g stroke="var(--ink)" fill="none">
+        <path stroke-width="3.5" d="M39.8 18.3v18.3M31.9 22.9l15.8 9.1M31.9 32l15.8-9.1" />
+        <path stroke-width="2.1" stroke-linecap="round" d="M41 8.5v4.3M46.8 14.5l2.4-3.6M50 18.7l3.9-1" />
+      </g>
+    </svg>
+  )}
+  <span class="wordmark-text">italian<span class="wordmark-dash">-</span>profanity<svg class="wordmark-star" viewBox="30.4 6.9 25 30.2" aria-hidden="true" focusable="false"><g stroke="currentColor" fill="none"><path stroke-width="3.5" d="M39.8 18.3v18.3M31.9 22.9l15.8 9.1M31.9 32l15.8-9.1" /><path stroke-width="2.1" stroke-linecap="round" d="M41 8.5v4.3M46.8 14.5l2.4-3.6M50 18.7l3.9-1" /></g></svg></span>
+</a>

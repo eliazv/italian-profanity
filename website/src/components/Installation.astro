@@ -1,0 +1,52 @@
+---
+import Faq from "./Faq.astro";
+import Icon from "./Icon.astro";
+import { NPM_URL, PUB_URL, REPOSITORY } from "../data/site";
+import { pageHref, ui, type Lang } from "../i18n/ui";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const docs = pageHref(lang, "docs/");
+const jsExample = [
+  'import { createChecker } from "italian-profanity";',
+  '',
+  'const checker = createChecker({ profile: "balanced" });',
+  'checker.check("D10 p0rc0").action; // "block"',
+  'checker.check("Claudio").action;  // "allow"',
+].join("\n");
+const dartExample = [
+  "import 'package:italian_profanity/italian_profanity.dart';",
+  "",
+  "final checker = ItalianProfanity.createChecker();",
+  "checker.check('D10 p0rc0').action; // Action.block",
+].join("\n");
+---
+<section class="section shell" id="install" aria-labelledby="install-title">
+  <div class="section-heading split-heading">
+    <h2 id="install-title" set:html={t.install.title} />
+    <p set:html={t.install.text} />
+  </div>
+  <div class="code-grid">
+    <article class="code-card">
+      <div class="code-card-header"><div><span class="code-dot dot-lime"></span><strong>JAVASCRIPT / TYPESCRIPT</strong></div><a class="registry-link" href={NPM_URL} target="_blank" rel="noreferrer"><Icon name="npm" size={14} /> npm</a></div>
+      <div class="code-command"><span>$</span><code>npm install italian-profanity</code><button type="button" data-copy="npm install italian-profanity" aria-label={t.copy.copyNpm}>{t.copy.copy}</button></div>
+      <pre><code>{jsExample}</code></pre>
+    </article>
+    <article class="code-card">
+      <div class="code-card-header"><div><span class="code-dot dot-pink"></span><strong>DART / FLUTTER</strong></div><a class="registry-link" href={PUB_URL} target="_blank" rel="noreferrer"><Icon name="dart" size={14} /> pub.dev</a></div>
+      <div class="code-command"><span>$</span><code>flutter pub add italian_profanity</code><button type="button" data-copy="flutter pub add italian_profanity" aria-label={t.copy.copyFlutter}>{t.copy.copy}</button></div>
+      <pre><code>{dartExample}</code></pre>
+    </article>
+  </div>
+</section>
+<Faq lang={lang} />
+<section class="final-cta shell">
+  <div class="final-cta-inner">
+    <h2 set:html={t.cta.title} />
+    <p>{t.cta.text}</p>
+    <div class="final-actions">
+      <a href={REPOSITORY} target="_blank" rel="noreferrer" class="button button-lime"><Icon name="github" /> {t.cta.star}</a>
+      <a href={docs} class="button button-outline-light">{t.cta.docs}</a>
+    </div>
+  </div>
+</section>
