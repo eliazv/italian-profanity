@@ -206,6 +206,27 @@
       "terms": ["pigliacazzi"],
       "provenance": ["manual"],
       "note": "Curazione manuale M3: termine sessuale, anatomico o ingiuria esplicita. Le letture neutrali e nominali richiedono review quando la confidenza è medium."
+    },
+    {
+      "id": "it.sexual.segone",
+      "kind": "word",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["segone", "segoni"],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: accrescitivo volgare; raro ma possibile il senso di grande sega da taglio, quindi review in balanced."
+    },
+    {
+      "id": "it.sexual.del-cazzo-composto",
+      "kind": "compound",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "terms": ["delcazzo"],
+      "anchor": "end",
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: nickname concatenati che terminano con del cazzo (kingdelcazzo); di cazzo resta a testadicazzo e ai composti esistenti. Solo ancorato alla fine e mai sulla parola isolata, che resta della regola it.sexual.cazzo e delle sue eccezioni."
     }
   ]
 }

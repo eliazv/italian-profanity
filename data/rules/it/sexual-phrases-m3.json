@@ -83,6 +83,22 @@
       "phrases": [["te", "lo", "metto", "in", "culo"], ["te", "lo", "infilo", "nel", "culo"]],
       "provenance": ["manual"],
       "note": "Espressione sessuale contestuale esplicita; nessuna censura generalizzata di oggetti o attività comuni."
+    },
+    {
+      "id": "it.sexual.ti-scopo",
+      "kind": "phrase",
+      "category": "sexual",
+      "severity": 2,
+      "confidence": "high",
+      "phrases": [
+        ["ti", "scopo"],
+        ["ti", "sfondo"],
+        ["ti", "chiavo"],
+        ["ti", "trombo"],
+        ["te", "sfondo"]
+      ],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: espressione sessuale rivolta a una persona; le singole parole restano neutre."
     }
   ]
 }

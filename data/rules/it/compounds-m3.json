@@ -137,7 +137,16 @@
       "category": "vulgar",
       "severity": 2,
       "confidence": "high",
-      "terms": ["checazzo", "machecazzo", "cheminchia", "macheminchia"],
+      "terms": [
+        "checazzo",
+        "machecazzo",
+        "cheminchia",
+        "macheminchia",
+        "checcazzo",
+        "eccheccazzo",
+        "ecchecazzo",
+        "macchecazzo"
+      ],
       "provenance": ["manual"],
       "note": "Curazione M3 di soprannomi/nickname concatenati e grafie alternative. Nessun match per sottostringa; espressione completa intenzionale."
     },

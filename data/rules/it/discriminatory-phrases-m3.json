@@ -177,6 +177,16 @@
       "phrases": [["negra", "di", "merda"], ["negri", "di", "merda"], ["negre", "di", "merda"]],
       "provenance": ["manual"],
       "note": "Formula denigratoria riferita a identità o caratteristiche personali; i termini identitari isolati NON sono censurati."
+    },
+    {
+      "id": "it.discriminatory.muso-giallo",
+      "kind": "phrase",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "phrases": [["muso", "giallo"], ["musi", "gialli"]],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: epiteto razzista; muso e giallo isolati restano neutri."
     }
   ]
 }

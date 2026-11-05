@@ -1,0 +1,82 @@
+{"id": "curation-001", "input": "madonna maiala", "profile": "balanced", "action": "block", "rules": ["it.blasphemy.divine-insult"], "note": "Positivo 0.4"}
+{"id": "curation-002", "input": "dio lupo", "profile": "balanced", "action": "block", "rules": ["it.blasphemy.divine-insult"], "note": "Positivo 0.4"}
+{"id": "curation-003", "input": "lupo dio", "profile": "balanced", "action": "block", "rules": ["it.blasphemy.divine-insult"], "note": "Positivo 0.4"}
+{"id": "curation-004", "input": "diolupo", "profile": "balanced", "action": "block", "rules": ["it.blasphemy.divine-insult"], "note": "Positivo 0.4"}
+{"id": "curation-005", "input": "Madonna.maiala", "profile": "balanced", "action": "block", "rules": ["it.blasphemy.divine-insult"], "note": "Positivo 0.4"}
+{"id": "curation-006", "input": "maiala", "profile": "balanced", "mustNotMatch": ["it.blasphemy.divine-insult"], "note": "Forma B isolata: nessuna bestemmia senza concetto divino adiacente"}
+{"id": "curation-007", "input": "lupo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.blasphemy.divine-insult"], "note": "Animale isolato: neutro"}
+{"id": "curation-008", "input": "lupo solitario", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.blasphemy.divine-insult"], "note": "Guardrail: lupo senza concetto divino"}
+{"id": "curation-009", "input": "Claudio lupo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.blasphemy.divine-insult"], "note": "Guardrail D5: claudio non è esattamente dio"}
+{"id": "curation-010", "input": "Diodato Lupi", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.blasphemy.divine-insult"], "note": "Guardrail: nome e cognome"}
+{"id": "curation-011", "input": "cacchio", "profile": "balanced", "action": "allow", "rules": ["it.vulgar.cacchio"], "note": "Eufemismo lieve: match visibile, consentito in balanced"}
+{"id": "curation-012", "input": "cacchio", "profile": "lenient", "action": "allow", "rules": ["it.vulgar.cacchio"], "note": "Eufemismo lieve: consentito in lenient"}
+{"id": "curation-013", "input": "cacchio", "profile": "strict", "action": "block", "rules": ["it.vulgar.cacchio"], "note": "Eufemismo lieve: strict blocca ogni match"}
+{"id": "curation-014", "input": "porca miseria", "profile": "balanced", "action": "allow", "rules": ["it.vulgar.porca-miseria"], "note": "Eufemismo lieve: match visibile, consentito in balanced"}
+{"id": "curation-015", "input": "porca miseria", "profile": "lenient", "action": "allow", "rules": ["it.vulgar.porca-miseria"], "note": "Eufemismo lieve: consentito in lenient"}
+{"id": "curation-016", "input": "porca miseria", "profile": "strict", "action": "block", "rules": ["it.vulgar.porca-miseria"], "note": "Eufemismo lieve: strict blocca ogni match"}
+{"id": "curation-017", "input": "porca vacca", "profile": "balanced", "action": "allow", "rules": ["it.vulgar.porca-vacca"], "note": "Eufemismo lieve: match visibile, consentito in balanced"}
+{"id": "curation-018", "input": "porca vacca", "profile": "lenient", "action": "allow", "rules": ["it.vulgar.porca-vacca"], "note": "Eufemismo lieve: consentito in lenient"}
+{"id": "curation-019", "input": "porca vacca", "profile": "strict", "action": "block", "rules": ["it.vulgar.porca-vacca"], "note": "Eufemismo lieve: strict blocca ogni match"}
+{"id": "curation-020", "input": "cacchione", "profile": "balanced", "mustNotMatch": ["it.vulgar.cacchio"], "note": "Negativo vicino: forma non dichiarata"}
+{"id": "curation-021", "input": "checcazzo", "profile": "balanced", "action": "block", "rules": ["it.vulgar.imprecazioni-cazzo"], "note": "Positivo 0.4"}
+{"id": "curation-022", "input": "eccheccazzo", "profile": "balanced", "action": "block", "rules": ["it.vulgar.imprecazioni-cazzo"], "note": "Positivo 0.4"}
+{"id": "curation-023", "input": "ecchecazzo", "profile": "balanced", "action": "block", "rules": ["it.vulgar.imprecazioni-cazzo"], "note": "Positivo 0.4"}
+{"id": "curation-024", "input": "macchecazzo", "profile": "balanced", "action": "block", "rules": ["it.vulgar.imprecazioni-cazzo"], "note": "Positivo 0.4"}
+{"id": "curation-025", "input": "checcazzola", "profile": "balanced", "mustNotMatch": ["it.vulgar.imprecazioni-cazzo"], "note": "Negativo vicino: composto più lungo"}
+{"id": "curation-026", "input": "succhiacazzo", "profile": "balanced", "action": "block", "rules": ["it.sexual.succhiacazzi"], "note": "Positivo 0.4"}
+{"id": "curation-027", "input": "ciucciacazzi", "profile": "balanced", "action": "block", "rules": ["it.sexual.succhiacazzi"], "note": "Positivo 0.4"}
+{"id": "curation-028", "input": "ciucciacazzo", "profile": "balanced", "action": "block", "rules": ["it.sexual.succhiacazzi"], "note": "Positivo 0.4"}
+{"id": "curation-029", "input": "ciucciacazzuola", "profile": "balanced", "mustNotMatch": ["it.sexual.succhiacazzi"], "note": "Negativo vicino: cazzuola resta innocua"}
+{"id": "curation-030", "input": "kingdelcazzo", "profile": "balanced", "action": "block", "rules": ["it.sexual.del-cazzo-composto"], "note": "Positivo 0.4"}
+{"id": "curation-031", "input": "superdelcazzo", "profile": "balanced", "action": "block", "rules": ["it.sexual.del-cazzo-composto"], "note": "Positivo 0.4"}
+{"id": "curation-032", "input": "ilredelcazzo99", "profile": "balanced", "action": "block", "rules": ["it.sexual.del-cazzo-composto"], "note": "Positivo 0.4"}
+{"id": "curation-033", "input": "facciadelcazzo", "profile": "balanced", "action": "block", "rules": ["it.sexual.del-cazzo-composto"], "note": "Positivo 0.4"}
+{"id": "curation-034", "input": "cazzo", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-035", "input": "Cazzola", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-036", "input": "Cazzolato", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-037", "input": "cazzotto", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-038", "input": "Cazzaniga", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-039", "input": "cazzuola", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-040", "input": "Cazzato", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-041", "input": "scazzottata", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-042", "input": "delcazzotto", "profile": "balanced", "mustNotMatch": ["it.sexual.del-cazzo-composto"], "note": "Guardrail: parola isolata o cazzo non finale"}
+{"id": "curation-043", "input": "vaffa", "profile": "balanced", "action": "review", "rules": ["it.insult.vaffa"], "note": "Positivo 0.4"}
+{"id": "curation-044", "input": "vaffa", "profile": "strict", "action": "block", "rules": ["it.insult.vaffa"], "note": "Positivo 0.4"}
+{"id": "curation-045", "input": "vaffare", "profile": "balanced", "mustNotMatch": ["it.insult.vaffa"], "note": "Negativo vicino: parola più lunga"}
+{"id": "curation-046", "input": "mortacci", "profile": "balanced", "action": "review", "rules": ["it.insult.mortacci"], "note": "Positivo 0.4"}
+{"id": "curation-047", "input": "mortaccitua", "profile": "balanced", "action": "review", "rules": ["it.insult.mortacci"], "note": "Positivo 0.4"}
+{"id": "curation-048", "input": "mortaccini", "profile": "balanced", "mustNotMatch": ["it.insult.mortacci"], "note": "Negativo vicino: parola più lunga"}
+{"id": "curation-049", "input": "segone", "profile": "balanced", "action": "review", "rules": ["it.sexual.segone"], "note": "Positivo 0.4"}
+{"id": "curation-050", "input": "segone", "profile": "strict", "action": "block", "rules": ["it.sexual.segone"], "note": "Positivo 0.4"}
+{"id": "curation-051", "input": "segonzano", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.sexual.segone"], "note": "Guardrail: nome di comune"}
+{"id": "curation-052", "input": "ti scopo", "profile": "balanced", "action": "block", "rules": ["it.sexual.ti-scopo"], "note": "Positivo 0.4"}
+{"id": "curation-053", "input": "ti sfondo", "profile": "balanced", "action": "block", "rules": ["it.sexual.ti-scopo"], "note": "Positivo 0.4"}
+{"id": "curation-054", "input": "te sfondo", "profile": "balanced", "action": "block", "rules": ["it.sexual.ti-scopo"], "note": "Positivo 0.4"}
+{"id": "curation-055", "input": "ti chiavo", "profile": "balanced", "action": "block", "rules": ["it.sexual.ti-scopo"], "note": "Positivo 0.4"}
+{"id": "curation-056", "input": "il tuo scopo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.sexual.ti-scopo"], "note": "Guardrail: scopo come sostantivo"}
+{"id": "curation-057", "input": "lo scopo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.sexual.ti-scopo"], "note": "Guardrail: scopo come sostantivo"}
+{"id": "curation-058", "input": "sfondo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.sexual.ti-scopo"], "note": "Guardrail: parola neutra isolata"}
+{"id": "curation-059", "input": "lesbicona", "profile": "balanced", "action": "block", "rules": ["it.discriminatory.lesbicona"], "note": "Positivo 0.4"}
+{"id": "curation-060", "input": "lesbicone", "profile": "balanced", "action": "block", "rules": ["it.discriminatory.lesbicona"], "note": "Positivo 0.4"}
+{"id": "curation-061", "input": "lesbica", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.lesbicona"], "note": "Identità neutra: mai un'offesa da sola"}
+{"id": "curation-062", "input": "travone", "profile": "balanced", "action": "review", "rules": ["it.discriminatory.travone"], "note": "Positivo 0.4"}
+{"id": "curation-063", "input": "trave", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.travone"], "note": "Guardrail: parola neutra"}
+{"id": "curation-064", "input": "giudeo", "profile": "balanced", "action": "review", "rules": ["it.discriminatory.giudeo"], "note": "Positivo 0.4"}
+{"id": "curation-065", "input": "Giudea", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.giudeo"], "note": "Guardrail: regione storica"}
+{"id": "curation-066", "input": "ebreo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.giudeo"], "note": "Identità neutra: mai un'offesa da sola"}
+{"id": "curation-067", "input": "zingaro", "profile": "balanced", "action": "review", "rules": ["it.discriminatory.zingaro"], "note": "Positivo 0.4"}
+{"id": "curation-068", "input": "zingari", "profile": "balanced", "action": "review", "rules": ["it.discriminatory.zingaro"], "note": "Positivo 0.4"}
+{"id": "curation-069", "input": "zingara", "profile": "strict", "action": "block", "rules": ["it.discriminatory.zingaro"], "note": "Positivo 0.4"}
+{"id": "curation-070", "input": "Zingaretti", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.zingaro"], "note": "Guardrail: cognome"}
+{"id": "curation-071", "input": "Zingarelli", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.zingaro"], "note": "Guardrail: cognome"}
+{"id": "curation-072", "input": "rom", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.zingaro"], "note": "Identità neutra"}
+{"id": "curation-073", "input": "spastico", "profile": "balanced", "action": "review", "rules": ["it.discriminatory.spastico"], "note": "Positivo 0.4"}
+{"id": "curation-074", "input": "spasmo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.spastico"], "note": "Guardrail: termine medico neutro"}
+{"id": "curation-075", "input": "treno ritardato", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.spastico"], "note": "Guardrail: ritardato escluso di proposito"}
+{"id": "curation-076", "input": "muso giallo", "profile": "balanced", "action": "block", "rules": ["it.discriminatory.muso-giallo"], "note": "Positivo 0.4"}
+{"id": "curation-077", "input": "musi gialli", "profile": "balanced", "action": "block", "rules": ["it.discriminatory.muso-giallo"], "note": "Positivo 0.4"}
+{"id": "curation-078", "input": "muso", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.muso-giallo"], "note": "Parola neutra isolata"}
+{"id": "curation-079", "input": "giallo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.muso-giallo"], "note": "Parola neutra isolata"}
+{"id": "curation-080", "input": "muso lungo", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.discriminatory.muso-giallo"], "note": "Guardrail: espressione neutra"}
+{"id": "curation-081", "input": "Minchilli", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.vulgar.minchia"], "note": "Eccezione: cognome"}
+{"id": "curation-082", "input": "minchia", "profile": "balanced", "action": "block", "rules": ["it.vulgar.minchia"], "note": "L'eccezione non disattiva la regola altrove"}
