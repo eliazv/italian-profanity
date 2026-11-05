@@ -1,0 +1,63 @@
+---
+const base = import.meta.env.BASE_URL;
+const root = base.endsWith("/") ? base : base + "/";
+---
+<section class="hero shell" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> OPEN SOURCE <span class="eyebrow-separator">/</span> ITALIAN-FIRST MODERATION</div>
+    <h1 id="hero-title">GOOD NAMES.<br /><span class="hero-outlined">BAD WORDS.</span><br /><span class="hero-stamp">FILTERED.</span></h1>
+    <p class="hero-intro">An Italian profanity filter that catches the clever stuff without punishing the innocent stuff. Built for usernames, nicknames and communities.</p>
+    <div class="hero-buttons">
+      <a class="button button-dark" href="#playground">Try the live filter <span aria-hidden="true">↗</span></a>
+      <a class="button button-outline" href={root + "docs/"}>Read the docs <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-install">
+      <span class="terminal-symbol" aria-hidden="true">$</span>
+      <code>npm install italian-profanity</code>
+      <button class="copy-button" type="button" data-copy="npm install italian-profanity" aria-label="Copy npm install command">COPY ↗</button>
+    </div>
+    <div class="hero-note"><span class="small-star" aria-hidden="true">✳</span> Offline by default <span aria-hidden="true">·</span> No runtime dependencies <span aria-hidden="true">·</span> MIT license</div>
+  </div>
+
+  <section class="playground-card" id="playground" aria-labelledby="playground-title">
+    <div class="playground-header">
+      <div class="playground-header-title"><span class="live-led" aria-hidden="true"></span> LIVE PLAYGROUND</div>
+      <span class="playground-header-meta">RUNS IN YOUR BROWSER</span>
+    </div>
+    <div class="playground-body">
+      <div class="playground-kicker">NO SERVER. NO DATA COLLECTION.</div>
+      <h2 id="playground-title">Go on. <span>Test it.</span></h2>
+      <label for="demo-input" class="input-label">ENTER A NICKNAME OR SHORT TEXT</label>
+      <textarea id="demo-input" class="demo-input" rows="2" maxlength="120" spellcheck="false" autocomplete="off" aria-describedby="demo-help">Claudio</textarea>
+      <div class="demo-examples">
+        <span class="example-label">TRY:</span>
+        <button type="button" class="example-chip" data-example="Claudio">Claudio</button>
+        <button type="button" class="example-chip" data-example="D10 p0rc0">D10 p0rc0</button>
+        <button type="button" class="example-chip" data-example="Diodato">Diodato</button>
+      </div>
+      <div class="playground-controls">
+        <label class="control-group" for="demo-profile"><span>POLICY</span>
+          <select id="demo-profile" class="profile-select">
+            <option value="balanced">Balanced</option><option value="strict">Strict</option><option value="lenient">Lenient</option>
+          </select>
+        </label>
+        <label class="control-group" for="demo-language"><span>LANGUAGES</span>
+          <select id="demo-language" class="profile-select">
+            <option value="it">Italian</option><option value="it-en">Italian + English</option>
+          </select>
+        </label>
+      </div>
+      <div class="demo-output" aria-live="polite" aria-atomic="true" data-state="loading">
+        <div class="output-topline"><span>DETECTION RESULT</span><span id="demo-version">INITIALIZING</span></div>
+        <div class="output-status">
+          <span class="output-icon" id="demo-status-icon" aria-hidden="true">…</span>
+          <div class="output-text"><strong id="demo-action">LOADING</strong><p id="demo-explanation">Loading the detector…</p></div>
+          <span class="output-count" id="demo-match-count">—</span>
+        </div>
+        <div class="output-matches" id="demo-matches" hidden></div>
+      </div>
+      <p class="demo-help" id="demo-help">Computed locally. No input is uploaded, stored or logged. A lexical filter is not a substitute for human moderation.</p>
+    </div>
+    <div class="playground-footer"><span>BUILT FOR REAL INPUT.</span><span>NOT JUST A WORD LIST. ↗</span></div>
+  </section>
+</section>
