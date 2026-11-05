@@ -5,7 +5,7 @@ export { root };
 
 /** Absolute URL for a path relative to the site root (e.g. "docs/"). */
 export function absoluteUrl(path = ""): string {
-  const site = import.meta.env.SITE ?? "https://eliazv.github.io";
+  const site = import.meta.env.SITE ?? "https://italian-profanity.eliazavatta.it";
   return new URL(root + path.replace(/^\//, ""), site).toString();
 }
 

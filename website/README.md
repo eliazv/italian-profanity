@@ -17,14 +17,11 @@ The website is not in the root pnpm workspace. The npm library is published from
 
 The GitHub workflow `.github/workflows/website-pages.yml` builds pull requests and deploys the static site from `master`. In repository Settings → Pages, select **GitHub Actions** as the source.
 
-Default address once Pages is enabled: https://eliazv.github.io/italian-profanity/
+Live at https://italian-profanity.eliazavatta.it (Italian version under `/it/`). The old address https://eliazv.github.io/italian-profanity/ redirects there.
 
-To use the optional subdomain, configure it under GitHub Pages Settings and add a DNS CNAME (`italian-profanity` → `eliazv.github.io`). Set the repository Actions variables:
+The custom domain is configured in Settings → Pages, with a DNS CNAME `italian-profanity` → `eliazv.github.io` on `eliazavatta.it`. The workflow reads the repository Actions variables `WEBSITE_SITE_URL` and `WEBSITE_SITE_BASE` (currently `https://italian-profanity.eliazavatta.it` and `/`); the same values are the defaults in `astro.config.mjs`.
 
-- `WEBSITE_SITE_URL=https://italian-profanity.eliazavatta.it`
-- `WEBSITE_SITE_BASE=/`
-
-Then rerun the Pages workflow. Verify the domain and enable HTTPS in Pages settings.
+If the site is ever taken down, delete the CNAME record too, so the subdomain cannot be claimed by another GitHub Pages site.
 
 ## Dependencies
 
