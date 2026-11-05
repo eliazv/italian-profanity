@@ -244,8 +244,28 @@ function maskedView(part: Segment, input: string): View | undefined {
 function views(part: Segment, input: string): View[] {
   const base: View = { chars: [...part.base], origins: part.baseOrigins, flexible: false }
   const deleet: View = { chars: [...part.deleet], origins: part.deleetOrigins, flexible: true }
+  const trimmed = trimmedViews(part, base, deleet, input)
+  // Non perdere le grafie inglesi autentiche come d1ckhead, fuck o f*ck.
+  // k → c è una vista aggiuntiva, non sovrascrive il deleet originale.
+  const kViews = [deleet, ...trimmed.filter((view) => view.flexible)]
+    .filter((view) => view.chars.includes("k"))
+    .map((view): View => ({
+      ...view,
+      chars: view.chars.map((char) => (char === "k" ? "c" : char)),
+    }))
   const masked = maskedView(part, input)
-  const all = [base, deleet, ...trimmedViews(part, base, deleet, input), ...(masked ? [masked] : [])]
+  const maskedK: View | undefined =
+    masked?.chars.includes("k")
+      ? { ...masked, chars: masked.chars.map((char) => (char === "k" ? "c" : char)) }
+      : undefined
+  const all = [
+    base,
+    deleet,
+    ...trimmed,
+    ...kViews,
+    ...(masked ? [masked] : []),
+    ...(maskedK ? [maskedK] : []),
+  ]
   for (const view of all) view.joined = isJoined(view, part)
   return all
 }

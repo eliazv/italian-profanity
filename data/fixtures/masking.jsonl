@@ -25,3 +25,5 @@
 {"id":"masking-025","input":"x**y","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
 {"id":"masking-026","input":"ca***o","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
 {"id":"masking-027","input":"Kilimangiaro","profile":"balanced","mustNotMatch":["it.insult.fanculo"],"note":"D27: negativo vicino"}
+{"id":"masking-028","input":"d1ckhead","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.insult.dickhead"],"note":"D27: preservare grafia inglese in presenza di leet"}
+{"id":"masking-029","input":"f*ck","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.vulgar.fuck"],"note":"D27: asterisco con k reale, preservare la forma inglese"}

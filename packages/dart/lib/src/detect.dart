@@ -287,12 +287,35 @@ List<_View> _views(Segment part, String input) {
       part.baseOrigins, false);
   final deleet = _View(part.deleet.runes.map(String.fromCharCode).toList(),
       part.deleetOrigins, true);
+  final trimmed = _trimmedViews(part, base, deleet, input);
+  // Conserva la grafia inglese originale: la k->c e' solo un'alternativa.
+  final kViews = <_View>[
+    for (final view in [deleet, ...trimmed.where((view) => view.flexible)])
+      if (view.chars.contains('k'))
+        _View(
+            [
+              for (final char in view.chars) char == 'k' ? 'c' : char
+            ],
+            view.origins,
+            view.flexible,
+            view.trimmed)
+  ];
   final masked = _maskedView(part, input);
+  final maskedK = masked != null && masked.chars.contains('k')
+      ? _View(
+          [for (final char in masked.chars) char == 'k' ? 'c' : char],
+          masked.origins,
+          false,
+          false,
+          true)
+      : null;
   final all = [
     base,
     deleet,
-    ..._trimmedViews(part, base, deleet, input),
-    if (masked != null) masked
+    ...trimmed,
+    ...kViews,
+    if (masked != null) masked,
+    if (maskedK != null) maskedK
   ];
   for (final view in all) {
     view.joined = _isJoined(view, part);

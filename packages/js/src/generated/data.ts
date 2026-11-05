@@ -2,7 +2,7 @@
 import type { CompiledException, CompiledRule } from "../types.ts"
 
 export const VERSION = "0.3.0"
-export const DATA_VERSION = "86638b781bcb"
+export const DATA_VERSION = "a1c1c8f33aae"
 
 /** Tabella di normalizzazione condivisa con il pacchetto Dart (SPECIFICHE.md §4.4). */
 export const FOLD: Readonly<Record<string, string>> = {
@@ -1731,7 +1731,6 @@ export const LEET: Readonly<Record<string, string>> = {
   "$": "s",
   "\u20ac": "e",
   "!": "i",
-  "k": "c",
 }
 
 export const RULES: readonly CompiledRule[] = [
