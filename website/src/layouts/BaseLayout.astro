@@ -1,0 +1,79 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+}
+
+const { title, description, canonicalPath = "" } = Astro.props;
+const siteBase = import.meta.env.BASE_URL;
+const root = siteBase.endsWith("/") ? siteBase : `${siteBase}/`;
+const docs = `${root}docs/`;
+const canonical = new URL(canonicalPath.replace(/^\//, ""), Astro.site ?? Astro.url).toString();
+const repository = "https://github.com/eliazv/italian-profanity";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f8f1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={`${root}favicon.svg`} type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="shell header-inner">
+          <a class="wordmark" href={root} aria-label="italian-profanity home">
+            <span class="wordmark-icon" aria-hidden="true">i<span>*</span></span>
+            <span>italian<span class="wordmark-divider">/</span>profanity</span>
+          </a>
+          <nav class="header-links" aria-label="Main navigation">
+            <a href={`${root}#why`}>Why it exists</a>
+            <a href={`${root}#playground`}>Playground</a>
+            <a href={docs}>Documentation</a>
+            <a class="nav-github" href={repository} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
+      </header>
+
+      <slot />
+
+      <footer class="site-footer">
+        <div class="shell footer-top">
+          <div>
+            <a class="wordmark footer-mark" href={root}>
+              <span class="wordmark-icon" aria-hidden="true">i<span>*</span></span>
+              <span>italian<span class="wordmark-divider">/</span>profanity</span>
+            </a>
+            <p>An open-source filter for Italian-first products.<br />Built with care, not a blacklist of everything.</p>
+          </div>
+          <div class="footer-links">
+            <a href={docs}>Docs</a>
+            <a href="https://www.npmjs.com/package/italian-profanity" target="_blank" rel="noreferrer">npm ↗</a>
+            <a href="https://pub.dev/packages/italian_profanity" target="_blank" rel="noreferrer">pub.dev ↗</a>
+            <a href={repository} target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://eliazavatta.it" target="_blank" rel="noreferrer">Made by Elia Zavatta ↗</a>
+          </div>
+        </div>
+        <div class="shell footer-bottom">
+          <span>MIT LICENSE · FREE & OPEN SOURCE</span>
+          <span>No tracking. No text sent to a server.</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
