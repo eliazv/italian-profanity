@@ -27,7 +27,7 @@ if (elements.every(Boolean)) {
   const chips = matchesContainer!;
   const versionLabel = version!;
 
-  versionLabel.textContent = "PACKAGE v" + VERSION;
+  versionLabel.textContent = "v" + VERSION;
 
   const clearMatches = () => {
     chips.replaceChildren();
