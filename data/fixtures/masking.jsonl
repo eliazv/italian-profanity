@@ -1,0 +1,37 @@
+{"id":"masking-001","input":"c*zzo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D27: elusione intenzionale"}
+{"id":"masking-002","input":"c**zo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D27: elusione intenzionale"}
+{"id":"masking-003","input":"m*nchia","profile":"balanced","action":"block","rules":["it.vulgar.minchia"],"note":"D27: elusione intenzionale"}
+{"id":"masking-004","input":"p*rco d*o","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"D27: elusione intenzionale"}
+{"id":"masking-005","input":"d*o p*rco","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"D27: elusione intenzionale"}
+{"id":"masking-006","input":"kaxxo","profile":"balanced","action":"block","rules":["it.vulgar.kazzo-grafie"],"note":"D27: elusione intenzionale"}
+{"id":"masking-007","input":"fankulo","profile":"balanced","action":"block","rules":["it.insult.fanculo"],"note":"D27: elusione intenzionale"}
+{"id":"masking-008","input":"porkodio","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"D27: elusione intenzionale"}
+{"id":"masking-009","input":"porko dio","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"D27: elusione intenzionale"}
+{"id":"masking-010","input":"k4zzo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D27: elusione intenzionale"}
+{"id":"masking-011","input":"c*zz0","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D27: elusione intenzionale"}
+{"id":"masking-012","input":"p*rko d*o","profile":"balanced","action":"block","rules":["it.blasphemy.divine-insult"],"note":"D27: elusione intenzionale"}
+{"id":"masking-013","input":"c**zo","profile":"strict","action":"block","rules":["it.sexual.cazzo"],"note":"D27: elusione intenzionale"}
+{"id":"masking-014","input":"c***zo","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
+{"id":"masking-015","input":"d*o","profile":"balanced","mustNotMatch":["it.blasphemy.divine-insult"],"note":"D27: negativo vicino"}
+{"id":"masking-016","input":"p*rco","profile":"balanced","mustNotMatch":["it.blasphemy.divine-insult"],"note":"D27: negativo vicino"}
+{"id":"masking-017","input":"cl*ssico","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
+{"id":"masking-018","input":"Kazakistan","profile":"balanced","mustNotMatch":["it.vulgar.kazzo-grafie"],"note":"D27: negativo vicino"}
+{"id":"masking-019","input":"kebab","profile":"balanced","mustNotMatch":["it.insult.fanculo"],"note":"D27: negativo vicino"}
+{"id":"masking-020","input":"Katia","profile":"balanced","mustNotMatch":["it.insult.fanculo"],"note":"D27: negativo vicino"}
+{"id":"masking-021","input":"Cazzola","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
+{"id":"masking-022","input":"Minchilli","profile":"balanced","mustNotMatch":["it.vulgar.minchia"],"note":"D27: negativo vicino"}
+{"id":"masking-023","input":"c* zzo","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
+{"id":"masking-024","input":"c*zz.o","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
+{"id":"masking-025","input":"x**y","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
+{"id":"masking-026","input":"ca***o","profile":"balanced","mustNotMatch":["it.sexual.cazzo"],"note":"D27: negativo vicino"}
+{"id":"masking-027","input":"Kilimangiaro","profile":"balanced","mustNotMatch":["it.insult.fanculo"],"note":"D27: negativo vicino"}
+{"id":"masking-028","input":"d1ckhead","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.insult.dickhead"],"note":"D27: preservare grafia inglese in presenza di leet"}
+{"id":"masking-029","input":"f*ck","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.vulgar.fuck"],"note":"D27: asterisco con k reale, preservare la forma inglese"}
+{"id":"masking-030","input":"ca$$o","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-031","input":"ca$zo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-032","input":"c4$$0","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-033","input":"k4$$0","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-034","input":"a$$hole","profile":"balanced","languages":["it","en"],"action":"block","rules":["en.insult.asshole"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-035","input":"ca$$ola","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-036","input":"ca$$otto","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-037","input":"ma$$a","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}

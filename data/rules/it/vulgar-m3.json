@@ -6,10 +6,10 @@
       "kind": "word",
       "category": "vulgar",
       "severity": 1,
-      "confidence": "medium",
+      "confidence": "high",
       "terms": ["cacchio", "cacchi", "cacchiata", "cacchiate"],
       "provenance": ["manual"],
-      "note": "Curazione manuale M3: turpiloquio o eufemismo anche regionale; parola completa, senza generalizzare una radice a parole innocue."
+      "note": "Eufemismo colloquiale lieve: gravità 1 con confidenza high, quindi il match resta visibile ma balanced e lenient consentono il testo; strict lo blocca (0.4)."
     },
     {
       "id": "it.vulgar.minkia",

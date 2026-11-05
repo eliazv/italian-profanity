@@ -16,7 +16,7 @@
 Italian-first profanity detection for short user-generated text — nicknames, usernames, room and team names. Same rules and same verdicts in **TypeScript** and **Dart/Flutter**.
 
 - Precision first: whole-word rules, explicit exceptions and an audit on Italian names, surnames and common words.
-- Catches common evasions: leetspeak, separators, accents, repeated letters, spaced letters and Unicode look-alikes.
+- Catches common evasions: leetspeak, separators, accents, repeated and spaced letters, Unicode look-alikes, internal asterisk masking and alternative k/$ spellings.
 - Blasphemy-aware: divine terms are only flagged in combination with an insult (_dio_ alone is fine).
 - Detection separated from policy: `balanced`, `strict` and `lenient` profiles, plus custom rules and exceptions.
 - Zero runtime dependencies, offline, MIT.
@@ -31,13 +31,15 @@ Libreria per riconoscere bestemmie, insulti e volgarità **in italiano** in test
 
 Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni più comuni (`D10 p0rc0`, `c a z z o`, `porcooo`).
 
+La 0.4.0 riconosce anche fino a due asterischi interni, k al posto di c e fino a due dollari come z, conservando le grafie inglesi originali. Le regole possono dichiarare radici `infix` curate; gli eufemismi lievi restano segnalati ma consentiti in `balanced`.
+
 **Limite dichiarato:** è un controllo lessicale. Un testo senza match non è necessariamente appropriato, e la moderazione umana resta necessaria.
 
 Pacchetti: npm [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) · pub.dev [`italian_profanity`](https://pub.dev/packages/italian_profanity).
 
-Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 290 regole e 1.034 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti sono coperti solo parzialmente. L’inglese opzionale contiene 51 regole curate, con 110 forme e 20 varianti di frase, senza dipendenze aggiuntive.
+Sono disponibili `findMatches()`, `check()`, `isClean()` e `createChecker()` in TS e Dart, con contatti facoltativi, eccezioni e soglie per categoria. Il lessico contiene 301 regole e 1.066 forme dichiarate per parole, prefissi e composti, più frasi e combinazioni di bestemmie. Tutte le categorie italiane hanno un primo nucleo; i dialetti sono coperti solo parzialmente. L’inglese opzionale contiene 51 regole curate, con 110 forme e 20 varianti di frase, senza dipendenze aggiuntive.
 
-Le attese sono condivise su 3.459 fixture. L’audit esegue il rilevatore su 127.842 input per ciascuna configurazione (`it` e `it+en`) e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
+Le attese sono condivise su 3.664 fixture. L’audit esegue il rilevatore su 127.842 input per ciascuna configurazione (`it` e `it+en`) e richiede che ogni collisione sia corretta o motivata. Alcuni omografi di nomi e cognomi producono intenzionalmente `review` in `balanced`: non viene promessa disambiguazione contestuale o assenza assoluta di falsi positivi. `strict` blocca anche questi casi. Le motivazioni e gli esiti attesi sono in [data/audit/accepted.jsonl](data/audit/accepted.jsonl).
 
 ```ts
 import { check, createChecker } from "italian-profanity"

@@ -330,6 +330,26 @@
       "terms": ["femminuccia", "femminucce"],
       "provenance": ["manual"],
       "note": "Curazione manuale M3: insulto colloquiale o regionale. I termini con significati alternativi hanno confidenza media; nel profilo balanced richiedono review."
+    },
+    {
+      "id": "it.insult.vaffa",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["vaffa"],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: abbreviazione di vaffanculo, usata anche in tono scherzoso: review in balanced."
+    },
+    {
+      "id": "it.insult.mortacci",
+      "kind": "word",
+      "category": "insult",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["mortacci", "mortaccitua", "mortaccituoi", "mortaccivostra", "mortaccivostri"],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: imprecazione romanesca anche da sola o concatenata; può essere esclamativa, quindi review in balanced."
     }
   ]
 }

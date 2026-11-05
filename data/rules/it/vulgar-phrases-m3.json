@@ -6,20 +6,20 @@
       "kind": "phrase",
       "category": "vulgar",
       "severity": 1,
-      "confidence": "medium",
+      "confidence": "high",
       "phrases": [["porca", "miseria"]],
       "provenance": ["manual"],
-      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+      "note": "Eufemismo colloquiale lieve: gravità 1 con confidenza high, quindi il match resta visibile ma balanced e lenient consentono il testo; strict lo blocca (0.4)."
     },
     {
       "id": "it.vulgar.porca-vacca",
       "kind": "phrase",
       "category": "vulgar",
       "severity": 1,
-      "confidence": "medium",
+      "confidence": "high",
       "phrases": [["porca", "vacca"]],
       "provenance": ["manual"],
-      "note": "Imprecazione o intercalare colloquiale; alcune formule sono eufemismi con significato non offensivo."
+      "note": "Eufemismo colloquiale lieve: gravità 1 con confidenza high, quindi il match resta visibile ma balanced e lenient consentono il testo; strict lo blocca (0.4)."
     },
     {
       "id": "it.vulgar.porco-zio",

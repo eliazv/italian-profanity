@@ -110,3 +110,16 @@ Il consolidamento mantiene le 290 regole italiane e aggiunge 307 fixture Unicode
 Il dataset inglese passa da 3 a 51 regole (110 forme e 20 varianti di frase), con 534 fixture aggiuntive. Le famiglie sono scelte manualmente dal preset MIT di Obscenity, che attribuisce cuss; entrambi i notice sono distribuiti. leo-profanity e @2toad/profanity sono confronti di copertura, senza importare le loro liste. Nessuna dipendenza aggiunta. Identità, anatomia e altre parole neutre isolate restano fuori dai nuovi blocchi; i termini ambigui richiedono review in balanced.
 
 Il totale è 341 regole e 3.459 fixture. L’audit viene eseguito su 127.842 input per ognuna delle configurazioni it e it+en, senza nuove accettazioni. [Rapporto e verifiche](consolidamento-2026-11-04.md). Il consolidamento tecnico non sostituisce una prova comparativa su applicazioni reali; nessun nickname reale è incluso nei test o nei report.
+
+## Curazione 0.4 — 5 novembre 2026
+
+Una batteria di circa 380 input inventati (lacune probabili, elusioni, nomi e cognomi) ha guidato le aggiunte; nessun nickname reale è usato o salvato. Il lessico passa a 301 regole italiane, con 82 fixture in `data/fixtures/curation.jsonl`.
+
+- **Bestemmie:** `maiala`, `lupo` e `lupi` entrano nel gruppo B della combo (`madonna maiala`, `dio lupo`); restano neutri senza concetto divino adiacente.
+- **Insulti e volgarità:** `vaffa` e `mortacci` isolati sono `medium` perché usati anche in tono scherzoso o esclamativo. Nuovi composti `checcazzo`/`eccheccazzo`, forme `ciucciacazzi`, `segone` (`medium`, omografo raro di grande sega) e la frase `ti scopo`/`ti sfondo`.
+- **Concatenati con cazzo:** il composto `delcazzo` è ancorato alla fine. Non si usa `cazzo` come composto o infix: all'inizio colpirebbe Cazzola, e un composto uguale alla parola duplicherebbe i match scavalcando le eccezioni su `it.sexual.cazzo`. Anche `dicazzo` è escluso perché si sovrappone a `testadicazzo`.
+- **Discriminatori:** `lesbicona` e `muso giallo` sono `high`. `travone` (trave grande), `giudeo` (usi storici), `zingaro` (esonimo anche descrittivo, e cognome) e `spastico` (termine medico) sono `medium`: review in balanced, mai blocco automatico. `ritardato` è escluso (treno ritardato).
+- **Eufemismi lievi:** `cacchio`, `porca miseria` e `porca vacca` passano a confidenza `high` con gravità 1. Il match resta nei risultati, balanced e lenient consentono il testo, strict lo blocca.
+- **Eccezioni:** `minchilli` (cognome) per la radice infix `minchi`.
+
+L'audit ha trovato solo le collisioni attese di `zingaro` con i cognomi Zingaro e Zingari, accettate individualmente come `review`. Le elusioni con `k` e con uno o due asterischi interni sono ora coperte dal motore (D27), con fixture dedicate in `data/fixtures/masking.jsonl`. Il riconoscimento resta deliberatamente conservativo: tre o più asterischi e separatori arbitrari non vengono trattati come maschere. La vista alternativa con uno o due dollari interni (`ca$$o`) è descritta in D28 e non perde la grafia inglese `a$$hole`.

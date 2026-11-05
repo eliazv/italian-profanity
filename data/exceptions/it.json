@@ -10,6 +10,11 @@
       "ruleId": "it.blasphemy.divine-insult",
       "word": "canidio",
       "reason": "Nome nel corpus di audit: soppressione limitata alla singola parola e regola."
+    },
+    {
+      "ruleId": "it.vulgar.minchia",
+      "word": "minchilli",
+      "reason": "Cognome pugliese: la radice infix minchi non indica qui un'espressione volgare."
     }
   ]
 }

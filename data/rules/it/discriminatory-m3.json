@@ -120,6 +120,56 @@
       "terms": ["frociarola", "frociarolo", "frociara", "frociaro", "frociaroli", "frociarole"],
       "provenance": ["manual"],
       "note": "Curazione manuale M3: forma denigratoria o stereotipo contestuale. Non includere i nomi neutrali delle identità."
+    },
+    {
+      "id": "it.discriminatory.lesbicona",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "high",
+      "terms": ["lesbicona", "lesbicone"],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: accrescitivo denigratorio; il termine identitario lesbica resta neutro."
+    },
+    {
+      "id": "it.discriminatory.travone",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["travone", "travoni"],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: ingiuria transfobica, ma omografo di trave grande in edilizia: review in balanced."
+    },
+    {
+      "id": "it.discriminatory.giudeo",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 3,
+      "confidence": "medium",
+      "terms": ["giudeo", "giudei"],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: oggi usato soprattutto in senso spregiativo, ma con usi storici e biblici: review in balanced. Giudea (regione) non è inclusa."
+    },
+    {
+      "id": "it.discriminatory.zingaro",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["zingaro", "zingara", "zingari", "zingare"],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: esonimo percepito come spregiativo dalle comunità rom e sinti, ma anche descrittivo nell'uso comune: review in balanced, mai blocco automatico."
+    },
+    {
+      "id": "it.discriminatory.spastico",
+      "kind": "word",
+      "category": "discriminatory",
+      "severity": 2,
+      "confidence": "medium",
+      "terms": ["spastico", "spastica", "spastici", "spastiche"],
+      "provenance": ["manual"],
+      "note": "Curazione 0.4: usato come insulto abilista, ma anche termine medico: review in balanced. Ritardato è escluso (treno ritardato)."
     }
   ]
 }

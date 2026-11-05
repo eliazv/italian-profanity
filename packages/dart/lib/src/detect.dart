@@ -25,10 +25,12 @@ class _Pattern {
 }
 
 class _View {
-  _View(this.chars, this.origins, this.flexible, [this.trimmed = false]);
+  _View(this.chars, this.origins, this.flexible,
+      [this.trimmed = false, this.masked = false]);
   final List<String> chars;
   final List<TextRange> origins;
   final bool flexible;
+  final bool masked;
 
   /// Vista senza le cifre esterne: usata solo se le viste complete non trovano
   /// la regola.
@@ -78,6 +80,20 @@ class _PreparedRule {
 
 // Stesso confronto per sequenze del motore TS: nessuna riduzione delle doppie.
 int? _consume(_View view, _Pattern term, [int start = 0]) {
+  // Ogni asterisco interno corrisponde a un solo carattere, senza squeeze.
+  if (view.masked) {
+    var cursor = start;
+    for (final run in term.runs) {
+      for (var index = 0; index < run.count; index++) {
+        if (cursor >= view.chars.length ||
+            (view.chars[cursor] != run.char && view.chars[cursor] != '*')) {
+          return null;
+        }
+        cursor++;
+      }
+    }
+    return cursor;
+  }
   var cursor = start;
   for (var index = 0; index < term.runs.length; index++) {
     final run = term.runs[index];
@@ -236,12 +252,97 @@ bool _isJoined(_View view, Segment part) {
   return words > 1;
 }
 
+// Uno o due asterischi interni a una parola, senza jolly tra separatori.
+final _maskedLetterOrDigit = RegExp(r'^[a-z0-9]$');
+final _maskedAllowed = RegExp(r'^[a-z0-9*]$');
+
+_View? _maskedView(Segment part, String input) {
+  if (part.kind != 'word') return null;
+  final source = input.substring(part.range.start, part.range.end);
+  if (!source.contains('*')) return null;
+  final chars = <String>[];
+  final origins = <TextRange>[];
+  for (final unit in foldWithOrigins(source, source.runes.length)) {
+    final value = leetTable[unit.char] ?? unit.char;
+    for (final code in value.runes) {
+      chars.add(String.fromCharCode(code));
+      origins.add(TextRange(part.range.start + unit.range.start,
+          part.range.start + unit.range.end));
+    }
+  }
+  final masks = chars.where((char) => char == '*').length;
+  if (masks < 1 ||
+      masks > 2 ||
+      chars.length < 3 ||
+      !_maskedLetterOrDigit.hasMatch(chars.first) ||
+      !_maskedLetterOrDigit.hasMatch(chars.last) ||
+      chars.any((char) => !_maskedAllowed.hasMatch(char))) {
+    return null;
+  }
+  return _View(chars, origins, false, false, true);
+}
+
+// Un dollaro puo indicare z, ma la vista originale mantiene $ -> s.
+_View? _dollarView(Segment part, String input) {
+  if (part.kind != 'word') return null;
+  final source = input.substring(part.range.start, part.range.end);
+  if (!source.contains(r'$')) return null;
+  final chars = <String>[];
+  final origins = <TextRange>[];
+  var dollars = 0;
+  for (final unit in foldWithOrigins(source, source.runes.length)) {
+    if (unit.char == r'$') dollars++;
+    final value = unit.char == r'$' ? 'z' : (leetTable[unit.char] ?? unit.char);
+    for (final code in value.runes) {
+      chars.add(String.fromCharCode(code));
+      origins.add(TextRange(part.range.start + unit.range.start,
+          part.range.start + unit.range.end));
+    }
+  }
+  if (dollars < 1 ||
+      dollars > 2 ||
+      chars.length < 3 ||
+      !_maskedLetterOrDigit.hasMatch(chars.first) ||
+      !_maskedLetterOrDigit.hasMatch(chars.last) ||
+      chars.any((char) => !_maskedLetterOrDigit.hasMatch(char))) {
+    return null;
+  }
+  return _View(chars, origins, false);
+}
+
 List<_View> _views(Segment part, String input) {
   final base = _View(part.base.runes.map(String.fromCharCode).toList(),
       part.baseOrigins, false);
   final deleet = _View(part.deleet.runes.map(String.fromCharCode).toList(),
       part.deleetOrigins, true);
-  final all = [base, deleet, ..._trimmedViews(part, base, deleet, input)];
+  final trimmed = _trimmedViews(part, base, deleet, input);
+  // Conserva la grafia inglese originale: la k->c e' solo un'alternativa.
+  final kViews = <_View>[
+    for (final view in [deleet, ...trimmed.where((view) => view.flexible)])
+      if (view.chars.contains('k'))
+        _View([for (final char in view.chars) char == 'k' ? 'c' : char],
+            view.origins, view.flexible, view.trimmed)
+  ];
+  final dollar = _dollarView(part, input);
+  final dollarK = dollar != null && dollar.chars.contains('k')
+      ? _View([for (final char in dollar.chars) char == 'k' ? 'c' : char],
+          dollar.origins, false)
+      : null;
+  final masked = _maskedView(part, input);
+  final maskedK = masked != null && masked.chars.contains('k')
+      ? _View([for (final char in masked.chars) char == 'k' ? 'c' : char],
+          masked.origins, false, false, true)
+      : null;
+  final all = [
+    base,
+    deleet,
+    ...trimmed,
+    ...kViews,
+    if (dollar != null) dollar,
+    if (dollarK != null) dollarK,
+    if (masked != null) masked,
+    if (maskedK != null) maskedK
+  ];
   for (final view in all) {
     view.joined = _isJoined(view, part);
   }
