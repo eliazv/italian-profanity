@@ -292,22 +292,13 @@ List<_View> _views(Segment part, String input) {
   final kViews = <_View>[
     for (final view in [deleet, ...trimmed.where((view) => view.flexible)])
       if (view.chars.contains('k'))
-        _View(
-            [
-              for (final char in view.chars) char == 'k' ? 'c' : char
-            ],
-            view.origins,
-            view.flexible,
-            view.trimmed)
+        _View([for (final char in view.chars) char == 'k' ? 'c' : char],
+            view.origins, view.flexible, view.trimmed)
   ];
   final masked = _maskedView(part, input);
   final maskedK = masked != null && masked.chars.contains('k')
-      ? _View(
-          [for (final char in masked.chars) char == 'k' ? 'c' : char],
-          masked.origins,
-          false,
-          false,
-          true)
+      ? _View([for (final char in masked.chars) char == 'k' ? 'c' : char],
+          masked.origins, false, false, true)
       : null;
   final all = [
     base,
