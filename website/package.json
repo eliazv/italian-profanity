@@ -12,6 +12,6 @@
     "@fontsource-variable/bricolage-grotesque": "5.3.0",
     "@fontsource-variable/jetbrains-mono": "5.3.0",
     "astro": "7.4.5",
-    "italian-profanity": "0.3.0"
+    "italian-profanity": "0.4.0"
   }
 }

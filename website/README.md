@@ -25,4 +25,4 @@ If the site is ever taken down, delete the CNAME record too, so the subdomain ca
 
 ## Dependencies
 
-The playground imports the real npm package, currently pinned to 0.3.0. Update that pin deliberately after a library release. The website does not send user text to a server.
+Il playground importa il pacchetto npm reale, fissato alla versione 0.4.0. Aggiornare il vincolo e `package-lock.json` dopo ogni rilascio della libreria. Le FAQ e i testi delle funzionalità in italiano e inglese descrivono le viste anti-elusione della 0.4.0 e le radici `infix` curate. Il sito non invia il testo degli utenti a un server.
