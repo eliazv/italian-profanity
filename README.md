@@ -4,6 +4,8 @@
 
 [![npm](https://img.shields.io/npm/v/italian-profanity?label=npm)](https://www.npmjs.com/package/italian-profanity) [![pub.dev](https://img.shields.io/pub/v/italian_profanity?label=pub.dev)](https://pub.dev/packages/italian_profanity)
 
+[🌐 Website & live playground](https://eliazv.github.io/italian-profanity/) · [Developer docs](https://eliazv.github.io/italian-profanity/docs/)
+
 Italian-first profanity detection for short user-generated text — nicknames, usernames, room and team names. Same rules and same verdicts in **TypeScript** and **Dart/Flutter**.
 
 - Precision first: whole-word rules, explicit exceptions and an audit on Italian names, surnames and common words.
