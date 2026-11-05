@@ -48,19 +48,28 @@ final result = checker.check('D10 p0rc0');
 // result.action == Action.block
 ```
 
-**Aggiornamento dalla beta:** la 0.1.0 amplia il lessico e può cambiare gli esiti. Consultare il changelog e il [confronto di comportamento](data/releases/0.1.0/behavior-diff.md) prima dell’aggiornamento.
+**Aggiornamenti e compatibilità:** le nuove versioni possono cambiare gli esiti del filtro. Consultare il [changelog](packages/js/CHANGELOG.md) e i [confronti di comportamento](data/releases/) prima di aggiornare applicazioni in produzione.
 
 Keywords: profanity, italian, parolacce, bestemmie, insulti, moderation, nickname, username, validation, flutter, dart.
 
 ## Installazione
 
 ```sh
-npm install --save-exact italian-profanity@0.1.0
+npm install italian-profanity
 ```
 
-```yaml
-dependencies:
-  italian_profanity: 0.1.0
+Per salvare esattamente la versione `latest` disponibile al momento dell'installazione:
+
+```sh
+npm install --save-exact italian-profanity@latest
+```
+
+Per Dart o Flutter:
+
+```sh
+dart pub add italian_profanity
+# oppure, in un progetto Flutter:
+flutter pub add italian_profanity
 ```
 
 La [guida d'integrazione](docs/integrazione.md) descrive configurazione condivisa client/server, gestione di `review`, limiti e migrazione dei vecchi filtri. Il dataset inglese curato va attivato con `languages: ["it", "en"]`; `languages: ["en"]` seleziona solo l’inglese. Le librerie esterne sono riferimenti di curazione, senza dipendenze a runtime. Non viene promessa copertura equivalente alle loro liste. Il [rapporto di consolidamento](docs/consolidamento-2026-11-04.md) documenta fonti, controlli e limiti.
