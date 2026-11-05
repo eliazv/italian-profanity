@@ -241,6 +241,37 @@ function maskedView(part: Segment, input: string): View | undefined {
   return { chars, origins, flexible: false, masked: true }
 }
 
+// $ can represent z (ca$$o) while the original deleet retains $ as s.
+function dollarView(part: Segment, input: string): View | undefined {
+  if (part.kind !== "word") return undefined
+  const source = input.slice(part.range.start, part.range.end)
+  if (!source.includes("$")) return undefined
+  const chars: string[] = []
+  const origins: Range[] = []
+  let dollars = 0
+  for (const unit of foldWithOrigins(source, Math.max(1, [...source].length))) {
+    if (unit.char === "$") dollars++
+    const value = unit.char === "$" ? "z" : (LEET[unit.char] ?? unit.char)
+    for (const char of value) {
+      chars.push(char)
+      origins.push({
+        start: part.range.start + unit.range.start,
+        end: part.range.start + unit.range.end,
+      })
+    }
+  }
+  if (
+    dollars < 1 ||
+    dollars > 2 ||
+    chars.length < 3 ||
+    !/^[a-z0-9]$/.test(chars[0] ?? "") ||
+    !/^[a-z0-9]$/.test(chars.at(-1) ?? "") ||
+    chars.some((char) => !/^[a-z0-9]$/.test(char))
+  )
+    return undefined
+  return { chars, origins, flexible: false }
+}
+
 function views(part: Segment, input: string): View[] {
   const base: View = { chars: [...part.base], origins: part.baseOrigins, flexible: false }
   const deleet: View = { chars: [...part.deleet], origins: part.deleetOrigins, flexible: true }
@@ -255,6 +286,10 @@ function views(part: Segment, input: string): View[] {
         chars: view.chars.map((char) => (char === "k" ? "c" : char)),
       }),
     )
+  const dollar = dollarView(part, input)
+  const dollarK: View | undefined = dollar?.chars.includes("k")
+    ? { ...dollar, chars: dollar.chars.map((char) => (char === "k" ? "c" : char)) }
+    : undefined
   const masked = maskedView(part, input)
   const maskedK: View | undefined = masked?.chars.includes("k")
     ? { ...masked, chars: masked.chars.map((char) => (char === "k" ? "c" : char)) }
@@ -264,6 +299,8 @@ function views(part: Segment, input: string): View[] {
     deleet,
     ...trimmed,
     ...kViews,
+    ...(dollar ? [dollar] : []),
+    ...(dollarK ? [dollarK] : []),
     ...(masked ? [masked] : []),
     ...(maskedK ? [maskedK] : []),
   ]

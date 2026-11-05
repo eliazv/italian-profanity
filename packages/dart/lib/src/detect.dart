@@ -282,6 +282,34 @@ _View? _maskedView(Segment part, String input) {
   return _View(chars, origins, false, false, true);
 }
 
+// Dollar can stand for z (ca$$o), keeping the original $ -> s alternative.
+_View? _dollarView(Segment part, String input) {
+  if (part.kind != 'word') return null;
+  final source = input.substring(part.range.start, part.range.end);
+  if (!source.contains('$')) return null;
+  final chars = <String>[];
+  final origins = <TextRange>[];
+  var dollars = 0;
+  for (final unit in foldWithOrigins(source, source.runes.length)) {
+    if (unit.char == '$') dollars++;
+    final value = unit.char == '$' ? 'z' : (leetTable[unit.char] ?? unit.char);
+    for (final code in value.runes) {
+      chars.add(String.fromCharCode(code));
+      origins.add(TextRange(part.range.start + unit.range.start,
+          part.range.start + unit.range.end));
+    }
+  }
+  if (dollars < 1 ||
+      dollars > 2 ||
+      chars.length < 3 ||
+      !_maskedLetterOrDigit.hasMatch(chars.first) ||
+      !_maskedLetterOrDigit.hasMatch(chars.last) ||
+      chars.any((char) => !_maskedLetterOrDigit.hasMatch(char))) {
+    return null;
+  }
+  return _View(chars, origins, false);
+}
+
 List<_View> _views(Segment part, String input) {
   final base = _View(part.base.runes.map(String.fromCharCode).toList(),
       part.baseOrigins, false);
@@ -295,6 +323,11 @@ List<_View> _views(Segment part, String input) {
         _View([for (final char in view.chars) char == 'k' ? 'c' : char],
             view.origins, view.flexible, view.trimmed)
   ];
+  final dollar = _dollarView(part, input);
+  final dollarK = dollar != null && dollar.chars.contains('k')
+      ? _View([for (final char in dollar.chars) char == 'k' ? 'c' : char],
+          dollar.origins, false)
+      : null;
   final masked = _maskedView(part, input);
   final maskedK = masked != null && masked.chars.contains('k')
       ? _View([for (final char in masked.chars) char == 'k' ? 'c' : char],
@@ -305,6 +338,8 @@ List<_View> _views(Segment part, String input) {
     deleet,
     ...trimmed,
     ...kViews,
+    if (dollar != null) dollar,
+    if (dollarK != null) dollarK,
     if (masked != null) masked,
     if (maskedK != null) maskedK
   ];

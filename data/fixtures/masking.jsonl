@@ -27,3 +27,11 @@
 {"id":"masking-027","input":"Kilimangiaro","profile":"balanced","mustNotMatch":["it.insult.fanculo"],"note":"D27: negativo vicino"}
 {"id":"masking-028","input":"d1ckhead","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.insult.dickhead"],"note":"D27: preservare grafia inglese in presenza di leet"}
 {"id":"masking-029","input":"f*ck","languages":["it","en"],"profile":"balanced","action":"block","rules":["en.vulgar.fuck"],"note":"D27: asterisco con k reale, preservare la forma inglese"}
+{"id":"masking-030","input":"ca$$o","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-031","input":"ca$zo","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-032","input":"c4$$0","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-033","input":"k4$$0","profile":"balanced","action":"block","rules":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-034","input":"a$$hole","profile":"balanced","languages":["it","en"],"action":"block","rules":["en.insult.asshole"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-035","input":"ca$$ola","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-036","input":"ca$$otto","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
+{"id":"masking-037","input":"ma$$a","profile":"balanced","action":"allow","mustNotMatch":["it.sexual.cazzo"],"note":"D28: dollaro come z senza perdere la lettura s"}
