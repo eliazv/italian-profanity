@@ -29,23 +29,43 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: 24
       - name: Test download snapshot accounting
         run: node --test tools/update-download-stats.test.mjs
+      - name: Restore previous snapshots from the data branch
+        if: github.event_name != 'pull_request'
+        run: |
+          if git fetch origin refs/heads/download-stats:refs/remotes/origin/download-stats; then
+            git show refs/remotes/origin/download-stats:stats/downloads-history.json > stats/downloads-history.json
+            git show refs/remotes/origin/download-stats:website/public/stats/downloads.json > website/public/stats/downloads.json
+          else
+            echo "No archive branch yet; initializing from the repository."
+          fi
       - name: Refresh package download totals
         if: github.event_name != 'pull_request'
         run: node tools/update-download-stats.mjs
-      - name: Preserve daily download history
+      - name: Preserve history on the unprotected data branch
         if: github.event_name != 'pull_request'
         run: |
-          if ! git diff --quiet -- website/public/stats/downloads.json stats/downloads-history.json; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add website/public/stats/downloads.json stats/downloads-history.json
-            git commit -m "Aggiorna storico download pacchetti"
-            git push
+          SNAPSHOT_DIR="$RUNNER_TEMP/download-stats-worktree"
+          if git show-ref --quiet refs/remotes/origin/download-stats; then
+            git worktree add --detach "$SNAPSHOT_DIR" refs/remotes/origin/download-stats
+          else
+            git worktree add --detach "$SNAPSHOT_DIR" HEAD
+          fi
+          cp website/public/stats/downloads.json "$SNAPSHOT_DIR/website/public/stats/downloads.json"
+          cp stats/downloads-history.json "$SNAPSHOT_DIR/stats/downloads-history.json"
+          cd "$SNAPSHOT_DIR"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add website/public/stats/downloads.json stats/downloads-history.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Aggiorna snapshot giornalieri dei download"
+            git push origin HEAD:refs/heads/download-stats
           fi
       - name: Install isolated website dependencies
         working-directory: website
