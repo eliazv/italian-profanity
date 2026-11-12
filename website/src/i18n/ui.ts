@@ -38,6 +38,7 @@ export const ui = {
       intro: "Spots bestemmie, insults and tricks like “D10&nbsp;p0rc0” in usernames — and leaves Claudio and Diodato alone.",
       tabs: "Package manager",
       docs: "Read the docs",
+      downloads: "Total downloads",
     },
     playground: {
       title: "Try it",
@@ -99,6 +100,7 @@ export const ui = {
       intro: "Riconosce bestemmie, insulti e trucchi come “D10&nbsp;p0rc0” negli username, e lascia passare Claudio e Diodato.",
       tabs: "Gestore di pacchetti",
       docs: "Documentazione",
+      downloads: "Download complessivi",
     },
     playground: {
       title: "Provalo",

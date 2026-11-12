@@ -26,3 +26,13 @@ If the site is ever taken down, delete the CNAME record too, so the subdomain ca
 ## Dependencies
 
 Il playground importa il pacchetto npm reale, fissato alla versione 0.4.0. Aggiornare il vincolo e `package-lock.json` dopo ogni rilascio della libreria. Le FAQ e i testi delle funzionalità in italiano e inglese descrivono le viste anti-elusione della 0.4.0 e le radici `infix` curate. Il sito non invia il testo degli utenti a un server.
+
+## Contatore download
+
+Un solo contatore nella hero mostra la somma cumulativa dei download npm e pub.dev. L'animazione parte quando il dato entra nello schermo, viene saltata con `prefers-reduced-motion` e il numero è formattato nella lingua corrente.
+
+Il workflow GitHub Pages aggiorna ogni giorno `website/public/stats/downloads.json` e archivia uno snapshot giornaliero in `stats/downloads-history.json`. Non serve un DB, un token npm o un backend. Il browser legge solo il JSON statico del sito.
+
+npm: API pubblica per finestre dalla data della prima pubblicazione. pub.dev: dato ufficiale a 30 giorni durante il primo mese e serie settimanale pubblica (non ufficialmente garantita) fino a 52 settimane. Superato l'anno, un totale precedente conservato consente di recuperare la parte precedente alla finestra; in assenza di una fonte affidabile il job mantiene l'ultimo totale noto, senza spacciare una finestra mobile per il totale storico. I download non rappresentano utenti unici.
+
+Per un aggiornamento manuale: GitHub Actions → `Website (Astro + GitHub Pages)` → Run workflow.
