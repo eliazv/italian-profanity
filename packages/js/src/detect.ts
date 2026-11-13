@@ -1,3 +1,4 @@
+import { lastItem } from "./compat.ts"
 import { EXCEPTIONS, LEET, RULES } from "./generated/data.ts"
 import { foldWithOrigins } from "./normalize.ts"
 import { applyPolicy } from "./policy.ts"
@@ -31,7 +32,7 @@ interface PreparedRule {
 function pattern(term: string): Pattern {
   const runs: Pattern["runs"] = []
   for (const char of term) {
-    const last = runs.at(-1)
+    const last = lastItem(runs)
     if (last?.char === char) last.count++
     else runs.push({ char, count: 1 })
   }
@@ -146,7 +147,7 @@ function trimmedViews(part: Segment, base: View, deleet: View, input: string): V
   }
   const lettered = part.fragments.filter((fragment) => !isDigitText(fragment.text))
   const first = lettered[0]
-  const last = lettered.at(-1)
+  const last = lastItem(lettered)
   if (first && last && lettered.length < part.fragments.length)
     spans.push({ start: first.range.start, end: last.range.end })
   // I frammenti uniti dalla punteggiatura (`sborra_verde`, `adolf-nigger`) danno
@@ -234,7 +235,7 @@ function maskedView(part: Segment, input: string): View | undefined {
     masks > 2 ||
     chars.length < 3 ||
     !/^[a-z0-9]$/.test(chars[0] ?? "") ||
-    !/^[a-z0-9]$/.test(chars.at(-1) ?? "") ||
+    !/^[a-z0-9]$/.test(lastItem(chars) ?? "") ||
     chars.some((char) => !/^[a-z0-9*]$/.test(char))
   )
     return undefined
@@ -265,7 +266,7 @@ function dollarView(part: Segment, input: string): View | undefined {
     dollars > 2 ||
     chars.length < 3 ||
     !/^[a-z0-9]$/.test(chars[0] ?? "") ||
-    !/^[a-z0-9]$/.test(chars.at(-1) ?? "") ||
+    !/^[a-z0-9]$/.test(lastItem(chars) ?? "") ||
     chars.some((char) => !/^[a-z0-9]$/.test(char))
   )
     return undefined
@@ -460,7 +461,7 @@ export function createChecker(options: CheckerOptions = {}): Checker {
             })
             if (matched.every((view) => view !== undefined)) {
               const first = matched[0]
-              const last = matched.at(-1)
+              const last = lastItem(matched)
               const start = first ? interval(first)?.start : undefined
               const end = last ? interval(last)?.end : undefined
               if (start !== undefined && end !== undefined) add(rule, { start, end })
