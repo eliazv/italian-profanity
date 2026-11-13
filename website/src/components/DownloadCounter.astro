@@ -1,0 +1,57 @@
+---
+import { root, ui, type Lang } from "../i18n/ui";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<div class="hero-download-count" data-download-count data-stats-url={root + "stats/downloads.json"} data-locale={lang} data-label={ui[lang].hero.downloads} hidden>
+  <span class="hero-download-icon" aria-hidden="true">↓</span>
+  <strong class="hero-download-value" data-download-value aria-hidden="true">0</strong>
+  <span class="hero-download-caption">{ui[lang].hero.downloads}</span>
+  <span class="visually-hidden" data-download-announcement aria-live="polite"></span>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-download-count]").forEach(async (element) => {
+    const value = element.querySelector<HTMLElement>("[data-download-value]");
+    const announcement = element.querySelector<HTMLElement>("[data-download-announcement]");
+    if (!value || !announcement) return;
+    try {
+      const response = await fetch(element.dataset.statsUrl ?? "");
+      if (!response.ok) return;
+      const stats: { total?: unknown } = await response.json();
+      if (typeof stats.total !== "number" || !Number.isSafeInteger(stats.total) || stats.total < 0) return;
+      const total = stats.total;
+      const format = new Intl.NumberFormat(element.dataset.locale === "it" ? "it-IT" : "en-US");
+      const showFinal = () => {
+        value.textContent = format.format(total);
+        announcement.textContent = format.format(total) + " " + (element.dataset.label ?? "");
+      };
+      element.hidden = false;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || total === 0) {
+        showFinal();
+        return;
+      }
+      const animate = () => {
+        let startedAt: number | undefined;
+        const frame = (now: number) => {
+          startedAt ??= now;
+          const progress = Math.min(1, (now - startedAt) / 1250);
+          value.textContent = format.format(Math.floor(total * (1 - (1 - progress) ** 3)));
+          if (progress < 1) requestAnimationFrame(frame);
+          else showFinal();
+        };
+        requestAnimationFrame(frame);
+      };
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          observer.disconnect();
+          animate();
+        }, { threshold: 0.25 });
+        observer.observe(element);
+      } else animate();
+    } catch {
+      // The landing remains usable if the static statistics file is unavailable.
+    }
+  });
+</script>

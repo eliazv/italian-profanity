@@ -1,5 +1,6 @@
 ---
 import Icon from "./Icon.astro";
+import DownloadCounter from "./DownloadCounter.astro";
 import { pageHref, ui, type Lang } from "../i18n/ui";
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -24,12 +25,13 @@ const t = ui[lang];
       </div>
       <a class="button button-dark" href={pageHref(lang, "docs/")}>{t.hero.docs}</a>
     </div>
+    <DownloadCounter lang={lang} />
   </div>
 
   <section class="playground-card" id="playground" aria-labelledby="playground-title">
     <div class="playground-header">
       <h2 class="playground-header-title" id="playground-title"><span class="live-led" aria-hidden="true"></span> {t.playground.title}</h2>
-      <span class="playground-header-meta">{t.playground.meta} · <span id="demo-version">…</span></span>
+      <span class="playground-header-meta">{t.playground.meta}</span>
     </div>
     <div class="playground-body">
       <textarea id="demo-input" class="demo-input" rows="1" maxlength="120" spellcheck="false" autocomplete="off" aria-label={t.playground.input} placeholder={t.playground.placeholder}>Claudio</textarea>
