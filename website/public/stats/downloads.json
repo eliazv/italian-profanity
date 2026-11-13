@@ -1,6 +1,13 @@
 {
-  "updatedAt": null,
-  "total": null,
-  "npm": null,
-  "pubDev": null
+  "updatedAt": "2026-11-13T18:39:11.649Z",
+  "total": 2312,
+  "npm": {
+    "total": 1517,
+    "through": "2026-11-11"
+  },
+  "pubDev": {
+    "total": 795,
+    "through": "2026-11-12",
+    "method": "new-package-30d"
+  }
 }
