@@ -1,4 +1,4 @@
-import { createChecker, VERSION } from "italian-profanity";
+import { createChecker } from "italian-profanity";
 import type { Profile } from "italian-profanity";
 
 // Playground copy for the page language (<html lang>); the default is English.
@@ -47,9 +47,8 @@ const description = document.querySelector<HTMLElement>("#demo-explanation");
 const icon = document.querySelector<HTMLElement>("#demo-status-icon");
 const count = document.querySelector<HTMLElement>("#demo-match-count");
 const matchesContainer = document.querySelector<HTMLElement>("#demo-matches");
-const version = document.querySelector<HTMLElement>("#demo-version");
 
-const elements = [input, profileInput, languageInput, output, actionLabel, description, icon, count, matchesContainer, version];
+const elements = [input, profileInput, languageInput, output, actionLabel, description, icon, count, matchesContainer];
 
 if (elements.every(Boolean)) {
   // Assertions only after the full element set has been checked.
@@ -62,9 +61,6 @@ if (elements.every(Boolean)) {
   const stateIcon = icon!;
   const matchedCount = count!;
   const chips = matchesContainer!;
-  const versionLabel = version!;
-
-  versionLabel.textContent = "v" + VERSION;
 
   const clearMatches = () => {
     chips.replaceChildren();
