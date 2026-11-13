@@ -1,3 +1,4 @@
+import { lastItem } from "./compat.ts"
 import { LEET } from "./generated/data.ts"
 import { foldWithOrigins, mergeSurrogatePairs, type OriginChar } from "./normalize.ts"
 import type { Range } from "./types.ts"
@@ -63,13 +64,13 @@ function isSeparator(char: string): boolean {
 }
 
 function span(units: OriginChar[]): Range {
-  return { start: units[0]?.range.start ?? 0, end: units.at(-1)?.range.end ?? 0 }
+  return { start: units[0]?.range.start ?? 0, end: lastItem(units)?.range.end ?? 0 }
 }
 
 function repetitions(units: OriginChar[]): Repetition[] {
   const result: Repetition[] = []
   for (const unit of units) {
-    const last = result.at(-1)
+    const last = lastItem(result)
     if (last && isLetter(unit.char) && last.char === unit.char) {
       last.count++
       last.range.end = unit.range.end

@@ -2,7 +2,7 @@ name: italian_profanity
 description: >-
   Italian profanity detection for nicknames and short text. Blasphemy-aware,
   offline, zero runtime dependencies. Matching Dart/Flutter and TypeScript engines.
-version: 0.4.0
+version: 0.4.1
 repository: https://github.com/eliazv/italian-profanity/tree/master/packages/dart
 homepage: https://italian-profanity.eliazavatta.it/
 documentation: https://github.com/eliazv/italian-profanity/blob/master/docs/integrazione.md

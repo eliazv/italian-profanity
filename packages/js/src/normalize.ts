@@ -1,3 +1,4 @@
+import { lastItem } from "./compat.ts"
 import { FOLD } from "./generated/data.ts"
 import type { Range } from "./types.ts"
 
@@ -11,7 +12,7 @@ export interface OriginChar {
 export function mergeSurrogatePairs(units: OriginChar[]): OriginChar[] {
   const output: OriginChar[] = []
   for (const unit of units) {
-    const previous = output.at(-1)
+    const previous = lastItem(output)
     const high = previous?.char.charCodeAt(0) ?? 0
     const low = unit.char.charCodeAt(0)
     if (
@@ -49,7 +50,7 @@ export function foldWithOrigins(input: string, maxLength = 64): OriginChar[] {
     // anche quando questo si è espanso in più punti di codice.
     const code = char.codePointAt(0) ?? 0
     if (value === "" && code >= 0x0300 && code <= 0x036f) {
-      const previous = output.at(-1)
+      const previous = lastItem(output)
       if (previous) {
         const originStart = previous.range.start
         for (let index = output.length - 1; index >= 0; index--) {
