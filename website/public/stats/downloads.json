@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-11-13T18:39:11.649Z",
-  "total": 2312,
+  "updatedAt": "2026-11-14T12:10:33.488Z",
+  "total": 2350,
   "npm": {
-    "total": 1517,
-    "through": "2026-11-11"
+    "total": 1552,
+    "through": "2026-11-12"
   },
   "pubDev": {
-    "total": 795,
-    "through": "2026-11-12",
+    "total": 798,
+    "through": "2026-11-13",
     "method": "new-package-30d"
   }
 }
