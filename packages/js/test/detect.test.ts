@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest"
 import { loadFixtureFiles } from "../../../tools/lib/data.ts"
-import { check, createChecker, findMatches, isClean } from "../src/index.ts"
+import {
+  check,
+  createChecker,
+  findMatches,
+  isClean,
+  SHORT_MAX_LENGTH,
+  TEXT_MAX_LENGTH,
+} from "../src/index.ts"
 import type { Category, Severity } from "../src/types.ts"
 
 const fixtures = loadFixtureFiles().flatMap((file) => file.fixtures.map(({ value }) => value))
@@ -47,6 +54,22 @@ describe("API pubblica e isolamento", () => {
       action: "allow",
       matches: [],
     })
+  })
+  it("in modalità text legge fino a 20.000 caratteri e rifiuta modalità ignote", () => {
+    expect(SHORT_MAX_LENGTH).toBe(64)
+    expect(TEXT_MAX_LENGTH).toBe(20_000)
+    const padded = " ".repeat(TEXT_MAX_LENGTH - sample.input.length) + sample.input
+    expect(check(padded, { mode: "text" }).matches).toEqual(
+      findMatches(sample.input).map((match) => ({
+        ...match,
+        range: {
+          start: match.range.start + padded.length - sample.input.length,
+          end: match.range.end + padded.length - sample.input.length,
+        },
+      })),
+    )
+    expect(check(" ".repeat(TEXT_MAX_LENGTH) + sample.input, { mode: "text" }).matches).toEqual([])
+    expect(() => createChecker({ mode: "long" as "text" })).toThrow(TypeError)
   })
   it("compila una copia indipendente delle opzioni dell'app", () => {
     const custom = fixtures.find(

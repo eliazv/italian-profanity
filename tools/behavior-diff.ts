@@ -35,6 +35,7 @@ const transitions: Record<string, number> = {}
 for (const fixture of fixtures) {
   const options: CheckerOptions = {
     profile: fixture.profile,
+    ...(fixture.mode && { mode: fixture.mode }),
     ...(fixture.languages && { languages: fixture.languages }),
     ...(fixture.contacts !== undefined && { contacts: fixture.contacts }),
     ...(fixture.maxLength !== undefined && { maxLength: fixture.maxLength }),

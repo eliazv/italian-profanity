@@ -60,6 +60,24 @@ bool isModeratedTextAllowed(String text) =>
 
 Il limite di 64 punti di codice tronca l'input analizzato. Il validatore dell'app deve rifiutare separatamente nomi troppo lunghi: il filtro non verifica il testo oltre il limite. Se si attiva `contacts`, URL, email e telefoni riconosciuti sono bloccati anche con i profili più permissivi; il rilevatore è euristico.
 
+## Descrizioni e testi lunghi
+
+Per descrizioni di eventi, bio, annunci e post usare una seconda istanza in modalità `text`, accanto a quella per nomi e titoli:
+
+```ts
+const shortText = createChecker({ profile: "balanced" })
+const longText = createChecker({ profile: "balanced", mode: "text" })
+
+const check = (value: string) =>
+  [...value].length <= 64 ? shortText.check(value) : longText.check(value)
+```
+
+```dart
+final longText = ItalianProfanity.createChecker(mode: InputMode.text);
+```
+
+`text` legge fino a 20.000 punti di codice (configurabile con `maxLength`) e in `balanced` trasforma in `review` i `block` di insulti, termini sessuali e volgarità: nelle descrizioni compaiono spesso in titoli di opere e citazioni ("La guerra è merda"). Bestemmie, termini discriminatori e contatti attivati continuano a bloccare. Se il contenuto non ha una coda di moderazione, l'app decide se pubblicare i `review` o trattenerli. I nomi propri locali che collidono con una regola si gestiscono con `exceptions` (D29).
+
 ## Copertura e sostituzione dei filtri
 
 L'italiano è attivo per default. L'inglese deve essere richiesto con `languages: ["it", "en"]`: contiene 51 regole curate, 110 forme e 20 varianti di frase. `["en"]` attiva soltanto l’inglese; non si installano librerie aggiuntive. La copertura non coincide con le liste esterne usate per confronto e non comprende automaticamente ogni termine o grafia. L’attivazione è logica: il pacchetto include già i dati di entrambe le lingue. I dialetti, incluso il romagnolo, non hanno ancora copertura dedicata.

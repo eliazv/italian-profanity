@@ -6,6 +6,12 @@ export type Confidence = "high" | "medium"
 export type RuleKind = "word" | "prefix" | "phrase" | "compound" | "combo" | "pattern"
 export type Action = "allow" | "review" | "block"
 export type Profile = "balanced" | "strict" | "lenient"
+/**
+ * `short` per nickname e titoli (limite 64); `text` per descrizioni e bio:
+ * limite 20.000 e blocco riservato a bestemmie, termini discriminatori e
+ * contatti, le altre categorie passano in revisione (D29).
+ */
+export type InputMode = "short" | "text"
 
 export interface ExtraRule {
   id?: string
@@ -18,8 +24,10 @@ export interface ExtraRule {
 
 export interface CheckerOptions {
   profile?: Profile
+  mode?: InputMode
   languages?: readonly ("it" | "en")[]
   contacts?: boolean
+  /** Predefinito: 64 in `short`, 20.000 in `text`. */
   maxLength?: number
   extraRules?: readonly ExtraRule[]
   exceptions?: readonly CompiledException[]

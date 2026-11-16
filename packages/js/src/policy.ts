@@ -1,8 +1,12 @@
 import type { Action, CheckerOptions, Match } from "./types.ts"
 
+/** Categorie che bloccano anche in modalità `text` (D29). */
+const TEXT_BLOCKING: ReadonlyArray<Match["category"]> = ["blasphemy", "discriminatory", "contact"]
+
 /** La policy non altera né elimina i match rilevati. */
 export function applyPolicy(matches: Match[], options: CheckerOptions): Action {
   const profile = options.profile ?? "balanced"
+  const text = options.mode === "text"
   let action: Action = "allow"
   for (const match of matches) {
     const threshold = options.thresholds?.[match.category]
@@ -20,8 +24,11 @@ export function applyPolicy(matches: Match[], options: CheckerOptions): Action {
       profile === "lenient" ||
       match.category === "contact" ||
       match.severity >= 2
-    )
-      return "block"
+    ) {
+      if (text && threshold === undefined && !TEXT_BLOCKING.includes(match.category))
+        action = "review"
+      else return "block"
+    }
   }
   return action
 }

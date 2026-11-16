@@ -33,6 +33,8 @@ Non blocca nomi innocui (Claudio, Diodato, Porcedda) e riconosce le elusioni pi�
 
 La 0.4.0 riconosce anche fino a due asterischi interni, k al posto di c e fino a due dollari come z, conservando le grafie inglesi originali. Le regole possono dichiarare radici `infix` curate; gli eufemismi lievi restano segnalati ma consentiti in `balanced`.
 
+Per descrizioni, bio e annunci c'è `mode: "text"`: legge fino a 20.000 caratteri e in `balanced` blocca solo bestemmie, termini discriminatori e contatti, mandando in `review` insulti e volgarità, che nei testi lunghi compaiono spesso in titoli e citazioni legittime.
+
 **Limite dichiarato:** è un controllo lessicale. Un testo senza match non è necessariamente appropriato, e la moderazione umana resta necessaria.
 
 Pacchetti: npm [`italian-profanity`](https://www.npmjs.com/package/italian-profanity) · pub.dev [`italian_profanity`](https://pub.dev/packages/italian_profanity).

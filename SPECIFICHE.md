@@ -32,6 +32,7 @@ Ho svolto la ricerca il 2026-11-03: le fonti dettagliate sono al §10 e nella re
 
 **In v0.1**
 - Riconoscimento lessicale su testi brevi, con un limite predefinito di 64 caratteri configurabile.
+- Modalità `text` per descrizioni, bio e post: stesso rilevatore, limite di 20.000 caratteri e policy che blocca solo bestemmie, termini discriminatori e contatti (D29).
 - Categorie: `blasphemy`, `insult`, `sexual`, `discriminatory`, `vulgar`.
 - Rilevatore facoltativo di **contatti**: URL, email e numeri di telefono. Serve per i nickname ed è disattivato per default.
 - Profili di policy e personalizzazioni dell'app (termini aggiuntivi, eccezioni).
@@ -39,7 +40,7 @@ Ho svolto la ricerca il 2026-11-03: le fonti dettagliate sono al §10 e nella re
 
 **Rimandato a dopo la v0.1**: `mask()`, CLI di scansione, dialetti (il primo sarà il romagnolo), demo online.
 
-**Fuori ambito**: testi lunghi o chat con analisi del contesto, machine learning, API remote, altre lingue oltre a italiano e inglese. L’italiano resta la specializzazione principale; l’inglese è un dataset curato opzionale, mai attivato automaticamente (D22).
+**Fuori ambito**: analisi del contesto di testi lunghi o chat (la modalità `text` resta lessicale), machine learning, API remote, altre lingue oltre a italiano e inglese. L’italiano resta la specializzazione principale; l’inglese è un dataset curato opzionale, mai attivato automaticamente (D22).
 
 **Promessa esplicita nel README**: "nessun match" non significa "testo appropriato". È un controllo lessicale con copertura limitata, e la moderazione umana resta necessaria.
 
@@ -80,7 +81,7 @@ Ho svolto la ricerca il 2026-11-03: le fonti dettagliate sono al §10 e nella re
 
 ### 4.1 Limiti di input
 
-Il testo viene troncato a `maxLength`, 64 **punti di codice Unicode** per default, prima della normalizzazione. `maxLength` deve essere un intero positivo finito; valori non validi causano un errore di argomento in entrambi i motori. Una coppia surrogata valida non viene mai divisa; un surrogato isolato conta come un punto ed è conservato. Non si contano i grafemi: un accento combinante conta separatamente dalla lettera. Gli offset dei risultati restano invece in **unità UTF-16** sul testo originale. La segmentazione viene eseguita una sola volta. Le regex delle regole aggiunte dall'app vengono sempre convertite in testo letterale: l'app passa termini, non regex.
+Il testo viene troncato a `maxLength`, 64 **punti di codice Unicode** per default (20.000 con `mode: "text"`, D29), prima della normalizzazione. `maxLength` deve essere un intero positivo finito; valori non validi causano un errore di argomento in entrambi i motori. Una coppia surrogata valida non viene mai divisa; un surrogato isolato conta come un punto ed è conservato. Non si contano i grafemi: un accento combinante conta separatamente dalla lettera. Gli offset dei risultati restano invece in **unità UTF-16** sul testo originale. La segmentazione viene eseguita una sola volta. Le regex delle regole aggiunte dall'app vengono sempre convertite in testo letterale: l'app passa termini, non regex.
 
 Ogni punto di codice prodotto dalla normalizzazione conserva l'intervallo UTF-16 della sua origine. In caso di espansione, tutti i caratteri prodotti condividono l'intervallo del carattere sorgente. L'intervallo di un match copre dall'inizio del primo carattere contribuente alla fine dell'ultimo, includendo separatori e invisibili interni. Per una lettera con segni combinanti rimossi, l'intervallo include anche quei segni successivi. Una fixture deve verificare esplicitamente questi casi: la sola parità non prova che gli offset siano corretti.
 
@@ -219,6 +220,8 @@ Le forme con `confidence: medium` producono `review` anche a gravità 1 in `bala
 
 `thresholds` permette di impostare per categoria il minimo di gravità (1, 2 o 3), oppure `null` per disattivarne l'azione. Le soglie esplicite prevalgono sul profilo, senza rimuovere i match; per un match ammesso dalla soglia resta il trattamento della confidenza. L'opzione `contacts: true` blocca i contatti in tutti i profili predefiniti (D20), salvo una soglia esplicita diversa.
 
+`mode: "text"` serve per testi lunghi scritti in prosa. Un titolo legittimo come "La guerra è merda" o il nome di uno spettacolo citato in una descrizione è frequente, mentre in un nickname la stessa parola è quasi sempre un insulto. In `text`, con profilo `balanced`, un match che porterebbe a `block` in `insult`, `sexual` o `vulgar` produce `review`; `blasphemy`, `discriminatory` e `contact` restano `block`. `strict` e le soglie esplicite non vengono attenuati. `lenient` agisce già solo sulle categorie che bloccano anche in `text`. Il rilevatore e l'elenco dei match non cambiano (D29).
+
 I contatti si riconoscono sull'input originale troncato: URL con `http://`, `https://` o `www.`, email ASCII con dominio e numeri telefonici di 9-15 cifre, anche con separatori. È un rilevatore euristico: una sequenza numerica isolata di tale lunghezza può essere classificata come telefono. Non è una validazione completa degli standard di email e URL né un normalizzatore di contatti Unicode.
 
 ### 6.2 TypeScript
@@ -236,6 +239,7 @@ isClean("Claudio") // true: scorciatoia per check(...).action === "allow"
 
 const checker = createChecker({
   profile: "balanced",
+  mode: "short", // default; "text" per descrizioni e bio (limite 20.000)
   languages: ["it"], // default; "en" solo se attivato
   contacts: true, // URL, email, telefono
   extraRules: [{ kind: "word", terms: ["nomeconcorrente"], category: "insult", severity: 2 }],
@@ -260,6 +264,7 @@ final result = ItalianProfanity.check('D10 p0rc0');
 result.action;                       // Action.block
 result.matches.first.ruleId;         // 'it.blasphemy.divine-insult'
 ItalianProfanity.isClean('Claudio'); // true
+ItalianProfanity.check(descrizione, mode: InputMode.text);
 
 final checker = ItalianProfanity.createChecker(
   profile: Profile.balanced,
@@ -285,7 +290,7 @@ Le fixture sono file **JSONL**, una riga per caso, così i diff restano leggibil
 {"id":"uni-001","input":"ｃａｚｚｏ","profile":"balanced","action":"block","note":"fullwidth"}
 ```
 
-Campi: `expectedBase` (risultato atteso di `fold` sull'intero input, prima di limiti e segmentazione), `expectedSegments`, `expectedError`, `maxLength`, `action` (atteso), `rules` (devono comparire), `mustNotMatch` (non devono comparire), `profile`. Almeno un'attesa è obbligatoria. Le attese di normalizzazione, segmentazione ed errore vengono verificate sempre su entrambi i motori da `pnpm parity`; `--expectations` aggiunge le attese di rilevamento da M2.
+Campi: `mode` (`short` o `text`), `expectedBase` (risultato atteso di `fold` sull'intero input, prima di limiti e segmentazione), `expectedSegments`, `expectedError`, `maxLength`, `action` (atteso), `rules` (devono comparire), `mustNotMatch` (non devono comparire), `profile`. Almeno un'attesa è obbligatoria. Le attese di normalizzazione, segmentazione ed errore vengono verificate sempre su entrambi i motori da `pnpm parity`; `--expectations` aggiunge le attese di rilevamento da M2.
 
 `expectedSegments` specifica l'elenco completo e ordinato dei segmenti: `kind`, `range`, `base` e `deleet` sono obbligatori per ciascuno; `fragments`, `baseOrigins`, `deleetOrigins` e `squeeze` sono opzionali. Ogni campo presente viene confrontato esattamente, inclusi lunghezza e ordine degli array: non è un confronto parziale degli elementi. Le strutture complete prodotte dai due motori vengono comunque sempre confrontate in parità. `expectedBase` ed `expectedSegments` accettano attese vuote. `expectedError: "invalidMaxLength"` richiede un `maxLength` invalido ed esclude attese sui segmenti o sul rilevamento.
 

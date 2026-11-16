@@ -323,9 +323,15 @@ function normalizedWord(input: string): string {
   return parts[0].base
 }
 
+/** Limiti predefiniti in punti di codice per le due modalità (D16, D29). */
+export const SHORT_MAX_LENGTH = 64
+export const TEXT_MAX_LENGTH = 20_000
+
 function validateOptions(options: CheckerOptions): void {
   if (options.profile !== undefined && !["balanced", "strict", "lenient"].includes(options.profile))
     throw new TypeError("Profilo non valido")
+  if (options.mode !== undefined && options.mode !== "short" && options.mode !== "text")
+    throw new TypeError("Modalità non valida")
   if (options.languages?.some((language) => language !== "it" && language !== "en"))
     throw new TypeError("Lingua non valida")
   if (options.contacts !== undefined && typeof options.contacts !== "boolean")
@@ -340,6 +346,10 @@ function validateOptions(options: CheckerOptions): void {
       throw new TypeError("Soglia non valida")
   }
   segment("", options.maxLength)
+}
+
+function defaultMaxLength(options: CheckerOptions): number {
+  return options.maxLength ?? (options.mode === "text" ? TEXT_MAX_LENGTH : SHORT_MAX_LENGTH)
 }
 
 const CONTACT_PATTERNS: ReadonlyArray<{ id: string; regex: RegExp }> = [
@@ -380,7 +390,11 @@ function contactMatches(input: string): Match[] {
 /** Compila una configurazione indipendente dalle successive modifiche dell'app. */
 export function createChecker(options: CheckerOptions = {}): Checker {
   validateOptions(options)
-  const settings: CheckerOptions = { ...options, thresholds: { ...options.thresholds } }
+  const settings: CheckerOptions = {
+    ...options,
+    maxLength: defaultMaxLength(options),
+    thresholds: { ...options.thresholds },
+  }
   const languages = new Set(options.languages ?? ["it"])
   const sourceRules: CompiledRule[] = RULES.filter((rule) =>
     languages.has(rule.language as "it" | "en"),
@@ -555,7 +569,7 @@ export function createChecker(options: CheckerOptions = {}): Checker {
       let prefix = ""
       let count = 0
       for (const char of input) {
-        if (count++ >= (settings.maxLength ?? 64)) break
+        if (count++ >= (settings.maxLength ?? SHORT_MAX_LENGTH)) break
         prefix += char
       }
       for (const match of contactMatches(prefix))

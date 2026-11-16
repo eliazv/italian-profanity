@@ -1,5 +1,19 @@
 # italian-profanity
 
+## 0.5.0
+
+### Minor Changes
+
+- b2e2c70: Nuova opzione `mode: "text"` per descrizioni, bio e altri testi lunghi (D29): limite predefinito di 20.000 punti di codice e policy che in `balanced` porta a `review`, invece di `block`, insulti, termini sessuali e volgarità; bestemmie, termini discriminatori e contatti restano bloccati. `mode: "short"` resta il default e non cambia comportamento. In Dart `CheckerOptions.maxLength` diventa nullable (`effectiveMaxLength` dà il limite risolto) e le facciate accettano `mode: InputMode.text`. Esportate le costanti `SHORT_MAX_LENGTH`/`TEXT_MAX_LENGTH` (`shortMaxLength`/`textMaxLength` in Dart).
+  
+  Eccezione nominale `goldoni` per `it.sexual.goldone` (Carlo Goldoni, teatri omonimi); il singolare `goldone` resta segnalato.
+
+### Differenze dalla 0.4.1
+
+Sulle 3.662 fixture valide cambiano 6 risultati, tutti nell'azione. Con le opzioni predefinite (`mode: "short"`) cambiano solo i due casi con `Goldoni`, da `review` ad `allow`. Gli altri quattro sono fixture `mode: "text"`, che la 0.4.1 ignora: una volgarità e un insulto in titoli di opere passano da `block` a `review`, mentre una bestemmia e un termine discriminatorio oltre il 64° carattere passano da `allow` a `block`, perché ora il testo viene letto per intero.
+
+Tabella completa e risultati riproducibili: [confronto di comportamento](https://github.com/eliazv/italian-profanity/blob/v0.5.0/data/releases/0.5.0/behavior-diff.md). Le fixture pubbliche non misurano la frequenza dei cambiamenti su utenti reali.
+
 ## 0.4.1
 
 ### Patch Changes

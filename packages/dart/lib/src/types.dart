@@ -8,6 +8,15 @@ enum Action { allow, review, block }
 
 enum Profile { balanced, strict, lenient }
 
+/// `short` per nickname e titoli (limite 64); `text` per descrizioni e bio:
+/// limite 20.000 e blocco riservato a bestemmie, termini discriminatori e
+/// contatti, le altre categorie passano in revisione (D29).
+enum InputMode { short, text }
+
+/// Limiti predefiniti in punti di codice per le due modalità (D16, D29).
+const int shortMaxLength = 64;
+const int textMaxLength = 20000;
+
 /// Intervallo immutabile nel testo originale, in unità UTF-16.
 class MatchRange {
   const MatchRange(this.start, this.end);
@@ -76,16 +85,24 @@ class RuleException {
 class CheckerOptions {
   const CheckerOptions(
       {this.profile = Profile.balanced,
+      this.mode = InputMode.short,
       this.languages = const ['it'],
       this.contacts = false,
-      this.maxLength = 64,
+      this.maxLength,
       this.extraRules = const [],
       this.exceptions = const [],
       this.thresholds = const {}});
   final Profile profile;
+  final InputMode mode;
   final List<String> languages;
   final bool contacts;
-  final num maxLength;
+
+  /// Predefinito: 64 in `short`, 20.000 in `text`.
+  final num? maxLength;
+
+  /// Limite effettivo, risolto in base alla modalità.
+  num get effectiveMaxLength =>
+      maxLength ?? (mode == InputMode.text ? textMaxLength : shortMaxLength);
   final List<ExtraRule> extraRules;
   final List<RuleException> exceptions;
   final Map<Category, int?> thresholds;
