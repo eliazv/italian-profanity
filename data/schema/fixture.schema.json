@@ -63,6 +63,7 @@
       "description": "Risultato atteso di fold sull'intero input, prima della segmentazione e dei limiti. Verificato sempre dalla parità."
     },
     "profile": { "enum": ["balanced", "strict", "lenient"] },
+    "mode": { "enum": ["short", "text"] },
     "contacts": { "type": "boolean" },
     "action": { "enum": ["allow", "review", "block"] },
     "rules": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },

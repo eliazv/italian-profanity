@@ -2,7 +2,7 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 const String version = '0.4.1';
-const String dataVersion = 'a1c1c8f33aae';
+const String dataVersion = '5c8237a79377';
 
 /// Tabella di normalizzazione condivisa con il pacchetto TypeScript (SPECIFICHE.md §4.4).
 const Map<String, String> foldTable = {
@@ -5228,6 +5228,10 @@ const List<Map<String, String>> exceptionsData = [
   {
     'ruleId': 'it.blasphemy.divine-insult',
     'word': 'canidio',
+  },
+  {
+    'ruleId': 'it.sexual.goldone',
+    'word': 'goldoni',
   },
   {
     'ruleId': 'it.vulgar.minchia',

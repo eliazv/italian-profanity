@@ -3,3 +3,5 @@
 {"id":"it-names-003","input":"Cristiano","profile":"balanced","action":"allow"}
 {"id":"it-names-004","input":"Porcedda","profile":"balanced","action":"allow"}
 {"id":"it-names-005","input":"Marco93","profile":"balanced","action":"allow","note":"numeri innocui"}
+{"id": "it-names-006", "input": "Teatro Goldoni", "profile": "balanced", "action": "allow", "mustNotMatch": ["it.sexual.goldone"]}
+{"id": "it-names-007", "input": "goldone", "profile": "balanced", "action": "review", "rules": ["it.sexual.goldone"], "note": "il singolare resta segnalato"}

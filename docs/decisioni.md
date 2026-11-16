@@ -151,3 +151,11 @@ La sostituzione `k → c` si applica come **vista deleet aggiuntiva**, senza alt
 ## D28 · Dollaro come z in una vista opzionale — 2026-11-05
 
 Il simbolo `$` non puo essere normalizzato globalmente a `z`: la tabella leetspeak lo usa gia come `s` e `a$$hole` deve restare riconosciuto. Per nickname come `ca$$o`, `ca$zo` e `c4$$0` si aggiunge una seconda vista di rilevamento soltanto quando sono presenti 1–2 dollari interni a una parola: ogni `$` diventa `z` mentre le altre trasformazioni leet restano valide. Non attraversa spazi o altri separatori e preserva gli offset UTF-16 e il risultato pubblico di `segment()`. La vista originale con `$ → s` resta attiva; la combinazione `k` e `$` usa una vista aggiuntiva.
+
+## D29 · Modalità `text` per testi lunghi — 2026-11-16
+
+La libreria nasce per nickname e titoli, ma le app la usano anche su descrizioni di eventi, bio e annunci. Con il limite di 64 punti di codice quei testi venivano controllati solo nell'incipit; alzare `maxLength` bastava a leggerli, ma la policy dei nickname bloccava testi legittimi. Su 3.000 descrizioni reali di eventi (VitaRomagna, novembre 2026) i due `block` erano titoli di opere ("Figli di Troia", "La guerra è merda") e circa l'1% andava in `review` per nomi propri come Goldoni.
+
+Si aggiunge l'opzione `mode`: `short` (default, comportamento invariato) e `text`. In `text` il limite predefinito è 20.000 punti di codice (resta configurabile con `maxLength`) e, in `balanced`, un `block` causato da `insult`, `sexual` o `vulgar` diventa `review`; bestemmie, termini discriminatori e contatti continuano a bloccare. Non si attenuano `strict` né le soglie esplicite, perché sono scelte dell'app. Rilevatore, viste, eccezioni e match restano gli stessi: non è un'analisi del contesto, che rimane fuori ambito. Nel `ProfanityChecker` Dart `CheckerOptions.maxLength` diventa nullable e il limite effettivo è `effectiveMaxLength`.
+
+Con la stessa motivazione si aggiunge l'eccezione nominale `goldoni` per `it.sexual.goldone`: Carlo Goldoni e i teatri che ne portano il nome prevalgono sul plurale volgare, mentre il singolare `goldone` resta segnalato. `busoni` e `rasponi` non diventano eccezioni globali (il primo è anche il plurale di un insulto omofobo): restano eccezioni dell'app che ne ha bisogno.

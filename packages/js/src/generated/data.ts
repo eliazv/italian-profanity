@@ -2,7 +2,7 @@
 import type { CompiledException, CompiledRule } from "../types.ts"
 
 export const VERSION = "0.4.1"
-export const DATA_VERSION = "a1c1c8f33aae"
+export const DATA_VERSION = "5c8237a79377"
 
 /** Tabella di normalizzazione condivisa con il pacchetto Dart (SPECIFICHE.md §4.4). */
 export const FOLD: Readonly<Record<string, string>> = {
@@ -5228,6 +5228,10 @@ export const EXCEPTIONS: readonly CompiledException[] = [
   {
     "ruleId": "it.blasphemy.divine-insult",
     "word": "canidio",
+  },
+  {
+    "ruleId": "it.sexual.goldone",
+    "word": "goldoni",
   },
   {
     "ruleId": "it.vulgar.minchia",

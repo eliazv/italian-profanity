@@ -407,7 +407,7 @@ List<ProfanityMatch> _contactMatches(String input) {
 
 class ProfanityChecker {
   ProfanityChecker([CheckerOptions options = const CheckerOptions()]) {
-    segment('', options.maxLength);
+    segment('', options.effectiveMaxLength);
     if (options.languages
         .any((language) => language != 'it' && language != 'en')) {
       throw ArgumentError('Lingua non valida');
@@ -419,9 +419,10 @@ class ProfanityChecker {
     }
     _settings = CheckerOptions(
         profile: options.profile,
+        mode: options.mode,
         languages: List.of(options.languages),
         contacts: options.contacts,
-        maxLength: options.maxLength,
+        maxLength: options.effectiveMaxLength,
         thresholds: Map.of(options.thresholds));
     final sourceRules = rulesData
         .where((data) => options.languages.contains(data['language']))
@@ -469,7 +470,7 @@ class ProfanityChecker {
   late final List<RuleException> _exceptions;
 
   List<ProfanityMatch> findMatches(String input) {
-    final parts = segment(input, _settings.maxLength);
+    final parts = segment(input, _settings.effectiveMaxLength);
     final words = parts.where((part) => part.kind == 'word').toList();
     final viewMap = {for (final part in parts) part: _views(part, input)};
     // Le eccezioni valgono per ogni vista della parola, comprese quelle senza
@@ -618,8 +619,8 @@ class ProfanityChecker {
       }
     }
     if (_settings.contacts) {
-      final prefix =
-          String.fromCharCodes(input.runes.take(_settings.maxLength.toInt()));
+      final prefix = String.fromCharCodes(
+          input.runes.take(_settings.effectiveMaxLength.toInt()));
       for (final match in _contactMatches(prefix)) {
         found['${match.ruleId}:${match.range.start}:${match.range.end}'] =
             match;
@@ -660,14 +661,16 @@ bool isClean(String input, [CheckerOptions? options]) =>
 abstract final class ItalianProfanity {
   static ProfanityChecker createChecker(
           {Profile profile = Profile.balanced,
+          InputMode mode = InputMode.short,
           List<String> languages = const ['it'],
           bool contacts = false,
-          num maxLength = 64,
+          num? maxLength,
           List<ExtraRule> extraRules = const [],
           List<RuleException> exceptions = const [],
           Map<Category, int?> thresholds = const {}}) =>
       ProfanityChecker(CheckerOptions(
           profile: profile,
+          mode: mode,
           languages: languages,
           contacts: contacts,
           maxLength: maxLength,
@@ -677,14 +680,16 @@ abstract final class ItalianProfanity {
 
   static CheckResult check(String input,
           {Profile profile = Profile.balanced,
+          InputMode mode = InputMode.short,
           List<String> languages = const ['it'],
           bool contacts = false,
-          num maxLength = 64,
+          num? maxLength,
           List<ExtraRule> extraRules = const [],
           List<RuleException> exceptions = const [],
           Map<Category, int?> thresholds = const {}}) =>
       createChecker(
               profile: profile,
+              mode: mode,
               languages: languages,
               contacts: contacts,
               maxLength: maxLength,
@@ -699,9 +704,14 @@ abstract final class ItalianProfanity {
           .findMatches(input);
   static bool isClean(String input,
           {Profile profile = Profile.balanced,
+          InputMode mode = InputMode.short,
           bool contacts = false,
-          num maxLength = 64}) =>
-      check(input, profile: profile, contacts: contacts, maxLength: maxLength)
+          num? maxLength}) =>
+      check(input,
+              profile: profile,
+              mode: mode,
+              contacts: contacts,
+              maxLength: maxLength)
           .action ==
       Action.allow;
 }

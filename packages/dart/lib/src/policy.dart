@@ -1,7 +1,15 @@
 import 'types.dart';
 
+/// Categorie che bloccano anche in modalità `text` (D29).
+const _textBlocking = [
+  Category.blasphemy,
+  Category.discriminatory,
+  Category.contact
+];
+
 /// La policy non altera né elimina i match rilevati.
 Action applyPolicy(List<ProfanityMatch> matches, CheckerOptions options) {
+  final text = options.mode == InputMode.text;
   var action = Action.allow;
   for (final match in matches) {
     final custom = options.thresholds.containsKey(match.category);
@@ -20,7 +28,11 @@ Action applyPolicy(List<ProfanityMatch> matches, CheckerOptions options) {
         options.profile == Profile.lenient ||
         match.category == Category.contact ||
         match.severity >= 2) {
-      return Action.block;
+      if (text && !custom && !_textBlocking.contains(match.category)) {
+        action = Action.review;
+      } else {
+        return Action.block;
+      }
     }
   }
   return action;

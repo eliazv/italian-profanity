@@ -192,7 +192,7 @@
 {"id":"expansion-192","input":"extramussaxyz","profile":"balanced","mustNotMatch":["it.sexual.mussa"],"note":"Negativo: radice interna a una parola più lunga"}
 {"id":"expansion-193","input":"mussa","profile":"strict","rules":["it.sexual.mussa"],"note":"Termine ambiguo presente anche in strict"}
 {"id":"expansion-194","input":"goldone","profile":"balanced","rules":["it.sexual.goldone"],"note":"Forma esatta selezionata manualmente"}
-{"id":"expansion-195","input":"goldoni","profile":"balanced","rules":["it.sexual.goldone"],"note":"Forma esatta selezionata manualmente"}
+{"id":"expansion-195","input":"goldoni","profile":"balanced","note":"eccezione nominale Goldoni (D29); il singolare goldone resta segnalato","action":"allow","mustNotMatch":["it.sexual.goldone"]}
 {"id":"expansion-196","input":"extragoldonexyz","profile":"balanced","mustNotMatch":["it.sexual.goldone"],"note":"Negativo: radice interna a una parola più lunga"}
 {"id":"expansion-197","input":"goldone","profile":"strict","rules":["it.sexual.goldone"],"note":"Termine ambiguo presente anche in strict"}
 {"id":"expansion-198","input":"slinguare","profile":"balanced","rules":["it.sexual.slinguare"],"note":"Forma esatta selezionata manualmente"}

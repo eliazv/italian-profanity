@@ -75,6 +75,27 @@ void main() {
               .toJson(),
           {'action': 'allow', 'matches': <Object>[]});
     });
+    test('in modalità text legge fino a 20.000 caratteri', () {
+      expect(shortMaxLength, 64);
+      expect(textMaxLength, 20000);
+      final input = sample['input']! as String;
+      final padded = '${' ' * (textMaxLength - input.length)}$input';
+      expect(check(padded, const CheckerOptions(mode: InputMode.text)).matches,
+          isNotEmpty);
+      expect(
+          check('${' ' * textMaxLength}$input',
+                  const CheckerOptions(mode: InputMode.text))
+              .matches,
+          isEmpty);
+      expect(const CheckerOptions().effectiveMaxLength, shortMaxLength);
+      expect(
+          const CheckerOptions(mode: InputMode.text, maxLength: 100)
+              .effectiveMaxLength,
+          100);
+      expect(
+          ItalianProfanity.check(padded, mode: InputMode.text).matches.length,
+          check(input).matches.length);
+    });
     test('compila una copia indipendente delle opzioni dell’app', () {
       final original = fixtures.firstWhere((item) =>
           item['action'] == 'block' &&

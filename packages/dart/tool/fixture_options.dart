@@ -3,8 +3,9 @@ import 'package:italian_profanity/italian_profanity.dart';
 // Lettura delle opzioni condivisa dai test e dal runner; nessun termine nel codice.
 CheckerOptions fixtureOptions(Map<String, Object?> fixture) => CheckerOptions(
       profile: Profile.values.byName(fixture['profile']! as String),
+      mode: InputMode.values.byName((fixture['mode'] as String?) ?? 'short'),
       contacts: (fixture['contacts'] as bool?) ?? false,
-      maxLength: (fixture['maxLength'] as num?) ?? 64,
+      maxLength: fixture['maxLength'] as num?,
       languages: (fixture['languages'] as List<Object?>?)?.cast<String>() ??
           const ['it'],
       thresholds: (fixture['thresholds'] as Map<String, Object?>? ?? {}).map(
