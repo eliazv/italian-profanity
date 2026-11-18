@@ -65,6 +65,19 @@
         "through": "2026-11-16",
         "method": "new-package-30d"
       }
+    },
+    {
+      "date": "2026-11-18",
+      "total": 2938,
+      "npm": {
+        "total": 2037,
+        "through": "2026-11-16"
+      },
+      "pubDev": {
+        "total": 901,
+        "through": "2026-11-17",
+        "method": "new-package-30d"
+      }
     }
   ]
 }
